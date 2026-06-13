@@ -51,18 +51,38 @@ export default function BookingForm() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!cvFile || !screenshotFile) {
       alert("Please upload both your CV and payment screenshot.");
       return;
     }
     setIsSubmitting(true);
-    // Simulate API request
-    setTimeout(() => {
-      setIsSubmitting(false);
+    
+    try {
+      const formPayload = new FormData();
+      Object.entries(formData).forEach(([key, value]) => {
+        formPayload.append(key, value as string);
+      });
+      formPayload.append("cvFile", cvFile);
+      formPayload.append("screenshotFile", screenshotFile);
+
+      const response = await fetch("https://services.leadconnectorhq.com/hooks/B1KkpgABfPleeIPoYy8x/webhook-trigger/bJivOdKvcs65nQRqpR2B", {
+        method: "POST",
+        body: formPayload,
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
       setIsSuccess(true);
-    }, 2000);
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("There was an error submitting your request. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToForm = () => {
