@@ -14,7 +14,6 @@ import {
   Smartphone,
   CheckCircle2
 } from "lucide-react";
-import { MouseParallax } from "./MouseParallax";
 
 export default function CoversSection() {
   const scrollToForm = () => {
@@ -149,30 +148,29 @@ export default function CoversSection() {
           {covers.map((item, idx) => {
             const Icon = item.icon;
             return (
-              <MouseParallax key={idx} intensity={10}>
-                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ type: "spring", stiffness: 100, delay: idx * 0.1 }}
-                  whileHover={{ y: -10, scale: 1.02 }}
-                  className="bg-white border-2 border-slate-100 rounded-[2rem] p-8 shadow-md hover:shadow-2xl hover:border-transparent transition-all duration-300 relative group overflow-hidden h-full"
-                >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                  <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center ${item.text} mb-8 transform group-hover:scale-110 group-hover:rotate-12 transition-all`}>
-                    <Icon className="w-7 h-7" />
-                  </div>
-                  <h3 className="text-2xl font-black text-slate-900 mb-6 group-hover:text-purple-700 transition-colors">{item.title}</h3>
-                  <ul className="space-y-4 relative z-10">
-                    {item.items.map((bullet, bIdx) => (
-                      <li key={bIdx} className="flex items-start gap-3 text-base text-slate-600 font-medium leading-relaxed">
-                        <CheckCircle2 className={`w-6 h-6 ${item.text} shrink-0 mt-0.5 opacity-80`} />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              </MouseParallax>
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ type: "spring", stiffness: 100, delay: idx * 0.1 }}
+                whileHover={{ y: -6, scale: 1.01, boxShadow: "0 20px 25px -5px rgba(124, 58, 237, 0.1), 0 10px 10px -5px rgba(124, 58, 237, 0.04)" }}
+                className="bg-white border-2 border-slate-100 rounded-[2rem] p-8 shadow-md hover:border-transparent transition-all duration-300 relative group overflow-hidden h-full cursor-none"
+              >
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center ${item.text} mb-8 transform group-hover:scale-110 group-hover:rotate-12 transition-all`}>
+                  <Icon className="w-7 h-7" />
+                </div>
+                <h3 className="text-2xl font-black text-slate-900 mb-6 group-hover:text-purple-700 transition-colors">{item.title}</h3>
+                <ul className="space-y-4 relative z-10">
+                  {item.items.map((bullet, bIdx) => (
+                    <li key={bIdx} className="flex items-start gap-3 text-base text-slate-600 font-medium leading-relaxed">
+                      <CheckCircle2 className={`w-6 h-6 ${item.text} shrink-0 mt-0.5 opacity-80`} />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             );
           })}
         </div>
@@ -230,29 +228,28 @@ export default function CoversSection() {
             {bonuses.map((bonus, idx) => {
               const Icon = bonus.icon;
               return (
-                <MouseParallax key={idx} intensity={5}>
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ type: "spring", stiffness: 100, delay: idx * 0.15 }}
-                    whileHover={{ scale: 1.03, y: -5 }}
-                    className="bg-white border-2 border-purple-100/50 rounded-3xl p-8 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all h-full"
-                  >
-                    <div className="space-y-6">
-                      <span className="inline-block font-black text-white bg-gradient-to-r from-purple-600 to-fuchsia-600 px-3 py-1.5 rounded-lg tracking-widest uppercase text-xs shadow-sm">
-                        {bonus.badge}
-                      </span>
-                      <div className="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center">
-                        <Icon className="w-7 h-7" />
-                      </div>
-                      <h4 className="text-2xl font-black text-slate-900 leading-tight">{bonus.title}</h4>
-                      <p className="text-base text-slate-600 font-medium leading-relaxed">
-                        {bonus.description}
-                      </p>
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ type: "spring", stiffness: 100, delay: idx * 0.15 }}
+                  whileHover={{ scale: 1.01, y: -4, boxShadow: "0 20px 25px -5px rgba(124, 58, 237, 0.08)" }}
+                  className="bg-white border-2 border-purple-100/50 rounded-3xl p-8 shadow-sm transition-all h-full cursor-none"
+                >
+                  <div className="space-y-6">
+                    <span className="inline-block font-black text-white bg-gradient-to-r from-purple-600 to-fuchsia-600 px-3 py-1.5 rounded-lg tracking-widest uppercase text-xs shadow-sm">
+                      {bonus.badge}
+                    </span>
+                    <div className="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center">
+                      <Icon className="w-7 h-7" />
                     </div>
-                  </motion.div>
-                </MouseParallax>
+                    <h4 className="text-2xl font-black text-slate-900 leading-tight">{bonus.title}</h4>
+                    <p className="text-base text-slate-600 font-medium leading-relaxed">
+                      {bonus.description}
+                    </p>
+                  </div>
+                </motion.div>
               );
             })}
           </div>

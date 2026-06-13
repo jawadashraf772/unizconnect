@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Award, GraduationCap, CheckCircle, Sparkles } from "lucide-react";
-import { MouseParallax } from "./MouseParallax";
 
 export default function HeroSection() {
   const scrollToForm = () => {
@@ -148,61 +147,60 @@ export default function HeroSection() {
 
           </div>
 
-          {/* Right Column: Visual Portrait with Parallax */}
+          {/* Right Column: Visual Portrait */}
           <div className="lg:col-span-5 flex justify-center mt-12 lg:mt-0">
-            <MouseParallax intensity={20}>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.7, rotate: -8 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              whileHover={{ scale: 1.03, rotate: 1, transition: { type: "spring", stiffness: 300 } }}
+              transition={{ type: "spring", stiffness: 80, damping: 18, delay: 0.3 }}
+              className="relative w-full max-w-[420px] aspect-[4/5]"
+            >
+              {/* Playful blob behind image */}
               <motion.div 
-                initial={{ opacity: 0, scale: 0.7, rotate: -8 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                transition={{ type: "spring", stiffness: 80, damping: 18, delay: 0.3 }}
-                className="relative w-full max-w-[420px] aspect-[4/5]"
-              >
-                {/* Playful blob behind image */}
-                <motion.div 
-                  animate={{ rotate: [6, -4, 6], scale: [1, 1.05, 1] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -inset-4 bg-gradient-to-tr from-purple-500 via-violet-500 to-purple-600 rounded-[3rem] opacity-30 blur-xl" 
+                animate={{ rotate: [6, -4, 6], scale: [1, 1.05, 1] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -inset-4 bg-gradient-to-tr from-purple-500 via-violet-500 to-purple-600 rounded-[3rem] opacity-30 blur-xl" 
+              />
+
+              {/* Main Image Container */}
+              <div className="relative w-full h-full rounded-[2.5rem] border-8 border-white shadow-2xl shadow-purple-500/20 overflow-hidden bg-purple-100 transform transition-transform">
+                <img 
+                  src="/ayesha.webp" 
+                  alt="Ayesha Saleem - UnizConnect Founder" 
+                  className="w-full h-full object-cover rounded-[2rem]"
                 />
+              </div>
 
-                {/* Main Image Container */}
-                <div className="relative w-full h-full rounded-[2.5rem] border-8 border-white shadow-2xl shadow-purple-500/20 overflow-hidden bg-purple-100 transform transition-transform">
-                  <img 
-                    src="/Ayesha-Saleem.webp" 
-                    alt="Ayesha Saleem - UnizConnect Founder" 
-                    className="w-full h-full object-cover"
-                  />
+              {/* Floating badges */}
+              <motion.div 
+                animate={{ y: [0, -12, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -bottom-6 -left-6 bg-white p-4 rounded-3xl shadow-2xl shadow-purple-500/10 flex items-center gap-3 border-2 border-purple-100"
+              >
+                <div className="p-2 bg-purple-100 rounded-2xl">
+                  <CheckCircle className="w-6 h-6 text-purple-600" />
                 </div>
-
-                {/* Floating badges */}
-                <motion.div 
-                  animate={{ y: [0, -12, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -bottom-6 -left-6 bg-white p-4 rounded-3xl shadow-2xl shadow-purple-500/10 flex items-center gap-3 border-2 border-purple-100"
-                >
-                  <div className="p-2 bg-purple-100 rounded-2xl">
-                    <CheckCircle className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-purple-400 font-black uppercase tracking-wider">Rating</p>
-                    <p className="text-base font-black text-slate-800">100% Honest Advice</p>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  animate={{ y: [0, 12, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute -top-6 -right-6 bg-white p-4 rounded-3xl shadow-2xl shadow-purple-500/10 flex items-center gap-3 border-2 border-purple-100"
-                >
-                  <div className="p-2 bg-violet-100 rounded-2xl">
-                    <GraduationCap className="w-6 h-6 text-violet-600" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-violet-400 font-black uppercase tracking-wider">Founder</p>
-                    <p className="text-base font-black text-slate-800">UnizConnect</p>
-                  </div>
-                </motion.div>
+                <div>
+                  <p className="text-xs text-purple-400 font-black uppercase tracking-wider">Rating</p>
+                  <p className="text-base font-black text-slate-800">100% Honest Advice</p>
+                </div>
               </motion.div>
-            </MouseParallax>
+
+              <motion.div 
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute -top-6 -right-6 bg-white p-4 rounded-3xl shadow-2xl shadow-purple-500/10 flex items-center gap-3 border-2 border-purple-100"
+              >
+                <div className="p-2 bg-violet-100 rounded-2xl">
+                  <GraduationCap className="w-6 h-6 text-violet-600" />
+                </div>
+                <div>
+                  <p className="text-xs text-violet-400 font-black uppercase tracking-wider">Founder</p>
+                  <p className="text-base font-black text-slate-800">UnizConnect</p>
+                </div>
+              </motion.div>
+            </motion.div>
           </div>
 
         </div>

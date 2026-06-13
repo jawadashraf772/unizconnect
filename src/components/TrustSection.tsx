@@ -79,32 +79,31 @@ export default function TrustSection() {
 
           {/* Right Block: Backstory visual quote card */}
           <div className="lg:col-span-5">
-            <MouseParallax intensity={15} tiltReverse>
-              <motion.div 
-                initial={{ opacity: 0, x: 50, rotate: 5 }}
-                whileInView={{ opacity: 1, x: 0, rotate: -2 }}
-                viewport={{ once: true }}
-                transition={{ type: "spring", stiffness: 100 }}
-                className="bg-gradient-to-tr from-purple-700 via-violet-600 to-purple-500 text-white rounded-[2.5rem] p-10 shadow-2xl shadow-purple-500/30 border-8 border-white relative overflow-hidden group"
-              >
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
-                <div className="relative z-10 space-y-8">
-                  <motion.div 
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
-                    <Heart className="w-12 h-12 text-pink-200 fill-pink-200" />
-                  </motion.div>
-                  <p className="text-2xl font-black italic leading-tight text-white/95">
-                    "I know your 1:1 isn't any therapy session… but it kind of feels therapeutic. This is the first time I've had a safe space to talk openly. I joined at my lowest and left feeling lighter."
-                  </p>
-                  <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
-                    <p className="font-black text-lg text-white tracking-wide">Political Science Student</p>
-                    <p className="text-sm font-bold text-purple-200 uppercase tracking-widest mt-1">Lahore School of Economics (LSE)</p>
-                  </div>
+            <motion.div 
+              initial={{ opacity: 0, x: 50, rotate: 5 }}
+              whileInView={{ opacity: 1, x: 0, rotate: -2 }}
+              whileHover={{ scale: 1.02, rotate: -1, transition: { type: "spring", stiffness: 300 } }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 100 }}
+              className="bg-gradient-to-tr from-purple-700 via-violet-600 to-purple-500 text-white rounded-[2.5rem] p-10 shadow-2xl shadow-purple-500/30 border-8 border-white relative overflow-hidden group cursor-none"
+            >
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+              <div className="relative z-10 space-y-8">
+                <motion.div 
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <Heart className="w-12 h-12 text-pink-200 fill-pink-200" />
+                </motion.div>
+                <p className="text-2xl font-black italic leading-tight text-white/95">
+                  "I know your 1:1 isn't any therapy session… but it kind of feels therapeutic. This is the first time I've had a safe space to talk openly. I joined at my lowest and left feeling lighter."
+                </p>
+                <div className="bg-white/10 p-4 rounded-xl backdrop-blur-sm border border-white/20">
+                  <p className="font-black text-lg text-white tracking-wide">Political Science Student</p>
+                  <p className="text-sm font-bold text-purple-200 uppercase tracking-widest mt-1">Lahore School of Economics (LSE)</p>
                 </div>
-              </motion.div>
-            </MouseParallax>
+              </div>
+            </motion.div>
           </div>
 
         </div>

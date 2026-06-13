@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Check, HelpCircle, ArrowRight, Star, AlertCircle } from "lucide-react";
-import { MouseParallax } from "./MouseParallax";
 
 export default function TransformSection() {
   const scrollToForm = () => {
@@ -86,50 +85,50 @@ export default function TransformSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {transformations.map((t, idx) => (
-            <MouseParallax key={idx} intensity={15}>
-              <motion.div
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ type: "spring", stiffness: 100, damping: 20, delay: idx * 0.15 }}
-                className="bg-white border-2 border-slate-100 p-8 rounded-3xl relative flex flex-col justify-between h-full hover:border-purple-300 shadow-xl shadow-purple-500/5 group"
-              >
-                <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-bold uppercase tracking-wider mb-6 border border-cyan-100">
-                    <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
-                    {t.uni}
-                  </div>
-
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <motion.div 
-                        key={i}
-                        whileHover={{ scale: 1.5, rotate: 15 }}
-                      >
-                        <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  <p className="text-slate-700 text-base font-medium leading-relaxed mb-6">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ type: "spring", stiffness: 100, damping: 20, delay: idx * 0.15 }}
+              whileHover={{ y: -6, scale: 1.01, boxShadow: "0 20px 25px -5px rgba(124, 58, 237, 0.1)", transition: { type: "spring", stiffness: 300 } }}
+              className="bg-white border-2 border-slate-100 p-8 rounded-3xl relative flex flex-col justify-between h-full hover:border-purple-300 shadow-xl shadow-purple-500/5 group transition-all duration-300 cursor-none"
+            >
+              <div>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-bold uppercase tracking-wider mb-6 border border-cyan-100">
+                  <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
+                  {t.uni}
                 </div>
 
-                <div className="border-t-2 border-slate-50 pt-4 mt-4">
-                  <h4 className="font-black text-lg text-slate-900 group-hover:text-purple-600 transition-colors">{t.name}</h4>
-                  <div className="flex justify-between items-center text-sm font-bold text-slate-400 mt-1 uppercase tracking-wide">
-                    <span>{t.city} • {t.gap}</span>
-                  </div>
-                  <motion.div 
-                    whileHover={{ scale: 1.05 }}
-                    className="mt-4 bg-gradient-to-r from-purple-100 to-fuchsia-100 text-purple-800 text-sm font-black py-2.5 px-4 rounded-xl text-center shadow-sm"
-                  >
-                    {t.result}
-                  </motion.div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <motion.div 
+                      key={i}
+                      whileHover={{ scale: 1.5, rotate: 15 }}
+                    >
+                      <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    </motion.div>
+                  ))}
                 </div>
-              </motion.div>
-            </MouseParallax>
+
+                <p className="text-slate-700 text-base font-medium leading-relaxed mb-6">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+              </div>
+
+              <div className="border-t-2 border-slate-50 pt-4 mt-4">
+                <h4 className="font-black text-lg text-slate-900 group-hover:text-purple-600 transition-colors">{t.name}</h4>
+                <div className="flex justify-between items-center text-sm font-bold text-slate-400 mt-1 uppercase tracking-wide">
+                  <span>{t.city} • {t.gap}</span>
+                </div>
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  className="mt-4 bg-gradient-to-r from-purple-100 to-fuchsia-100 text-purple-800 text-sm font-black py-2.5 px-4 rounded-xl text-center shadow-sm"
+                >
+                  {t.result}
+                </motion.div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

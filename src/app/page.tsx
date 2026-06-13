@@ -7,6 +7,7 @@ import TrustSection from "@/components/TrustSection";
 import BookingForm from "@/components/BookingForm";
 import FaqSection from "@/components/FaqSection";
 import FooterSection from "@/components/FooterSection";
+import { ScrollPopup } from "@/components/ScrollPopup";
 
 export default function Home() {
   return (
@@ -39,6 +40,9 @@ export default function Home() {
 
       {/* Footer CTA & Brand Info */}
       <FooterSection />
+
+      {/* Scroll-triggered interactive popup */}
+      <ScrollPopup />
     </div>
   );
 }

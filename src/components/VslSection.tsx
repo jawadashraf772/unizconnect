@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Play, Video, Sparkles } from "lucide-react";
 import { useState } from "react";
-import { MouseParallax } from "./MouseParallax";
 
 export default function VslSection() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -85,58 +84,56 @@ export default function VslSection() {
         </div>
 
         {/* Video Embed Frame */}
-        <MouseParallax intensity={8}>
-          <motion.div 
-            initial={{ opacity: 0, y: 40, scale: 0.9 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80, delay: 0.2 }}
-            whileHover={{ scale: 1.02 }}
-            className="relative max-w-4xl mx-auto aspect-video rounded-[2rem] overflow-hidden border-4 border-purple-400/30 bg-purple-950 shadow-2xl shadow-purple-900/50 group cursor-none"
-            onClick={() => setIsPlaying(true)}
-          >
-            {!isPlaying ? (
-              <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-purple-900/80 via-purple-950/90 to-violet-950/95 z-10 p-6">
-                {/* Play Button with pulse ring */}
-                <div className="relative mb-8">
-                  <motion.div 
-                    animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0, 0.4] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute -inset-6 bg-purple-500 rounded-full" 
-                  />
-                  <motion.div 
-                    animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-                    className="absolute -inset-10 bg-purple-400 rounded-full" 
-                  />
-                  <motion.button 
-                    whileHover={{ scale: 1.15, rotate: 10 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center text-white shadow-2xl shadow-purple-500/50 cursor-none border-4 border-white/20"
-                  >
-                    <Play className="w-10 h-10 fill-current ml-1.5" />
-                  </motion.button>
-                </div>
-
-                {/* Title Overlay */}
-                <h3 className="text-2xl sm:text-3xl font-black max-w-lg text-white mb-3 select-none leading-tight">
-                  Your Study Abroad Decision Needs a 1:1 Session, Not Guesswork
-                </h3>
-                <p className="text-base text-purple-300 select-none font-bold">Click to watch video explanation (2 mins)</p>
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.9 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 80, delay: 0.2 }}
+          whileHover={{ scale: 1.01, boxShadow: "0 25px 50px -12px rgba(124, 58, 237, 0.3)" }}
+          className="relative max-w-4xl mx-auto aspect-video rounded-[2rem] overflow-hidden border-4 border-purple-400/30 bg-purple-950 shadow-2xl shadow-purple-900/50 group cursor-none transition-all duration-300"
+          onClick={() => setIsPlaying(true)}
+        >
+          {!isPlaying ? (
+            <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-purple-900/80 via-purple-950/90 to-violet-950/95 z-10 p-6">
+              {/* Play Button with pulse ring */}
+              <div className="relative mb-8">
+                <motion.div 
+                  animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0, 0.4] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="absolute -inset-6 bg-purple-500 rounded-full" 
+                />
+                <motion.div 
+                  animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+                  className="absolute -inset-10 bg-purple-400 rounded-full" 
+                />
+                <motion.button 
+                  whileHover={{ scale: 1.15, rotate: 10 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center text-white shadow-2xl shadow-purple-500/50 cursor-none border-4 border-white/20"
+                >
+                  <Play className="w-10 h-10 fill-current ml-1.5" />
+                </motion.button>
               </div>
-            ) : (
-              <video 
-                className="absolute inset-0 w-full h-full object-cover"
-                src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4"
-                autoPlay
-                controls
-                playsInline
-              />
-            )}
 
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-violet-900 -z-10" />
-          </motion.div>
-        </MouseParallax>
+              {/* Title Overlay */}
+              <h3 className="text-2xl sm:text-3xl font-black max-w-lg text-white mb-3 select-none leading-tight">
+                Your Study Abroad Decision Needs a 1:1 Session, Not Guesswork
+              </h3>
+              <p className="text-base text-purple-300 select-none font-bold">Click to watch video explanation (2 mins)</p>
+            </div>
+          ) : (
+            <video 
+              className="absolute inset-0 w-full h-full object-cover"
+              src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4"
+              autoPlay
+              controls
+              playsInline
+            />
+          )}
+
+          <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-violet-900 -z-10" />
+        </motion.div>
 
         {/* VSL CTA */}
         <motion.div
