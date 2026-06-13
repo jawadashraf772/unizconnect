@@ -18,6 +18,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "UnizConnect | 1:1 Strategy Session with Ayesha Saleem",
   description: "Get personalized guidance on your study abroad and career path. Stop guessing and start planning with confidence.",
+  icons: {
+    icon: "/logo.webp",
+  },
 };
 
 export default function RootLayout({
