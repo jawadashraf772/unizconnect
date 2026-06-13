@@ -36,14 +36,14 @@ export function ScrollPopup() {
   useEffect(() => {
     const handleScroll = () => {
       if (hasClosed) return;
-      if (window.scrollY > 400) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      const shouldShow = window.scrollY > 400;
+      setIsVisible((prev) => {
+        if (prev !== shouldShow) return shouldShow;
+        return prev;
+      });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [hasClosed]);
 
