@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FileText,
@@ -33,7 +34,7 @@ export default function BookingForm() {
   const [cvFile, setCvFile] = useState<File | null>(null);
   const [screenshotFile, setScreenshotFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const router = useRouter();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -76,7 +77,7 @@ export default function BookingForm() {
         throw new Error("Failed to submit form");
       }
 
-      setIsSuccess(true);
+      router.push("/thank-you");
     } catch (error) {
       console.error("Submission error:", error);
       alert("There was an error submitting your request. Please try again.");
@@ -299,39 +300,10 @@ export default function BookingForm() {
               </div>
             </div>
 
-            {/* Right Column: Booking Form Fields */}
             <div className="lg:col-span-7 bg-white border-2 border-slate-100 rounded-[2.5rem] p-8 sm:p-12 shadow-2xl relative">
-              <AnimatePresence mode="wait">
-                {isSuccess ? (
-                  <motion.div
-                    key="success"
-                    initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                    className="text-center py-20 space-y-8"
-                  >
-                    <motion.div
-                      animate={{ y: [0, -20, 0] }}
-                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                      className="w-24 h-24 bg-gradient-to-br from-emerald-400 to-teal-500 text-white rounded-full flex items-center justify-center mx-auto shadow-xl shadow-emerald-500/30 border-4 border-white"
-                    >
-                      <Check className="w-12 h-12" />
-                    </motion.div>
-                    <h3 className="text-4xl font-black text-slate-900">You're All Set! 🎉</h3>
-                    <p className="text-slate-600 text-xl font-medium max-w-md mx-auto leading-relaxed">
-                      Our team is verifying your payment. Keep an eye on your email and WhatsApp for Ayesha's calendar link within 24 hours.
-                    </p>
-                    <div className="pt-8 flex items-center justify-center gap-3 text-sm text-slate-500 font-bold bg-slate-50 py-3 rounded-2xl w-max mx-auto px-6">
-                      <ShieldCheck className="w-5 h-5 text-emerald-600" />
-                      <span>Secure verification in progress.</span>
-                    </div>
-                  </motion.div>
-                ) : (
                   <motion.form
-                    key="form"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    exit={{ opacity: 0, scale: 0.95 }}
                     onSubmit={handleSubmit}
                     className="space-y-6"
                   >
@@ -523,8 +495,6 @@ export default function BookingForm() {
                       {isSubmitting ? "Verifying..." : "Book Your 1:1 Session"}
                     </motion.button>
                   </motion.form>
-                )}
-              </AnimatePresence>
             </div>
 
           </div>
