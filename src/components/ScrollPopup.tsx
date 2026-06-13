@@ -61,7 +61,7 @@ export function ScrollPopup() {
   };
 
   const scrollToForm = () => {
-    const element = document.getElementById("booking-form-fields");
+    const element = document.getElementById("booking-form");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }

@@ -66,7 +66,7 @@ export default function BookingForm() {
   };
 
   const scrollToForm = () => {
-    const element = document.getElementById("booking-form-fields");
+    const element = document.getElementById("booking-form");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -250,7 +250,7 @@ export default function BookingForm() {
       </section>
 
       {/* FORM SECTION */}
-      <section id="booking-form-fields" className="py-24 bg-gradient-to-b from-white to-slate-50 border-t-4 border-dashed border-purple-100 relative overflow-hidden">
+      <section id="booking-form" className="py-24 bg-gradient-to-b from-white to-slate-50 border-t-4 border-dashed border-purple-100 relative overflow-hidden">
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-200/40 rounded-full blur-[120px] -z-10 mix-blend-multiply" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
