@@ -130,17 +130,17 @@ export default function HeroSection() {
               {[
                 { val: "1,000+", label: "Students", color: "text-purple-600" },
                 { val: "Top Offers", label: "Global Scope", color: "text-violet-600" },
-                { val: "Scholarship Wins", label: "Secured", color: "text-purple-700" },
+                { val: "Scholarship", label: "Wins Secured", color: "text-purple-700" },
                 { val: "Certified", label: "British Council", color: "text-violet-700" }
               ].map((stat, i) => (
                 <motion.div 
                   key={i}
                   whileHover={{ y: -8, scale: 1.08, rotate: i % 2 === 0 ? 2 : -2 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="flex flex-col items-center lg:items-start bg-white p-4 rounded-2xl shadow-md border-2 border-purple-100/50 cursor-crosshair hover:border-purple-300 hover:shadow-xl hover:shadow-purple-500/10 transition-colors"
+                  className="flex flex-col items-center lg:items-start justify-center bg-white p-4 rounded-2xl shadow-md border-2 border-purple-100/50 cursor-crosshair hover:border-purple-300 hover:shadow-xl hover:shadow-purple-500/10 transition-colors w-full min-h-[92px]"
                 >
-                  <span className={`text-xl sm:text-2xl font-black ${stat.color} leading-tight`}>{stat.val}</span>
-                  <span className="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">{stat.label}</span>
+                  <span className={`text-base sm:text-lg md:text-xl font-black ${stat.color} leading-none break-words`}>{stat.val}</span>
+                  <span className="text-[10px] sm:text-xs text-slate-500 font-bold uppercase tracking-wider mt-1.5 leading-tight">{stat.label}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -168,7 +168,7 @@ export default function HeroSection() {
                 <img 
                   src="/ayesha.webp" 
                   alt="Ayesha Saleem - UnizConnect Founder" 
-                  className="w-full h-full object-cover rounded-[2rem]"
+                  className="w-full h-full object-cover object-top rounded-[2rem]"
                 />
               </div>
 

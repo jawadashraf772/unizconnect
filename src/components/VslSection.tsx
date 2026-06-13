@@ -94,9 +94,18 @@ export default function VslSection() {
           onClick={() => setIsPlaying(true)}
         >
           {!isPlaying ? (
-            <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-purple-900/80 via-purple-950/90 to-violet-950/95 z-10 p-6">
+            <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center z-10 p-6">
+              {/* Background Thumbnail Image */}
+              <img 
+                src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/6928bdac571896657f6dba4d.png" 
+                alt="Your Study Abroad Decision Needs a 1:1 Session" 
+                className="absolute inset-0 w-full h-full object-cover -z-10"
+              />
+              {/* Subtle overlay that darkens slightly on hover */}
+              <div className="absolute inset-0 bg-purple-950/10 group-hover:bg-purple-950/30 transition-colors duration-300 -z-10" />
+
               {/* Play Button with pulse ring */}
-              <div className="relative mb-8">
+              <div className="relative">
                 <motion.div 
                   animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0, 0.4] }}
                   transition={{ duration: 2, repeat: Infinity }}
@@ -115,12 +124,6 @@ export default function VslSection() {
                   <Play className="w-10 h-10 fill-current ml-1.5" />
                 </motion.button>
               </div>
-
-              {/* Title Overlay */}
-              <h3 className="text-2xl sm:text-3xl font-black max-w-lg text-white mb-3 select-none leading-tight">
-                Your Study Abroad Decision Needs a 1:1 Session, Not Guesswork
-              </h3>
-              <p className="text-base text-purple-300 select-none font-bold">Click to watch video explanation (2 mins)</p>
             </div>
           ) : (
             <video 
