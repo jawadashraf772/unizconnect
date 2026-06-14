@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HelpCircle, ArrowRight, Sparkles, DollarSign, Target, Clock, TrendingUp } from "lucide-react";
+import { HelpCircle, ArrowRight, DollarSign, Target, Clock, TrendingUp } from "lucide-react";
 
 export default function WhySection() {
   const scrollToForm = () => {
@@ -12,11 +12,11 @@ export default function WhySection() {
   };
 
   return (
-    <section className="relative py-28 overflow-hidden">
+    <section className="relative py-28 overflow-hidden bg-slate-50">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/30 to-white" />
-      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-purple-100/40 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-indigo-100/30 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/40 to-slate-50" />
+      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-purple-200/30 rounded-full blur-[150px] mix-blend-multiply pointer-events-none" />
+      <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-indigo-200/30 rounded-full blur-[120px] mix-blend-multiply pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
         
@@ -27,13 +27,13 @@ export default function WhySection() {
           viewport={{ once: true }}
           className="text-center space-y-5 mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-xs font-black uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 border border-purple-200 text-purple-700 text-xs font-black uppercase tracking-widest shadow-sm">
             <HelpCircle className="w-4 h-4" />
             Let&apos;s Talk About Value
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight">
             Why It&apos;s For{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-600">PKR 5000</span>?
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-fuchsia-600 to-violet-600">PKR 5000</span>?
           </h2>
         </motion.div>
 
@@ -45,16 +45,16 @@ export default function WhySection() {
           transition={{ type: "spring", stiffness: 80 }}
           className="relative"
         >
-          <div className="absolute -inset-[1px] bg-gradient-to-b from-purple-200 via-purple-100 to-transparent rounded-[2rem] blur-sm" />
+          <div className="absolute -inset-[1px] bg-gradient-to-b from-purple-200 via-purple-100 to-transparent rounded-[2rem] blur-md" />
 
-          <div className="relative bg-white border border-purple-100/50 rounded-[2rem] p-8 sm:p-12 shadow-xl overflow-hidden">
+          <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-8 sm:p-12 shadow-2xl overflow-hidden">
 
             {/* Decorative corner accent */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-purple-50 to-transparent rounded-bl-[4rem]" />
 
             <div className="space-y-8 relative">
               
-              <p className="text-2xl sm:text-3xl text-purple-800 font-black italic">
+              <p className="text-2xl sm:text-3xl text-purple-700 font-black italic">
                 Fair question.
               </p>
 
@@ -62,44 +62,44 @@ export default function WhySection() {
 
                 <p>
                   Yes, you can watch videos, attend webinars, Google things, ask friends, or visit education expos. It&apos;s all{" "}
-                  <span className="text-purple-700 font-extrabold uppercase px-2 py-0.5 bg-purple-50 rounded-md">FREE</span>.
+                  <span className="text-purple-700 font-extrabold uppercase px-2 py-0.5 bg-purple-50 border border-purple-100 rounded-md">FREE</span>.
                 </p>
 
                 <p>
                   But most of that{" "}
-                  <span className="text-purple-700 font-extrabold uppercase px-2 py-0.5 bg-purple-50 rounded-md">FREE</span>{" "}
+                  <span className="text-purple-700 font-extrabold uppercase px-2 py-0.5 bg-purple-50 border border-purple-100 rounded-md">FREE</span>{" "}
                   information stays surface-level.
                 </p>
 
-                <div className="flex items-start gap-4 bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-100 rounded-xl p-5">
-                  <Target className="w-5 h-5 text-purple-500 shrink-0 mt-0.5" />
-                  <p className="text-slate-700 font-semibold">
+                <div className="flex items-start gap-4 bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-100 rounded-xl p-5 shadow-sm">
+                  <Target className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
+                  <p className="text-slate-800 font-bold">
                     It tells you what&apos;s possible for students in general.
                   </p>
                 </div>
 
                 <p>
-                  This 40-minute session helps you understand what applies to <span className="font-black text-slate-800">you specifically</span> - your fears, your goals, your budget, and your situation.
+                  This 40-minute session helps you understand what applies to <span className="font-black text-slate-900">you specifically</span> - your fears, your goals, your budget, and your situation.
                 </p>
               </div>
 
-              {/* Price Highlight Card */}
+              {/* Price Highlight Card (Light Theme Version) */}
               <motion.div
                 whileHover={{ scale: 1.01 }}
-                className="bg-gradient-to-br from-[#130e2a] to-[#1e1545] rounded-2xl p-8 shadow-xl relative overflow-hidden"
+                className="bg-gradient-to-br from-yellow-50 to-amber-50 border border-yellow-200 rounded-2xl p-8 shadow-lg relative overflow-hidden"
               >
                 <motion.div
                   animate={{ x: [0, 30, 0] }}
                   transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-0 right-0 w-40 h-40 bg-yellow-400/10 rounded-full blur-3xl"
+                  className="absolute top-0 right-0 w-40 h-40 bg-white/60 rounded-full blur-3xl"
                 />
                 <div className="flex items-start gap-4 relative">
-                  <div className="w-12 h-12 rounded-xl bg-yellow-400/20 flex items-center justify-center shrink-0">
-                    <DollarSign className="w-6 h-6 text-yellow-400" />
+                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm border border-yellow-100">
+                    <DollarSign className="w-6 h-6 text-yellow-600" />
                   </div>
                   <div className="space-y-2">
-                    <p className="text-3xl sm:text-4xl font-black text-yellow-400">It just costs PKR 5,000.</p>
-                    <p className="text-sm text-purple-200/70 font-medium leading-relaxed">
+                    <p className="text-3xl sm:text-4xl font-black text-slate-900">It just costs PKR 5,000.</p>
+                    <p className="text-sm text-slate-600 font-medium leading-relaxed">
                       And let&apos;s be honest, most of us have spent that much on food that wasn&apos;t even good or on hangouts with friends.
                     </p>
                   </div>
@@ -111,9 +111,9 @@ export default function WhySection() {
                   But the wrong degree, missed scholarship, or delayed application can cost you far more than money.
                 </p>
 
-                <div className="flex items-start gap-4 bg-red-50/50 border border-red-100 rounded-xl p-5">
+                <div className="flex items-start gap-4 bg-red-50 border border-red-100 rounded-xl p-5 shadow-sm">
                   <Clock className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                  <p className="text-slate-800 font-black">
+                  <p className="text-slate-900 font-black">
                     It can cost you time, effort, confidence, and mental peace.
                   </p>
                 </div>
@@ -122,14 +122,14 @@ export default function WhySection() {
                   And just so you know, our calendar stays booked mostly not because we do aggressive marketing but because students attend a session, find value in it, and then refer their friends and cousins to us.
                 </p>
 
-                <div className="flex items-start gap-4 bg-amber-50/50 border border-amber-100 rounded-xl p-5">
+                <div className="flex items-start gap-4 bg-amber-50 border border-amber-100 rounded-xl p-5 shadow-sm">
                   <TrendingUp className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
                   <p className="text-purple-800 font-black">
                     Every time a spot opens and you choose to wait, someone else books it.
                   </p>
                 </div>
 
-                <p className="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-700 pt-4 leading-tight">
+                <p className="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-fuchsia-700 to-indigo-700 pt-4 leading-tight">
                   That&apos;s how much demand this one session has created since launch.
                 </p>
               </div>
@@ -142,7 +142,7 @@ export default function WhySection() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={scrollToForm}
-                className="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-purple-600 hover:from-purple-500 hover:via-fuchsia-500 hover:to-purple-500 text-white font-black text-lg sm:text-xl rounded-xl shadow-xl shadow-purple-500/20 transition-all inline-flex items-center justify-center gap-3 uppercase tracking-wider group relative overflow-hidden"
+                className="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-purple-700 to-indigo-800 hover:from-purple-600 hover:to-indigo-700 text-white font-black text-lg sm:text-xl rounded-xl shadow-xl shadow-purple-500/30 transition-all inline-flex items-center justify-center gap-3 uppercase tracking-wider group relative overflow-hidden"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
                 <span className="relative flex items-center gap-2">

@@ -84,11 +84,11 @@ export default function FaqSection() {
   const emojiMap = ["⏱️", "📝", "🎓", "📊", "🇬🇧", "💼", "📩", "📄", "🏆", "🔗", "📚"];
 
   return (
-    <section id="faq" className="relative py-28 overflow-hidden">
+    <section id="faq" className="relative py-28 overflow-hidden bg-slate-50">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-purple-50/50 via-white to-purple-50/30" />
-      <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-violet-200/30 rounded-full blur-[120px]" />
-      <div className="absolute bottom-20 left-0 w-[300px] h-[300px] bg-purple-200/30 rounded-full blur-[100px]" />
+      <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-violet-200/30 rounded-full blur-[120px] mix-blend-multiply pointer-events-none" />
+      <div className="absolute bottom-20 left-0 w-[300px] h-[300px] bg-purple-200/30 rounded-full blur-[100px] mix-blend-multiply pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -99,7 +99,7 @@ export default function FaqSection() {
           viewport={{ once: true }}
           className="text-center space-y-5 mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-xs font-black uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 border border-purple-200 text-purple-700 text-xs font-black uppercase tracking-widest shadow-sm">
             <HelpCircle className="w-4 h-4" />
             Got Questions?
           </div>
@@ -143,7 +143,7 @@ export default function FaqSection() {
                       animate={{ rotate: isOpen ? 180 : 0 }}
                       transition={{ type: "spring", stiffness: 300 }}
                       className={`shrink-0 w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${
-                        isOpen ? "bg-purple-600 text-white" : "bg-purple-50 text-purple-500"
+                        isOpen ? "bg-purple-600 text-white" : "bg-purple-50 border border-purple-100 text-purple-600"
                       }`}
                     >
                       <ChevronDown className="w-4 h-4" />
@@ -170,32 +170,34 @@ export default function FaqSection() {
           })}
         </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom CTA (Light Theme Update) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mt-16"
         >
-          <div className="relative overflow-hidden rounded-2xl">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#130e2a] to-[#1e1545]" />
+          <div className="relative overflow-hidden rounded-2xl border border-purple-100 shadow-xl">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-50 to-white" />
             <motion.div
               animate={{ x: [0, 30, 0] }}
               transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-0 right-0 w-60 h-60 bg-purple-500/10 rounded-full blur-3xl"
+              className="absolute top-0 right-0 w-60 h-60 bg-purple-200/40 rounded-full blur-3xl mix-blend-multiply"
             />
             
             <div className="relative p-8 sm:p-10 text-center">
               <div className="flex items-center justify-center gap-3 mb-4">
-                <MessageCircle className="w-6 h-6 text-purple-300" />
-                <h3 className="text-2xl font-black text-white">Still have questions?</h3>
+                <div className="w-12 h-12 rounded-xl bg-white border border-purple-100 shadow-sm flex items-center justify-center">
+                  <MessageCircle className="w-6 h-6 text-purple-600" />
+                </div>
               </div>
-              <p className="text-purple-200/60 font-medium mb-6">Reach out to us directly and we&apos;ll help you out!</p>
+              <h3 className="text-2xl font-black text-slate-900 mb-2">Still have questions?</h3>
+              <p className="text-slate-600 font-medium mb-8">Reach out to us directly and we&apos;ll help you out!</p>
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 href="tel:+923264855658"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white font-black text-lg rounded-xl shadow-xl shadow-purple-500/20 hover:from-purple-400 hover:to-fuchsia-400 transition-all"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-700 to-indigo-800 text-white font-black text-lg rounded-xl shadow-xl shadow-purple-500/20 hover:from-purple-600 hover:to-indigo-700 transition-all"
               >
                 <Phone className="w-5 h-5" />
                 Call +92-326-4855658
