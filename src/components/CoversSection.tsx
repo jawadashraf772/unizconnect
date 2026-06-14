@@ -25,105 +25,100 @@ export default function CoversSection() {
 
   const covers = [
     {
-      icon: UserCheck,
-      title: "1. Deep Profile Assessment",
-      color: "from-cyan-400 to-blue-500",
-      bg: "bg-cyan-50",
-      text: "text-cyan-600",
-      items: [
-        "Review your academics, CGPA, institution, and experience.",
-        "Understand where your profile currently stands.",
-        "See which study options may suit you."
-      ]
+      num: 1,
+      title: "REVIEW YOUR PROFILE",
+      desc: "Where you actually stand with your academic background, CGPA, professional experience, etc."
     },
     {
-      icon: TrendingUp,
-      title: "2. Honest Strengths and Weaknesses",
-      color: "from-fuchsia-400 to-purple-500",
-      bg: "bg-fuchsia-50",
-      text: "text-fuchsia-600",
-      items: [
-        "Know what makes your profile strong.",
-        "See what may weaken your chances.",
-        "Learn how to position yourself better."
-      ]
+      num: 2,
+      title: "COMPARE COUNTRIES",
+      desc: "Which countries seem the best fit for your course choice and long-terms goals and what are the visa implications of each"
     },
     {
-      icon: Briefcase,
-      title: "3. Career Goals and Preferences",
-      color: "from-orange-400 to-amber-500",
-      bg: "bg-orange-50",
-      text: "text-orange-600",
-      items: [
-        "Clarify what career path suits your strengths.",
-        "Match your course with your long-term goals.",
-        "Avoid a degree that feels right now but limits you later."
-      ]
+      num: 3,
+      title: "COMMENT ON SCHOLARSHIP FIT",
+      desc: "Which scholarships are realistic for you to target - mainstream or university-specific funding that most students don’t know"
     },
     {
-      icon: Compass,
-      title: "4. Course Comparison Based on Fit",
-      color: "from-emerald-400 to-teal-500",
-      bg: "bg-emerald-50",
-      text: "text-emerald-600",
-      items: [
-        "Compare courses based on your profile.",
-        "Understand which programs make sense.",
-        "Avoid choosing only by trend or price."
-      ]
+      num: 4,
+      title: "TALK ABOUT FINANCES",
+      desc: "What kind of budget should you expect for studying abroad, given that costs differ across countries, programmes, and scholarship outcomes"
     },
     {
-      icon: GraduationCap,
-      title: "5. Admission and Scholarship Suitability",
-      color: "from-purple-400 to-indigo-500",
-      bg: "bg-purple-50",
-      text: "text-purple-600",
-      items: [
-        "Check your admission suitability.",
-        "Understand your scholarship chances.",
-        "Know what to improve before applying."
-      ]
+      num: 5,
+      title: "SHARE PROFILE BUILDING TIPS",
+      desc: "What kind of activities you can engage in if your profile is weak since competitive scholarships are never just about good grades"
     },
     {
-      icon: Map,
-      title: "6. Roadmap, Strategy, and Timeline",
-      color: "from-rose-400 to-pink-500",
-      bg: "bg-rose-50",
-      text: "text-rose-600",
-      items: [
-        "Know what steps come first.",
-        "Plan around key deadlines.",
-        "Leave with a clear action plan."
-      ]
+      num: 6,
+      title: "DISCUSS PROCESS & TIMELINE",
+      desc: "What to do, how to do, and when to do, so you stop going in circles and avoid missing deadlines"
+    },
+    {
+      num: 7,
+      title: "ADDRESS YOUR CONFUSIONS & QUESTIONS",
+      desc: "One thing that most students who booked this session appreciate is having a safe space to ask the questions they’ve been too embarrassed to ask anywhere else.\n\nNo question is too small, basic, or silly. You can ask many as you want, even if that means extending the session from 40 minutes to 60 minutes."
     }
   ];
 
   const bonuses = [
     {
-      badge: "BONUS 1",
-      icon: MessageSquare,
-      title: "Free Follow-Up Questions",
-      description: "Ask what you forgot. Get clarity later. No second booking."
-    },
-    {
-      badge: "BONUS 2",
+      badge: "Bonus 1 - Free",
       icon: Mail,
-      title: "Custom Recap Email",
-      description: "Written session summary. Revisit advice anytime. Clear next steps."
+      title: "Post-Session Follow-Up Questions",
+      description: "After the session ends, you might realize you forgot to ask something. It happens.\n\nBut the good thing is you don't have to pay again and book another session just to ask follow-up questions and get more clarity."
     },
     {
-      badge: "BONUS 3",
+      badge: "Bonus 2 - Free",
+      icon: MessageSquare,
+      title: "Custom Recap Email",
+      description: "I understand no human (including us 😄) can remember everything word-for-word from a 40-minute session.\n\nDon’t worry...you don’t need to remember anything. Because after the session, you’ll receive a custom-written, detailed recap email covering highlights of the session."
+    },
+    {
+      badge: "Bonus 3 - Free",
       icon: Smartphone,
       title: "Direct Access to Ayesha",
-      description: "Direct contact options via phone and email. Reach out whenever you need guidance."
+      description: "We know communicating directly just feels easier. So, in your recap email, you’ll also get Ayesha’s contact number and personal email.\n\nIf something confuses you later or you start overthinking a decision, you can simply reach out to her."
     }
   ];
 
   return (
-    <section id="what-is-covered" className="py-24 relative overflow-hidden">
+    <div className="w-full bg-slate-50">
+      <section id="what-is-covered" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/30 to-white" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
+        {/* Maryam Imran Quote Spotlight */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-purple-950 text-white rounded-[2rem] p-8 sm:p-12 shadow-2xl mb-20 relative overflow-hidden border-2 border-purple-800"
+        >
+          <div className="relative z-10 flex items-stretch gap-6 sm:gap-8">
+            {/* Left vertical white border line */}
+            <div className="w-1.5 bg-white rounded-full shrink-0" />
+            
+            <div className="relative flex-1 py-2">
+              {/* Top quote icon */}
+              <span className="text-yellow-400 text-6xl sm:text-7xl font-serif absolute -top-8 -left-4 select-none opacity-80">“</span>
+              
+              <div className="pl-6 pr-6 sm:pl-8 sm:pr-8">
+                <p className="text-lg sm:text-xl md:text-2xl font-semibold italic leading-relaxed text-slate-100">
+                  I took a consultation session. It was a very wonderful experience. Ayesha not only guided me through the application process but she was also very transparent and supportive. Applications can be very exhausting and draining but due to Ayesha's encouragement I felt much better after the session.
+                </p>
+                
+                <div className="text-yellow-400 font-black text-base sm:text-lg tracking-wider mt-6">
+                  Maryam Imran - Bahria University, Islamabad
+                </div>
+              </div>
+              
+              {/* Bottom quote icon */}
+              <span className="text-yellow-400 text-6xl sm:text-7xl font-serif absolute -bottom-12 right-2 select-none opacity-80">”</span>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Core Coverage Header */}
         <div className="text-center space-y-6 mb-20">
           <motion.h2 
@@ -133,141 +128,112 @@ export default function CoversSection() {
             transition={{ type: "spring", stiffness: 100 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900"
           >
-            What This 1:1 Session{" "}
+            What You'll Get From{" "}
             <span className="inline-block relative">
-              <span className="relative z-10 text-white px-3 py-1.5 bg-gradient-to-r from-purple-600 to-violet-600 rounded-xl rotate-2 inline-block transform hover:-rotate-2 transition-transform cursor-crosshair">Actually Covers</span>
+              <span className="relative z-10 text-white px-4 py-2 bg-gradient-to-r from-purple-600 to-violet-600 rounded-2xl rotate-2 inline-block transform hover:-rotate-2 transition-transform cursor-crosshair">This 1:1 Session</span>
             </span>
           </motion.h2>
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto font-medium">
-            For 40 minutes, Ayesha focuses on your profile, goals, and career.
-          </p>
+          
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-xl text-purple-700 font-extrabold bg-purple-50 border border-purple-100 rounded-2xl px-6 py-4 inline-block shadow-sm">
+              💡 This is not a random session conducted by a junior counsellor. It's a 1:1 session directly with Ayesha. For 40 minutes, she blocks her calendar just for you, looks at your profile properly, and gives you her full attention.
+            </p>
+          </div>
         </div>
 
         {/* 6-Grid Areas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {covers.map((item, idx) => {
-            const Icon = item.icon;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 mt-12">
+          {covers.map((item, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ type: "spring", stiffness: 100, delay: idx * 0.08 }}
+              whileHover={{ y: -6, scale: 1.02, boxShadow: "0 25px 50px -12px rgba(124, 58, 237, 0.12)" }}
+              className={`bg-white border-2 border-slate-100 rounded-[2rem] p-8 pt-12 shadow-lg hover:border-purple-200 transition-all duration-300 relative group flex flex-col justify-start h-full cursor-none ${
+                item.num === 7 ? "lg:col-span-3" : ""
+              }`}
+            >
+              {/* Number bubble overlapping top-left of the card */}
+              <div className="absolute -top-5 left-8 bg-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-black text-xl shadow-md border-2 border-white">
+                {item.num}
+              </div>
+              
+              <h3 className="text-xl font-black text-slate-900 mb-4 tracking-tight mt-2 leading-snug group-hover:text-purple-600 transition-colors">
+                {item.title}
+              </h3>
+              
+              <p className="text-slate-600 text-base font-semibold leading-relaxed whitespace-pre-line">
+                {item.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Full-width Bonuses Section */}
+    <section id="bonuses" className="w-full bg-purple-950 border-y-4 border-purple-900 py-24 relative overflow-hidden">
+      {/* Decorative Blur Blob */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
+        
+        {/* Exclusive Access Badge */}
+        <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-purple-700 font-black tracking-widest uppercase shadow-lg border-2 border-purple-100 mb-8 mt-4">
+          <Gift className="w-5 h-5" />
+          Exclusive Access
+        </div>
+
+        <div className="text-center space-y-4 mb-16 w-full">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
+            Not just 40 minutes of guidance... <br />
+            when you book this session, you also get access to <span className="text-yellow-400 underline decoration-2 underline-offset-4">3 FREE bonuses</span> 👇
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {bonuses.map((bonus, idx) => {
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ type: "spring", stiffness: 100, delay: idx * 0.1 }}
-                whileHover={{ y: -6, scale: 1.01, boxShadow: "0 20px 25px -5px rgba(124, 58, 237, 0.1), 0 10px 10px -5px rgba(124, 58, 237, 0.04)" }}
-                className="bg-white border-2 border-slate-100 rounded-[2rem] p-8 shadow-md hover:border-transparent transition-all duration-300 relative group overflow-hidden h-full cursor-none"
+                viewport={{ once: true }}
+                transition={{ type: "spring", stiffness: 100, delay: idx * 0.15 }}
+                whileHover={{ scale: 1.01, y: -4 }}
+                className="bg-purple-900 p-4 sm:p-5 rounded-[2rem] shadow-xl transition-all h-full flex flex-col cursor-none"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center ${item.text} mb-8 transform group-hover:scale-110 group-hover:rotate-12 transition-all`}>
-                  <Icon className="w-7 h-7" />
+                <div className="bg-white rounded-[1.5rem] p-6 sm:p-8 space-y-6 flex-1 flex flex-col justify-start">
+                  <span className="font-extrabold text-purple-600 text-xl sm:text-2xl block">
+                    {bonus.badge}
+                  </span>
+                  <h4 className="text-xl sm:text-2xl font-black text-purple-900 leading-tight">
+                    {bonus.title}
+                  </h4>
+                  <p className="text-slate-700 text-base font-semibold leading-relaxed whitespace-pre-line">
+                    {bonus.description}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-black text-slate-900 mb-6 group-hover:text-purple-700 transition-colors">{item.title}</h3>
-                <ul className="space-y-4 relative z-10">
-                  {item.items.map((bullet, bIdx) => (
-                    <li key={bIdx} className="flex items-start gap-3 text-base text-slate-600 font-medium leading-relaxed">
-                      <CheckCircle2 className={`w-6 h-6 ${item.text} shrink-0 mt-0.5 opacity-80`} />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
               </motion.div>
             );
           })}
         </div>
 
-        {/* 7. Full-Width Personal Doubt Clearing Card */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100 }}
-          className="bg-gradient-to-br from-purple-900 via-purple-950 to-violet-950 text-white rounded-[2.5rem] p-8 sm:p-12 shadow-2xl border-4 border-purple-800 mb-24 relative overflow-hidden group"
-        >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-purple-600/30 via-violet-500/30 to-purple-400/30 blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-          
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-8 space-y-6">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-500/20 text-purple-300 font-bold uppercase tracking-wider text-sm border border-purple-500/30">
-                Safe & Confined Space
-              </span>
-              <h3 className="text-3xl sm:text-4xl font-black text-white leading-tight">
-                7. Your Big and Small Questions
-              </h3>
-              <p className="text-slate-300 text-lg font-medium leading-relaxed">
-                Bring every question confusing you right now. Discuss small doubts before they become big mistakes. Leave with answers you can actually act on.
-              </p>
-            </div>
-            <div className="lg:col-span-4 lg:text-right">
-              <motion.button
-                whileHover={{ scale: 1.05, rotate: -2 }}
-                whileTap={{ scale: 0.95, rotate: 2 }}
-                onClick={scrollToForm}
-                className="w-full lg:w-auto px-8 py-5 bg-white text-purple-700 font-black text-xl rounded-full transition-all shadow-xl shadow-purple-500/20 cursor-none border-b-4 border-purple-200 active:border-b-0 active:mt-1"
-              >
-                Book Your Strategy Session
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Bonuses Section */}
-        <div className="bg-gradient-to-br from-purple-50 to-violet-50 border-4 border-white rounded-[3rem] p-8 sm:p-14 shadow-2xl relative">
-          <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white px-6 py-2 rounded-full shadow-lg border-2 border-purple-100 font-black text-purple-700 uppercase tracking-widest text-sm flex items-center gap-2">
-            <Gift className="w-5 h-5" />
-            Exclusive Access
-          </div>
-
-          <div className="text-center space-y-4 mb-16 mt-4">
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900">
-              Not just 40 minutes of guidance...
-            </h3>
-            <p className="text-purple-600 text-xl font-bold">You also get 3 high-value bonuses included!</p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {bonuses.map((bonus, idx) => {
-              const Icon = bonus.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ type: "spring", stiffness: 100, delay: idx * 0.15 }}
-                  whileHover={{ scale: 1.01, y: -4, boxShadow: "0 20px 25px -5px rgba(124, 58, 237, 0.08)" }}
-                  className="bg-white border-2 border-purple-100/50 rounded-3xl p-8 shadow-sm transition-all h-full cursor-none"
-                >
-                  <div className="space-y-6">
-                    <span className="inline-block font-black text-white bg-gradient-to-r from-purple-600 to-fuchsia-600 px-3 py-1.5 rounded-lg tracking-widest uppercase text-xs shadow-sm">
-                      {bonus.badge}
-                    </span>
-                    <div className="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center">
-                      <Icon className="w-7 h-7" />
-                    </div>
-                    <h4 className="text-2xl font-black text-slate-900 leading-tight">{bonus.title}</h4>
-                    <p className="text-base text-slate-600 font-medium leading-relaxed">
-                      {bonus.description}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          <div className="text-center mt-16">
-            <motion.button
-              whileHover={{ scale: 1.05, rotate: 2 }}
-              whileTap={{ scale: 0.95, rotate: -2 }}
-              onClick={scrollToForm}
-              className="w-full sm:w-auto px-12 py-6 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-black text-xl rounded-full shadow-xl shadow-purple-500/30 cursor-none border-b-4 border-purple-800 active:border-b-0 active:mt-1 transition-all"
-            >
-              Yes! I want to Book My 1:1 Session 🎁
-            </motion.button>
-          </div>
-
+        <div className="text-center mt-16">
+          <motion.button
+            whileHover={{ scale: 1.05, rotate: 2 }}
+            whileTap={{ scale: 0.95, rotate: -2 }}
+            onClick={scrollToForm}
+            className="w-full sm:w-auto px-12 py-6 bg-white text-purple-700 font-black text-xl rounded-full shadow-xl shadow-purple-500/30 cursor-none border-b-4 border-purple-200 active:border-b-0 active:mt-1 transition-all"
+          >
+            Yes! I want to Book My 1:1 Session 🎁
+          </motion.button>
         </div>
 
       </div>
     </section>
+  </div>
   );
 }

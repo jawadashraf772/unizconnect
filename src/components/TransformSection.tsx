@@ -196,24 +196,24 @@ export default function TransformSection() {
               </motion.span>
               Is This You?
             </motion.div>
-            <motion.h2
+             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ type: "spring", stiffness: 80 }}
               className="text-5xl sm:text-6xl font-black text-slate-900 leading-tight"
             >
-              This session is for you{" "}
+              Who Is This{" "}
               <motion.span 
                 animate={{ scale: [1, 1.1, 1], rotate: [0, 3, -3, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
                 className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-500"
               >
-                If...
+                Session For?
               </motion.span>
             </motion.h2>
             <p className="text-xl text-slate-600 font-medium max-w-2xl mx-auto">
-              If you recognize yourself in any of these, booking this session will save you months of confusion.
+              If you recognise yourself in any of these, this session is for you.
             </p>
           </div>
 

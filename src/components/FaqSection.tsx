@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, HelpCircle, MessageCircle } from "lucide-react";
+import { ChevronDown, HelpCircle, MessageCircle, Phone, Sparkles } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -19,175 +19,188 @@ export default function FaqSection() {
   const faqs: FAQItem[] = [
     {
       question: "How long is the 1:1 session?",
-      answer: "The session lasts 40 minutes, with the option to extend up to 60 minutes if needed."
+      answer: "The session is 40 minutes long, but if your discussion needs more time it can be extended up to 60 minutes."
     },
     {
-      question: "Will Ayesha review my personal statement or scholarship essay?",
-      answer: "No, full essay review is a separate service. You can ask questions about your essays during the session."
+      question: "Will Ayesha review my personal statement or scholarship essay during the session?",
+      answer: "Full personal statement or scholarship essay review is a separate service. However, if you have questions about how to approach your personal statement or scholarship essays, what to include, what to avoid and how to position your experiences effectively, Ayesha can guide you through all of that during the session."
     },
     {
       question: "Can I ask about scholarships?",
-      answer: "Yes! Ayesha will guide you on scholarship suitability and chances based on your profile."
+      answer: "Yes, absolutely. Ayesha will help you understand your scholarship suitability, where your profile currently stands and what may improve your chances."
     },
     {
-      question: "My CGPA is low. Should I still book?",
-      answer: "Absolutely. A low CGPA affects strategy, not all opportunities. The session will clarify what’s realistic and how to improve your chances."
+      question: "My CGPA is low. Should I still book the session?",
+      answer: "Yes of course, especially if you want honest guidance. CGPA does not always mean your options are finished, but it does affect your strategy. The session will help you understand what is realistic, what can be improved, and whether studying abroad is right for you or not."
     },
     {
       question: "Is this session only for UK admissions?",
-      answer: "No. You can discuss options for the UK, US, Malaysia, Europe, Turkey, New Zealand, and other destinations. The focus is finding the best fit for your profile."
+      answer: "The session is not limited to UK admissions only; you can also discuss study options for the US, Malaysia, Germany, France, Ireland, and Sweden."
     },
     {
-      question: "Can I book this session for career guidance?",
-      answer: "Yes. It’s designed to align your study abroad choices with long-term career goals."
+      question: "Can I book this session if I need career guidance?",
+      answer: "Yes. If you're unsure what career path to pursue, which degree to choose, or whether you should study abroad or stay in Pakistan, this session can help you make an informed decision based on your goals, strengths and situation."
     },
     {
-      question: "Will I get a written summary?",
-      answer: "Yes. After the session, you will receive a custom recap email covering key advice and next steps."
+      question: "Will I get a written summary after the session?",
+      answer: "Yes, you will receive a custom recap email after the session so you can revisit the key points, advice, and next steps discussed during the session."
     },
     {
       question: "Do I need to upload my CV?",
-      answer: "Yes. Your CV helps Ayesha assess your profile and prepare for a personalized session."
+      answer: "For those who have professional or volunteer/community experience, yes definitely. And for those who are high school leavers or are in high school, they can attach their transcript or a short bio instead. This makes the guidance more personal and useful."
     },
     {
-      question: "Is admission or scholarship guaranteed?",
-      answer: "No. The session provides strategy, clarity, and guidance, but does not guarantee results."
-    },
-    {
-      question: "How will I get the session link?",
-      answer: "After payment verification, the team will send you Ayesha’s calendar link via email and WhatsApp."
+      question: "Is scholarship guaranteed?",
+      answer: "No. And honestly, you should be careful of anyone who guarantees scholarships. Scholarships are never decided by consultants. They are decided by universities and scholarship committees, and it's completely their call. What we do is help students target the right opportunities early and build the right essay strategy. In our experience, we've seen that students who apply early with strong profile positioning often have a better chance of securing good offers and funding."
     },
     {
       question: "Which study level is this session for?",
-      answer: "This session is for Undergraduate, Postgraduate, and Research-level students planning to study abroad."
+      answer: (
+        <div>
+          This session is suitable for students planning for:
+          <ul className="list-none mt-3 space-y-2">
+            <li className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+              <span className="font-bold">Undergraduate study</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+              <span className="font-bold">Postgraduate study</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+              <span className="font-bold">Doctoral study</span>
+            </li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      question: "If I am based out of Lahore, how will this session be conducted?",
+      answer: "Not to worry. Our student body is from across Pakistan, including Lahore, Islamabad, Rawalpindi, Karachi, Faisalabad, Peshawar, Gujrat, Sahiwal, Hyderabad and many other cities. In fact, most students choose to meet online (even those based in Lahore). Once your payment is verified, you'll receive a calendar link where you can choose from any of the three modes: Online via Google Meet, Phone Call, In-person at our office (Al Hafeez Executive, Floor 3, Office 316, Gulberg III, Lahore)."
     }
   ];
 
   const emojiMap = ["⏱️", "📝", "🎓", "📊", "🇬🇧", "💼", "📩", "📄", "🏆", "🔗", "📚"];
 
   return (
-    <section id="faq" className="relative py-24 overflow-hidden">
-      {/* Purple gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-50 via-white to-purple-50/50" />
-      <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-violet-200/40 rounded-full blur-[100px] mix-blend-multiply" />
-      <div className="absolute bottom-20 left-0 w-[300px] h-[300px] bg-purple-200/40 rounded-full blur-[100px] mix-blend-multiply" />
+    <section id="faq" className="relative py-28 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-50/50 via-white to-purple-50/30" />
+      <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-violet-200/30 rounded-full blur-[120px]" />
+      <div className="absolute bottom-20 left-0 w-[300px] h-[300px] bg-purple-200/30 rounded-full blur-[100px]" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center space-y-6 mb-16">
-          <motion.div 
-            initial={{ rotate: -15, scale: 0.5 }}
-            whileInView={{ rotate: 0, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white text-purple-700 text-sm font-black tracking-widest uppercase shadow-lg border-2 border-purple-200"
-          >
-            <motion.span
-              animate={{ rotate: [0, 20, -20, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              <HelpCircle className="w-5 h-5 text-purple-600" />
-            </motion.span>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center space-y-5 mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-xs font-black uppercase tracking-widest">
+            <HelpCircle className="w-4 h-4" />
             Got Questions?
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900"
-          >
+          </div>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight">
             Frequently Asked{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-600">Questions</span>
-          </motion.h2>
-          <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto">
+          </h2>
+          <p className="text-lg text-slate-500 font-medium max-w-2xl mx-auto">
             Everything you need to know about booking and the strategy session.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Accordions */}
-        <div className="space-y-4">
+        {/* FAQ Accordion */}
+        <div className="space-y-3">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
-              <motion.div 
+              <motion.div
                 key={idx}
-                initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-20px" }}
-                transition={{ type: "spring", stiffness: 150, damping: 20, delay: idx * 0.04 }}
-                className={`rounded-[1.5rem] overflow-hidden transition-all duration-300 border-2 ${
-                  isOpen 
-                    ? "bg-white border-purple-300 shadow-xl shadow-purple-500/10" 
-                    : "bg-white/80 border-purple-100/50 shadow-sm hover:border-purple-200 hover:shadow-md"
-                }`}
+                transition={{ delay: idx * 0.03, type: "spring", stiffness: 150 }}
               >
-                <motion.button
-                  whileHover={{ x: 5 }}
-                  whileTap={{ scale: 0.99 }}
-                  onClick={() => toggleFAQ(idx)}
-                  className="w-full flex justify-between items-center p-6 sm:p-7 text-left font-black text-slate-800 text-base sm:text-lg focus:outline-hidden cursor-crosshair select-none gap-4"
-                >
-                  <div className="flex items-center gap-4">
-                    <motion.span 
-                      whileHover={{ scale: 1.3, rotate: 15 }}
-                      className="text-2xl sm:text-3xl select-none shrink-0"
-                    >
-                      {emojiMap[idx] || "❓"}
-                    </motion.span>
-                    <span className="group-hover:text-purple-700 transition-colors">{faq.question}</span>
-                  </div>
-                  <motion.div
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${isOpen ? "bg-purple-600 text-white" : "bg-purple-100 text-purple-600"} transition-colors`}
+                <div className={`rounded-2xl overflow-hidden transition-all duration-300 border ${
+                  isOpen 
+                    ? "bg-white border-purple-200 shadow-lg shadow-purple-500/5" 
+                    : "bg-white/80 border-slate-100 shadow-sm hover:border-purple-100 hover:shadow-md"
+                }`}>
+                  <button
+                    onClick={() => toggleFAQ(idx)}
+                    className="w-full flex justify-between items-center p-5 sm:p-6 text-left font-bold text-slate-800 text-sm sm:text-base focus:outline-none select-none gap-4 group"
                   >
-                    <ChevronDown className="w-5 h-5" />
-                  </motion.div>
-                </motion.button>
-
-                <AnimatePresence initial={false}>
-                  {isOpen && (
+                    <div className="flex items-center gap-3.5">
+                      <span className="text-xl sm:text-2xl select-none shrink-0 group-hover:scale-110 transition-transform">
+                        {emojiMap[idx] || "❓"}
+                      </span>
+                      <span className="group-hover:text-purple-700 transition-colors font-bold leading-snug">{faq.question}</span>
+                    </div>
                     <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ type: "spring", stiffness: 200, damping: 25 }}
+                      animate={{ rotate: isOpen ? 180 : 0 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className={`shrink-0 w-8 h-8 rounded-xl flex items-center justify-center transition-colors ${
+                        isOpen ? "bg-purple-600 text-white" : "bg-purple-50 text-purple-500"
+                      }`}
                     >
-                      <div className="px-6 sm:px-7 pb-7 text-base text-slate-600 font-medium leading-relaxed border-t-2 border-purple-100 pt-5 ml-14 sm:ml-16">
-                        {faq.answer}
-                      </div>
+                      <ChevronDown className="w-4 h-4" />
                     </motion.div>
-                  )}
-                </AnimatePresence>
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 25 }}
+                      >
+                        <div className="px-5 sm:px-6 pb-6 text-sm sm:text-base text-slate-600 font-medium leading-relaxed border-t border-purple-50 pt-4 ml-[52px] sm:ml-[56px]">
+                          {faq.answer}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </motion.div>
             );
           })}
         </div>
 
         {/* Bottom CTA */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100 }}
-          className="mt-16 text-center"
+          className="mt-16"
         >
-          <div className="bg-gradient-to-r from-purple-100 to-violet-100 rounded-[2rem] p-8 sm:p-10 border-2 border-purple-200">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <MessageCircle className="w-7 h-7 text-purple-600" />
-              <h3 className="text-2xl font-black text-slate-900">Still have questions?</h3>
+          <div className="relative overflow-hidden rounded-2xl">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#130e2a] to-[#1e1545]" />
+            <motion.div
+              animate={{ x: [0, 30, 0] }}
+              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-0 right-0 w-60 h-60 bg-purple-500/10 rounded-full blur-3xl"
+            />
+            
+            <div className="relative p-8 sm:p-10 text-center">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <MessageCircle className="w-6 h-6 text-purple-300" />
+                <h3 className="text-2xl font-black text-white">Still have questions?</h3>
+              </div>
+              <p className="text-purple-200/60 font-medium mb-6">Reach out to us directly and we&apos;ll help you out!</p>
+              <motion.a
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                href="tel:+923264855658"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white font-black text-lg rounded-xl shadow-xl shadow-purple-500/20 hover:from-purple-400 hover:to-fuchsia-400 transition-all"
+              >
+                <Phone className="w-5 h-5" />
+                Call +92-326-4855658
+              </motion.a>
             </div>
-            <p className="text-slate-600 font-medium mb-6">Reach out to us directly and we'll help you out!</p>
-            <motion.a 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="tel:+923264855658" 
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-black text-lg rounded-full shadow-lg shadow-purple-500/25 cursor-none"
-            >
-              📞 Call +92-326-4855658
-            </motion.a>
           </div>
         </motion.div>
 

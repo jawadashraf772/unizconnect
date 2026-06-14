@@ -75,9 +75,9 @@ export default function FooterSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-purple-200 max-w-xl mx-auto text-xl font-medium leading-relaxed"
+            className="text-purple-200 max-w-xl mx-auto text-xl font-black leading-relaxed uppercase tracking-wider"
           >
-            Your future deserves more than random advice. Make your study abroad decision with absolute confidence.
+            Your Future Deserves More Than Random Advice!
           </motion.p>
         </div>
 
