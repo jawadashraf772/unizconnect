@@ -120,75 +120,147 @@ export default function BookingForm() {
   return (
     <div className="bg-white">
 
-      {/* HOW BOOKING WORKS TIMELINE */}
-      <section className="relative py-28 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-purple-50/30" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-100/40 rounded-full blur-[120px] -z-0" />
+      {/* HOW BOOKING WORKS — REDESIGNED */}
+      <section className="relative py-28 lg:py-36 overflow-hidden">
+        {/* Dark gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-950 via-indigo-950 to-slate-950" />
+        
+        {/* Animated gradient orbs */}
+        <motion.div 
+          animate={{ scale: [1, 1.3, 1], x: [0, 40, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-20 left-[10%] w-[500px] h-[500px] bg-purple-600/15 rounded-full blur-[150px] pointer-events-none" 
+        />
+        <motion.div 
+          animate={{ scale: [1, 1.2, 1], y: [0, -30, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          className="absolute bottom-20 right-[15%] w-[400px] h-[400px] bg-fuchsia-600/15 rounded-full blur-[120px] pointer-events-none" 
+        />
+
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "32px 32px" }} />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 80 }}
+            className="text-center space-y-6 mb-24"
+          >
+            <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+              <Sparkles className="w-4 h-4 text-purple-400" />
+              <span className="text-purple-300 font-black text-xs uppercase tracking-[0.2em]">Simple Process</span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
+              How Booking{" "}
+              <span className="relative inline-block">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-violet-400">Works</span>
+                <motion.div
+                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-fuchsia-500 rounded-full"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5, duration: 0.8 }}
+                />
+              </span>
+            </h2>
+            <p className="text-purple-200/60 text-lg font-medium max-w-lg mx-auto">4 simple steps from booking to getting on a call with Ayesha</p>
+          </motion.div>
+
+          {/* Steps — Alternating Zigzag Layout */}
+          <div className="relative">
+            
+            {/* Vertical Center Line (Desktop) */}
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2">
+              <motion.div 
+                initial={{ height: "0%" }}
+                whileInView={{ height: "100%" }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className="w-full bg-gradient-to-b from-purple-500 via-fuchsia-500 to-indigo-500 rounded-full"
+              />
+            </div>
+
+            {/* Steps */}
+            <div className="space-y-12 lg:space-y-0">
+              {steps.map((step, idx) => {
+                const isEven = idx % 2 === 0;
+                return (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, x: isEven ? -60 : 60 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ type: "spring", stiffness: 80, delay: idx * 0.15 }}
+                    className={`relative lg:flex items-center lg:pb-20 last:lg:pb-0 ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"}`}
+                  >
+                    {/* Content Card */}
+                    <div className={`lg:w-[45%] ${isEven ? "lg:pr-16 lg:text-right" : "lg:pl-16 lg:text-left"}`}>
+                      <motion.div
+                        whileHover={{ y: -8, scale: 1.02 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                        className="group relative bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] rounded-3xl p-8 sm:p-10 hover:bg-white/[0.08] hover:border-purple-500/30 transition-all duration-500 overflow-hidden"
+                      >
+                        {/* Glow effect on hover */}
+                        <div className={`absolute ${isEven ? "-right-20" : "-left-20"} -top-20 w-40 h-40 bg-gradient-to-br ${step.color} rounded-full blur-[80px] opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
+                        
+                        <div className="relative">
+                          {/* Step badge */}
+                          <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 mb-5 ${isEven ? "lg:ml-auto" : ""}`}>
+                            <span className="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em]">Step {step.step}</span>
+                          </div>
+                          
+                          <h4 className="text-2xl sm:text-3xl font-black text-white mb-3 tracking-tight">{step.title}</h4>
+                          <p className="text-purple-200/50 text-base font-semibold leading-relaxed">{step.desc}</p>
+                        </div>
+                      </motion.div>
+                    </div>
+
+                    {/* Center Circle Node */}
+                    <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 z-20">
+                      <motion.div
+                        whileHover={{ scale: 1.2, rotate: 10 }}
+                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-2xl border-4 border-slate-950 transition-all`}
+                      >
+                        <step.icon className="w-7 h-7 text-white" />
+                      </motion.div>
+                    </div>
+
+                    {/* Mobile Icon (visible only on mobile) */}
+                    <div className="lg:hidden flex justify-center -mt-6 mb-4">
+                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg border-2 border-slate-900`}>
+                        <step.icon className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+
+                    {/* Empty space for the other side */}
+                    <div className="hidden lg:block lg:w-[45%]" />
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Bottom Confirmation Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center space-y-5 mb-20"
+            transition={{ delay: 0.6 }}
+            className="flex justify-center mt-20"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-xs font-black uppercase tracking-widest">
-              <Sparkles className="w-4 h-4" />
-              Simple Process
+            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white/[0.05] border border-white/10 backdrop-blur-sm shadow-xl">
+              <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center shrink-0">
+                <CheckCircle className="w-4 h-4 text-emerald-400" />
+              </div>
+              <p className="text-sm text-purple-200/70 font-semibold">
+                Team verifies payment and sends calendar link by <span className="text-white font-black">email</span> and <span className="text-white font-black">WhatsApp</span>.
+              </p>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight lg:whitespace-nowrap">
-              How Booking{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Works</span>
-            </h2>
-            <p className="text-slate-500 text-lg font-medium max-w-md mx-auto">Simple 4-step process to get scheduled</p>
           </motion.div>
-
-          {/* Steps - Connected Timeline */}
-          <div className="relative">
-            {/* Connector Line */}
-            <div className="hidden sm:block absolute top-16 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] h-[2px] bg-gradient-to-r from-purple-200 via-fuchsia-200 to-indigo-200 z-0" />
-
-            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 sm:gap-6 relative z-10">
-              {steps.map((step, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.12, type: "spring", stiffness: 120 }}
-                  className="flex flex-col items-center text-center group"
-                >
-                  {/* Step Circle */}
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg mb-5 group-hover:shadow-xl transition-shadow`}
-                  >
-                    <step.icon className="w-6 h-6 text-white" />
-                  </motion.div>
-
-                  {/* Card */}
-                  <div className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-purple-100 transition-all duration-300 w-full">
-                    <span className="text-[10px] font-black text-purple-600 uppercase tracking-[0.2em] mb-2 block">Step {step.step}</span>
-                    <h4 className="font-black text-slate-800 text-lg mb-2">{step.title}</h4>
-                    <p className="text-sm text-slate-500 font-medium leading-relaxed">{step.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center text-slate-600 font-semibold text-sm mt-12 bg-white border border-slate-200 rounded-full py-3 px-6 inline-flex items-center gap-2 mx-auto max-w-fit shadow-sm"
-            style={{ display: "flex", margin: "3rem auto 0" }}
-          >
-            <CheckCircle className="w-4 h-4 text-emerald-500" />
-            Team verifies payment and sends calendar link by email and WhatsApp.
-          </motion.p>
         </div>
       </section>
 
