@@ -147,6 +147,30 @@ export default function OfferSection() {
                 <span className="text-purple-700 font-black">12 students</span> booked this week
               </p>
             </motion.div>
+
+            {/* Bonuses Box (Moved from Right Card) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="relative bg-gradient-to-br from-purple-50 to-fuchsia-50 border border-purple-100 rounded-2xl p-6 overflow-hidden shadow-sm mt-4"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
+              <p className="text-xs font-black text-yellow-600 uppercase tracking-[0.15em] flex items-center gap-2 mb-4 relative">
+                <Gift className="w-4 h-4 text-yellow-500" /> Exclusive Access Bonuses (PKR 15k+ value)
+              </p>
+              <div className="space-y-3 relative">
+                {bonuses.map((bonus, idx) => (
+                  <div key={idx} className="flex items-center gap-3 text-sm font-bold text-slate-700">
+                    <span className="w-7 h-7 rounded-lg bg-yellow-100 border border-yellow-200 flex items-center justify-center text-xs text-yellow-600 font-black shrink-0">
+                      {bonus.num}
+                    </span>
+                    <span>{bonus.text}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
 
           {/* Right - Premium Pricing Card (Light Theme) */}
@@ -217,23 +241,7 @@ export default function OfferSection() {
                   </ul>
                 </div>
 
-                {/* Bonuses Box */}
-                <div className="relative bg-gradient-to-br from-purple-50 to-fuchsia-50 border border-purple-100 rounded-2xl p-6 mb-8 overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
-                  <p className="text-xs font-black text-yellow-600 uppercase tracking-[0.15em] flex items-center gap-2 mb-4 relative">
-                    <Gift className="w-4 h-4 text-yellow-500" /> Exclusive Access Bonuses (PKR 15k+ value)
-                  </p>
-                  <div className="space-y-3 relative">
-                    {bonuses.map((bonus, idx) => (
-                      <div key={idx} className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                        <span className="w-7 h-7 rounded-lg bg-yellow-100 border border-yellow-200 flex items-center justify-center text-xs text-yellow-600 font-black shrink-0">
-                          {bonus.num}
-                        </span>
-                        <span>{bonus.text}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+
 
                 {/* Action Button */}
                 <motion.button
