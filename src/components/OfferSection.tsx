@@ -24,7 +24,6 @@ export default function OfferSection() {
   const bonuses = [
     { num: 1, text: "Free follow-up questions" },
     { num: 2, text: "Custom recap email" },
-    { num: 3, text: "Direct access to Ayesha" },
   ];
 
   return (
