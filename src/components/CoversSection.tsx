@@ -73,12 +73,6 @@ export default function CoversSection() {
       icon: MessageSquare,
       title: "Custom Recap Email",
       description: "I understand no human (including us 😄) can remember everything word-for-word from a 40-minute session.\n\nDon’t worry...you don’t need to remember anything. Because after the session, you’ll receive a custom-written, detailed recap email covering highlights of the session."
-    },
-    {
-      badge: "Bonus 3 - Free",
-      icon: Smartphone,
-      title: "Direct Access to Ayesha",
-      description: "We know communicating directly just feels easier. So, in your recap email, you’ll also get Ayesha’s contact number and personal email.\n\nIf something confuses you later or you start overthinking a decision, you can simply reach out to her."
     }
   ];
 
@@ -118,7 +112,7 @@ export default function CoversSection() {
             </div>
           </div>
         </motion.div>
-
+ 
         {/* Core Coverage Header */}
         <div className="text-center space-y-6 mb-20">
           <motion.h2 
@@ -140,7 +134,7 @@ export default function CoversSection() {
             </p>
           </div>
         </div>
-
+ 
         {/* 6-Grid Areas */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 mt-12">
           {covers.map((item, idx) => (
@@ -172,12 +166,12 @@ export default function CoversSection() {
         </div>
       </div>
     </section>
-
+ 
     {/* Full-width Bonuses Section */}
     <section id="bonuses" className="w-full bg-purple-950 border-y-4 border-purple-900 py-24 relative overflow-hidden">
       {/* Decorative Blur Blob */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none" />
-
+ 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
         
         {/* Exclusive Access Badge */}
@@ -185,15 +179,15 @@ export default function CoversSection() {
           <Gift className="w-5 h-5" />
           Exclusive Access
         </div>
-
+ 
         <div className="text-center space-y-4 mb-16 w-full">
           <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
             Not just 40 minutes of guidance... <br />
-            when you book this session, you also get access to <span className="text-yellow-400 underline decoration-2 underline-offset-4">3 FREE bonuses</span> 👇
+            when you book this session, you also get access to <span className="text-yellow-400 underline decoration-2 underline-offset-4">2 FREE bonuses</span> 👇
           </h3>
         </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+ 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl w-full">
           {bonuses.map((bonus, idx) => {
             return (
               <motion.div
@@ -206,7 +200,7 @@ export default function CoversSection() {
                 className="bg-purple-900 p-4 sm:p-5 rounded-[2rem] shadow-xl transition-all h-full flex flex-col cursor-none"
               >
                 <div className="bg-white rounded-[1.5rem] p-6 sm:p-8 space-y-6 flex-1 flex flex-col justify-start">
-                  <span className="font-extrabold text-purple-600 text-xl sm:text-2xl block">
+                  <span className="font-extrabold text-purple-600 text-xl block">
                     {bonus.badge}
                   </span>
                   <h4 className="text-xl sm:text-2xl font-black text-purple-900 leading-tight">

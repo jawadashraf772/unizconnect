@@ -61,7 +61,7 @@ export default function TrustSection() {
             </motion.div>
             
             <div className="space-y-4">
-              <h2 className="text-4xl sm:text-5xl font-black text-slate-900 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight lg:whitespace-nowrap">
                 Hey, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Ayesha.</span>
               </h2>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-800">

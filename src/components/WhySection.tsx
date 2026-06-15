@@ -31,7 +31,7 @@ export default function WhySection() {
             <HelpCircle className="w-4 h-4" />
             Let&apos;s Talk About Value
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight lg:whitespace-nowrap">
             Why It&apos;s For{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-fuchsia-600 to-violet-600">PKR 5000</span>?
           </h2>

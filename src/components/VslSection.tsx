@@ -1,11 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Play, Video, Sparkles } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function VslSection() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const scrollToForm = () => {
     const element = document.getElementById("booking-form");
@@ -13,6 +14,28 @@ export default function VslSection() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Track scroll progress of this section
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  // Smooth scroll progress using spring physics
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 85,
+    damping: 25,
+    restDelta: 0.001
+  });
+
+  // Calculate 3D transforms based on scroll progress:
+  // - Starts tilted back and to the side when entering viewport.
+  // - Straightens up and expands to full size when in full view.
+  const rotateX = useTransform(smoothProgress, [0, 0.45], [20, 0]);
+  const rotateY = useTransform(smoothProgress, [0, 0.45], [-12, 0]);
+  const rotateZ = useTransform(smoothProgress, [0, 0.45], [3, 0]);
+  const scale = useTransform(smoothProgress, [0, 0.45], [0.85, 1.05]);
+  const borderRadius = useTransform(smoothProgress, [0, 0.45], ["32px", "12px"]);
 
   return (
     <section id="video" className="relative py-20 lg:py-28 overflow-hidden noise-overlay">
@@ -55,7 +78,11 @@ export default function VslSection() {
         </motion.div>
       ))}
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10 relative z-10">
+      <div 
+        ref={containerRef}
+        style={{ perspective: "1200px" }}
+        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-10 relative z-10"
+      >
         
         {/* Section Heading */}
         <div className="space-y-6">
@@ -85,12 +112,16 @@ export default function VslSection() {
 
         {/* Video Embed Frame */}
         <motion.div 
-          initial={{ opacity: 0, y: 40, scale: 0.9 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 80, delay: 0.2 }}
-          whileHover={{ scale: 1.01, boxShadow: "0 25px 50px -12px rgba(124, 58, 237, 0.3)" }}
-          className="relative max-w-4xl mx-auto aspect-video rounded-[2rem] overflow-hidden border-4 border-purple-400/30 bg-purple-950 shadow-2xl shadow-purple-900/50 group cursor-none transition-all duration-300"
+          style={{
+            rotateX,
+            rotateY,
+            rotateZ,
+            scale,
+            borderRadius,
+            transformStyle: "preserve-3d",
+          }}
+          whileHover={{ scale: 1.07, boxShadow: "0 25px 50px -12px rgba(124, 58, 237, 0.4)" }}
+          className="relative max-w-4xl mx-auto aspect-video overflow-hidden border-4 border-purple-400/30 bg-purple-950 shadow-2xl shadow-purple-900/50 group cursor-none transition-colors duration-300"
           onClick={() => setIsPlaying(true)}
         >
           {!isPlaying ? (

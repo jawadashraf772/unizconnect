@@ -104,10 +104,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto font-semibold leading-relaxed px-4"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 max-w-4xl mx-auto font-semibold leading-relaxed px-4 flex items-center justify-center gap-2 flex-wrap sm:flex-nowrap sm:whitespace-nowrap"
           >
-            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-purple-100 text-purple-600 text-[10px] shrink-0 font-black mr-2 align-middle">✕</span>
-            without feeling overwhelmed by too many options and too little clarity.
+            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-100 text-purple-600 text-[10px] shrink-0 font-black">✕</span>
+            <span>without feeling overwhelmed by too many options and too little clarity.</span>
           </motion.p>
 
           {/* CTA & Rating Block */}

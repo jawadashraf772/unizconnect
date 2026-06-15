@@ -103,7 +103,7 @@ export default function FaqSection() {
             <HelpCircle className="w-4 h-4" />
             Got Questions?
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight lg:whitespace-nowrap">
             Frequently Asked{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-600">Questions</span>
           </h2>

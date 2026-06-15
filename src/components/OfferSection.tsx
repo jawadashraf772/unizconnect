@@ -58,7 +58,7 @@ export default function OfferSection() {
             <Sparkles className="w-4 h-4 text-purple-600" />
             <span className="text-purple-700 font-black text-xs uppercase tracking-[0.2em]">Exclusive Strategy Offer</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.1] lg:whitespace-nowrap">
             Take Your{" "}
             <span className="relative">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-fuchsia-600 to-violet-600">
