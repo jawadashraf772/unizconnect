@@ -169,30 +169,26 @@ export default function VslSection() {
         {isPlaying && (
           <div 
             onClick={() => setIsPlaying(false)}
-            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-xl transition-all duration-300"
+            className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
           >
             {/* Close button */}
             <button
               onClick={() => setIsPlaying(false)}
-              className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all cursor-none z-[10000]"
+              className="absolute top-6 right-6 w-12 h-12 bg-white/25 hover:bg-white/40 text-white rounded-full flex items-center justify-center transition-all cursor-none z-[10000] shadow-lg backdrop-blur-md"
               aria-label="Close video"
             >
               <span className="text-2xl font-light">✕</span>
             </button>
 
-            {/* Centered Video Player */}
-            <div 
+            {/* Full-Screen Video Player */}
+            <video 
+              className="w-full h-full object-cover"
+              src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4"
+              autoPlay
+              controls
+              playsInline
               onClick={(e) => e.stopPropagation()} 
-              className="w-full max-w-5xl px-4 aspect-video relative z-[9999]"
-            >
-              <video 
-                className="w-full h-full rounded-2xl shadow-2xl border border-white/10"
-                src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4"
-                autoPlay
-                controls
-                playsInline
-              />
-            </div>
+            />
           </div>
         )}
 
