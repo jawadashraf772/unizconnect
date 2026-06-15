@@ -173,8 +173,8 @@ export default function BookingForm() {
           {/* Steps — Alternating Zigzag Layout */}
           <div className="relative">
             
-            {/* Vertical Center Line (Desktop) */}
-            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px -translate-x-1/2">
+            {/* Vertical Center Line / Left Line on Mobile */}
+            <div className="absolute left-6 sm:left-8 lg:left-1/2 top-0 bottom-0 w-px -translate-x-1/2">
               <motion.div 
                 initial={{ height: "0%" }}
                 whileInView={{ height: "100%" }}
@@ -185,24 +185,24 @@ export default function BookingForm() {
             </div>
 
             {/* Steps */}
-            <div className="space-y-12 lg:space-y-0">
+            <div className="space-y-0">
               {steps.map((step, idx) => {
                 const isEven = idx % 2 === 0;
                 return (
                   <motion.div
                     key={idx}
-                    initial={{ opacity: 0, x: isEven ? -60 : 60 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ type: "spring", stiffness: 80, delay: idx * 0.15 }}
-                    className={`relative lg:flex items-center lg:pb-20 last:lg:pb-0 ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"}`}
+                    className={`relative pl-12 sm:pl-16 lg:pl-0 pb-12 lg:pb-20 last:pb-0 lg:flex items-center ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"}`}
                   >
                     {/* Content Card */}
-                    <div className={`lg:w-[45%] ${isEven ? "lg:pr-16 lg:text-right" : "lg:pl-16 lg:text-left"}`}>
+                    <div className={`w-full lg:w-[45%] ${isEven ? "lg:pr-16 lg:text-right" : "lg:pl-16 lg:text-left"}`}>
                       <motion.div
                         whileHover={{ y: -8, scale: 1.02 }}
                         transition={{ type: "spring", stiffness: 300 }}
-                        className="group relative bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] rounded-3xl p-8 sm:p-10 hover:bg-white/[0.08] hover:border-purple-500/30 transition-all duration-500 overflow-hidden"
+                        className="group relative bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] rounded-3xl p-6 sm:p-10 hover:bg-white/[0.08] hover:border-purple-500/30 transition-all duration-500 overflow-hidden"
                       >
                         {/* Glow effect on hover */}
                         <div className={`absolute ${isEven ? "-right-20" : "-left-20"} -top-20 w-40 h-40 bg-gradient-to-br ${step.color} rounded-full blur-[80px] opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
@@ -213,27 +213,20 @@ export default function BookingForm() {
                             <span className="text-[10px] font-black text-purple-400 uppercase tracking-[0.2em]">Step {step.step}</span>
                           </div>
                           
-                          <h4 className="text-2xl sm:text-3xl font-black text-white mb-3 tracking-tight">{step.title}</h4>
+                          <h4 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-3 tracking-tight">{step.title}</h4>
                           <p className="text-purple-200/50 text-base font-semibold leading-relaxed">{step.desc}</p>
                         </div>
                       </motion.div>
                     </div>
 
-                    {/* Center Circle Node */}
-                    <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 z-20">
+                    {/* Circle Node (Responsive - Left-aligned on mobile, center-aligned on desktop) */}
+                    <div className="absolute left-6 sm:left-8 -translate-x-1/2 top-6 lg:top-1/2 lg:-translate-y-1/2 lg:left-1/2 z-20">
                       <motion.div
                         whileHover={{ scale: 1.2, rotate: 10 }}
-                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-2xl border-4 border-slate-950 transition-all`}
+                        className={`w-12 h-12 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-2xl border-4 border-slate-950 transition-all`}
                       >
-                        <step.icon className="w-7 h-7 text-white" />
+                        <step.icon className="w-5 h-5 lg:w-7 lg:h-7 text-white" />
                       </motion.div>
-                    </div>
-
-                    {/* Mobile Icon (visible only on mobile) */}
-                    <div className="lg:hidden flex justify-center -mt-6 mb-4">
-                      <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg border-2 border-slate-900`}>
-                        <step.icon className="w-6 h-6 text-white" />
-                      </div>
                     </div>
 
                     {/* Empty space for the other side */}
@@ -252,11 +245,11 @@ export default function BookingForm() {
             transition={{ delay: 0.6 }}
             className="flex justify-center mt-20"
           >
-            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-white/[0.05] border border-white/10 backdrop-blur-sm shadow-xl">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 px-6 py-5 sm:px-8 sm:py-4 rounded-2xl bg-white/[0.05] border border-white/10 backdrop-blur-sm shadow-xl max-w-2xl mx-auto">
               <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center shrink-0">
                 <CheckCircle className="w-4 h-4 text-emerald-400" />
               </div>
-              <p className="text-sm text-purple-200/70 font-semibold">
+              <p className="text-sm text-purple-200/70 font-semibold text-center sm:text-left">
                 Team verifies payment and sends calendar link by <span className="text-white font-black">email</span> and <span className="text-white font-black">WhatsApp</span>.
               </p>
             </div>
