@@ -124,56 +124,77 @@ export default function VslSection() {
           className="relative max-w-4xl mx-auto aspect-video overflow-hidden border-4 border-purple-400/30 bg-purple-950 shadow-2xl shadow-purple-900/50 group cursor-none transition-colors duration-300"
           onClick={() => setIsPlaying(true)}
         >
-          {!isPlaying ? (
-            <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center z-10 p-6">
-              {/* Background Thumbnail Image */}
-              <img 
-                src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/6928bdac571896657f6dba4d.png" 
-                alt="Your Study Abroad Decision Needs a 1:1 Session" 
-                className="absolute inset-0 w-full h-full object-cover -z-10"
-              />
-              {/* Subtle overlay that darkens slightly on hover */}
-              <div className="absolute inset-0 bg-purple-950/10 group-hover:bg-purple-950/30 transition-colors duration-300 -z-10" />
-
-              {/* Play Button with pulse ring */}
-              <div className="relative flex flex-col items-center gap-6">
-                <div className="relative">
-                  <motion.div 
-                    animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0, 0.4] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute -inset-6 bg-purple-500 rounded-full" 
-                  />
-                  <motion.div 
-                    animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
-                    className="absolute -inset-10 bg-purple-400 rounded-full" 
-                  />
-                  <motion.button 
-                    whileHover={{ scale: 1.15, rotate: 10 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center text-white shadow-2xl shadow-purple-500/50 cursor-none border-4 border-white/20"
-                  >
-                    <Play className="w-10 h-10 fill-current ml-1.5" />
-                  </motion.button>
-                </div>
-
-                <span className="px-5 py-2.5 rounded-xl bg-purple-950/80 border border-purple-500/30 text-white font-black text-sm tracking-wider uppercase shadow-xl animate-pulse backdrop-blur-sm">
-                  WATCH THIS VIDEO BEFORE CLICKING
-                </span>
-              </div>
-            </div>
-          ) : (
-            <video 
-              className="absolute inset-0 w-full h-full object-cover"
-              src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4"
-              autoPlay
-              controls
-              playsInline
+          <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center z-10 p-6">
+            {/* Background Thumbnail Image */}
+            <img 
+              src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/6928bdac571896657f6dba4d.png" 
+              alt="Your Study Abroad Decision Needs a 1:1 Session" 
+              className="absolute inset-0 w-full h-full object-cover -z-10"
             />
-          )}
+            {/* Subtle overlay that darkens slightly on hover */}
+            <div className="absolute inset-0 bg-purple-950/10 group-hover:bg-purple-950/30 transition-colors duration-300 -z-10" />
+
+            {/* Play Button with pulse ring */}
+            <div className="relative flex flex-col items-center gap-6">
+              <div className="relative">
+                <motion.div 
+                  animate={{ scale: [1, 1.5, 1], opacity: [0.4, 0, 0.4] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="absolute -inset-6 bg-purple-500 rounded-full" 
+                />
+                <motion.div 
+                  animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
+                  transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+                  className="absolute -inset-10 bg-purple-400 rounded-full" 
+                />
+                <motion.button 
+                  whileHover={{ scale: 1.15, rotate: 10 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center text-white shadow-2xl shadow-purple-500/50 cursor-none border-4 border-white/20"
+                >
+                  <Play className="w-10 h-10 fill-current ml-1.5" />
+                </motion.button>
+              </div>
+
+              <span className="px-5 py-2.5 rounded-xl bg-purple-950/80 border border-purple-500/30 text-white font-black text-sm tracking-wider uppercase shadow-xl animate-pulse backdrop-blur-sm">
+                WATCH THIS VIDEO BEFORE CLICKING
+              </span>
+            </div>
+          </div>
 
           <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-violet-900 -z-10" />
         </motion.div>
+
+        {/* Full Screen Video Modal */}
+        {isPlaying && (
+          <div 
+            onClick={() => setIsPlaying(false)}
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-xl transition-all duration-300"
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setIsPlaying(false)}
+              className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition-all cursor-none z-[10000]"
+              aria-label="Close video"
+            >
+              <span className="text-2xl font-light">✕</span>
+            </button>
+
+            {/* Centered Video Player */}
+            <div 
+              onClick={(e) => e.stopPropagation()} 
+              className="w-full max-w-5xl px-4 aspect-video relative z-[9999]"
+            >
+              <video 
+                className="w-full h-full rounded-2xl shadow-2xl border border-white/10"
+                src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4"
+                autoPlay
+                controls
+                playsInline
+              />
+            </div>
+          </div>
+        )}
 
         {/* VSL CTA */}
         <motion.div
