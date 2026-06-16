@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { Play, Video, Sparkles } from "lucide-react";
 import { useState, useRef } from "react";
 
@@ -14,28 +14,6 @@ export default function VslSection() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  // Track scroll progress of this section
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
-  // Smooth scroll progress using spring physics
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 85,
-    damping: 25,
-    restDelta: 0.001
-  });
-
-  // Calculate 3D transforms based on scroll progress:
-  // - Starts tilted back and to the side when entering viewport.
-  // - Straightens up and expands to full size when in full view.
-  const rotateX = useTransform(smoothProgress, [0, 0.45], [20, 0]);
-  const rotateY = useTransform(smoothProgress, [0, 0.45], [-12, 0]);
-  const rotateZ = useTransform(smoothProgress, [0, 0.45], [3, 0]);
-  const scale = useTransform(smoothProgress, [0, 0.45], [0.9, 1]);
-  const borderRadius = useTransform(smoothProgress, [0, 0.45], ["32px", "0px"]);
 
   return (
     <section id="video" ref={containerRef} className="relative py-20 lg:py-28 overflow-hidden noise-overlay">
@@ -108,18 +86,14 @@ export default function VslSection() {
         </div>
 
         {/* Video Embed Frame (Full Width Container) */}
-        <div style={{ perspective: "1200px" }} className="w-full relative my-8">
+        <div className="w-full relative my-8">
           <motion.div 
-            style={{
-              rotateX,
-              rotateY,
-              rotateZ,
-              scale,
-              borderRadius,
-              transformStyle: "preserve-3d",
-            }}
-            whileHover={{ scale: 1.02, boxShadow: "0 25px 50px -12px rgba(124, 58, 237, 0.4)" }}
-            className="relative w-full aspect-video overflow-hidden border-y-4 border-purple-400/30 bg-purple-950 shadow-2xl group cursor-none transition-all duration-300"
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 80, damping: 20 }}
+            whileHover={{ scale: 1.01, boxShadow: "0 25px 50px -12px rgba(124, 58, 237, 0.4)" }}
+            className="relative w-full aspect-video overflow-hidden border-y-4 border-purple-400/30 bg-purple-950 shadow-2xl group transition-all duration-300"
             onClick={() => setIsPlaying(true)}
           >
             <div className="absolute inset-0 w-full h-full flex flex-col items-center justify-center z-10 p-6">
@@ -148,7 +122,7 @@ export default function VslSection() {
                   <motion.button 
                     whileHover={{ scale: 1.15, rotate: 10 }}
                     whileTap={{ scale: 0.9 }}
-                    className="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center text-white shadow-2xl shadow-purple-500/50 cursor-none border-4 border-white/20"
+                    className="relative w-24 h-24 bg-gradient-to-br from-purple-500 to-violet-600 rounded-full flex items-center justify-center text-white shadow-2xl shadow-purple-500/50 border-4 border-white/20"
                   >
                     <Play className="w-10 h-10 fill-current ml-1.5" />
                   </motion.button>
