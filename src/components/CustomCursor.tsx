@@ -21,26 +21,26 @@ export function CustomCursor() {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
-  // Instantly responsive coordinates for the inner dot
-  const [rawCoords, setRawCoords] = useState({ x: -100, y: -100 });
-
   // Spring configuration for the trailing outer ring
   const springConfig = { damping: 30, stiffness: 250, mass: 0.6 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
+    // Check if the user is on a mobile/touch device
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (isTouchDevice) return;
+
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
-      setRawCoords({ x: e.clientX, y: e.clientY });
       if (!isVisible) setIsVisible(true);
     };
 
     const handleMouseLeave = () => setIsVisible(false);
     const handleMouseEnter = () => setIsVisible(true);
 
-    const handleMouseDown = () => {
+    const handleMouseDown = (e: MouseEvent) => {
       setIsClicking(true);
       // Spawn burst particles on click
       const newParticles: Particle[] = Array.from({ length: 8 }).map((_, idx) => {
@@ -48,8 +48,8 @@ export function CustomCursor() {
         const randomColor = colors[Math.floor(Math.random() * colors.length)];
         return {
           id: Date.now() + idx,
-          x: rawCoords.x,
-          y: rawCoords.y,
+          x: e.clientX,
+          y: e.clientY,
           color: randomColor,
           angle: (idx * 45 * Math.PI) / 180 + (Math.random() * 0.2 - 0.1),
           distance: 40 + Math.random() * 40,
@@ -60,41 +60,30 @@ export function CustomCursor() {
 
     const handleMouseUp = () => setIsClicking(false);
 
-    const handleElementHover = () => setIsHovering(true);
-    const handleElementLeave = () => setIsHovering(false);
-
-    window.addEventListener("mousemove", moveCursor);
-    window.addEventListener("mousedown", handleMouseDown);
-    window.addEventListener("mouseup", handleMouseUp);
-    document.body.addEventListener("mouseleave", handleMouseLeave);
-    document.body.addEventListener("mouseenter", handleMouseEnter);
-
-    // Add listeners to clickable elements
-    const updateClickables = () => {
-      const clickables = document.querySelectorAll(
-        "a, button, input, textarea, select, [role='button'], .hover-magnetic"
-      );
-      clickables.forEach((el) => {
-        el.addEventListener("mouseenter", handleElementHover);
-        el.addEventListener("mouseleave", handleElementLeave);
-      });
+    // Event delegation: monitor mouseover globally to check if hover is on clickable elements
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+      const isClickable = target.closest("a, button, input, textarea, select, [role='button'], .hover-magnetic");
+      setIsHovering(!!isClickable);
     };
 
-    updateClickables();
-
-    // Re-check periodically or on DOM changes to bind new elements
-    const observer = new MutationObserver(updateClickables);
-    observer.observe(document.body, { childList: true, subtree: true });
+    window.addEventListener("mousemove", moveCursor, { passive: true });
+    window.addEventListener("mousedown", handleMouseDown, { passive: true });
+    window.addEventListener("mouseup", handleMouseUp, { passive: true });
+    document.addEventListener("mouseover", handleMouseOver, { passive: true });
+    document.body.addEventListener("mouseleave", handleMouseLeave, { passive: true });
+    document.body.addEventListener("mouseenter", handleMouseEnter, { passive: true });
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("mousedown", handleMouseDown);
       window.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("mouseover", handleMouseOver);
       document.body.removeEventListener("mouseleave", handleMouseLeave);
       document.body.removeEventListener("mouseenter", handleMouseEnter);
-      observer.disconnect();
     };
-  }, [cursorX, cursorY, isVisible, rawCoords.x, rawCoords.y]);
+  }, [cursorX, cursorY, isVisible]);
 
   // Clean up particles
   useEffect(() => {
@@ -154,8 +143,8 @@ export function CustomCursor() {
       <motion.div
         className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999] hidden md:block"
         style={{
-          x: rawCoords.x,
-          y: rawCoords.y,
+          x: cursorX,
+          y: cursorY,
           translateX: "-50%",
           translateY: "-50%",
           backgroundColor: isHovering ? "#7c3aed" : "#d946ef",
