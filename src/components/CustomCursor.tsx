@@ -69,9 +69,14 @@ export function CustomCursor() {
       setIsHovering(!!isClickable);
     };
 
+    const handleResize = () => {
+      setIsVisible(false);
+    };
+
     window.addEventListener("mousemove", moveCursor, { passive: true });
     window.addEventListener("mousedown", handleMouseDown, { passive: true });
     window.addEventListener("mouseup", handleMouseUp, { passive: true });
+    window.addEventListener("resize", handleResize, { passive: true });
     document.addEventListener("mouseover", handleMouseOver, { passive: true });
     document.body.addEventListener("mouseleave", handleMouseLeave, { passive: true });
     document.body.addEventListener("mouseenter", handleMouseEnter, { passive: true });
@@ -80,6 +85,7 @@ export function CustomCursor() {
       window.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("mousedown", handleMouseDown);
       window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("resize", handleResize);
       document.removeEventListener("mouseover", handleMouseOver);
       document.body.removeEventListener("mouseleave", handleMouseLeave);
       document.body.removeEventListener("mouseenter", handleMouseEnter);

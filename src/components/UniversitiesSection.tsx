@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Globe } from "lucide-react";
 
 /* Each university gets a styled shield/crest-style logo box with their brand color + initials.
@@ -39,10 +38,8 @@ export default function UniversitiesSection() {
     <section className="py-24 relative overflow-hidden w-full">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/40 to-white" />
-      <motion.div 
-        animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.25, 0.15] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-purple-300/30 rounded-full blur-[120px]" 
+      <div 
+        className="absolute top-1/2 left-1/2 w-[700px] h-[700px] bg-purple-300/30 rounded-full blur-[120px] animate-smooth-pulse-glow" 
       />
 
       {/* Full-width marquee container */}
@@ -53,15 +50,11 @@ export default function UniversitiesSection() {
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
           <div className="overflow-hidden w-full">
-            <motion.div 
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-              className="flex gap-5 w-max"
-            >
+            <div className="flex gap-5 w-max animate-marquee-left">
               {[...row1Extended, ...row1Extended].map((uni, idx) => (
                 <UniCard key={idx} uni={uni} />
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -70,15 +63,11 @@ export default function UniversitiesSection() {
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
           <div className="overflow-hidden w-full">
-            <motion.div 
-              animate={{ x: ["-50%", "0%"] }}
-              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-              className="flex gap-5 w-max"
-            >
+            <div className="flex gap-5 w-max animate-marquee-right">
               {[...row2Extended, ...row2Extended].map((uni, idx) => (
                 <UniCard key={idx} uni={uni} />
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
 

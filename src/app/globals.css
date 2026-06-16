@@ -138,3 +138,50 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 0;
   }
 }
+
+/* Hardware accelerated Marquee Animations for UniversitiesSection */
+@keyframes marquee-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 40s linear infinite;
+  will-change: transform;
+}
+
+/* Hardware accelerated Pulse Glow Animation for Background Blur */
+@keyframes smooth-pulse-glow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: translate3d(-50%, -50%, 0) scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: translate3d(-50%, -50%, 0) scale(1.08);
+  }
+}
+
+.animate-smooth-pulse-glow {
+  animation: smooth-pulse-glow 10s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
