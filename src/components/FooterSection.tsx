@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Heart } from "lucide-react";
+import { Sparkles, Heart, Facebook, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 
 export default function FooterSection() {
@@ -116,6 +116,37 @@ export default function FooterSection() {
             <span className="font-black text-xl text-white tracking-tight">
               Uniz<span className="text-purple-300">Connect</span>
             </span>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex items-center justify-center gap-4">
+            <a 
+              href="https://www.facebook.com/unizconnect" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-purple-300 hover:text-white transition-all duration-300 p-2.5 rounded-full bg-white/5 hover:bg-white/10 hover:scale-110 active:scale-95"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-6 h-6" />
+            </a>
+            <a 
+              href="https://www.instagram.com/unizconnect/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-purple-300 hover:text-white transition-all duration-300 p-2.5 rounded-full bg-white/5 hover:bg-white/10 hover:scale-110 active:scale-95"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-6 h-6" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/company/unizconnect/posts/?feedView=all" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-purple-300 hover:text-white transition-all duration-300 p-2.5 rounded-full bg-white/5 hover:bg-white/10 hover:scale-110 active:scale-95"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-6 h-6" />
+            </a>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-purple-300 font-bold">
