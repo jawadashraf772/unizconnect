@@ -16,7 +16,12 @@ export default function VslSection() {
   };
 
   return (
-    <section id="video" ref={containerRef} className="relative py-20 lg:py-28 overflow-hidden noise-overlay">
+    <section 
+      id="video" 
+      ref={containerRef} 
+      className="relative py-20 lg:py-28 overflow-hidden noise-overlay"
+      style={{ zIndex: isPlaying ? 999999 : undefined }}
+    >
       {/* Deep purple gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-950 via-violet-900 to-indigo-950" />
       
@@ -138,33 +143,6 @@ export default function VslSection() {
           </motion.div>
         </div>
 
-        {/* Full Screen Video Modal */}
-        {isPlaying && (
-          <div 
-            onClick={() => setIsPlaying(false)}
-            className="fixed inset-0 z-[9999] bg-black flex items-center justify-center"
-          >
-            {/* Close button */}
-            <button
-              onClick={() => setIsPlaying(false)}
-              className="absolute top-6 right-6 w-12 h-12 bg-white/25 hover:bg-white/40 text-white rounded-full flex items-center justify-center transition-all cursor-none z-[10000] shadow-lg backdrop-blur-md"
-              aria-label="Close video"
-            >
-              <span className="text-2xl font-light">✕</span>
-            </button>
-
-            {/* Full-Screen Video Player */}
-            <video 
-              className="w-full h-full object-cover"
-              src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4"
-              autoPlay
-              controls
-              playsInline
-              onClick={(e) => e.stopPropagation()} 
-            />
-          </div>
-        )}
-
         {/* VSL CTA (Constrained Width) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -185,6 +163,35 @@ export default function VslSection() {
         </motion.div>
 
       </div>
+
+      {/* Full Screen Video Modal - Placed outside the relative container to avoid local stacking context constraints */}
+      {isPlaying && (
+        <div 
+          onClick={() => setIsPlaying(false)}
+          className="fixed inset-0 bg-black flex items-center justify-center"
+          style={{ zIndex: 999999 }}
+        >
+          {/* Close button */}
+          <button
+            onClick={() => setIsPlaying(false)}
+            className="absolute top-6 right-6 w-12 h-12 bg-white/25 hover:bg-white/40 text-white rounded-full flex items-center justify-center transition-all cursor-none shadow-lg backdrop-blur-md"
+            style={{ zIndex: 1000000 }}
+            aria-label="Close video"
+          >
+            <span className="text-2xl font-light">✕</span>
+          </button>
+
+          {/* Full-Screen Video Player */}
+          <video 
+            className="w-full h-full object-cover"
+            src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4"
+            autoPlay
+            controls
+            playsInline
+            onClick={(e) => e.stopPropagation()} 
+          />
+        </div>
+      )}
     </section>
   );
 }
