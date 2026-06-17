@@ -7,20 +7,19 @@ import { Globe } from "lucide-react";
 
 export default function UniversitiesSection() {
   const universities = [
-    { name: "University of Bristol", country: "UK", logo: "/university of bristol.png" },
-    { name: "University of Liverpool", country: "UK", logo: "/university of liverpool.png" },
-    { name: "Nottingham Trent University", country: "UK", logo: "/Nottingham Trent University.png" },
-    { name: "Loughborough University", country: "UK", logo: "/loughborough University.png" },
-    { name: "London School of Economics", country: "UK", logo: "/london school of economics.png" },
-    { name: "University of Sussex", country: "UK", logo: "/University of suseex.jpg" },
-    { name: "University of Leeds", country: "UK", logo: "/University of Leeds.png" },
-    { name: "University of Manchester", country: "UK", logo: "/Manchester_University_Logo_(2).png" },
-    { name: "University of Sheffield", country: "UK", logo: "/university of Sheffield.png" },
-    { name: "Queen Mary University", country: "UK", logo: "/Queen Mary University.png" },
+    { name: "LUMS", logo: "/6bd02876308442c384a692045335addd.jpg" },
+    { name: "Bahria University", logo: "/BAHARIA UNI.png" },
+    { name: "Beaconhouse National University", logo: "/Beaconhouse_National_University_logo.png" },
+    { name: "Forman Christian College", logo: "/FCC.png" },
+    { name: "IBA Karachi", logo: "/IBA.webp" },
+    { name: "IoBM", logo: "/IOBM.png" },
+    { name: "LGS", logo: "/LGS.png" },
+    { name: "NED University", logo: "/NED UNI.png" },
+    { name: "NUST", logo: "/nust.jpg" }
   ];
 
   const row1 = universities.slice(0, 5);
-  const row2 = universities.slice(5, 10);
+  const row2 = universities.slice(5, 9);
   const row1Extended = [...row1, ...row1, ...row1];
   const row2Extended = [...row2, ...row2, ...row2];
 
