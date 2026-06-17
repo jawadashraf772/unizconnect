@@ -7,7 +7,7 @@ import { Globe } from "lucide-react";
 
 export default function UniversitiesSection() {
   const universities = [
-    { name: "LUMS", logo: "/6bd02876308442c384a692045335addd.jpg" },
+    { name: "LUMS", logo: "/lums.png" },
     { name: "Bahria University", logo: "/BAHARIA UNI.png" },
     { name: "Beaconhouse National University", logo: "/Beaconhouse_National_University_logo.png" },
     { name: "Forman Christian College", logo: "/FCC.png" },
