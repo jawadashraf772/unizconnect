@@ -79,29 +79,7 @@ export default function TestimonialsSection() {
         className="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-violet-600/15 rounded-full blur-[120px]" 
       />
 
-      {/* Floating emojis */}
-      {["⭐", "💬", "🎓", "💜", "✨"].map((e, i) => (
-        <motion.div
-          key={i}
-          className="absolute text-4xl select-none opacity-10 z-10"
-          animate={{
-            y: [0, -25, 0],
-            rotate: [0, 15, -15, 0],
-          }}
-          transition={{
-            duration: 6 + i * 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: i * 1.5,
-          }}
-          style={{
-            top: `${15 + i * 18}%`,
-            left: `${8 + i * 20}%`,
-          }}
-        >
-          {e}
-        </motion.div>
-      ))}
+
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

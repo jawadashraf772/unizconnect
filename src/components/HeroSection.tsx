@@ -53,9 +53,9 @@ export default function HeroSection() {
             className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.2] px-2"
           >
             Get Personalized Guidance That Has Helped{" "}
-            <span className="relative inline-block text-purple-600 px-1 font-black">
+            <span className="relative inline-block text-red-600 px-1 font-black">
               1300+ Students
-              <span className="absolute left-0 bottom-1.5 w-full h-2 bg-purple-100 rounded-full -z-10 transform -rotate-1" />
+              <span className="absolute left-0 bottom-1.5 w-full h-2 bg-red-100 rounded-full -z-10 transform -rotate-1" />
             </span>{" "}
             Make Smarter Decisions About{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600">
@@ -70,7 +70,6 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 max-w-5xl mx-auto font-semibold leading-relaxed px-4 flex items-center justify-center gap-2 flex-wrap sm:flex-nowrap"
           >
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-100 text-purple-600 text-[10px] shrink-0 font-black">✕</span>
             <span className="sm:whitespace-nowrap text-center">without feeling overwhelmed by too many options and too little clarity.</span>
           </motion.p>
 
