@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Play, Video, Sparkles } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function VslSection() {
   const [isPlaying, setIsPlaying] = useState(false);
