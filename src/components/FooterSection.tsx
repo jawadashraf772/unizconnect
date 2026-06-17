@@ -29,30 +29,7 @@ export default function FooterSection() {
         className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-violet-600 rounded-full blur-[120px]" 
       />
 
-      {/* Floating emojis */}
-      {["🎓", "✈️", "🌍", "💜", "✨", "🚀"].map((e, i) => (
-        <motion.div
-          key={i}
-          className="absolute text-4xl sm:text-5xl select-none opacity-10 z-10"
-          animate={{
-            y: [0, -30, 0],
-            x: [0, 15, -15, 0],
-            rotate: [0, 15, -15, 0],
-          }}
-          transition={{
-            duration: 6 + i * 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: i * 1.5,
-          }}
-          style={{
-            top: `${10 + i * 15}%`,
-            left: `${5 + i * 17}%`,
-          }}
-        >
-          {e}
-        </motion.div>
-      ))}
+
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20 lg:py-28 relative z-10">
         

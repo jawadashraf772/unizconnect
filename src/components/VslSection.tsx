@@ -51,29 +51,7 @@ export default function VslSection() {
         className="absolute bottom-10 left-1/4 w-[400px] h-[400px] bg-violet-600/20 rounded-full blur-[100px]" 
       />
 
-      {/* Floating sparkle emojis */}
-      {["✨", "🎬", "🎓", "💜"].map((e, i) => (
-        <motion.div
-          key={i}
-          className="absolute text-4xl select-none opacity-20 z-10"
-          animate={{
-            y: [0, -25, 0],
-            rotate: [0, 15, -15, 0],
-          }}
-          transition={{
-            duration: 5 + i * 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: i * 1.5,
-          }}
-          style={{
-            top: `${15 + i * 20}%`,
-            left: `${10 + i * 25}%`,
-          }}
-        >
-          {e}
-        </motion.div>
-      ))}
+
 
       {/* Full width content flex container */}
       <div className="relative z-10 w-full flex flex-col items-center">

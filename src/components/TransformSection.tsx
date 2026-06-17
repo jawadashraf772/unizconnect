@@ -145,38 +145,7 @@ export default function TransformSection() {
         <div className="absolute bottom-20 right-10 w-[300px] h-[300px] bg-violet-300/40 rounded-full blur-[80px] mix-blend-multiply" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-200/30 rounded-full blur-[100px] mix-blend-multiply" />
 
-        {/* Playful floating emojis in background */}
-        {[
-          { char: "🤔", top: "10%", left: "8%", delay: 0.2, duration: 7 },
-          { char: "💡", top: "25%", left: "82%", delay: 0.9, duration: 6 },
-          { char: "🌟", top: "65%", left: "5%", delay: 1.5, duration: 9 },
-          { char: "🚀", top: "80%", left: "85%", delay: 0.5, duration: 8 },
-          { char: "🎯", top: "45%", left: "88%", delay: 1.1, duration: 5 },
-          { char: "✨", top: "15%", left: "78%", delay: 2.3, duration: 7 },
-          { char: "🌈", top: "85%", left: "15%", delay: 1.8, duration: 6 },
-        ].map((emoji, idx) => (
-          <motion.div
-            key={idx}
-            className="absolute text-5xl sm:text-6xl select-none opacity-15 z-0"
-            animate={{
-              y: [0, -40, 0],
-              x: [0, 15, -15, 0],
-              rotate: [0, 20, -20, 0],
-            }}
-            transition={{
-              duration: emoji.duration,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: emoji.delay,
-            }}
-            style={{
-              top: emoji.top,
-              left: emoji.left,
-            }}
-          >
-            {emoji.char}
-          </motion.div>
-        ))}
+
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           

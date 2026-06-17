@@ -10,46 +10,10 @@ export default function HeroSection() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  const floatingEmojis = [
-    { char: "🎓", top: "15%", left: "12%", delay: 0, duration: 6 },
-    { char: "✈️", top: "55%", left: "85%", delay: 1, duration: 8 },
-    { char: "🌍", top: "75%", left: "20%", delay: 2, duration: 7 },
-    { char: "✨", top: "25%", left: "70%", delay: 0.5, duration: 5 },
-    { char: "📚", top: "65%", left: "10%", delay: 1.5, duration: 9 },
-    { char: "💜", top: "85%", left: "75%", delay: 2.5, duration: 6 },
-    { char: "🚀", top: "35%", left: "45%", delay: 1.2, duration: 7 },
-  ];
-
   return (
     <section id="home" className="relative overflow-hidden py-24 lg:py-36">
       {/* Purple gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-violet-50" />
-
-      {/* Playful Floating Background Emojis */}
-      {floatingEmojis.map((emoji, idx) => (
-        <motion.div
-          key={idx}
-          className="absolute text-4xl sm:text-5xl select-none z-0 opacity-15"
-          animate={{
-            y: [0, -30, 0],
-            x: [0, 20, 0],
-            rotate: [0, 10, -10, 0],
-          }}
-          transition={{
-            duration: emoji.duration,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: emoji.delay,
-          }}
-          style={{
-            top: emoji.top,
-            left: emoji.left,
-          }}
-        >
-          {emoji.char}
-        </motion.div>
-      ))}
 
       {/* Decorative gradient blobs */}
       <motion.div 
