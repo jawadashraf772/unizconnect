@@ -94,7 +94,7 @@ export default function FooterSection() {
             animate={{ boxShadow: ["0 0 0 0 rgba(167,139,250,0)", "0 0 0 20px rgba(167,139,250,0)"] }}
             transition={{ boxShadow: { duration: 1.5, repeat: Infinity } }}
             onClick={scrollToForm}
-            className="w-full sm:w-auto px-12 py-6 bg-white text-purple-700 font-black text-2xl rounded-full shadow-2xl shadow-purple-500/20 cursor-none border-b-4 border-purple-200 active:border-b-0 active:mt-1 transition-all flex items-center gap-3 mx-auto justify-center"
+            className="w-full sm:w-auto px-12 py-6 bg-white text-purple-700 font-black text-2xl rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border-b-4 border-purple-200 active:border-b-0 active:mt-1 transition-all flex items-center gap-3 mx-auto justify-center"
           >
             <Sparkles className="w-7 h-7" />
             Book Your 1:1 Strategy Session

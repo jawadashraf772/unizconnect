@@ -145,7 +145,7 @@ export default function CoversSection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ type: "spring", stiffness: 100, delay: idx * 0.08 }}
               whileHover={{ y: -6, scale: 1.02, boxShadow: "0 25px 50px -12px rgba(124, 58, 237, 0.12)" }}
-              className={`bg-white border-2 border-slate-100 rounded-[2rem] p-8 pt-12 shadow-lg hover:border-purple-200 transition-all duration-300 relative group flex flex-col justify-start h-full cursor-none ${
+              className={`bg-white border-2 border-slate-100 rounded-[2rem] p-8 pt-12 shadow-lg hover:border-purple-200 transition-all duration-300 relative group flex flex-col justify-start h-full ${
                 item.num === 7 ? "lg:col-span-3" : ""
               }`}
             >
@@ -197,7 +197,7 @@ export default function CoversSection() {
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 100, delay: idx * 0.15 }}
                 whileHover={{ scale: 1.01, y: -4 }}
-                className="bg-purple-900 p-4 sm:p-5 rounded-[2rem] shadow-xl transition-all h-full flex flex-col cursor-none"
+                className="bg-purple-900 p-4 sm:p-5 rounded-[2rem] shadow-xl transition-all h-full flex flex-col"
               >
                 <div className="bg-white rounded-[1.5rem] p-6 sm:p-8 space-y-6 flex-1 flex flex-col justify-start">
                   <span className="font-extrabold text-purple-600 text-xl block">
@@ -220,7 +220,7 @@ export default function CoversSection() {
             whileHover={{ scale: 1.05, rotate: 2 }}
             whileTap={{ scale: 0.95, rotate: -2 }}
             onClick={scrollToForm}
-            className="w-full sm:w-auto px-12 py-6 bg-white text-purple-700 font-black text-xl rounded-full shadow-xl shadow-purple-500/30 cursor-none border-b-4 border-purple-200 active:border-b-0 active:mt-1 transition-all"
+            className="w-full sm:w-auto px-12 py-6 bg-white text-purple-700 font-black text-xl rounded-full shadow-xl shadow-purple-500/30 cursor-pointer border-b-4 border-purple-200 active:border-b-0 active:mt-1 transition-all"
           >
             Yes! I want to Book My 1:1 Session 🎁
           </motion.button>

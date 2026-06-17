@@ -33,7 +33,7 @@ export default function Header() {
           onClick={() => scrollToSection("home")}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="flex items-center gap-3 cursor-none"
+          className="flex items-center gap-3 cursor-pointer"
         >
           <motion.div 
             animate={{ rotate: [0, 10, -10, 0] }}
@@ -60,7 +60,7 @@ export default function Header() {
               onClick={() => scrollToSection(link.target)}
               whileHover={{ y: -2 }}
               whileTap={{ y: 0 }}
-              className="text-slate-600 hover:text-purple-600 font-bold text-sm lg:text-base tracking-wide transition-colors cursor-none relative group"
+              className="text-slate-600 hover:text-purple-600 font-bold text-sm lg:text-base tracking-wide transition-colors relative group"
             >
               {link.label}
               <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-purple-500 transition-all duration-300 group-hover:w-full" />
@@ -73,7 +73,7 @@ export default function Header() {
           whileHover={{ scale: 1.08, rotate: -1 }}
           whileTap={{ scale: 0.95, rotate: 1 }}
           onClick={() => scrollToSection("booking-form")}
-          className="px-5 py-2 sm:px-6 sm:py-2.5 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-black text-sm rounded-full shadow-lg shadow-purple-500/25 cursor-none flex items-center gap-2 border-b-2 border-purple-800 active:border-b-0 transition-all"
+          className="px-5 py-2 sm:px-6 sm:py-2.5 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-black text-sm rounded-full shadow-lg shadow-purple-500/25 cursor-pointer flex items-center gap-2 border-b-2 border-purple-800 active:border-b-0 transition-all"
         >
           <Sparkles className="w-4 h-4" />
           Book Session

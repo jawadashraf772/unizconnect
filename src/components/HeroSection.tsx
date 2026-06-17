@@ -121,7 +121,7 @@ export default function HeroSection() {
               onClick={scrollToForm}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-16 py-6 bg-gradient-to-r from-purple-800 to-indigo-900 text-white font-black text-xl rounded-full shadow-2xl shadow-purple-900/40 cursor-none border-b-4 border-purple-950 active:border-b-0 active:mt-1 transition-all flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-16 py-6 bg-gradient-to-r from-purple-800 to-indigo-900 text-white font-black text-xl rounded-full shadow-2xl shadow-purple-900/40 cursor-pointer border-b-4 border-purple-950 active:border-b-0 active:mt-1 transition-all flex items-center justify-center gap-3"
             >
               <span>Book Your 1/1 Session</span>
               <span className="text-xl">➔</span>

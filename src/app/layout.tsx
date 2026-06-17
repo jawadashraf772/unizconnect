@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
-import { CustomCursor } from "@/components/CustomCursor";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -31,9 +30,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-gray-50 text-gray-900 selection:bg-brand-purple selection:text-white md:cursor-none`}
+        className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-gray-50 text-gray-900 selection:bg-brand-purple selection:text-white`}
       >
-        <CustomCursor />
         {children}
       </body>
     </html>

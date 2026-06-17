@@ -92,7 +92,7 @@ export default function TransformSection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ type: "spring", stiffness: 100, damping: 20, delay: idx * 0.15 }}
               whileHover={{ y: -6, scale: 1.01, boxShadow: "0 20px 25px -5px rgba(124, 58, 237, 0.1)", transition: { type: "spring", stiffness: 300 } }}
-              className="bg-white border-2 border-slate-100 p-8 rounded-3xl relative flex flex-col justify-between h-full hover:border-purple-300 shadow-xl shadow-purple-500/5 group transition-all duration-300 cursor-none"
+              className="bg-white border-2 border-slate-100 p-8 rounded-3xl relative flex flex-col justify-between h-full hover:border-purple-300 shadow-xl shadow-purple-500/5 group transition-all duration-300"
             >
               <div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-bold uppercase tracking-wider mb-6 border border-cyan-100">
@@ -272,7 +272,7 @@ export default function TransformSection() {
               animate={{ boxShadow: ["0 0 0 0 rgba(217,70,239,0)", "0 0 0 15px rgba(217,70,239,0)"] }}
               transition={{ boxShadow: { duration: 1.5, repeat: Infinity } }}
               onClick={scrollToForm}
-              className="w-full sm:w-auto px-12 py-6 bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600 text-white font-black text-2xl rounded-full shadow-2xl shadow-purple-500/30 cursor-none border-b-4 border-purple-800 active:border-b-0 active:mt-1 transition-all"
+              className="w-full sm:w-auto px-12 py-6 bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600 text-white font-black text-2xl rounded-full shadow-2xl shadow-purple-500/30 cursor-pointer border-b-4 border-purple-800 active:border-b-0 active:mt-1 transition-all"
             >
               Yes, This is Me! 🙋‍♂️ Book My Session
             </motion.button>
