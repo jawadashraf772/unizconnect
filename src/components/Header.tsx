@@ -28,18 +28,14 @@ export default function Header() {
           whileTap={{ scale: 0.98 }}
           className="flex items-center gap-3 cursor-pointer"
         >
-          <motion.div 
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="w-10 h-10 sm:w-12 sm:h-12 relative rounded-2xl bg-purple-100 flex items-center justify-center shadow-lg shadow-purple-500/10 overflow-hidden"
-          >
+          <div className="w-14 h-14 sm:w-18 sm:h-18 relative flex items-center justify-center overflow-hidden">
             <Image 
               src="/logo.webp" 
               alt="UnizConnect Logo" 
               fill
-              className="object-contain p-1.5"
+              className="object-contain"
             />
-          </motion.div>
+          </div>
           <span className="font-black text-lg sm:text-xl text-slate-900 tracking-tight hidden xs:block">
             Uniz<span className="text-purple-600">Connect</span>
           </span>
