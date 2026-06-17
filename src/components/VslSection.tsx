@@ -36,6 +36,7 @@ export default function VslSection() {
       gap: "9 years of study gap",
       result: "Won £13,000 Scholarship (PKR 4.8 Million+)",
       uni: "University of Bristol",
+      avatar: "/avatar_ahmad.png",
       quote: "It was an excellent session and it lasted more than 80 minutes (2x the originally allotted slot). Ayesha was kind enough to listen to and address my queries. I had no idea of where to start my journey from but this session gave me a fair idea about the journey ahead."
     },
     {
@@ -44,6 +45,7 @@ export default function VslSection() {
       gap: "Recent graduate",
       result: "Won £27,200 Total Scholarship (PKR 1 Crore+)",
       uni: "Liverpool, NTU, & Loughborough",
+      avatar: "/avatar_eesha.png",
       quote: "Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options."
     },
     {
@@ -52,6 +54,7 @@ export default function VslSection() {
       gap: "10 years of study gap",
       result: "Won £64,000 Total Scholarship (PKR 2.38 Crore+)",
       uni: "LSE, Nottingham, NTU, & Sussex",
+      avatar: "/avatar_awaisha.png",
       quote: "UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process."
     }
   ];
@@ -165,13 +168,20 @@ export default function VslSection() {
                 </div>
 
                 <div className="border-t border-purple-100 pt-4 mt-4">
-                  <h4 className="font-black text-lg text-slate-900 group-hover:text-purple-600 transition-colors">{t.name}</h4>
-                  <div className="flex justify-between items-center text-sm font-bold text-slate-400 mt-1 uppercase tracking-wide">
-                    <span>{t.city} • {t.gap}</span>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-purple-200 flex-shrink-0">
+                      <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <h4 className="font-black text-base text-slate-900 group-hover:text-purple-600 transition-colors leading-tight">{t.name}</h4>
+                      <div className="text-xs font-bold text-slate-400 mt-1 uppercase tracking-wide">
+                        {t.city} • {t.gap}
+                      </div>
+                    </div>
                   </div>
                   <motion.div 
                     whileHover={{ scale: 1.05 }}
-                    className="mt-4 bg-gradient-to-r from-purple-100 to-fuchsia-100 text-purple-800 text-sm font-black py-2.5 px-4 rounded-xl text-center shadow-sm"
+                    className="mt-2 bg-gradient-to-r from-purple-100 to-fuchsia-100 text-purple-800 text-sm font-black py-2.5 px-4 rounded-xl text-center shadow-sm"
                   >
                     {t.result}
                   </motion.div>
