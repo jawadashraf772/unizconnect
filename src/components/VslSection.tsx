@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Play, Video, Sparkles } from "lucide-react";
+import { Play, Video, Sparkles, Star } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 export default function VslSection() {
@@ -28,6 +28,33 @@ export default function VslSection() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  const transformations = [
+    {
+      name: "Ahmad Bilal",
+      city: "Lahore",
+      gap: "9 years of study gap",
+      result: "Won £13,000 Scholarship (PKR 4.8 Million+)",
+      uni: "University of Bristol",
+      quote: "It was an excellent session and it lasted more than 80 minutes (2x the originally allotted slot). Ayesha was kind enough to listen to and address my queries. I had no idea of where to start my journey from but this session gave me a fair idea about the journey ahead."
+    },
+    {
+      name: "Eesha Valait",
+      city: "Rawalpindi",
+      gap: "Recent graduate",
+      result: "Won £27,200 Total Scholarship (PKR 1 Crore+)",
+      uni: "Liverpool, NTU, & Loughborough",
+      quote: "Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options."
+    },
+    {
+      name: "Awaisha Inayat",
+      city: "Karachi",
+      gap: "10 years of study gap",
+      result: "Won £64,000 Total Scholarship (PKR 2.38 Crore+)",
+      uni: "LSE, Nottingham, NTU, & Sussex",
+      quote: "UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process."
+    }
+  ];
 
   return (
     <section 
@@ -100,6 +127,58 @@ export default function VslSection() {
               preload="metadata"
             />
           </motion.div>
+        </div>
+
+        {/* Testimonials Boxes in Purple Background */}
+        <div className="max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-8 relative z-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {transformations.map((t, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ type: "spring", stiffness: 100, damping: 20, delay: idx * 0.15 }}
+                whileHover={{ y: -6, scale: 1.01, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)", transition: { type: "spring", stiffness: 300 } }}
+                className="bg-white/95 backdrop-blur-sm border border-purple-500/20 p-8 rounded-3xl relative flex flex-col justify-between h-full hover:border-purple-300 shadow-2xl group transition-all duration-300 text-slate-800"
+              >
+                <div>
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold uppercase tracking-wider mb-6 border border-purple-100">
+                    <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+                    {t.uni}
+                  </div>
+
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <motion.div 
+                        key={i}
+                        whileHover={{ scale: 1.5, rotate: 15 }}
+                      >
+                        <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <p className="text-slate-700 text-base font-medium leading-relaxed mb-6">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                </div>
+
+                <div className="border-t border-purple-100 pt-4 mt-4">
+                  <h4 className="font-black text-lg text-slate-900 group-hover:text-purple-600 transition-colors">{t.name}</h4>
+                  <div className="flex justify-between items-center text-sm font-bold text-slate-400 mt-1 uppercase tracking-wide">
+                    <span>{t.city} • {t.gap}</span>
+                  </div>
+                  <motion.div 
+                    whileHover={{ scale: 1.05 }}
+                    className="mt-4 bg-gradient-to-r from-purple-100 to-fuchsia-100 text-purple-800 text-sm font-black py-2.5 px-4 rounded-xl text-center shadow-sm"
+                  >
+                    {t.result}
+                  </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* VSL CTA (Constrained Width) */}
