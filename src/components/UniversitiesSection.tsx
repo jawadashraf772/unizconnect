@@ -8,14 +8,14 @@ import { Globe } from "lucide-react";
 export default function UniversitiesSection() {
   const universities = [
     { name: "LUMS", logo: "/lums.png" },
-    { name: "Bahria University", logo: "/BAHARIA UNI.png" },
-    { name: "Beaconhouse National University", logo: "/Beaconhouse_National_University_logo.png" },
-    { name: "Forman Christian College", logo: "/FCC.png" },
-    { name: "IBA Karachi", logo: "/IBA.webp" },
-    { name: "IoBM", logo: "/IOBM.png" },
-    { name: "LGS", logo: "/LGS.png" },
-    { name: "NED University", logo: "/NED UNI.png" },
-    { name: "NUST", logo: "/nust.jpg" }
+    { name: "Bahria University", logo: "/BAHARIA_UNI_clean.png" },
+    { name: "Beaconhouse National University", logo: "/BNU_clean.png" },
+    { name: "Forman Christian College", logo: "/FCC_clean.png" },
+    { name: "IBA Karachi", logo: "/IBA_clean.png" },
+    { name: "IoBM", logo: "/IOBM_clean.png" },
+    { name: "LGS", logo: "/LGS_clean.png" },
+    { name: "NED University", logo: "/NED_clean.png" },
+    { name: "NUST", logo: "/NUST_clean.png" }
   ];
 
   const row1 = universities.slice(0, 5);
@@ -24,11 +24,11 @@ export default function UniversitiesSection() {
   const row2Extended = [...row2, ...row2, ...row2];
 
   const UniCard = ({ uni }: { uni: typeof universities[0] }) => (
-    <div className="flex-shrink-0 bg-white border-2 border-purple-100/40 rounded-2xl w-60 h-32 flex items-center justify-center p-3 shadow-md hover:shadow-lg hover:border-purple-300 transition-all duration-300 group">
+    <div className="flex-shrink-0 bg-white border-2 border-purple-100/40 rounded-2xl w-72 h-36 flex items-center justify-center p-2 shadow-md hover:shadow-lg hover:border-purple-300 transition-all duration-300 group">
       <img
         src={uni.logo}
         alt={`${uni.name} logo`}
-        className="max-w-full max-h-full object-contain group-hover:scale-110 transition-all duration-300"
+        className="max-w-[90%] max-h-[90%] object-contain group-hover:scale-110 transition-all duration-300"
       />
     </div>
   );
