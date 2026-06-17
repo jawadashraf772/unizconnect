@@ -24,7 +24,7 @@ export default function UniversitiesSection() {
   const row2Extended = [...row2, ...row2, ...row2];
 
   const UniCard = ({ uni }: { uni: typeof universities[0] }) => (
-    <div className="flex-shrink-0 bg-white border-2 border-purple-100/40 rounded-2xl w-48 h-24 flex items-center justify-center p-5 shadow-md hover:shadow-lg hover:border-purple-300 transition-all duration-300 group">
+    <div className="flex-shrink-0 bg-white border-2 border-purple-100/40 rounded-2xl w-60 h-32 flex items-center justify-center p-3 shadow-md hover:shadow-lg hover:border-purple-300 transition-all duration-300 group">
       <img
         src={uni.logo}
         alt={`${uni.name} logo`}
