@@ -42,15 +42,13 @@ export default function Header() {
         </motion.div>
 
         {/* CTA Button */}
-        <motion.button
-          whileHover={{ scale: 1.08, rotate: -1 }}
-          whileTap={{ scale: 0.95, rotate: 1 }}
+        <button
           onClick={() => scrollToSection("booking-form")}
-          className="px-5 py-2 sm:px-6 sm:py-2.5 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-black text-sm rounded-full shadow-lg shadow-purple-500/25 cursor-pointer flex items-center gap-2 border-b-2 border-purple-800 active:border-b-0 transition-all"
+          className="px-6 py-3 sm:px-8 sm:py-3.5 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-black text-sm sm:text-base rounded-full shadow-lg shadow-purple-500/25 cursor-pointer flex items-center gap-2 border-b-2 border-purple-800 active:border-b-0 transition-all"
         >
-          <Sparkles className="w-4 h-4" />
+          <Sparkles className="w-5 h-5" />
           Book Session
-        </motion.button>
+        </button>
 
       </div>
     </motion.header>
