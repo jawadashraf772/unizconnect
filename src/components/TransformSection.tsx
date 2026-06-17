@@ -11,33 +11,6 @@ export default function TransformSection() {
     }
   };
 
-  const transformations = [
-    {
-      name: "Ahmad Bilal",
-      city: "Lahore",
-      gap: "9 years of study gap",
-      result: "Won £13,000 Scholarship (PKR 4.8 Million+)",
-      uni: "University of Bristol",
-      quote: "It was an excellent session and it lasted more than 80 minutes (2x the originally allotted slot). Ayesha was kind enough to listen to and address my queries. I had no idea of where to start my journey from but this session gave me a fair idea about the journey ahead."
-    },
-    {
-      name: "Eesha Valait",
-      city: "Rawalpindi",
-      gap: "Recent graduate",
-      result: "Won £27,200 Total Scholarship (PKR 1 Crore+)",
-      uni: "Liverpool, NTU, & Loughborough",
-      quote: "Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options."
-    },
-    {
-      name: "Awaisha Inayat",
-      city: "Karachi",
-      gap: "10 years of study gap",
-      result: "Won £64,000 Total Scholarship (PKR 2.38 Crore+)",
-      uni: "LSE, Nottingham, NTU, & Sussex",
-      quote: "UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process."
-    }
-  ];
-
   const paintPoints = [
     { text: "You've watched videos and read websites but feel more confused", emoji: "😵", gradient: "from-pink-500 to-rose-500", bg: "bg-pink-50", border: "border-pink-200", hoverBg: "hover:bg-pink-100" },
     { text: "You keep switching between UK, US, Canada, Germany, and other countries", emoji: "🔄", gradient: "from-blue-500 to-cyan-500", bg: "bg-blue-50", border: "border-blue-200", hoverBg: "hover:bg-blue-100" },
@@ -55,83 +28,7 @@ export default function TransformSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/20 to-white" />
       {/* Decorative Blob */}
       <div className="absolute top-40 left-0 w-[600px] h-[600px] bg-purple-200/30 rounded-full blur-[120px] -z-10 mix-blend-multiply" />
-      
-      {/* 1:1 Guidance Transformations */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-32 relative z-10">
-        <div className="text-center space-y-6 mb-20">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 100, damping: 20 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight"
-          >
-            See How 1:1 Guidance{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-500 to-purple-500 inline-block transform hover:scale-110 transition-transform cursor-crosshair">
-              Transforms
-            </span>{" "}
-            Study Abroad Plans
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1, type: "spring", stiffness: 100 }}
-            className="text-xl text-slate-600 max-w-2xl mx-auto font-medium"
-          >
-            Real success stories from students who started their journey with Ayesha's 1:1 strategy session.
-          </motion.p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {transformations.map((t, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ type: "spring", stiffness: 100, damping: 20, delay: idx * 0.15 }}
-              whileHover={{ y: -6, scale: 1.01, boxShadow: "0 20px 25px -5px rgba(124, 58, 237, 0.1)", transition: { type: "spring", stiffness: 300 } }}
-              className="bg-white border-2 border-slate-100 p-8 rounded-3xl relative flex flex-col justify-between h-full hover:border-purple-300 shadow-xl shadow-purple-500/5 group transition-all duration-300"
-            >
-              <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-50 text-cyan-700 text-xs font-bold uppercase tracking-wider mb-6 border border-cyan-100">
-                  <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
-                  {t.uni}
-                </div>
-
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <motion.div 
-                      key={i}
-                      whileHover={{ scale: 1.5, rotate: 15 }}
-                    >
-                      <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                    </motion.div>
-                  ))}
-                </div>
-
-                <p className="text-slate-700 text-base font-medium leading-relaxed mb-6">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-              </div>
-
-              <div className="border-t-2 border-slate-50 pt-4 mt-4">
-                <h4 className="font-black text-lg text-slate-900 group-hover:text-purple-600 transition-colors">{t.name}</h4>
-                <div className="flex justify-between items-center text-sm font-bold text-slate-400 mt-1 uppercase tracking-wide">
-                  <span>{t.city} • {t.gap}</span>
-                </div>
-                <motion.div 
-                  whileHover={{ scale: 1.05 }}
-                  className="mt-4 bg-gradient-to-r from-purple-100 to-fuchsia-100 text-purple-800 text-sm font-black py-2.5 px-4 rounded-xl text-center shadow-sm"
-                >
-                  {t.result}
-                </motion.div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
 
       {/* This Session is for You If — SUPER PLAYFUL */}
       <section className="relative py-28 overflow-hidden">
