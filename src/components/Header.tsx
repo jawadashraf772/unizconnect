@@ -12,13 +12,6 @@ export default function Header() {
     }
   };
 
-  const navLinks = [
-    { label: "Watch Intro", target: "video" },
-    { label: "What's Covered", target: "what-is-covered" },
-    { label: "Why Trust Ayesha", target: "about-ayesha" },
-    { label: "FAQs", target: "faq" }
-  ];
-
   return (
     <motion.header 
       initial={{ y: -100 }}
@@ -51,22 +44,6 @@ export default function Header() {
             Uniz<span className="text-purple-600">Connect</span>
           </span>
         </motion.div>
-
-        {/* Center Navigation Links (Hidden on Mobile) */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
-          {navLinks.map((link, idx) => (
-            <motion.button
-              key={idx}
-              onClick={() => scrollToSection(link.target)}
-              whileHover={{ y: -2 }}
-              whileTap={{ y: 0 }}
-              className="text-slate-600 hover:text-purple-600 font-bold text-sm lg:text-base tracking-wide transition-colors relative group"
-            >
-              {link.label}
-              <span className="absolute bottom-[-4px] left-0 w-0 h-0.5 bg-purple-500 transition-all duration-300 group-hover:w-full" />
-            </motion.button>
-          ))}
-        </nav>
 
         {/* CTA Button */}
         <motion.button
