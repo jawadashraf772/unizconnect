@@ -8,6 +8,20 @@ export default function VslSection() {
   const [isPlaying, setIsPlaying] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    if (isPlaying) {
+      document.body.style.overflow = "hidden";
+      document.body.style.cursor = "default";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.cursor = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.body.style.cursor = "";
+    };
+  }, [isPlaying]);
+
   const scrollToForm = () => {
     const element = document.getElementById("booking-form");
     if (element) {
@@ -174,7 +188,7 @@ export default function VslSection() {
           {/* Close button */}
           <button
             onClick={() => setIsPlaying(false)}
-            className="absolute top-6 right-6 w-12 h-12 bg-white/25 hover:bg-white/40 text-white rounded-full flex items-center justify-center transition-all cursor-none shadow-lg backdrop-blur-md"
+            className="absolute top-6 right-6 w-12 h-12 bg-white/25 hover:bg-white/40 text-white rounded-full flex items-center justify-center transition-all cursor-pointer shadow-lg backdrop-blur-md"
             style={{ zIndex: 1000000 }}
             aria-label="Close video"
           >
@@ -188,6 +202,7 @@ export default function VslSection() {
             autoPlay
             controls
             playsInline
+            preload="auto"
             onClick={(e) => e.stopPropagation()} 
           />
         </div>
