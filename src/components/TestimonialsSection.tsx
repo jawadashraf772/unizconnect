@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
       avatar: "/Quratulain Sajid.png"
     },
     {
-      quote: "The study plan you provided was clear, practical and well structured. Ayesha really helped me understand my options for studying and plan accordingly.",
+      quote: "Thank you for your excellent counseling and guidance. The study plan you provided was clear, practical and well structured. Ayesha really helped me understand my options for studying and plan accordingly.",
       name: "Shagufta Naz",
       detail: "NUST Graduate • Scholarship Recipient",
       highlight: "Clear, practical, and well-structured plan",
