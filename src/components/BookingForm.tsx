@@ -160,13 +160,13 @@ export default function BookingForm() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
             {/* LEFT COLUMN: Pricing Card */}
-            <div className="lg:col-span-5 w-full flex justify-center flex-col">
+            <div className="lg:col-span-5 w-full flex flex-col gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 80, damping: 20 }}
-                className="w-full max-w-[520px] relative group mx-auto"
+                className="w-full relative group"
               >
                 {/* Animated border glow */}
                 <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-300 via-fuchsia-300 to-indigo-300 rounded-[2rem] opacity-60 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
@@ -262,7 +262,7 @@ export default function BookingForm() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 80, damping: 20 }}
-                className="relative group mt-10 w-full max-w-[520px] mx-auto"
+                className="relative group w-full"
               >
                 {/* Card glow */}
                 <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-200 via-purple-100 to-purple-200 rounded-[2rem] blur-sm opacity-60 group-hover:opacity-100 transition-opacity" />
@@ -337,9 +337,9 @@ export default function BookingForm() {
                 className="relative"
               >
                 {/* Card glow */}
-                <div className="absolute -inset-[1px] bg-gradient-to-b from-purple-200 via-purple-100 to-transparent rounded-[2.5rem] blur-sm" />
+                <div className="absolute -inset-[1px] bg-gradient-to-b from-purple-200 via-purple-100 to-transparent rounded-[2rem] blur-sm" />
 
-                <div className="relative bg-white backdrop-blur-2xl rounded-[2.5rem] p-6 sm:p-10 border border-purple-100 overflow-hidden shadow-2xl">
+                <div className="relative bg-white backdrop-blur-2xl rounded-[2rem] p-6 sm:p-8 border border-purple-100 overflow-hidden shadow-xl">
 
                   {/* Top Header */}
                   <div className="space-y-4 mb-8">
