@@ -113,8 +113,8 @@ export default function TrustSection() {
                   "I know your 1:1 isn't any therapy session… but it kind of feels therapeutic. This is the first time I've had a safe space to talk openly. I joined at my lowest and left feeling lighter."
                 </p>
                 <div className="pt-2 border-t border-purple-100/50">
-                  <span className="font-normal text-slate-700 text-base">
-                    - A Political Science student from <span className="underline decoration-purple-400 font-normal">Lahore School of Economics</span>
+                  <span className="font-normal text-purple-700 text-base">
+                    - A Political Science student from <span className="underline decoration-purple-400 font-normal text-purple-700">Lahore School of Economics</span>
                   </span>
                 </div>
               </div>

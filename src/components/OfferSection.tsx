@@ -81,72 +81,7 @@ export default function OfferSection() {
         {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
-          {/* Left - Trust Stats */}
           <div className="lg:col-span-5 space-y-5">
-            {[
-              {
-                icon: Flame,
-                title: "Limited Slots",
-                desc: "Only 4 spots left this week!",
-                gradient: "from-orange-100 to-red-100",
-                iconColor: "text-orange-600",
-                borderColor: "border-orange-200",
-              },
-              {
-                icon: ShieldCheck,
-                title: "100% Secure",
-                desc: "Direct calendar slot booking",
-                gradient: "from-emerald-100 to-teal-100",
-                iconColor: "text-emerald-600",
-                borderColor: "border-emerald-200",
-              },
-              {
-                icon: Users,
-                title: "Over 1,300+ Students Mentored",
-                desc: "Across LUMS, FAST, LSE, NUST, IBA & working professionals",
-                gradient: "from-purple-100 to-violet-100",
-                iconColor: "text-purple-600",
-                borderColor: "border-purple-200",
-              },
-            ].map((stat, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.15, type: "spring", stiffness: 100 }}
-                whileHover={{ x: 5, scale: 1.02 }}
-                className={`group relative bg-white backdrop-blur-xl border ${stat.borderColor} shadow-sm rounded-2xl p-6 flex items-start gap-5 transition-all duration-300 hover:shadow-md hover:shadow-purple-500/10`}
-              >
-                <div className={`bg-gradient-to-br ${stat.gradient} p-3.5 rounded-xl ${stat.iconColor} shrink-0 group-hover:scale-110 transition-transform`}>
-                  <stat.icon className="w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-black text-slate-800 text-base mb-1">{stat.title}</h4>
-                  <p className="text-xs text-slate-500 font-bold uppercase tracking-wider leading-relaxed">{stat.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-
-            {/* Micro social proof */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="flex items-center gap-3 pt-4 pl-1"
-            >
-              <div className="flex -space-x-2">
-                {["🧕", "👩‍🎓", "👨‍💼", "👩‍💻"].map((emoji, i) => (
-                  <div key={i} className="w-8 h-8 rounded-full bg-purple-100 border-2 border-white flex items-center justify-center text-sm shadow-sm">
-                    {emoji}
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs text-slate-500 font-semibold">
-                <span className="text-purple-700 font-black">12 students</span> booked this week
-              </p>
-            </motion.div>
 
             {/* Bonuses Box (Moved from Right Card) */}
             <motion.div
