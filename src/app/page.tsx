@@ -8,7 +8,6 @@ import AcceptancesSection from "@/components/AcceptancesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import TrustSection from "@/components/TrustSection";
 import BookingForm from "@/components/BookingForm";
-import SpotlightTestimonial from "@/components/SpotlightTestimonial";
 import WhySection from "@/components/WhySection";
 import FaqSection from "@/components/FaqSection";
 import FooterSection from "@/components/FooterSection";
@@ -47,8 +46,7 @@ export default function Home() {
         {/* 12-14. Offer, Value Prop, How Booking Works & Form */}
         <BookingForm />
 
-        {/* 14.5. Spotlight Testimonial (Kashmala Khan) */}
-        <SpotlightTestimonial />
+
 
         {/* 14.8. Why PKR 5,000 Section */}
         <WhySection />

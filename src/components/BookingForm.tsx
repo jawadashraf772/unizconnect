@@ -23,6 +23,9 @@ import {
   Check,
   Gift,
   Zap,
+  Quote,
+  Star,
+  ExternalLink,
 } from "lucide-react";
 
 export default function BookingForm() {
@@ -394,6 +397,67 @@ export default function BookingForm() {
                       ))}
                     </div>
                   </motion.div>
+
+                </div>
+              </motion.div>
+
+              {/* Spotlight Testimonial Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", stiffness: 80, damping: 20 }}
+                className="relative group mt-6"
+              >
+                {/* Card glow */}
+                <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-200 via-purple-100 to-purple-200 rounded-[2rem] blur-sm opacity-60 group-hover:opacity-100 transition-opacity" />
+
+                <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-6 overflow-hidden shadow-xl">
+
+                  {/* Decorative quote */}
+                  <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
+                    <Quote className="w-20 h-20 rotate-180" />
+                  </div>
+
+                  {/* Featured Story Label */}
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-yellow-100 border border-yellow-200 text-yellow-700 text-[10px] font-black uppercase tracking-wider shadow-xs mb-4">
+                    <Star className="w-3 h-3 fill-yellow-500 text-yellow-500" />
+                    Featured Success Story
+                  </div>
+
+                  {/* 5 Stars */}
+                  <div className="flex items-center gap-0.5 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
+
+                  <p className="text-slate-800 text-xs italic font-bold leading-relaxed mb-6">
+                    &ldquo;I&apos;ve been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master&apos;s degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm.&rdquo;
+                  </p>
+                  
+                  <div className="flex items-center gap-4">
+                    {/* Portrait */}
+                    <div className="relative w-14 h-14 rounded-xl overflow-hidden border-2 border-white bg-purple-50 shadow-md shrink-0">
+                      <img
+                        src="/kashmala.png"
+                        alt="Kashmala Khan"
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </div>
+
+                    <div className="space-y-1">
+                      <p className="text-sm font-black text-purple-700">Kashmala Khan</p>
+                      <p className="text-xs font-bold text-slate-500">BNU, Lahore</p>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex items-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-50 border border-emerald-100 shadow-xs inline-flex w-full justify-center">
+                    <ExternalLink className="w-3 h-3 text-emerald-600" />
+                    <span className="text-xs font-bold text-emerald-700">
+                      Now at <span className="font-black underline decoration-emerald-300">Cardiff Met University</span>, UK
+                    </span>
+                  </div>
 
                 </div>
               </motion.div>
