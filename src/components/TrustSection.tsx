@@ -137,14 +137,14 @@ export default function TrustSection() {
           <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-28 lg:self-start">
             
             {/* Ayesha's Portrait Card */}
-            <div className="flex justify-center">
+            <div className="flex justify-center relative z-0">
               <motion.div 
-                initial={{ opacity: 0, y: 80 }}
+                initial={{ opacity: 0, y: 200 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 300 } }}
-                transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.1 }}
-                className="relative w-full max-w-[340px] bg-white border-4 border-white rounded-[2.5rem] shadow-xl overflow-hidden group"
+                transition={{ type: "spring", stiffness: 60, damping: 15, delay: 0.1 }}
+                className="relative w-full max-w-[340px] bg-white border-4 border-white rounded-[2.5rem] shadow-xl overflow-hidden group z-0"
               >
                 {/* Visual purple/pink blob overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-950/20 via-transparent to-transparent pointer-events-none" />
@@ -165,7 +165,7 @@ export default function TrustSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="bg-white border-2 border-slate-100 rounded-3xl overflow-hidden shadow-xl"
+              className="bg-white border-2 border-slate-100 rounded-3xl overflow-hidden shadow-xl relative z-10"
             >
               {/* Divider-separated Stat Rows */}
               <div className="divide-y divide-slate-100">
