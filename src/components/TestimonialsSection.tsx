@@ -135,44 +135,48 @@ export default function TestimonialsSection() {
                 <Quote className="w-10 h-10 text-purple-300" />
               </div>
 
-              <div className="relative z-10 space-y-5">
-                <div className="flex items-center justify-between">
-                  <motion.span 
-                    whileHover={{ scale: 1.4, rotate: 15 }}
-                    className="text-4xl select-none"
-                  >
-                    {t.emoji}
-                  </motion.span>
-                  <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                </div>
-
-                <p className="text-purple-100 text-sm font-medium leading-relaxed">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-
-                <div className={`inline-block bg-gradient-to-r ${t.gradient} text-white text-xs font-black px-3 py-1.5 rounded-lg shadow-sm`}>
-                  {t.highlight}
-                </div>
-
-                <div className="border-t border-purple-400/20 pt-4 flex items-center gap-3">
-                  {t.avatar ? (
-                    <img 
-                      src={t.avatar} 
-                      alt={t.name} 
-                      className="w-12 h-12 rounded-full object-cover border-2 border-purple-400/30"
-                    />
-                  ) : (
-                    <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center font-bold text-white border-2 border-purple-400/30">
-                      {t.name.split(' ').map(n => n[0]).join('')}
+              <div className="relative z-10 space-y-5 flex flex-col justify-between h-full">
+                <div className="space-y-5">
+                  {/* Top Block: Profile & Stars */}
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex items-center gap-4">
+                      {t.avatar ? (
+                        <img 
+                          src={t.avatar} 
+                          alt={t.name} 
+                          className="w-16 h-16 rounded-full object-cover border-2 border-purple-400/40 shrink-0"
+                        />
+                      ) : (
+                        <div className="w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center font-bold text-white border-2 border-purple-400/40 shrink-0">
+                          {t.name.split(' ').map(n => n[0]).join('')}
+                        </div>
+                      )}
+                      <div>
+                        <p className="font-black text-white text-base sm:text-lg leading-snug">{t.name}</p>
+                        <p className="text-[11px] sm:text-xs text-purple-300 font-bold uppercase tracking-wider mt-1 leading-normal">{t.detail}</p>
+                      </div>
                     </div>
-                  )}
-                  <div>
-                    <p className="font-black text-white text-base leading-tight">{t.name}</p>
-                    <p className="text-xs text-purple-300 font-bold uppercase tracking-wider mt-1 leading-none">{t.detail}</p>
+                    {/* Stars & Emoji */}
+                    <div className="flex flex-col items-end gap-1.5 shrink-0">
+                      <div className="flex gap-0.5">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                      <span className="text-2xl select-none leading-none">{t.emoji}</span>
+                    </div>
+                  </div>
+
+                  {/* Quote */}
+                  <p className="text-purple-100 text-sm font-medium leading-relaxed">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
+                </div>
+
+                {/* Highlight Badge */}
+                <div className="pt-2 border-t border-purple-400/10">
+                  <div className={`inline-block bg-gradient-to-r ${t.gradient} text-white text-xs font-black px-3 py-1.5 rounded-lg shadow-sm`}>
+                    {t.highlight}
                   </div>
                 </div>
               </div>
