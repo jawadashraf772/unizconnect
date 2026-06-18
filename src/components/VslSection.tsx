@@ -36,17 +36,19 @@ export default function VslSection() {
       gap: "9 years of study gap",
       result: "Won £13,000 Scholarship (PKR 4.8 Million+)",
       uni: "University of Bristol",
-      avatar: "/avatar_ahmad.png",
+      avatar: "/avatar_ahmad.png?v=2",
+      avatarScale: "scale-[1.45]",
       quote: "It was an excellent session and it lasted more than 80 minutes (2x the originally allotted slot). Ayesha was kind enough to listen to and address my queries. I had no idea of where to start my journey from but this session gave me a fair idea about the journey ahead."
     },
     {
-      name: "Eesha Valait",
-      city: "Rawalpindi",
-      gap: "Recent graduate",
-      result: "Won £27,200 Total Scholarship (PKR 1 Crore+)",
-      uni: "Liverpool, NTU, & Loughborough",
-      avatar: "/avatar_eesha.png",
-      quote: "Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options."
+      name: "Kashmala Khan",
+      city: "Lahore",
+      gap: "BNU Graduate",
+      result: "Now at Cardiff Met University, UK",
+      uni: "Cardiff Met University",
+      avatar: "/kashmala.png?v=2",
+      avatarScale: "scale-[1.85]",
+      quote: "I've been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master's degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm."
     },
     {
       name: "Awaisha Inayat",
@@ -54,7 +56,8 @@ export default function VslSection() {
       gap: "10 years of study gap",
       result: "Won £64,000 Total Scholarship (PKR 2.38 Crore+)",
       uni: "LSE, Nottingham, NTU, & Sussex",
-      avatar: "/avatar_awaisha.png",
+      avatar: "/avatar_awaisha.png?v=2",
+      avatarScale: "scale-[1.45]",
       quote: "UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process."
     }
   ];
@@ -145,13 +148,30 @@ export default function VslSection() {
                 whileHover={{ y: -6, scale: 1.01, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)", transition: { type: "spring", stiffness: 300 } }}
                 className="bg-white/95 backdrop-blur-sm border border-purple-500/20 p-8 rounded-3xl relative flex flex-col justify-between h-full hover:border-purple-300 shadow-2xl group transition-all duration-300 text-slate-800"
               >
-                <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold uppercase tracking-wider mb-6 border border-purple-100">
-                    <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
-                    {t.uni}
+                <div className="flex flex-col gap-4">
+                  {/* Top row: University badge */}
+                  <div className="flex justify-between items-start">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold uppercase tracking-wider border border-purple-100">
+                      <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+                      {t.uni}
+                    </div>
                   </div>
 
-                  <div className="flex gap-1 mb-4">
+                  {/* Profile info: Avatar, Name, City/Gap */}
+                  <div className="flex items-center gap-4 py-2 border-b border-purple-100 pb-4">
+                    <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-purple-200 flex-shrink-0 bg-white">
+                      <img src={t.avatar} alt={t.name} className={`w-full h-full object-cover origin-center ${t.avatarScale}`} />
+                    </div>
+                    <div>
+                      <h4 className="font-black text-base text-slate-900 group-hover:text-purple-600 transition-colors leading-tight">{t.name}</h4>
+                      <div className="text-xs font-bold text-slate-400 mt-1 uppercase tracking-wide">
+                        {t.city} • {t.gap}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Stars */}
+                  <div className="flex gap-1 mt-2">
                     {[...Array(5)].map((_, i) => (
                       <motion.div 
                         key={i}
@@ -162,26 +182,17 @@ export default function VslSection() {
                     ))}
                   </div>
 
-                  <p className="text-slate-700 text-base font-medium leading-relaxed mb-6">
+                  {/* Quote */}
+                  <p className="text-slate-700 text-base font-medium leading-relaxed my-2">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
 
-                <div className="border-t border-purple-100 pt-4 mt-4">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-purple-200 flex-shrink-0">
-                      <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
-                    </div>
-                    <div>
-                      <h4 className="font-black text-base text-slate-900 group-hover:text-purple-600 transition-colors leading-tight">{t.name}</h4>
-                      <div className="text-xs font-bold text-slate-400 mt-1 uppercase tracking-wide">
-                        {t.city} • {t.gap}
-                      </div>
-                    </div>
-                  </div>
+                {/* Result banner at the bottom */}
+                <div className="mt-6 pt-4 border-t border-purple-500/10">
                   <motion.div 
                     whileHover={{ scale: 1.05 }}
-                    className="mt-2 bg-gradient-to-r from-purple-100 to-fuchsia-100 text-purple-800 text-sm font-black py-2.5 px-4 rounded-xl text-center shadow-sm"
+                    className="bg-gradient-to-r from-purple-100 to-fuchsia-100 text-purple-800 text-sm font-black py-2.5 px-4 rounded-xl text-center shadow-sm"
                   >
                     {t.result}
                   </motion.div>

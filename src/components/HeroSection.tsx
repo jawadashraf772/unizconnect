@@ -58,7 +58,7 @@ export default function HeroSection() {
               <span className="absolute left-0 bottom-1.5 w-full h-2 bg-red-100 rounded-full -z-10 transform -rotate-1" />
             </span>{" "}
             Make Smarter Decisions About{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600">
+            <span className="text-purple-600">
               Admissions, Scholarships, & Careers
             </span>
           </motion.h1>
@@ -90,34 +90,6 @@ export default function HeroSection() {
               <span className="text-xl">➔</span>
             </motion.button>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-              {/* Visual Avatar stack */}
-              <div className="flex -space-x-3">
-                {[
-                  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80",
-                  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80",
-                  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100&q=80",
-                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80",
-                  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80"
-                ].map((src, index) => (
-                  <img
-                    key={index}
-                    src={src}
-                    alt={`Student ${index + 1}`}
-                    className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-md select-none shrink-0"
-                  />
-                ))}
-              </div>
-
-              <div className="flex flex-col items-center sm:items-start gap-0.5">
-                <div className="flex justify-center gap-0.5 text-amber-400 text-lg">
-                  ★ ★ ★ ★ ★
-                </div>
-                <p className="text-sm text-slate-500 font-bold tracking-wide">
-                  Trusted by students from different institutions and cities
-                </p>
-              </div>
-            </div>
           </motion.div>
 
         </div>

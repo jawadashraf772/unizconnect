@@ -19,6 +19,7 @@ export default function TestimonialsSection() {
       highlight: "From confused to clear in 40 minutes",
       emoji: "🎯",
       gradient: "from-purple-500 to-violet-600",
+      avatar: "/Rectangle 138.png"
     },
     {
       quote: "I was told by three other consultants that my CGPA was too low. Ayesha not only showed me realistic options but also helped me understand how to strengthen my application. I got into two top UK universities!",
@@ -27,6 +28,7 @@ export default function TestimonialsSection() {
       highlight: "Got into 2 UK Universities despite low CGPA",
       emoji: "💪",
       gradient: "from-emerald-500 to-teal-600",
+      avatar: "/Rectangle 136.png"
     },
     {
       quote: "I really enjoyed it as it was both informative and comfortable for me in order to put all my points and concerns.",
@@ -35,6 +37,7 @@ export default function TestimonialsSection() {
       highlight: "Informative and highly comfortable session",
       emoji: "🌟",
       gradient: "from-blue-500 to-indigo-600",
+      avatar: "/Quratulain Sajid.png"
     },
     {
       quote: "The study plan you provided was clear, practical and well structured. Ayesha really helped me understand my options for studying and plan accordingly.",
@@ -43,6 +46,7 @@ export default function TestimonialsSection() {
       highlight: "Clear, practical, and well-structured plan",
       emoji: "📚",
       gradient: "from-amber-500 to-orange-600",
+      avatar: "/shagufta naz.png"
     },
     {
       quote: "I recently had the opportunity to attend my first consultation session with Ms. Ayesha Saleem. She welcomed me with warmth and maintained a highly positive attitude throughout. Her explanations were clear and comprehensive.",
@@ -51,6 +55,7 @@ export default function TestimonialsSection() {
       highlight: "Warm, highly positive & comprehensive",
       emoji: "🎓",
       gradient: "from-fuchsia-500 to-pink-600",
+      avatar: "/Muhammad Talal.png"
     },
     {
       quote: "Had a great session with Ms. Ayesha. She really understands students' needs and guided me well about scholarships and options in the US, UK and Germany. Very helpful and supportive.",
@@ -59,6 +64,7 @@ export default function TestimonialsSection() {
       highlight: "Understands students' needs & very supportive",
       emoji: "🤝",
       gradient: "from-violet-500 to-purple-600",
+      avatar: "/hamza akram.png"
     },
   ];
 
@@ -152,9 +158,22 @@ export default function TestimonialsSection() {
                   {t.highlight}
                 </div>
 
-                <div className="border-t border-purple-400/20 pt-4">
-                  <p className="font-black text-white text-base">{t.name}</p>
-                  <p className="text-xs text-purple-300 font-bold uppercase tracking-wider mt-0.5">{t.detail}</p>
+                <div className="border-t border-purple-400/20 pt-4 flex items-center gap-3">
+                  {t.avatar ? (
+                    <img 
+                      src={t.avatar} 
+                      alt={t.name} 
+                      className="w-12 h-12 rounded-full object-cover border-2 border-purple-400/30"
+                    />
+                  ) : (
+                    <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center font-bold text-white border-2 border-purple-400/30">
+                      {t.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                  )}
+                  <div>
+                    <p className="font-black text-white text-base leading-tight">{t.name}</p>
+                    <p className="text-xs text-purple-300 font-bold uppercase tracking-wider mt-1 leading-none">{t.detail}</p>
+                  </div>
                 </div>
               </div>
             </motion.div>
