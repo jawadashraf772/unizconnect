@@ -19,7 +19,6 @@ export default function TestimonialsSection() {
       highlight: "From confused to clear in 40 minutes",
       emoji: "🎯",
       gradient: "from-purple-500 to-violet-600",
-      avatar: "/Rectangle 138.png"
     },
     {
       quote: "I was told by three other consultants that my CGPA was too low. Ayesha not only showed me realistic options but also helped me understand how to strengthen my application. I got into two top UK universities!",
@@ -28,7 +27,6 @@ export default function TestimonialsSection() {
       highlight: "Got into 2 UK Universities despite low CGPA",
       emoji: "💪",
       gradient: "from-emerald-500 to-teal-600",
-      avatar: "/Rectangle 136.png"
     },
     {
       quote: "I really enjoyed it as it was both informative and comfortable for me in order to put all my points and concerns.",
