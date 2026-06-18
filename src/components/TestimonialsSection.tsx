@@ -80,6 +80,65 @@ export default function TestimonialsSection() {
       emoji: "👍",
       gradient: "from-rose-500 to-pink-600",
     },
+    {
+      quote: "Asalam u Alekum Everyone... Thank you Soo much for your efforts✨✨✨✨✨ ... This is a great achievement... Thank you ❤️❤️❤️❤️",
+      name: "Eesha",
+      detail: "Nottingham Trent University • Scholarship Winner",
+      highlight: "50% Scholarship at NTU",
+      emoji: "🎓",
+      gradient: "from-purple-500 to-indigo-600",
+      avatar: "/avatar_eesha.png"
+    },
+    {
+      quote: "Thankyou so muchhh. I was really surprised. didn’t even register it properly lol",
+      name: "Alisha",
+      detail: "University of Glasgow • Scholarship Recipient",
+      highlight: "£10,000 Global Leadership Scholarship",
+      emoji: "🎉",
+      gradient: "from-emerald-500 to-teal-600",
+    },
+    {
+      quote: "Many many congratulations @~muhammad..., as you've managed to secure the £13,000 ThinkBig Scholarship Alhumdullillah 😍🎉🥳\n\nThat's a great achievement MashaAllah 💯👏🏼🔥\n\nMany thanks for your support which has remained a pivotal part in this journey ❤️",
+      name: "Muhammad",
+      detail: "Bristol University • Scholarship Winner",
+      highlight: "£13,000 ThinkBig Scholarship",
+      emoji: "🏆",
+      gradient: "from-blue-500 to-indigo-600",
+    },
+    {
+      quote: "I'd tried a few consultants before but didn't feel I was getting the guidance I needed. A friend of mine, who'd been through the process and had a good experience, suggested I reach out to UnizConnect. At first, I was a bit unsure, especially since I wasn't even in the same city as them. But, based on my friend's recommendation, I decided to give it a try.\n\nFrom our very first session, I felt comfortable and understood. Miss Ayesha walked me through everything I'd been stressing about like writing a personal statement, meeting admissions criteria, and choosing the right course. I found the sessions incredibly helpful and reassuring!",
+      name: "Sumbul",
+      detail: "Consultation Session",
+      highlight: "Extremely helpful & reassuring guidance",
+      emoji: "💡",
+      gradient: "from-amber-500 to-orange-600",
+    },
+    {
+      quote: "Mam LSE me hogaya Aaaaaaaaaaaaaaaa Ab to Meri treat banti he",
+      name: "Uzair",
+      detail: "LSE Graduate • Geographic Data Science",
+      highlight: "Accepted into LSE",
+      emoji: "🎓",
+      gradient: "from-purple-500 to-indigo-600",
+      avatar: "/uzair LSEEE 1.png"
+    },
+    {
+      quote: "Dear Awaisha Inayat, We are pleased to invite you to interview for a Chevening award. Please book your interview as soon as possible to ensure you secure your preferred slot.",
+      name: "Awaisha Inayat",
+      detail: "Chevening Scholar",
+      highlight: "Chevening Scholarship Interview Invite",
+      emoji: "🏆",
+      gradient: "from-emerald-500 to-teal-600",
+      avatar: "/avatar_awaisha.png"
+    },
+    {
+      quote: "I had a wonderful consultation session with Ms. Ayesha Saleem. She was extremely welcoming and carried such a warm, positive attitude throughout our interaction, which instantly made the discussion comfortable and engaging. Her explanations were very clear and detailed, and I really appreciated how she not only addressed my study abroad queries but also guided me regarding career direction, helping me see what would be most beneficial for my future. The session was both insightful and encouraging, and I left with much more clarity and confidence about my next steps.",
+      name: "Yumna",
+      detail: "Consultation Session",
+      highlight: "Insightful & encouraging guidance",
+      emoji: "💡",
+      gradient: "from-blue-500 to-indigo-600",
+    },
   ];
 
   return (
