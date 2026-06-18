@@ -13,7 +13,7 @@ export default function TestimonialsSection() {
 
   const testimonials = [
     {
-      quote: "Ayesha helped me see things I never considered. The session wasn't just advice — it was life-changing. I walked in confused about whether to go for UK or US, and left with a crystal clear plan.",
+      quote: "I loved the initial session, the counsellor even gave me extra time. ❤️ The initial session covered everything.",
       name: "Manahil Afridi",
       detail: "FAST University • Applied for Masters",
       highlight: "From confused to clear in 40 minutes",
@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
       gradient: "from-purple-500 to-violet-600",
     },
     {
-      quote: "I was told by three other consultants that my CGPA was too low. Ayesha not only showed me realistic options but also helped me understand how to strengthen my application. I got into two top UK universities!",
+      quote: "I had a wonderful experience while consulting with Mam Ayesha. Her welcoming attitude allowed me to discuss my concerns in detail. UnizConnect is a best platform for consultation where not only your queries are answered properly but they guide you in a right direction as well.",
       name: "Javeria Ilahi",
       detail: "NUST Graduate • 2.8 CGPA",
       highlight: "Got into 2 UK Universities despite low CGPA",
