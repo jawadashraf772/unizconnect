@@ -20,6 +20,7 @@ export default function TestimonialsSection() {
     "/Quratulain Sajid.png",
     "/uzair LSEEE 1.png",
     "/avatar_eesha.png",
+    "/avatar_awaisha.png",
     "/WhatsApp Image 2026-06-05 at 12.54.54 AM 1.png",
     "/WhatsApp Image 2026-06-05 at 12.55.31 AM 1.png",
     "/WhatsApp Image 2026-06-05 at 12.56.01 AM 1.png"
@@ -79,6 +80,7 @@ export default function TestimonialsSection() {
             const isShagufta = src === "/shagufta naz.png";
             const isHamza = src === "/hamza akram.png";
             const isQuratulain = src === "/Quratulain Sajid.png";
+            const isAwaisha = src === "/avatar_awaisha.png";
 
             return (
               <motion.div
@@ -218,7 +220,32 @@ export default function TestimonialsSection() {
                   </div>
                 )}
 
-                {!isTalal && !isShagufta && !isHamza && !isQuratulain && (
+                {isAwaisha && (
+                  <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
+                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
+                      <Quote className="w-12 h-12 rotate-180" />
+                    </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div>
+                        <h4 className="font-black text-slate-900 leading-tight">Awaisha Inayat</h4>
+                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Karachi • 10 Years of Study Gap</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-0.5 mb-3 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                      ))}
+                    </div>
+                    <p className="text-slate-700 text-xs leading-relaxed font-semibold italic mb-4">
+                      &ldquo;UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process.&ldquo;
+                    </p>
+                    <div className="bg-gradient-to-r from-purple-50 to-fuchsia-50 text-purple-700 text-[11px] font-black py-2.5 px-4 rounded-xl border border-purple-100/50">
+                      Won total £64,287 = PKR 2 Crore 60 Lacs+ from London School of Economics, Nottingham, Sussex & NTU
+                    </div>
+                  </div>
+                )}
+
+                {!isTalal && !isShagufta && !isHamza && !isQuratulain && !isAwaisha && (
                   <div className="bg-white/5 border-2 border-purple-400/20 p-3 rounded-[2rem]">
                     <img
                       src={src}
