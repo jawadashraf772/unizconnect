@@ -119,7 +119,7 @@ export default function WhySection() {
                   And just so you know, our calendar stays booked mostly not because we do aggressive marketing but because students attend a session, find value in it, and then refer their friends and cousins to us.
                 </p>
 
-                <p>
+                <p className="text-slate-900 font-black">
                   Every time a spot opens and you choose to wait, someone else books it.
                 </p>
 
