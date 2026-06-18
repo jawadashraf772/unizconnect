@@ -49,16 +49,7 @@ export default function TrustSection() {
           
           {/* Left Column: Story & Written Narrative */}
           <div className="lg:col-span-7 space-y-8">
-            <motion.div 
-              initial={{ rotate: -5, scale: 0.9 }}
-              whileInView={{ rotate: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-purple-700 text-sm font-black tracking-widest uppercase shadow-md border border-purple-100"
-            >
-              <Compass className="w-5 h-5" />
-              The Founder's Story
-            </motion.div>
+
             
             <div className="space-y-4">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight lg:whitespace-nowrap">
