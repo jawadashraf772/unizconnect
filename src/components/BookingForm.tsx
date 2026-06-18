@@ -156,20 +156,20 @@ export default function BookingForm() {
           className="absolute bottom-1/4 right-[10%] w-[400px] h-[400px] bg-indigo-200/40 rounded-full blur-[100px] mix-blend-multiply pointer-events-none"
         />
         
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
             {/* LEFT COLUMN: Pricing Card */}
-            <div className="lg:col-span-5 w-full flex justify-center">
+            <div className="lg:col-span-5 w-full flex justify-center flex-col">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 80, damping: 20 }}
-                className="w-full max-w-[520px] relative group"
+                className="w-full max-w-[520px] relative group mx-auto"
               >
                 {/* Animated border glow */}
-                <div className="absolute -inset-[2px] bg-gradient-to-r from-purple-300 via-fuchsia-300 to-indigo-300 rounded-[2rem] opacity-60 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
+                <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-300 via-fuchsia-300 to-indigo-300 rounded-[2rem] opacity-60 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
 
                 {/* Card body */}
                 <div className="relative bg-white backdrop-blur-2xl rounded-[2rem] p-6 sm:p-8 border border-purple-100 overflow-hidden shadow-xl">
@@ -262,56 +262,65 @@ export default function BookingForm() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 80, damping: 20 }}
-                className="relative group mt-6"
+                className="relative group mt-10 w-full max-w-[520px] mx-auto"
               >
                 {/* Card glow */}
                 <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-200 via-purple-100 to-purple-200 rounded-[2rem] blur-sm opacity-60 group-hover:opacity-100 transition-opacity" />
 
-                <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-6 overflow-hidden shadow-xl">
+                <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-6 sm:p-8 overflow-hidden shadow-xl">
 
                   {/* Decorative quote */}
                   <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
-                    <Quote className="w-20 h-20 rotate-180" />
+                    <Quote className="w-16 h-16 rotate-180" />
                   </div>
 
-                  {/* Featured Story Label */}
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-yellow-100 border border-yellow-200 text-yellow-700 text-[10px] font-black uppercase tracking-wider shadow-xs mb-4">
-                    <Star className="w-3 h-3 fill-yellow-500 text-yellow-500" />
-                    Featured Success Story
-                  </div>
-
-                  {/* 5 Stars */}
-                  <div className="flex items-center gap-0.5 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-                    ))}
-                  </div>
-
-                  <p className="text-slate-800 text-xs italic font-bold leading-relaxed mb-6">
-                    &ldquo;I&apos;ve been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master&apos;s degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm.&rdquo;
-                  </p>
-                  
-                  <div className="flex items-center gap-4">
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
                     {/* Portrait */}
-                    <div className="relative w-14 h-14 rounded-xl overflow-hidden border-2 border-white bg-purple-50 shadow-md shrink-0">
-                      <img
-                        src="/kashmala.png"
-                        alt="Kashmala Khan"
-                        className="w-full h-full object-cover object-center"
-                      />
+                    <div className="relative shrink-0">
+                      <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-2xl opacity-60 blur-sm" />
+                      <div className="relative w-16 h-16 rounded-xl overflow-hidden border-2 border-white bg-purple-50 shadow-md">
+                        <img
+                          src="/kashmala.png"
+                          alt="Kashmala Khan"
+                          className="w-full h-full object-cover object-center"
+                        />
+                      </div>
                     </div>
 
-                    <div className="space-y-1">
-                      <p className="text-sm font-black text-purple-700">Kashmala Khan</p>
-                      <p className="text-xs font-bold text-slate-500">BNU, Lahore</p>
-                    </div>
-                  </div>
+                    {/* Right text content */}
+                    <div className="flex-1 text-center sm:text-left space-y-3 min-w-0">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                        {/* Featured Story Label */}
+                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-yellow-100 border border-yellow-200 text-yellow-700 text-[9px] font-black uppercase tracking-wider shadow-xs">
+                          <Star className="w-2.5 h-2.5 fill-yellow-500 text-yellow-500" />
+                          Featured success story
+                        </div>
 
-                  <div className="mt-4 flex items-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-50 border border-emerald-100 shadow-xs inline-flex w-full justify-center">
-                    <ExternalLink className="w-3 h-3 text-emerald-600" />
-                    <span className="text-xs font-bold text-emerald-700">
-                      Now at <span className="font-black underline decoration-emerald-300">Cardiff Met University</span>, UK
-                    </span>
+                        {/* 5 Stars */}
+                        <div className="flex items-center justify-center gap-0.5">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                          ))}
+                        </div>
+                      </div>
+
+                      <p className="text-slate-800 text-xs italic font-bold leading-relaxed">
+                        &ldquo;I&apos;ve been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master&apos;s degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm.&rdquo;
+                      </p>
+
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100 w-full">
+                        <div className="text-left">
+                          <p className="text-xs font-black text-purple-700">Kashmala Khan</p>
+                          <p className="text-[10px] font-bold text-slate-500">BNU, Lahore</p>
+                        </div>
+                        <div className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-100 shadow-xs justify-center shrink-0">
+                          <ExternalLink className="w-3 h-3 text-emerald-600" />
+                          <span className="text-[10px] font-bold text-emerald-700">
+                            Now at <span className="font-black underline decoration-emerald-300">Cardiff Met University</span>, UK
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                 </div>
