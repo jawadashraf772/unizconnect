@@ -49,16 +49,6 @@ export default function VslSection() {
       avatar: "/kashmala.png?v=2",
       avatarScale: "scale-[1.85]",
       quote: "I've been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master's degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm."
-    },
-    {
-      name: "Awaisha Inayat",
-      city: "Karachi",
-      gap: "10 years of study gap",
-      result: "Won £64,000 Total Scholarship (PKR 2.38 Crore+)",
-      uni: "LSE, Nottingham, NTU, & Sussex",
-      avatar: "/avatar_awaisha.png?v=2",
-      avatarScale: "scale-[1.45]",
-      quote: "UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process."
     }
   ];
 
@@ -136,8 +126,8 @@ export default function VslSection() {
         </div>
 
         {/* Testimonials Boxes in Purple Background */}
-        <div className="max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-8 relative z-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-8 relative z-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {transformations.map((t, idx) => (
               <motion.div
                 key={idx}
