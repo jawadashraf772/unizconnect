@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
       avatar: "/shagufta naz.png"
     },
     {
-      quote: "I recently had the opportunity to attend my first consultation session with Ms. Ayesha Saleem. She welcomed me with warmth and maintained a highly positive attitude throughout. Her explanations were clear and comprehensive.",
+      quote: "I recently had the opportunity to attend my first consultation session with Ms. Ayesha Saleem. Although I was unable to reach the office at the scheduled time, she still welcomed me with warmth and maintained a highly positive attitude throughout. Her explanations were clear and comprehensive, covering both directly relevant matters as well as related concerns with equal attention.",
       name: "Muhammad Talal",
       detail: "Scholarship Winner",
       highlight: "Warm, highly positive & comprehensive",
@@ -63,6 +63,22 @@ export default function TestimonialsSection() {
       emoji: "🤝",
       gradient: "from-violet-500 to-purple-600",
       avatar: "/hamza akram.png"
+    },
+    {
+      quote: "I recently had a session with Ms. Ayesha, and I had a great experience. She explained everything clearly and made sure no questions were left unanswered. What I appreciated most was her gentle and kind demeanour, she created the kind of space where you actually feel safe asking things and exploring options.",
+      name: "Nayab Ali",
+      detail: "Applied for Masters",
+      highlight: "Safe space to explore options",
+      emoji: "🌟",
+      gradient: "from-sky-500 to-blue-600",
+    },
+    {
+      quote: "I would say Ayesha Mam was really friendly very insightful - to all those who are reading this i would highly recommend you to book the session and you will love it ❤️",
+      name: "Irfan Khan",
+      detail: "Applied for Masters",
+      highlight: "Highly recommended & friendly",
+      emoji: "👍",
+      gradient: "from-rose-500 to-pink-600",
     },
   ];
 
