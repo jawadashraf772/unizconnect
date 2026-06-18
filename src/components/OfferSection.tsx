@@ -191,6 +191,26 @@ export default function OfferSection() {
                   </span>
                 </motion.button>
 
+                {/* Micro social proof */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="flex items-center justify-center gap-3 mt-5"
+                >
+                  <div className="flex -space-x-2">
+                    {["🧕", "👩‍🎓", "👨‍💼", "👩‍💻"].map((emoji, i) => (
+                      <div key={i} className="w-8 h-8 rounded-full bg-purple-100 border-2 border-white flex items-center justify-center text-sm shadow-sm animate-bounce" style={{ animationDelay: `${i * 150}ms`, animationDuration: '2s' }}>
+                        {emoji}
+                      </div>
+                    ))}
+                  </div>
+                  <p className="text-xs text-slate-500 font-semibold">
+                    <span className="text-purple-700 font-black">12 students</span> booked this week
+                  </p>
+                </motion.div>
+
               </div>
             </motion.div>
           </div>
