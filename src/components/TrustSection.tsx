@@ -164,12 +164,6 @@ export default function TrustSection() {
                     alt="Ayesha Saleem - UnizConnect Founder" 
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
-                  
-                  {/* Badge */}
-                  <div className="absolute top-4 left-4 bg-white/95 px-3.5 py-1.5 rounded-xl text-xs font-black text-purple-700 shadow-md backdrop-blur-xs flex items-center gap-1.5 border border-purple-100">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-600 animate-ping" />
-                    Founder & CEO
-                  </div>
                 </div>
               </motion.div>
             </div>
