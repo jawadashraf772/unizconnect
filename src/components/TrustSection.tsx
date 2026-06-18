@@ -109,19 +109,19 @@ export default function TrustSection() {
               </div>
               <div className="relative z-10 space-y-4">
                 <div className="flex gap-0.5 text-yellow-500 text-sm">★ ★ ★ ★ ★</div>
-                <p className="text-base sm:text-lg font-black italic leading-relaxed text-slate-700">
+                <p className="text-base sm:text-lg font-normal italic leading-relaxed text-slate-700">
                   "I know your 1:1 isn't any therapy session… but it kind of feels therapeutic. This is the first time I've had a safe space to talk openly. I joined at my lowest and left feeling lighter."
                 </p>
                 <div className="pt-2 border-t border-purple-100/50">
-                  <span className="font-black text-slate-900 text-base">
-                    - A Political Science student from <span className="underline decoration-purple-400 font-bold">Lahore School of Economics</span>
+                  <span className="font-normal text-slate-700 text-base">
+                    - A Political Science student from <span className="underline decoration-purple-400 font-normal">Lahore School of Economics</span>
                   </span>
                 </div>
               </div>
             </motion.div>
 
             {/* Ending Narrative */}
-            <div className="space-y-6 text-slate-600 font-semibold leading-relaxed text-base sm:text-lg">
+            <div className="space-y-6 text-slate-600 font-normal leading-relaxed text-base sm:text-lg">
               <p>
                 I've spent thousands of hours reviewing student profiles, understanding scholarship criteria, and helping applicants avoid costly mistakes.
               </p>
@@ -131,10 +131,10 @@ export default function TrustSection() {
               <p>
                 For 40 minutes, you'll get direct access to the insights, experience, and guidance I've gained from helping students navigate some of the biggest decisions of their lives.
               </p>
-              <p className="font-black text-slate-900">
+              <p className="font-medium text-slate-800">
                 See you inside the session!
               </p>
-              <div className="text-xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-700 pt-4">
+              <div className="text-xl font-medium text-purple-700 pt-4">
                 <p>Until then,</p>
                 <p>Ba bye!</p>
               </div>
