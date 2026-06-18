@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, HelpCircle, MessageCircle, Phone, Sparkles } from "lucide-react";
+import { ChevronDown, HelpCircle, Sparkles } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -77,7 +77,30 @@ export default function FaqSection() {
     },
     {
       question: "If I am based out of Lahore, how will this session be conducted?",
-      answer: "Not to worry. Our student body is from across Pakistan, including Lahore, Islamabad, Rawalpindi, Karachi, Faisalabad, Peshawar, Gujrat, Sahiwal, Hyderabad and many other cities. In fact, most students choose to meet online (even those based in Lahore). Once your payment is verified, you'll receive a calendar link where you can choose from any of the three modes: Online via Google Meet, Phone Call, In-person at our office (Al Hafeez Executive, Floor 3, Office 316, Gulberg III, Lahore)."
+      answer: (
+        <div className="space-y-3">
+          <p>
+            Not to worry. Our student body is from across Pakistan, including Lahore, Islamabad, Rawalpindi, Karachi, Faisalabad, Peshawar, Gujrat, Sahiwal, Hyderabad and many other cities. In fact, most students choose to meet online (even those based in Lahore). Once your payment is verified, you'll receive a calendar link where you can choose from any of the three modes:
+          </p>
+          <ul className="space-y-1.5 my-2 pl-1">
+            <li className="flex items-center gap-2">
+              <span className="font-black text-purple-600">1.</span>
+              <span className="font-bold text-slate-800">Online via Google Meet</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="font-black text-purple-600">2.</span>
+              <span className="font-bold text-slate-800">Phone Call</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="font-black text-purple-600">3.</span>
+              <span className="font-bold text-slate-800">In-person at our office</span>
+            </li>
+          </ul>
+          <p className="text-xs sm:text-sm text-slate-500 font-semibold border-t border-slate-100 pt-2.5 mt-2">
+            📍 Address: Al Hafeez Executive, Floor 3, Office 316, Gulberg III, Lahore.
+          </p>
+        </div>
+      )
     }
   ];
 
@@ -90,7 +113,7 @@ export default function FaqSection() {
       <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-violet-200/30 rounded-full blur-[120px] mix-blend-multiply pointer-events-none" />
       <div className="absolute bottom-20 left-0 w-[300px] h-[300px] bg-purple-200/30 rounded-full blur-[100px] mix-blend-multiply pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <motion.div
@@ -131,7 +154,7 @@ export default function FaqSection() {
                 }`}>
                   <button
                     onClick={() => toggleFAQ(idx)}
-                    className="w-full flex justify-between items-center p-5 sm:p-6 text-left font-bold text-slate-800 text-sm sm:text-base focus:outline-none select-none gap-4 group"
+                    className="w-full flex justify-between items-center p-5 sm:p-6 text-left font-bold text-slate-800 text-[17px] sm:text-[20px] focus:outline-none select-none gap-4 group"
                   >
                     <div className="flex items-center gap-3.5">
                       <span className="text-xl sm:text-2xl select-none shrink-0 group-hover:scale-110 transition-transform">
@@ -170,41 +193,7 @@ export default function FaqSection() {
           })}
         </div>
 
-        {/* Bottom CTA (Light Theme Update) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16"
-        >
-          <div className="relative overflow-hidden rounded-2xl border border-purple-100 shadow-xl">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-50 to-white" />
-            <motion.div
-              animate={{ x: [0, 30, 0] }}
-              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-0 right-0 w-60 h-60 bg-purple-200/40 rounded-full blur-3xl mix-blend-multiply"
-            />
-            
-            <div className="relative p-8 sm:p-10 text-center">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-white border border-purple-100 shadow-sm flex items-center justify-center">
-                  <MessageCircle className="w-6 h-6 text-purple-600" />
-                </div>
-              </div>
-              <h3 className="text-2xl font-black text-slate-900 mb-2">Still have questions?</h3>
-              <p className="text-slate-600 font-medium mb-8">Reach out to us directly and we&apos;ll help you out!</p>
-              <motion.a
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                href="tel:+923264855658"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-700 to-indigo-800 text-white font-black text-lg rounded-xl shadow-xl shadow-purple-500/20 hover:from-purple-600 hover:to-indigo-700 transition-all"
-              >
-                <Phone className="w-5 h-5" />
-                Call +92-326-4855658
-              </motion.a>
-            </div>
-          </div>
-        </motion.div>
+
 
       </div>
     </section>

@@ -325,6 +325,8 @@ export default function BookingForm() {
 
                 </div>
               </motion.div>
+
+
             </div>
 
             {/* RIGHT COLUMN: Form Card */}

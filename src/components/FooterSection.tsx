@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Heart } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import Image from "next/image";
 
 export default function FooterSection() {
@@ -136,10 +136,6 @@ export default function FooterSection() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-purple-300 font-bold">
             <span>© {new Date().getFullYear()} UnizConnect. All Rights Reserved.</span>
-            <span className="hidden sm:inline text-purple-600">•</span>
-            <span className="flex items-center gap-1">
-              Made with <Heart className="w-4 h-4 text-pink-400 fill-pink-400 inline" /> for Students
-            </span>
           </div>
         </div>
 

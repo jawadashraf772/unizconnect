@@ -14,16 +14,15 @@ export default function TestimonialsSection() {
   const reviewImages = [
     "/Rectangle 138.png",
     "/Rectangle 136.png",
-    "/Rectangle 137.png",
     "/shagufta naz.png",
     "/Muhammad Talal.png",
     "/hamza akram.png",
+    "/Quratulain Sajid.png",
     "/uzair LSEEE 1.png",
     "/avatar_eesha.png",
     "/WhatsApp Image 2026-06-05 at 12.54.54 AM 1.png",
     "/WhatsApp Image 2026-06-05 at 12.55.31 AM 1.png",
-    "/WhatsApp Image 2026-06-05 at 12.56.01 AM 1.png",
-    "/avatar_awaisha.png"
+    "/WhatsApp Image 2026-06-05 at 12.56.01 AM 1.png"
   ];
 
   return (
@@ -42,8 +41,6 @@ export default function TestimonialsSection() {
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 3 }}
         className="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-violet-600/15 rounded-full blur-[120px]" 
       />
-
-
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -76,25 +73,163 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        {/* Testimonials Grid (Direct Screenshot Images) */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 max-w-6xl mx-auto mb-16">
-          {reviewImages.map((src, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 50, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ type: "spring", stiffness: 100, damping: 20, delay: idx * 0.05 }}
-              whileHover={{ y: -6, scale: 1.02, transition: { type: "spring", stiffness: 300 } }}
-              className="break-inside-avoid bg-white/5 backdrop-blur-sm border-2 border-purple-400/20 rounded-[2rem] p-3 shadow-xl hover:border-purple-400/40 transition-all duration-300 inline-block w-full"
-            >
-              <img
-                src={src}
-                alt={`Student success review ${idx + 1}`}
-                className="w-full h-auto rounded-[1.5rem] object-contain"
-              />
-            </motion.div>
-          ))}
+          {reviewImages.map((src, idx) => {
+            const isTalal = src === "/Muhammad Talal.png";
+            const isShagufta = src === "/shagufta naz.png";
+            const isHamza = src === "/hamza akram.png";
+            const isQuratulain = src === "/Quratulain Sajid.png";
+
+            return (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ type: "spring", stiffness: 100, damping: 20, delay: idx * 0.05 }}
+                whileHover={{ y: -6, scale: 1.02, transition: { type: "spring", stiffness: 300 } }}
+                className="break-inside-avoid rounded-[2rem] shadow-xl transition-all duration-300 inline-block w-full overflow-hidden"
+              >
+                {isTalal && (
+                  <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
+                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
+                      <Quote className="w-12 h-12 rotate-180" />
+                    </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="relative shrink-0">
+                        <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
+                        <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
+                          <img
+                            src="/Muhammad Talal.png"
+                            alt="Muhammad Talal"
+                            className="w-full h-full object-cover object-center scale-[1.05]"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-black text-slate-900 leading-tight">Muhammad Talal</h4>
+                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Student Consultation</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-0.5 mb-3 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                      ))}
+                    </div>
+                    <p className="text-slate-700 text-xs leading-relaxed font-semibold italic">
+                      &ldquo;I recently had the opportunity to attend my first consultation session with Ms. Ayesha Saleem. Although I was unable to reach the office at the scheduled time, she still welcomed me with warmth and maintained a highly positive attitude throughout. Her explanations were clear and comprehensive, covering both directly relevant matters as well as related concerns with equal attention.&rdquo;
+                    </p>
+                  </div>
+                )}
+
+                {isShagufta && (
+                  <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
+                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
+                      <Quote className="w-12 h-12 rotate-180" />
+                    </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="relative shrink-0">
+                        <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
+                        <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
+                          <img
+                            src="/shagufta naz.png"
+                            alt="Shagufta Naz"
+                            className="w-full h-full object-cover object-center"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-black text-slate-900 leading-tight">Shagufta Naz</h4>
+                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Student Consultation</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-0.5 mb-3 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                      ))}
+                    </div>
+                    <p className="text-slate-700 text-xs leading-relaxed font-semibold italic">
+                      &ldquo;Thank you for your excellent counseling and guidance. The study plan you provided was clear, practical and well structured. Ayesha really helped me understand my options for studying and plan accordingly.&rdquo;
+                    </p>
+                  </div>
+                )}
+
+                {isHamza && (
+                  <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
+                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
+                      <Quote className="w-12 h-12 rotate-180" />
+                    </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="relative shrink-0">
+                        <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
+                        <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
+                          <img
+                            src="/hamza akram.png"
+                            alt="Hamza Akram"
+                            className="w-full h-full object-cover object-center"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-black text-slate-900 leading-tight">Hamza Akram</h4>
+                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Student Consultation</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-0.5 mb-3 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                      ))}
+                    </div>
+                    <p className="text-slate-700 text-xs leading-relaxed font-semibold italic">
+                      &ldquo;Had a great session with Ms. Ayesha. She really understands students’ needs and guided me well about scholarships and options in the US, UK and Germany. Very helpful and supportive.&rdquo;
+                    </p>
+                  </div>
+                )}
+
+                {isQuratulain && (
+                  <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
+                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
+                      <Quote className="w-12 h-12 rotate-180" />
+                    </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="relative shrink-0">
+                        <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
+                        <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
+                          <img
+                            src="/Quratulain Sajid.png"
+                            alt="Quratulain Sajid"
+                            className="w-full h-full object-cover object-center"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-black text-slate-900 leading-tight">Quratulain Sajid</h4>
+                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Student Consultation</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-0.5 mb-3 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                      ))}
+                    </div>
+                    <p className="text-slate-700 text-xs leading-relaxed font-semibold italic">
+                      &ldquo;I really enjoyed it as it was both informative and comfortable for me in order to put all my points and concerns.&rdquo;
+                    </p>
+                  </div>
+                )}
+
+                {!isTalal && !isShagufta && !isHamza && !isQuratulain && (
+                  <div className="bg-white/5 border-2 border-purple-400/20 p-3 rounded-[2rem]">
+                    <img
+                      src={src}
+                      alt={`Student success review ${idx + 1}`}
+                      className="w-full h-auto rounded-[1.5rem] object-contain"
+                    />
+                  </div>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* CTA */}
