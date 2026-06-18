@@ -160,7 +160,7 @@ export default function BookingForm() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
             {/* LEFT COLUMN: Pricing Card */}
-            <div className="lg:col-span-5 w-full flex flex-col gap-8">
+            <div className="lg:col-span-5 w-full flex flex-col gap-8 lg:sticky lg:top-24 lg:self-start">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -282,7 +282,7 @@ export default function BookingForm() {
                         <img
                           src="/kashmala.png"
                           alt="Kashmala Khan"
-                          className="w-full h-full object-cover object-center scale-[1.45] rounded-full"
+                          className="w-full h-full object-cover object-center scale-[1.9] rounded-full"
                         />
                       </div>
                     </div>
