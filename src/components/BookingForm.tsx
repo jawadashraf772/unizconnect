@@ -369,39 +369,7 @@ export default function BookingForm() {
                     </ul>
                   </div>
 
-                  {/* Action Button: Book It NOW! (scrolls / focuses Name input) */}
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={focusNameField}
-                    type="button"
-                    className="w-full py-4 bg-gradient-to-r from-purple-700 to-indigo-800 hover:from-purple-600 hover:to-indigo-700 text-white font-black text-base rounded-2xl shadow-xl shadow-purple-500/20 transition-all text-center flex items-center justify-center gap-2.5 uppercase tracking-widest relative overflow-hidden group/btn"
-                  >
-                    <span className="relative z-10 flex items-center gap-2">
-                      Book It NOW!
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </span>
-                  </motion.button>
 
-                  {/* Micro social proof */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="flex items-center justify-center gap-2.5 mt-4"
-                  >
-                    <div className="flex -space-x-1.5">
-                      {["🧕", "👩‍🎓", "👨‍💼", "👩‍💻"].map((emoji, i) => (
-                        <div key={i} className="w-7 h-7 rounded-full bg-purple-100 border-2 border-white flex items-center justify-center text-xs shadow-sm animate-bounce" style={{ animationDelay: `${i * 150}ms`, animationDuration: '2s' }}>
-                          {emoji}
-                        </div>
-                      ))}
-                    </div>
-                    <p className="text-[11px] text-slate-500 font-semibold">
-                      <span className="text-purple-700 font-black">12 students</span> booked this week
-                    </p>
-                  </motion.div>
 
                   {/* Bonuses Box */}
                   <motion.div
