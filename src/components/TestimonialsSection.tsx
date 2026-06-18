@@ -13,7 +13,7 @@ export default function TestimonialsSection() {
 
   const testimonials = [
     {
-      quote: "I loved the initial session, the counsellor even gave me extra time. ❤️ The initial session covered everything.",
+      quote: "I loved the initial session, the counsellor even gave me extra time. ❤️The initial session covered everything.",
       name: "Manahil Afridi",
       detail: "FAST University • Applied for Masters",
       highlight: "From confused to clear in 40 minutes",
@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
       gradient: "from-purple-500 to-violet-600",
     },
     {
-      quote: "I had a wonderful experience while consulting with Mam Ayesha. Her welcoming attitude allowed me to discuss my concerns in detail. UnizConnect is a best platform for consultation where not only your queries are answered properly but they guide you in a right direction as well.",
+      quote: "I had a wonderful experience while consulting with mam ayesha. Her welcoming attitude allowed me to discuss my concerns in detail. Uniz connect is a best paltform for consultation where not only your queries are answered properly but they guide you in a right direction as well.",
       name: "Javeria Ilahi",
       detail: "NUST Graduate • 2.8 CGPA",
       highlight: "Got into 2 UK Universities despite low CGPA",
