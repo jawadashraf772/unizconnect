@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Star } from "lucide-react";
 
 export default function HeroSection() {
   const scrollToForm = () => {
@@ -16,17 +16,9 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-violet-50" />
 
       {/* Decorative gradient blobs */}
-      <motion.div 
-        animate={{ scale: [1, 1.2, 1], x: [0, 30, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-purple-300/30 rounded-full blur-[100px] -z-10 mix-blend-multiply" 
-      />
-      <motion.div 
-        animate={{ scale: [1, 1.3, 1], y: [0, -30, 0] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-violet-300/30 rounded-full blur-[100px] -z-10 mix-blend-multiply" 
-      />
-      <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-fuchsia-200/20 rounded-full blur-[100px] -z-10 mix-blend-multiply" />
+      <div className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-purple-300/20 rounded-full blur-[100px] -z-10 animate-gpu-blob-1 pointer-events-none" />
+      <div className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-violet-300/20 rounded-full blur-[100px] -z-10 animate-gpu-blob-2 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-fuchsia-200/15 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div className="space-y-10 max-w-4xl mx-auto">
@@ -89,6 +81,49 @@ export default function HeroSection() {
               <span>Book Your 1:1 Session</span>
               <span className="text-xl">➔</span>
             </motion.button>
+
+            {/* Overlapping Trust Badge */}
+            <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 justify-center bg-white/60 backdrop-blur-xs py-3.5 px-6 rounded-full border border-purple-100 shadow-sm max-w-max mx-auto">
+              <div className="flex -space-x-3">
+                <img
+                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
+                  src="/image 1.jpeg"
+                  alt="Student 1"
+                />
+                <img
+                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
+                  src="/image 2.jpeg"
+                  alt="Student 2"
+                />
+                <img
+                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
+                  src="/image 3.jpeg"
+                  alt="Student 3"
+                />
+                <img
+                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
+                  src="/image 4.jpeg"
+                  alt="Student 4"
+                />
+                <img
+                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
+                  src="/image 5.jpeg"
+                  alt="Student 5"
+                />
+              </div>
+              <div className="flex flex-col items-center sm:items-start gap-0.5">
+                <div className="flex gap-0.5 text-yellow-500">
+                  <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                  <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                  <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                  <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                  <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                </div>
+                <span className="text-[#3b5998] text-xs sm:text-sm font-bold tracking-wide">
+                  Trusted by students from different institutions and cities
+                </span>
+              </div>
+            </div>
 
           </motion.div>
 

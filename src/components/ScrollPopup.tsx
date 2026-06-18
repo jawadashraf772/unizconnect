@@ -34,13 +34,17 @@ export function ScrollPopup() {
   ];
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
       if (hasClosed) return;
-      const shouldShow = window.scrollY > 400;
-      setIsVisible((prev) => {
-        if (prev !== shouldShow) return shouldShow;
-        return prev;
-      });
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const shouldShow = window.scrollY > 400;
+          setIsVisible((prev) => (prev !== shouldShow ? shouldShow : prev));
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });

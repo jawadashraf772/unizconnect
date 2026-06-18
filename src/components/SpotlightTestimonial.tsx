@@ -8,11 +8,7 @@ export default function SpotlightTestimonial() {
     <section className="relative py-24 overflow-hidden bg-slate-50">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-purple-50/20 to-slate-50" />
-      <motion.div
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-200/50 rounded-full blur-[150px] mix-blend-multiply pointer-events-none"
-      />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-200/20 rounded-full blur-[150px] animate-gpu-blob-1 pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
 

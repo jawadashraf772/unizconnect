@@ -14,13 +14,16 @@ export default function TestimonialsSection() {
   const reviewImages = [
     "/Rectangle 138.png",
     "/Rectangle 136.png",
+    "javeria",
     "/shagufta naz.png",
+    "irfan",
     "/Muhammad Talal.png",
+    "manahil",
     "/hamza akram.png",
+    "nayab",
     "/Quratulain Sajid.png",
     "/uzair LSEEE 1.png",
-    "/avatar_eesha.png",
-    "/avatar_awaisha.png",
+    "nabila",
     "/WhatsApp Image 2026-06-05 at 12.54.54 AM 1.png",
     "/WhatsApp Image 2026-06-05 at 12.55.31 AM 1.png",
     "/WhatsApp Image 2026-06-05 at 12.56.01 AM 1.png"
@@ -80,7 +83,11 @@ export default function TestimonialsSection() {
             const isShagufta = src === "/shagufta naz.png";
             const isHamza = src === "/hamza akram.png";
             const isQuratulain = src === "/Quratulain Sajid.png";
-            const isAwaisha = src === "/avatar_awaisha.png";
+            const isJaveria = src === "javeria";
+            const isManahil = src === "manahil";
+            const isIrfan = src === "irfan";
+            const isNayab = src === "nayab";
+            const isNabila = src === "nabila";
 
             return (
               <motion.div
@@ -220,15 +227,22 @@ export default function TestimonialsSection() {
                   </div>
                 )}
 
-                {isAwaisha && (
+
+
+                {isJaveria && (
                   <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
                     <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
                       <Quote className="w-12 h-12 rotate-180" />
                     </div>
                     <div className="flex items-center gap-4 mb-4">
+                      <div className="relative shrink-0">
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-[#0091ff] flex items-center justify-center shadow-md">
+                          <span className="text-white text-xl font-black">JI</span>
+                        </div>
+                      </div>
                       <div>
-                        <h4 className="font-black text-slate-900 leading-tight">Awaisha Inayat</h4>
-                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Karachi • 10 Years of Study Gap</p>
+                        <h4 className="font-black text-slate-900 leading-tight text-lg">Javeria Ilahi</h4>
+                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Student Consultation</p>
                       </div>
                     </div>
                     <div className="flex gap-0.5 mb-3 text-yellow-500">
@@ -236,16 +250,122 @@ export default function TestimonialsSection() {
                         <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
                       ))}
                     </div>
-                    <p className="text-slate-700 text-xs leading-relaxed font-semibold italic mb-4">
-                      &ldquo;UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process.&ldquo;
+                    <p className="text-slate-700 text-xs leading-relaxed font-semibold italic">
+                      &ldquo;I had a wonderful experience while consulting with mam ayesha. Her welcoming attitude allowed me to discuss my concerns in detail. Uniz connect is a best paltform for consultation where not only your queries are answered properly but they guide you in a right direction as well.&rdquo;
                     </p>
-                    <div className="bg-gradient-to-r from-purple-50 to-fuchsia-50 text-purple-700 text-[11px] font-black py-2.5 px-4 rounded-xl border border-purple-100/50">
-                      Won total £64,287 = PKR 2 Crore 60 Lacs+ from London School of Economics, Nottingham, Sussex & NTU
+                  </div>
+                )}
+
+                {isManahil && (
+                  <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
+                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
+                      <Quote className="w-12 h-12 rotate-180" />
+                    </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="relative shrink-0">
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-[#0091ff] flex items-center justify-center shadow-md">
+                          <span className="text-white text-xl font-black">MA</span>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-black text-slate-900 leading-tight text-lg">Manahil Afridi</h4>
+                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Student Consultation</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-0.5 mb-3 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                      ))}
+                    </div>
+                    <p className="text-slate-700 text-xs leading-relaxed font-semibold italic">
+                      &ldquo;I loved the initial session, the counsellor even gave me extra time. ❤️The initial session covered everything.&rdquo;
+                    </p>
+                  </div>
+                )}
+
+                {isIrfan && (
+                  <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
+                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
+                      <Quote className="w-12 h-12 rotate-180" />
+                    </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="relative shrink-0">
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-[#0091ff] flex items-center justify-center shadow-md">
+                          <span className="text-white text-xl font-black">IK</span>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-black text-slate-900 leading-tight text-lg">Irfan Khan</h4>
+                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Student Consultation</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-0.5 mb-3 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                      ))}
+                    </div>
+                    <p className="text-slate-700 text-xs leading-relaxed font-semibold italic">
+                      &ldquo;I would say Ayesha Mam was really friendly very insightful - to all those who are reading this i would highly recommend you to book the session and you will love it ❤️&rdquo;
+                    </p>
+                  </div>
+                )}
+
+                {isNayab && (
+                  <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
+                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
+                      <Quote className="w-12 h-12 rotate-180" />
+                    </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="relative shrink-0">
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-[#0091ff] flex items-center justify-center shadow-md">
+                          <span className="text-white text-xl font-black">NA</span>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-black text-slate-900 leading-tight text-lg">Nayab Ali</h4>
+                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Student Consultation</p>
+                      </div>
+                    </div>
+                    <div className="flex gap-0.5 mb-3 text-yellow-500">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                      ))}
+                    </div>
+                    <p className="text-slate-700 text-xs leading-relaxed font-semibold italic">
+                      &ldquo;I recently had a session with Ms. Ayesha, and I had a great experience. She explained everything clearly and made sure no questions were left unanswered. What I appreciated most was her gentle and kind demeanour, she created the kind of space where you actually feel safe asking things and exploring options.&rdquo;
+                    </p>
+                  </div>
+                )}
+
+                {isNabila && (
+                  <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
+                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
+                      <Quote className="w-12 h-12 rotate-180" />
+                    </div>
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="relative shrink-0">
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-600 flex items-center justify-center shadow-md">
+                          <span className="text-white text-xl font-black">N</span>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-black text-slate-900 leading-tight text-lg">Nabila</h4>
+                        <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Email Feedback</p>
+                      </div>
+                    </div>
+                    <div className="text-slate-700 text-xs leading-relaxed font-semibold italic space-y-3">
+                      <p>Dear Ayesha,</p>
+                      <p>
+                        Thank you so much for such a detailed and heartwarming recap of our session. To be honest, I had my doubts when I connected you for counselling services since you have more experienced competitors in the market, too. However, I couldn't be happier about choosing UnizConnect for my admission journey. I don't think I could have found more personalized services elsewhere. I am truly grateful to you for showing patience toward the whole process, my nervousness, and especially the technical glitch. It was only your kindness that made me comfortable as we delved deeper into the discussion.
+                      </p>
+                      <p>
+                        I have no doubt that UnizConnect will do great things in no time, insha'Allah. Please don't lose your kindness, sweetness, and personalised approach when it happens because that is exactly what makes your company so special.
+                      </p>
                     </div>
                   </div>
                 )}
 
-                {!isTalal && !isShagufta && !isHamza && !isQuratulain && !isAwaisha && (
+                {!isTalal && !isShagufta && !isHamza && !isQuratulain && !isJaveria && !isManahil && !isIrfan && !isNayab && !isNabila && (
                   <div className="bg-white/5 border-2 border-purple-400/20 p-3 rounded-[2rem]">
                     <img
                       src={src}

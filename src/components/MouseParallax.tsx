@@ -77,6 +77,7 @@ export function MouseParallax({
         rotateX: isHovered ? rotateX : 0,
         rotateY: isHovered ? rotateY : 0,
         transformStyle: "preserve-3d",
+        willChange: "transform",
       }}
       className={className}
     >

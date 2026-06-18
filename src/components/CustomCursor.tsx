@@ -121,7 +121,7 @@ export function CustomCursor() {
             }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            style={{ backgroundColor: p.color }}
+            style={{ backgroundColor: p.color, willChange: "transform" }}
           />
         ))}
       </AnimatePresence>
@@ -138,6 +138,7 @@ export function CustomCursor() {
           boxShadow: isHovering
             ? "0 0 15px rgba(217, 70, 239, 0.4)"
             : "0 0 10px rgba(124, 58, 237, 0.2)",
+          willChange: "transform",
         }}
         animate={{
           scale: isHovering ? 1.6 : isClicking ? 0.8 : 1,
@@ -155,6 +156,7 @@ export function CustomCursor() {
           translateX: "-50%",
           translateY: "-50%",
           backgroundColor: isHovering ? "#7c3aed" : "#d946ef",
+          willChange: "transform",
         }}
         animate={{
           scale: isHovering ? 1.5 : isClicking ? 0.5 : 1,

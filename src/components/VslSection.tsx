@@ -6,7 +6,16 @@ import { useState, useRef, useEffect } from "react";
 
 export default function VslSection() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlayingVideo, setIsPlayingVideo] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlayClick = () => {
+    setIsPlayingVideo(true);
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
 
   useEffect(() => {
     if (isPlaying) {
@@ -73,16 +82,8 @@ export default function VslSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-purple-950 via-violet-900 to-indigo-950" />
       
       {/* Animated gradient blobs */}
-      <motion.div 
-        animate={{ scale: [1, 1.2, 1], x: [0, 30, 0], y: [0, -20, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-10 right-1/4 w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[100px]" 
-      />
-      <motion.div 
-        animate={{ scale: [1, 1.3, 1], x: [0, -20, 0], y: [0, 30, 0] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className="absolute bottom-10 left-1/4 w-[400px] h-[400px] bg-violet-600/20 rounded-full blur-[100px]" 
-      />
+      <div className="absolute top-10 right-1/4 w-[400px] h-[400px] bg-purple-600/15 rounded-full blur-[100px] animate-gpu-blob-1 pointer-events-none" />
+      <div className="absolute bottom-10 left-1/4 w-[400px] h-[400px] bg-violet-600/15 rounded-full blur-[100px] animate-gpu-blob-2 pointer-events-none" />
 
 
 
@@ -125,13 +126,28 @@ export default function VslSection() {
             className="relative w-full aspect-video rounded-3xl overflow-hidden border-4 border-purple-400/30 bg-purple-950 shadow-2xl transition-all duration-300"
           >
             <video 
+              ref={videoRef}
               className="w-full h-full object-cover"
               src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4"
               poster="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/6928bdac571896657f6dba4d.png"
               controls
               playsInline
               preload="metadata"
+              onPlay={() => setIsPlayingVideo(true)}
+              onPause={() => setIsPlayingVideo(false)}
             />
+            {!isPlayingVideo && (
+              <div 
+                onClick={handlePlayClick}
+                className="absolute inset-0 flex items-center justify-center bg-black/10 cursor-pointer z-10 group"
+              >
+                <div className="w-20 h-20 bg-white text-purple-700 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white border-4 border-white/80">
+                  <Play className="w-8 h-8 fill-current translate-x-0.5" />
+                </div>
+                {/* Glowing ring animation */}
+                <div className="absolute w-24 h-24 rounded-full border border-white/50 animate-ping pointer-events-none opacity-40 group-hover:border-purple-500/50" />
+              </div>
+            )}
           </motion.div>
         </div>
 
