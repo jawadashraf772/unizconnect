@@ -7,7 +7,6 @@ import CoversSection from "@/components/CoversSection";
 import AcceptancesSection from "@/components/AcceptancesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import TrustSection from "@/components/TrustSection";
-import OfferSection from "@/components/OfferSection";
 import BookingForm from "@/components/BookingForm";
 import SpotlightTestimonial from "@/components/SpotlightTestimonial";
 import WhySection from "@/components/WhySection";
@@ -44,9 +43,6 @@ export default function Home() {
 
         {/* 9 & 10. Backstory & Authority Credentials */}
         <TrustSection />
-
-        {/* 11. Pricing and Offer Section */}
-        <OfferSection />
 
         {/* 12-14. Offer, Value Prop, How Booking Works & Form */}
         <BookingForm />
