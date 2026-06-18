@@ -61,14 +61,11 @@ export default function WhySection() {
               <div className="space-y-6 text-slate-600 font-medium leading-relaxed text-base sm:text-lg">
 
                 <p>
-                  Yes, you can watch videos, attend webinars, Google things, ask friends, or visit education expos. It&apos;s all{" "}
-                  <span className="text-purple-700 font-extrabold uppercase px-2 py-0.5 bg-purple-50 border border-purple-100 rounded-md">FREE</span>.
+                  Yes, you can watch videos, attend webinars, Google things, ask friends, or visit education expos. It&apos;s all free.
                 </p>
 
                 <p>
-                  But most of that{" "}
-                  <span className="text-purple-700 font-extrabold uppercase px-2 py-0.5 bg-purple-50 border border-purple-100 rounded-md">FREE</span>{" "}
-                  information stays surface-level.
+                  But most of that free information stays surface-level.
                 </p>
 
                 <div className="flex items-start gap-4 bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-100 rounded-xl p-5 shadow-sm">
@@ -122,12 +119,9 @@ export default function WhySection() {
                   And just so you know, our calendar stays booked mostly not because we do aggressive marketing but because students attend a session, find value in it, and then refer their friends and cousins to us.
                 </p>
 
-                <div className="flex items-start gap-4 bg-amber-50 border border-amber-100 rounded-xl p-5 shadow-sm">
-                  <TrendingUp className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-                  <p className="text-purple-800 font-black">
-                    Every time a spot opens and you choose to wait, someone else books it.
-                  </p>
-                </div>
+                <p>
+                  Every time a spot opens and you choose to wait, someone else books it.
+                </p>
 
                 <p className="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-fuchsia-700 to-indigo-700 pt-4 leading-tight">
                   That&apos;s how much demand this one session has created since launch.
