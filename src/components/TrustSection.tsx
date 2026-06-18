@@ -139,11 +139,11 @@ export default function TrustSection() {
             {/* Ayesha's Portrait Card */}
             <div className="flex justify-center">
               <motion.div 
-                initial={{ opacity: 0, scale: 0.8, rotate: 3 }}
-                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.02, rotate: -1, transition: { type: "spring", stiffness: 300 } }}
-                transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.2 }}
+                whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 300 } }}
+                transition={{ type: "spring", stiffness: 80, damping: 15, delay: 0.1 }}
                 className="relative w-full max-w-[340px] bg-white border-4 border-white rounded-[2.5rem] shadow-xl overflow-hidden group"
               >
                 {/* Visual purple/pink blob overlay */}
@@ -151,7 +151,7 @@ export default function TrustSection() {
                 
                 <div className="relative w-full aspect-[4/5] overflow-hidden bg-purple-50">
                   <img 
-                    src="/ayesha.webp" 
+                    src="/ayesha_new.png" 
                     alt="Ayesha Saleem - UnizConnect Founder" 
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
