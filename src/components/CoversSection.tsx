@@ -79,7 +79,7 @@ export default function CoversSection() {
 
   return (
     <div className="w-full bg-slate-50">
-      <section id="what-is-covered" className="py-24 relative overflow-hidden">
+      <section id="what-is-covered" className="pt-8 pb-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/30 to-white" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

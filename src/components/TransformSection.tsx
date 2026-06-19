@@ -24,13 +24,13 @@ export default function TransformSection() {
   ];
 
   return (
-    <div className="py-24 relative overflow-hidden">
+    <div className="py-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/20 to-white" />
       {/* Decorative Blob */}
       <div className="absolute top-40 left-0 w-[600px] h-[600px] bg-purple-200/30 rounded-full blur-[120px] -z-10 mix-blend-multiply" />
 
       {/* This Session is for You If — SUPER PLAYFUL */}
-      <section className="relative py-28 overflow-hidden">
+      <section className="relative py-16 overflow-hidden">
         {/* Fun multi-color background */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-violet-50 to-purple-50" />
         <motion.div 

@@ -1,10 +1,5 @@
 "use client";
 
-import { Globe } from "lucide-react";
-
-/* Each university gets a styled shield/crest-style logo box with their brand color + initials.
-   This is far more reliable than external image fetching and looks premium. */
-
 export default function UniversitiesSection() {
   const universities = [
     { name: "LUMS", logo: "/lums.png" },
@@ -34,20 +29,40 @@ export default function UniversitiesSection() {
   );
 
   return (
-    <section className="py-24 relative overflow-hidden w-full">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/40 to-white" />
-      <div 
-        className="absolute top-1/2 left-1/2 w-[700px] h-[700px] bg-purple-300/30 rounded-full blur-[120px] animate-smooth-pulse-glow" 
-      />
+    <div className="relative w-full overflow-hidden mt-12 sm:mt-16 z-20">
+      {/* Mobile/Tablet view: Static logo showcase */}
+      <div className="block sm:hidden px-4">
+        <p className="text-center text-xs font-black text-purple-600/80 uppercase tracking-widest mb-5">
+          Admitted to top-tier institutions
+        </p>
+        <div className="grid grid-cols-3 gap-3 max-w-sm mx-auto">
+          {universities.map((uni, idx) => (
+            <div 
+              key={idx} 
+              className="bg-white border border-purple-100/60 rounded-xl aspect-[1.8/1] flex items-center justify-center p-2 shadow-xs hover:border-purple-200 hover:shadow-sm transition-all duration-300"
+            >
+              <img
+                src={uni.logo}
+                alt={`${uni.name} logo`}
+                className="max-w-[90%] max-h-[90%] object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 
-      {/* Full-width marquee container */}
-      <div className="w-full relative z-10 overflow-hidden">
+      {/* Desktop/Tablet view: Smooth Marquee */}
+      <div className="hidden sm:block w-full relative">
+        <div className="text-center mb-8">
+          <p className="text-xs sm:text-sm font-black text-purple-600/80 uppercase tracking-widest">
+            Admitted to top-tier institutions
+          </p>
+        </div>
         
         {/* Marquee Row 1 - scrolls left */}
         <div className="relative mb-6 w-full">
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-purple-50/50 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-purple-50/50 to-transparent z-10 pointer-events-none" />
           <div className="overflow-hidden w-full">
             <div className="flex gap-5 w-max animate-marquee-left">
               {[...row1Extended, ...row1Extended].map((uni, idx) => (
@@ -59,8 +74,8 @@ export default function UniversitiesSection() {
 
         {/* Marquee Row 2 - scrolls right */}
         <div className="relative w-full">
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-purple-50/50 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-purple-50/50 to-transparent z-10 pointer-events-none" />
           <div className="overflow-hidden w-full">
             <div className="flex gap-5 w-max animate-marquee-right">
               {[...row2Extended, ...row2Extended].map((uni, idx) => (
@@ -69,8 +84,8 @@ export default function UniversitiesSection() {
             </div>
           </div>
         </div>
-
       </div>
-    </section>
+    </div>
   );
 }
+

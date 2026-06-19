@@ -107,7 +107,7 @@ export default function FaqSection() {
   const emojiMap = ["⏱️", "📝", "🎓", "📊", "🇬🇧", "💼", "📩", "📄", "🏆", "🔗", "📚"];
 
   return (
-    <section id="faq" className="relative py-28 overflow-hidden bg-slate-50">
+    <section id="faq" className="relative pt-12 pb-24 overflow-hidden bg-slate-50">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-purple-50/50 via-white to-purple-50/30" />
       <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-violet-200/30 rounded-full blur-[120px] mix-blend-multiply pointer-events-none" />

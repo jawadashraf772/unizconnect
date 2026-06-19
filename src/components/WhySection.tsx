@@ -12,7 +12,7 @@ export default function WhySection() {
   };
 
   return (
-    <section className="relative py-28 overflow-hidden bg-slate-50">
+    <section className="relative pt-12 pb-10 overflow-hidden bg-slate-50">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/40 to-slate-50" />
       <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-purple-200/30 rounded-full blur-[150px] mix-blend-multiply pointer-events-none" />

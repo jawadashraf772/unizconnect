@@ -58,6 +58,7 @@ export default function BookingForm() {
   const bonuses = [
     { num: 1, text: "Free follow-up questions" },
     { num: 2, text: "Custom recap email" },
+    { num: 3, text: "Direct access to Ayesha" },
   ];
 
   const focusNameField = () => {
@@ -142,7 +143,7 @@ export default function BookingForm() {
     <div className="bg-white">
 
       {/* FORM SECTION (Light Theme Update) */}
-      <section id="booking-form" className="relative py-28 overflow-hidden bg-slate-50/50">
+      <section id="booking-form" className="relative pt-4 pb-14 overflow-hidden bg-slate-50/50">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-white via-purple-50/40 to-slate-50" />
         <motion.div
@@ -174,19 +175,8 @@ export default function BookingForm() {
                 {/* Card body */}
                 <div className="relative bg-white backdrop-blur-2xl rounded-[2rem] p-6 sm:p-8 border border-purple-100 overflow-hidden shadow-xl">
 
-                  {/* Top badge */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-50 to-fuchsia-50 border border-purple-200/60">
-                      <Zap className="w-3.5 h-3.5 text-yellow-500" />
-                      <span className="text-[10px] font-black text-purple-700 uppercase tracking-wider">Most Popular</span>
-                    </div>
-                    <span className="text-[9px] font-black text-purple-600 bg-purple-50 px-2.5 py-1 rounded-lg uppercase tracking-wider border border-purple-100">
-                      100% Certified
-                    </span>
-                  </div>
-
                   {/* Title & Price */}
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-3 mb-6 pt-4">
                     <h3 className="text-lg sm:text-xl font-black tracking-tight text-slate-900">
                       40-Minute 1:1 Consultation
                     </h3>
@@ -194,12 +184,6 @@ export default function BookingForm() {
                       <span className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-700">
                         PKR 5,000
                       </span>
-                      <span className="text-sm line-through text-slate-400 font-bold">
-                        PKR 10,000
-                      </span>
-                    </div>
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 text-[10px] font-black">
-                      <span>🔥</span> 50% OFF — Limited Time
                     </div>
                   </div>
 

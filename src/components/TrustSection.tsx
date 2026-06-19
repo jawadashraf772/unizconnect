@@ -35,7 +35,7 @@ export default function TrustSection() {
   ];
 
   return (
-    <section id="about-ayesha" className="py-24 relative overflow-hidden bg-slate-50/50">
+    <section id="about-ayesha" className="pt-24 pb-10 relative overflow-hidden bg-slate-50/50">
       <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/20 to-white pointer-events-none" />
       
       {/* Decorative Blob */}
@@ -136,7 +136,20 @@ export default function TrustSection() {
           {/* Right Column: Visual Portrait & Stats Grid */}
           <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-28 lg:self-start">
             
-
+            {/* Visual Portrait */}
+            <motion.div
+              initial={{ opacity: 0, y: 120 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ type: "spring", stiffness: 50, damping: 15, delay: 0.1 }}
+              className="max-w-[80%] sm:max-w-[70%] lg:max-w-[85%] mx-auto"
+            >
+              <img
+                src="/ayesha_new.png"
+                alt="Ayesha Saleem"
+                className="w-full h-auto rounded-[2rem] object-cover"
+              />
+            </motion.div>
 
             {/* Custom Credentials Block */}
             <motion.div
@@ -179,7 +192,7 @@ export default function TrustSection() {
         </div>
 
         {/* Call To Action */}
-        <div className="mt-16 text-center">
+        <div className="mt-10 text-center">
           <motion.button
             whileHover={{ scale: 1.05, y: -4 }}
             whileTap={{ scale: 0.95, y: 0 }}

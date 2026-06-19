@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Sparkles, Star } from "lucide-react";
+import UniversitiesSection from "./UniversitiesSection";
 
 export default function HeroSection() {
   const scrollToForm = () => {
@@ -11,7 +12,7 @@ export default function HeroSection() {
     }
   };
   return (
-    <section id="home" className="relative overflow-hidden py-24 lg:py-36">
+    <section id="home" className="relative overflow-hidden pt-24 pb-12 lg:pt-36 lg:pb-16">
       {/* Purple gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-violet-50" />
 
@@ -129,6 +130,9 @@ export default function HeroSection() {
 
         </div>
       </div>
+
+      {/* Universities Marquee / Showcase emerged into Hero */}
+      <UniversitiesSection />
     </section>
   );
 }

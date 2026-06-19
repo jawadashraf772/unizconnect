@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import VslSection from "@/components/VslSection";
 import TransformSection from "@/components/TransformSection";
-import UniversitiesSection from "@/components/UniversitiesSection";
 import CoversSection from "@/components/CoversSection";
 import AcceptancesSection from "@/components/AcceptancesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -21,9 +20,6 @@ export default function Home() {
       <main className="flex-grow">
         {/* 1. Hero Section */}
         <HeroSection />
-
-        {/* 5. Top Universities */}
-        <UniversitiesSection />
 
         {/* 2. VSL Section */}
         <VslSection />

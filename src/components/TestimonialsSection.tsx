@@ -88,6 +88,7 @@ export default function TestimonialsSection() {
             const isIrfan = src === "irfan";
             const isNayab = src === "nayab";
             const isNabila = src === "nabila";
+            const isImage = !isTalal && !isShagufta && !isHamza && !isQuratulain && !isJaveria && !isManahil && !isIrfan && !isNayab && !isNabila;
 
             return (
               <motion.div
@@ -97,12 +98,14 @@ export default function TestimonialsSection() {
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ type: "spring", stiffness: 100, damping: 20, delay: idx * 0.05 }}
                 whileHover={{ y: -6, scale: 1.02, transition: { type: "spring", stiffness: 300 } }}
-                className="break-inside-avoid rounded-[2rem] shadow-xl transition-all duration-300 inline-block w-full overflow-hidden"
+                className={`break-inside-avoid transition-all duration-300 inline-block w-full ${
+                  isImage ? "" : "rounded-[2rem] shadow-xl overflow-hidden"
+                }`}
               >
                 {isTalal && (
                   <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
-                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
-                      <Quote className="w-12 h-12 rotate-180" />
+                    <div className="absolute top-6 right-6 text-purple-100/30 pointer-events-none">
+                      <Quote className="w-10 h-10 rotate-180" />
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
@@ -133,8 +136,8 @@ export default function TestimonialsSection() {
 
                 {isShagufta && (
                   <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
-                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
-                      <Quote className="w-12 h-12 rotate-180" />
+                    <div className="absolute top-6 right-6 text-purple-100/30 pointer-events-none">
+                      <Quote className="w-10 h-10 rotate-180" />
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
@@ -165,8 +168,8 @@ export default function TestimonialsSection() {
 
                 {isHamza && (
                   <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
-                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
-                      <Quote className="w-12 h-12 rotate-180" />
+                    <div className="absolute top-6 right-6 text-purple-100/30 pointer-events-none">
+                      <Quote className="w-10 h-10 rotate-180" />
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
@@ -197,8 +200,8 @@ export default function TestimonialsSection() {
 
                 {isQuratulain && (
                   <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
-                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
-                      <Quote className="w-12 h-12 rotate-180" />
+                    <div className="absolute top-6 right-6 text-purple-100/30 pointer-events-none">
+                      <Quote className="w-10 h-10 rotate-180" />
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
@@ -231,8 +234,8 @@ export default function TestimonialsSection() {
 
                 {isJaveria && (
                   <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
-                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
-                      <Quote className="w-12 h-12 rotate-180" />
+                    <div className="absolute top-6 right-6 text-purple-100/30 pointer-events-none">
+                      <Quote className="w-10 h-10 rotate-180" />
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
@@ -258,8 +261,8 @@ export default function TestimonialsSection() {
 
                 {isManahil && (
                   <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
-                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
-                      <Quote className="w-12 h-12 rotate-180" />
+                    <div className="absolute top-6 right-6 text-purple-100/30 pointer-events-none">
+                      <Quote className="w-10 h-10 rotate-180" />
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
@@ -285,8 +288,8 @@ export default function TestimonialsSection() {
 
                 {isIrfan && (
                   <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
-                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
-                      <Quote className="w-12 h-12 rotate-180" />
+                    <div className="absolute top-6 right-6 text-purple-100/30 pointer-events-none">
+                      <Quote className="w-10 h-10 rotate-180" />
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
@@ -312,8 +315,8 @@ export default function TestimonialsSection() {
 
                 {isNayab && (
                   <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
-                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
-                      <Quote className="w-12 h-12 rotate-180" />
+                    <div className="absolute top-6 right-6 text-purple-100/30 pointer-events-none">
+                      <Quote className="w-10 h-10 rotate-180" />
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
@@ -339,8 +342,8 @@ export default function TestimonialsSection() {
 
                 {isNabila && (
                   <div className="bg-white border-2 border-purple-100 rounded-[2rem] p-6 text-slate-800 text-left relative overflow-hidden">
-                    <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
-                      <Quote className="w-12 h-12 rotate-180" />
+                    <div className="absolute top-6 right-6 text-purple-100/30 pointer-events-none">
+                      <Quote className="w-10 h-10 rotate-180" />
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
@@ -353,26 +356,24 @@ export default function TestimonialsSection() {
                         <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wide">Email Feedback</p>
                       </div>
                     </div>
-                    <div className="text-slate-700 text-xs leading-relaxed font-semibold italic space-y-3">
-                      <p>Dear Ayesha,</p>
-                      <p>
-                        Thank you so much for such a detailed and heartwarming recap of our session. To be honest, I had my doubts when I connected you for counselling services since you have more experienced competitors in the market, too. However, I couldn't be happier about choosing UnizConnect for my admission journey. I don't think I could have found more personalized services elsewhere. I am truly grateful to you for showing patience toward the whole process, my nervousness, and especially the technical glitch. It was only your kindness that made me comfortable as we delved deeper into the discussion.
+                     <div className="text-slate-700 text-sm leading-relaxed font-medium space-y-3 mt-4">
+                      <p className="font-bold text-slate-800">Dear Ayesha,</p>
+                      <p className="italic text-slate-600 pl-3 border-l-2 border-purple-200">
+                        &ldquo;Thank you so much for such a detailed and heartwarming recap of our session. To be honest, I had my doubts when I connected you for counselling services since you have more experienced competitors in the market, too. However, I couldn't be happier about choosing UnizConnect for my admission journey. I don't think I could have found more personalized services elsewhere. I am truly grateful to you for showing patience toward the whole process, my nervousness, and especially the technical glitch. It was only your kindness that made me comfortable as we delved deeper into the discussion.&rdquo;
                       </p>
-                      <p>
-                        I have no doubt that UnizConnect will do great things in no time, insha'Allah. Please don't lose your kindness, sweetness, and personalised approach when it happens because that is exactly what makes your company so special.
+                      <p className="italic text-slate-600 pl-3 border-l-2 border-purple-200">
+                        &ldquo;I have no doubt that UnizConnect will do great things in no time, insha'Allah. Please don't lose your kindness, sweetness, and personalised approach when it happens because that is exactly what makes your company so special.&rdquo;
                       </p>
                     </div>
                   </div>
                 )}
 
-                {!isTalal && !isShagufta && !isHamza && !isQuratulain && !isJaveria && !isManahil && !isIrfan && !isNayab && !isNabila && (
-                  <div className="bg-white/5 border-2 border-purple-400/20 p-3 rounded-[2rem]">
-                    <img
-                      src={src}
-                      alt={`Student success review ${idx + 1}`}
-                      className="w-full h-auto rounded-[1.5rem] object-contain"
-                    />
-                  </div>
+                {isImage && (
+                  <img
+                    src={src}
+                    alt={`Student success review ${idx + 1}`}
+                    className="w-full h-auto rounded-[1.5rem] object-contain border border-transparent shadow-xs"
+                  />
                 )}
               </motion.div>
             );
