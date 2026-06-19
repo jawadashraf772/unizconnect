@@ -79,7 +79,7 @@ export default function CoversSection() {
 
   return (
     <div className="w-full bg-slate-50">
-      <section id="what-is-covered" className="pt-8 pb-20 relative overflow-hidden">
+      <section id="what-is-covered" className="pt-8 pb-10 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/30 to-white" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -142,7 +142,7 @@ export default function CoversSection() {
         </div>
   
         {/* 6-Grid Areas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 mt-12">
           {covers.map((item, idx) => (
             <motion.div
               key={idx}
@@ -172,7 +172,7 @@ export default function CoversSection() {
     </section>
  
     {/* Full-width Bonuses Section */}
-    <section id="bonuses" className="w-full bg-purple-950 border-y-4 border-purple-900 py-24 relative overflow-hidden">
+    <section id="bonuses" className="w-full bg-purple-950 border-y-4 border-purple-900 pt-12 pb-20 relative overflow-hidden">
       {/* Decorative Blur Blob */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none" />
  

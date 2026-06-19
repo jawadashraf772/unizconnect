@@ -11,9 +11,18 @@ export default function VslSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlayClick = () => {
-    setIsPlayingVideo(true);
     if (videoRef.current) {
-      videoRef.current.play();
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsPlayingVideo(true);
+          })
+          .catch((error) => {
+            console.error("Video play was prevented:", error);
+            setIsPlayingVideo(false);
+          });
+      }
     }
   };
 
@@ -128,14 +137,20 @@ export default function VslSection() {
             <video 
               ref={videoRef}
               className="w-full h-full object-cover"
-              src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4"
               poster="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/6928bdac571896657f6dba4d.png"
               controls
               playsInline
               preload="metadata"
               onPlay={() => setIsPlayingVideo(true)}
               onPause={() => setIsPlayingVideo(false)}
-            />
+              onEnded={() => setIsPlayingVideo(false)}
+            >
+              <source 
+                src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4" 
+                type="video/mp4" 
+              />
+              Your browser does not support the video tag.
+            </video>
             {!isPlayingVideo && (
               <div 
                 onClick={handlePlayClick}
@@ -152,7 +167,7 @@ export default function VslSection() {
         </div>
 
         {/* Testimonials Boxes in Purple Background */}
-        <div className="max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-8 relative z-20">
+        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-8 relative z-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {transformations.map((t, idx) => (
               <motion.div
