@@ -88,27 +88,27 @@ export default function HeroSection() {
               <div className="flex -space-x-3">
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
-                  src="/image 1.jpeg"
+                  src="/image 1.webp"
                   alt="Student 1"
                 />
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
-                  src="/image 2.jpeg"
+                  src="/image 2.webp"
                   alt="Student 2"
                 />
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
-                  src="/image 3.jpeg"
+                  src="/image 3.webp"
                   alt="Student 3"
                 />
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
-                  src="/image 4.jpeg"
+                  src="/image 4.webp"
                   alt="Student 4"
                 />
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
-                  src="/image 5.jpeg"
+                  src="/image 5.webp"
                   alt="Student 5"
                 />
               </div>

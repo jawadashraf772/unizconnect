@@ -145,7 +145,7 @@ export default function TrustSection() {
               className="max-w-[80%] sm:max-w-[70%] lg:max-w-[85%] mx-auto"
             >
               <img
-                src="/ayesha_new.png"
+                src="/ayesha_new.webp"
                 alt="Ayesha Saleem"
                 className="w-full h-auto rounded-[2rem] object-cover"
               />

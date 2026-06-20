@@ -68,7 +68,7 @@ export default function SpotlightTestimonial() {
                   <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-2xl opacity-60 blur-sm" />
                   <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                     <img
-                      src="/kashmala.png"
+                      src="/kashmala.webp"
                       alt="Kashmala Khan"
                       className="w-full h-full object-cover object-center"
                     />

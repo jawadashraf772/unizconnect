@@ -264,7 +264,7 @@ export default function BookingForm() {
                       <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-sm" />
                       <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                         <img
-                          src="/kashmala.png"
+                          src="/kashmala.webp"
                           alt="Kashmala Khan"
                           className="w-full h-full object-cover object-center scale-[1.9] rounded-full"
                         />

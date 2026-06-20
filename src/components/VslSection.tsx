@@ -54,7 +54,7 @@ export default function VslSection() {
       gap: "9 years of study gap",
       result: "Won £13,000 Scholarship (PKR 4.8 Million+)",
       uni: "University of Bristol",
-      avatar: "/avatar_ahmad.png?v=2",
+      avatar: "/avatar_ahmad.webp?v=2",
       avatarScale: "scale-[1.45]",
       quote: "It was an excellent session and it lasted more than 80 minutes (2x the originally allotted slot). Ayesha was kind enough to listen to and address my queries. I had no idea of where to start my journey from but this session gave me a fair idea about the journey ahead."
     },
@@ -64,7 +64,7 @@ export default function VslSection() {
       gap: "BNU Graduate",
       result: "Now at Cardiff Met University, UK",
       uni: "Cardiff Met University",
-      avatar: "/kashmala.png?v=2",
+      avatar: "/kashmala.webp?v=2",
       avatarScale: "scale-[1.85]",
       quote: "I've been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master's degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm."
     },
@@ -74,7 +74,7 @@ export default function VslSection() {
       gap: "10 years of study gap",
       result: "Won £64,000 Total Scholarship (PKR 2.38 Crore+)",
       uni: "LSE, Nottingham, NTU, & Sussex",
-      avatar: "/avatar_awaisha.png?v=2",
+      avatar: "/avatar_awaisha.webp?v=2",
       avatarScale: "scale-[1.45]",
       quote: "UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process."
     }
@@ -137,7 +137,7 @@ export default function VslSection() {
             <video 
               ref={videoRef}
               className="w-full h-full object-cover"
-              poster="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/6928bdac571896657f6dba4d.png"
+              poster="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/6928bdac571896657f6dba4d.webp"
               controls
               playsInline
               preload="metadata"

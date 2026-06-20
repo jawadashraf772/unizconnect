@@ -12,17 +12,17 @@ export default function TestimonialsSection() {
   };
 
   const reviewImages = [
-    "/Rectangle 138.png",
-    "/Rectangle 136.png",
+    "/Rectangle 138.webp",
+    "/Rectangle 136.webp",
     "javeria",
-    "/shagufta naz.png",
+    "/shagufta naz.webp",
     "irfan",
-    "/Muhammad Talal.png",
+    "/Muhammad Talal.webp",
     "manahil",
-    "/hamza akram.png",
+    "/hamza akram.webp",
     "nayab",
-    "/Quratulain Sajid.png",
-    "/uzair LSEEE 1.png",
+    "/Quratulain Sajid.webp",
+    "/uzair LSEEE 1.webp",
     "nabila",
     "/WhatsApp Image 2026-06-05 at 12.54.54 AM 1.png",
     "/WhatsApp Image 2026-06-05 at 12.55.31 AM 1.png",
@@ -79,10 +79,10 @@ export default function TestimonialsSection() {
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 max-w-6xl mx-auto mb-16">
           {reviewImages.map((src, idx) => {
-            const isTalal = src === "/Muhammad Talal.png";
-            const isShagufta = src === "/shagufta naz.png";
-            const isHamza = src === "/hamza akram.png";
-            const isQuratulain = src === "/Quratulain Sajid.png";
+            const isTalal = src === "/Muhammad Talal.webp";
+            const isShagufta = src === "/shagufta naz.webp";
+            const isHamza = src === "/hamza akram.webp";
+            const isQuratulain = src === "/Quratulain Sajid.webp";
             const isJaveria = src === "javeria";
             const isManahil = src === "manahil";
             const isIrfan = src === "irfan";
@@ -112,7 +112,7 @@ export default function TestimonialsSection() {
                         <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                           <img
-                            src="/Muhammad Talal.png"
+                            src="/Muhammad Talal.webp"
                             alt="Muhammad Talal"
                             className="w-full h-full object-cover object-center scale-[1.05]"
                           />
@@ -144,7 +144,7 @@ export default function TestimonialsSection() {
                         <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                           <img
-                            src="/shagufta naz.png"
+                            src="/shagufta naz.webp"
                             alt="Shagufta Naz"
                             className="w-full h-full object-cover object-center"
                           />
@@ -176,7 +176,7 @@ export default function TestimonialsSection() {
                         <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                           <img
-                            src="/hamza akram.png"
+                            src="/hamza akram.webp"
                             alt="Hamza Akram"
                             className="w-full h-full object-cover object-center"
                           />
@@ -208,7 +208,7 @@ export default function TestimonialsSection() {
                         <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                           <img
-                            src="/Quratulain Sajid.png"
+                            src="/Quratulain Sajid.webp"
                             alt="Quratulain Sajid"
                             className="w-full h-full object-cover object-center"
                           />

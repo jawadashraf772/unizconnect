@@ -2,15 +2,15 @@
 
 export default function UniversitiesSection() {
   const universities = [
-    { name: "LUMS", logo: "/lums.png" },
-    { name: "Bahria University", logo: "/BAHARIA_UNI_clean.png" },
-    { name: "Beaconhouse National University", logo: "/BNU_clean.png" },
-    { name: "Forman Christian College", logo: "/FCC_clean.png" },
-    { name: "IBA Karachi", logo: "/IBA_clean.png" },
-    { name: "IoBM", logo: "/IOBM_clean.png" },
-    { name: "LGS", logo: "/LGS_clean.png" },
-    { name: "NED University", logo: "/NED_clean.png" },
-    { name: "NUST", logo: "/NUST_clean.png" }
+    { name: "LUMS", logo: "/lums.webp" },
+    { name: "Bahria University", logo: "/BAHARIA_UNI_clean.webp" },
+    { name: "Beaconhouse National University", logo: "/BNU_clean.webp" },
+    { name: "Forman Christian College", logo: "/FCC_clean.webp" },
+    { name: "IBA Karachi", logo: "/IBA_clean.webp" },
+    { name: "IoBM", logo: "/IOBM_clean.webp" },
+    { name: "LGS", logo: "/LGS_clean.webp" },
+    { name: "NED University", logo: "/NED_clean.webp" },
+    { name: "NUST", logo: "/NUST_clean.webp" }
   ];
 
   const row1 = universities.slice(0, 5);
