@@ -24,9 +24,9 @@ export default function TestimonialsSection() {
     "/Quratulain Sajid.webp",
     "/uzair LSEEE 1.webp",
     "nabila",
-    "/WhatsApp Image 2026-06-05 at 12.54.54 AM 1.png",
-    "/WhatsApp Image 2026-06-05 at 12.55.31 AM 1.png",
-    "/WhatsApp Image 2026-06-05 at 12.56.01 AM 1.png"
+    "/WhatsApp Image 2026-06-05 at 12.54.54 AM 1.webp",
+    "/WhatsApp Image 2026-06-05 at 12.55.31 AM 1.webp",
+    "/WhatsApp Image 2026-06-05 at 12.56.01 AM 1.webp"
   ];
 
   return (
