@@ -123,16 +123,17 @@ export default function HeroSection() {
                 <span className="text-[#3b5998] text-xs sm:text-sm font-bold tracking-wide">
                   Trusted by students from different institutions and cities
                 </span>
-              </div>
             </div>
+          </div>
+        </motion.div>
 
-          </motion.div>
+          {/* Universities Marquee / Showcase emerged into Hero */}
+          <div className="w-full relative z-20 mt-8 sm:mt-12">
+            <UniversitiesSection />
+          </div>
 
         </div>
       </div>
-
-      {/* Universities Marquee / Showcase emerged into Hero */}
-      <UniversitiesSection />
     </section>
   );
 }

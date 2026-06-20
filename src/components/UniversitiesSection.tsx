@@ -29,7 +29,7 @@ export default function UniversitiesSection() {
   );
 
   return (
-    <div className="relative w-full overflow-hidden mt-12 sm:mt-16 z-20">
+    <div className="relative w-full overflow-hidden mt-2 sm:mt-4 z-20">
       {/* Mobile/Tablet view: Static logo showcase */}
       <div className="block sm:hidden px-4">
         <p className="text-center text-xs font-black text-purple-600/80 uppercase tracking-widest mb-5">
