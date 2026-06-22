@@ -156,7 +156,7 @@ export default function OfferSection() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={scrollToForm}
-                  className="w-full py-5 bg-gradient-to-r from-purple-700 to-indigo-800 hover:from-purple-600 hover:to-indigo-700 text-white font-black text-lg rounded-2xl shadow-xl shadow-purple-500/20 transition-all text-center flex items-center justify-center gap-3 uppercase tracking-widest relative overflow-hidden group/btn"
+                  className="w-full py-5 bg-gradient-to-r from-purple-700 to-indigo-800 hover:from-purple-600 hover:to-indigo-700 text-white font-black text-lg rounded-2xl shadow-xl shadow-purple-500/20 transition-all text-center flex items-center justify-center gap-3 uppercase tracking-widest relative overflow-hidden group/btn whitespace-nowrap"
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     Book It NOW!

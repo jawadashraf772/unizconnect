@@ -136,7 +136,7 @@ export default function WhySection() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={scrollToForm}
-                className="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-purple-700 to-indigo-800 hover:from-purple-600 hover:to-indigo-700 text-white font-black text-lg sm:text-xl rounded-xl shadow-xl shadow-purple-500/30 transition-all inline-flex items-center justify-center gap-3 uppercase tracking-wider group relative overflow-hidden"
+                className="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-purple-700 to-indigo-800 hover:from-purple-600 hover:to-indigo-700 text-white font-black text-lg sm:text-xl rounded-xl shadow-xl shadow-purple-500/30 transition-all inline-flex items-center justify-center gap-3 uppercase tracking-wider group relative overflow-hidden whitespace-nowrap"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
                 <span className="relative flex items-center gap-2">

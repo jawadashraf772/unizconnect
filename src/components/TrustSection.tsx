@@ -14,23 +14,19 @@ export default function TrustSection() {
   const credentials = [
     {
       value: "£446,200",
-      label: "worth scholarships won",
-      gradient: "from-purple-600 to-indigo-600"
+      label: "worth scholarships won"
     },
     {
       value: "Certified",
-      label: "by the British Council",
-      gradient: "from-violet-600 to-purple-600"
+      label: "by the British Council"
     },
     {
       value: "9.5",
-      label: "years of experience",
-      gradient: "from-indigo-600 to-violet-600"
+      label: "years of experience"
     },
     {
       value: "10%-100%",
-      label: "fee waivers secured for students",
-      gradient: "from-purple-600 to-indigo-600"
+      label: "fee waivers secured for students"
     }
   ];
 
@@ -163,7 +159,7 @@ export default function TrustSection() {
               <div className="divide-y divide-slate-100">
                 {credentials.map((c, i) => (
                   <div key={i} className="p-6 transition-colors duration-300 hover:bg-purple-50/10">
-                    <span className={`text-3xl sm:text-4xl font-black bg-gradient-to-r ${c.gradient} bg-clip-text text-transparent block leading-none`}>
+                    <span className="text-3xl sm:text-4xl font-black text-red-600 block leading-none">
                       {c.value}
                     </span>
                     <span className="text-sm text-slate-500 font-bold uppercase tracking-wider block mt-2">
@@ -174,10 +170,10 @@ export default function TrustSection() {
 
                 {/* Consultations List Item */}
                 <div className="p-6 transition-colors duration-300 hover:bg-purple-50/10">
-                  <span className="text-2xl sm:text-3xl font-black text-indigo-700 block leading-tight">
+                  <span className="text-2xl sm:text-3xl font-black text-red-600 block leading-tight">
                     Consultations
                   </span>
-                  <span className="text-sm text-slate-800 font-bold uppercase tracking-wider block mt-1">
+                  <span className="text-sm text-slate-500 font-bold uppercase tracking-wider block mt-1">
                     across disciplines
                   </span>
                   <p className="text-xs text-slate-500 font-semibold leading-relaxed mt-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
@@ -197,9 +193,9 @@ export default function TrustSection() {
             whileHover={{ scale: 1.05, y: -4 }}
             whileTap={{ scale: 0.95, y: 0 }}
             onClick={scrollToForm}
-            className="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-black text-xl rounded-full shadow-lg shadow-purple-500/20 active:mt-1 transition-all"
+            className="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-black text-xl rounded-full shadow-lg shadow-purple-500/20 active:mt-1 transition-all whitespace-nowrap"
           >
-            Book Your 1:1 Session 🚀
+            Book Your 1:1 Session
           </motion.button>
         </div>
 

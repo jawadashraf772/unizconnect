@@ -193,7 +193,7 @@ export default function CoversSection() {
             whileHover={{ scale: 1.05, rotate: 2 }}
             whileTap={{ scale: 0.95, rotate: -2 }}
             onClick={scrollToForm}
-            className="w-full sm:w-auto px-12 py-6 bg-white text-purple-700 font-black text-xl rounded-full shadow-xl shadow-purple-500/30 cursor-pointer border-b-4 border-purple-200 active:border-b-0 active:mt-1 transition-all"
+            className="w-full sm:w-auto px-12 py-6 bg-gradient-to-r from-yellow-400 to-yellow-300 text-purple-900 font-black text-xl rounded-full shadow-[0_0_40px_rgba(250,204,21,0.3)] hover:shadow-[0_0_60px_rgba(250,204,21,0.5)] border-b-4 border-yellow-500 active:border-b-0 active:mt-1 transition-all flex items-center justify-center gap-3 mx-auto whitespace-nowrap"
           >
             Yes! I want to Book My 1:1 Session 🎁
           </motion.button>

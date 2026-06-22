@@ -356,9 +356,6 @@ export default function BookingForm() {
                         <CreditCard className="w-3.5 h-3.5 text-purple-600" />
                       </div>
                       <h3 className="text-base font-black text-slate-800">Bank Details</h3>
-                      <span className="ml-auto text-[9px] font-black text-purple-700 bg-white px-2 py-0.5 rounded-md uppercase tracking-wider border border-purple-100 shadow-xs">
-                        Official Account
-                      </span>
                     </div>
                     
                     <div className="space-y-2.5 relative">
@@ -366,7 +363,7 @@ export default function BookingForm() {
                         <div key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 py-2.5 border-b border-purple-100/60 last:border-b-0">
                           <span className="text-xs text-slate-500 font-semibold">{detail.label}</span>
                           <div className="flex items-center gap-2">
-                            <span className={`font-black text-slate-900 ${detail.label === "IBAN" ? "text-xs font-mono" : detail.label === "Account Number" ? "text-sm font-mono" : "text-sm"}`}>
+                            <span className="font-black text-slate-900 text-sm">
                               {detail.value}
                             </span>
                             {detail.copyText && (
@@ -525,7 +522,7 @@ export default function BookingForm() {
                       whileTap={{ scale: 0.99 }}
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 hover:from-purple-500 hover:via-fuchsia-500 hover:to-indigo-500 text-white font-black text-lg rounded-xl shadow-xl shadow-purple-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2.5 uppercase tracking-wider mt-6 relative overflow-hidden group"
+                      className="w-full py-4 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 hover:from-purple-500 hover:via-fuchsia-500 hover:to-indigo-500 text-white font-black text-lg rounded-xl shadow-xl shadow-purple-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2.5 uppercase tracking-wider mt-6 relative overflow-hidden group whitespace-nowrap"
                     >
                       <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
                       <span className="relative flex items-center gap-2.5">

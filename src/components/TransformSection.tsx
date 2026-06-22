@@ -121,7 +121,7 @@ export default function TransformSection() {
               animate={{ boxShadow: ["0 0 0 0 rgba(217,70,239,0)", "0 0 0 15px rgba(217,70,239,0)"] }}
               transition={{ boxShadow: { duration: 1.5, repeat: Infinity } }}
               onClick={scrollToForm}
-              className="w-full sm:w-auto px-12 py-6 bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600 text-white font-black text-2xl rounded-full shadow-2xl shadow-purple-500/30 cursor-pointer border-b-4 border-purple-800 active:border-b-0 active:mt-1 transition-all"
+              className="w-full sm:w-auto px-12 py-6 bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600 text-white font-black text-2xl rounded-full shadow-2xl shadow-purple-500/30 cursor-pointer border-b-4 border-purple-800 active:border-b-0 active:mt-1 transition-all whitespace-nowrap"
             >
               Yes, This is Me! 🙋‍♂️ Book My Session
             </motion.button>
