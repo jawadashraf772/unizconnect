@@ -136,7 +136,7 @@ export default function VslSection() {
           >
             <video 
               ref={videoRef}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-fill"
               poster="/image.png"
               controls
               playsInline
