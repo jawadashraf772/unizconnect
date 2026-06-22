@@ -25,14 +25,14 @@ export default function HeroSection() {
         <div className="space-y-6 sm:space-y-8 max-w-5xl mx-auto">
           
           {/* Target Audience Badge */}
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-2">
             <motion.div 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purple-500/10 border border-purple-200/50 text-purple-700 text-xs sm:text-sm font-black tracking-widest uppercase shadow-sm"
+              className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-200/50 text-purple-700 text-[10px] sm:text-xs font-black tracking-widest uppercase shadow-sm"
             >
-              <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
               College Students • Undergraduates • Graduates • Working Professionals
             </motion.div>
 
@@ -79,10 +79,10 @@ export default function HeroSection() {
               onClick={scrollToForm}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-16 py-6 bg-gradient-to-r from-purple-800 to-indigo-900 text-white font-black text-xl rounded-full shadow-2xl shadow-purple-900/40 cursor-pointer border-b-4 border-purple-950 active:border-b-0 active:mt-1 transition-all flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-8 py-4.5 sm:px-12 sm:py-5 bg-gradient-to-r from-purple-800 to-indigo-900 text-white font-black text-base sm:text-lg rounded-full shadow-xl shadow-purple-900/30 cursor-pointer border-b-4 border-purple-950 active:border-b-0 active:mt-1 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
             >
               <span>Book Your 1:1 Session</span>
-              <span className="text-xl">➔</span>
+              <span className="text-lg">➔</span>
             </motion.button>
 
             {/* Overlapping Trust Badge */}
