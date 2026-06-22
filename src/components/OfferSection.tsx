@@ -22,7 +22,7 @@ export default function OfferSection() {
   ];
 
   const bonuses = [
-    { num: 1, text: "Free follow-up questions" },
+    { num: 1, text: "FREE follow-up questions" },
     { num: 2, text: "Custom recap email" },
   ];
 

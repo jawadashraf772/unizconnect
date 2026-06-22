@@ -58,19 +58,19 @@ export default function CoversSection() {
 
   const bonuses = [
     {
-      badge: "Bonus 1 - Free",
+      badge: "Bonus 1 - FREE",
       icon: Mail,
       title: "Post-Session Follow-Up Questions",
       description: "After the session ends, you might realize you forgot to ask something. It happens.\n\nBut the good thing is you don't have to pay again and book another session just to ask follow-up questions and get more clarity."
     },
     {
-      badge: "Bonus 2 - Free",
+      badge: "Bonus 2 - FREE",
       icon: MessageSquare,
       title: "Custom Recap Email",
       description: "I understand no human (including us 😄) can remember everything word-for-word from a 40-minute session.\n\nDon’t worry...you don’t need to remember anything. Because after the session, you’ll receive a custom-written, detailed recap email covering highlights of the session."
     },
     {
-      badge: "Bonus 3 - Free",
+      badge: "Bonus 3 - FREE",
       icon: Smartphone,
       title: "Direct Access to Ayesha",
       description: "We know communicating directly just feels easier. So, in your recap email, you’ll also get Ayesha’s contact number and personal email.\n\nIf something confuses you later or you start overthinking a decision, you can simply reach out to her."
@@ -175,10 +175,10 @@ export default function CoversSection() {
               >
                 <div className="bg-white rounded-[1.5rem] p-6 sm:p-8 space-y-6 flex-1 flex flex-col justify-start">
                   <div className="flex items-center gap-3">
-                    <div className="p-2.5 bg-purple-50 rounded-xl text-purple-600">
+                    <div className="p-2.5 bg-red-50 rounded-xl text-red-600">
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <span className="font-extrabold text-purple-600 text-xl block">
+                    <span className="font-extrabold text-red-600 text-xl block">
                       {bonus.badge}
                     </span>
                   </div>

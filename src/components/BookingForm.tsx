@@ -56,7 +56,7 @@ export default function BookingForm() {
   ];
 
   const bonuses = [
-    { num: 1, text: "Free follow-up questions" },
+    { num: 1, text: "FREE follow-up questions" },
     { num: 2, text: "Custom recap email" },
     { num: 3, text: "Direct access to Ayesha" },
   ];
