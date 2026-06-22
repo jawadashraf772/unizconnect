@@ -178,13 +178,8 @@ export default function VslSection() {
         <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-12 mb-8 relative z-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {transformations.map((t, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ type: "spring", stiffness: 100, damping: 20, delay: idx * 0.15 }}
-                whileHover={{ y: -6, scale: 1.01, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)", transition: { type: "spring", stiffness: 300 } }}
                 className="bg-white/95 backdrop-blur-sm border border-purple-500/20 p-8 rounded-3xl relative flex flex-col justify-between h-full hover:border-purple-300 shadow-2xl group transition-all duration-300 text-slate-800"
               >
                 <div className="flex flex-col gap-4">
@@ -240,7 +235,7 @@ export default function VslSection() {
                     {t.result}
                   </motion.div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

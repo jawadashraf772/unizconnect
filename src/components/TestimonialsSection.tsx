@@ -88,14 +88,9 @@ export default function TestimonialsSection() {
             const isImage = !isTalal && !isShagufta && !isHamza && !isQuratulain && !isJaveria && !isManahil && !isIrfan && !isNayab && !isNabila;
 
             return (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 50, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ type: "spring", stiffness: 100, damping: 20, delay: idx * 0.05 }}
-                whileHover={{ y: -6, scale: 1.02, transition: { type: "spring", stiffness: 300 } }}
-                className={`break-inside-avoid transition-all duration-300 inline-block w-full ${
+                className={`break-inside-avoid inline-block w-full ${
                   isImage ? "" : "rounded-[2rem] shadow-xl overflow-hidden"
                 }`}
               >
@@ -372,7 +367,7 @@ export default function TestimonialsSection() {
                     className="w-full h-auto rounded-[1.5rem] object-contain border border-transparent shadow-xs"
                   />
                 )}
-              </motion.div>
+              </div>
             );
           })}
         </div>
