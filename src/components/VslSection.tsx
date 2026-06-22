@@ -65,7 +65,7 @@ export default function VslSection() {
       gap: "10 years of study gap",
       result: "Won £64,000 Total Scholarship (PKR 2.38 Crore+)",
       uni: "LSE, Nottingham, NTU, & Sussex",
-      avatar: "/avatar_eesha.webp?v=2",
+      avatar: "/kashmala khan.webp",
       avatarScale: "scale-100",
       quote: "UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process."
     },
