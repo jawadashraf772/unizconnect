@@ -45,12 +45,14 @@ export default function HeroSection() {
             transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.2] px-2"
           >
-            Get Personalized Guidance That Has Helped{" "}
+            Get Personalized Guidance <br className="hidden sm:inline" />
+            That Has Helped{" "}
             <span className="relative inline-block text-red-600 px-1 font-black">
               1300+ Students
               <span className="absolute left-0 bottom-1.5 w-full h-2 bg-red-100 rounded-full -z-10 transform -rotate-1" />
             </span>{" "}
-            Make Smarter Decisions About{" "}
+            <br className="hidden sm:inline" />
+            Make Smarter Decisions About <br className="hidden sm:inline" />
             <span className="text-purple-600">
               Admissions, Scholarships, & Careers
             </span>
@@ -127,12 +129,12 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-          {/* Universities Marquee / Showcase emerged into Hero */}
-          <div className="w-full relative z-20 mt-8 sm:mt-12">
-            <UniversitiesSection />
-          </div>
-
         </div>
+      </div>
+
+      {/* Universities Marquee / Showcase emerged into Hero - Full Width */}
+      <div className="w-full relative z-20 mt-8 sm:mt-12">
+        <UniversitiesSection />
       </div>
     </section>
   );

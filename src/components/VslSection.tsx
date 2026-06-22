@@ -118,7 +118,9 @@ export default function VslSection() {
             transition={{ type: "spring", stiffness: 80 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-black max-w-4xl mx-auto leading-tight text-white"
           >
-            Before you book, watch Ayesha, Founder of UnizConnect, explain what's covered in a{" "}
+            Before you book, watch Ayesha, <br className="hidden sm:inline" />
+            Founder of UnizConnect, explain what's <br className="hidden sm:inline" />
+            covered in a{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-fuchsia-300 to-violet-300">
               1:1 session
             </span>
