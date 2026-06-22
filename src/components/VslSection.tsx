@@ -70,18 +70,18 @@ export default function VslSection() {
       quote: "UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process."
     },
     {
-      name: "Eesha Valait",
-      city: "Rawalpindi",
-      gap: "Recent graduate",
+      name: "Kashmala Khan",
+      city: "Lahore",
+      gap: "BNU, Lahore",
       result: (
         <>
-          Won a total of £27,700 in scholarships = <span className="text-red-600 font-extrabold">PKR 1 crore+</span> from Liverpool, NTU, & Loughborough
+          Now studying at <span className="font-extrabold text-purple-700">Cardiff Met University, UK</span>
         </>
       ),
-      uni: "Liverpool, NTU, & Loughborough",
-      avatar: "",
+      uni: "Cardiff Met University",
+      avatar: "/kashmala khan.webp",
       avatarScale: "scale-100",
-      quote: "Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options."
+      quote: "I've been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master's degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm."
     },
     {
       name: "Ahmad Bilal",
