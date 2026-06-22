@@ -49,14 +49,14 @@ export default function VslSection() {
 
   const transformations = [
     {
-      name: "Ahmad Bilal",
-      city: "Lahore",
-      gap: "9 years of study gap",
-      result: "Won £13,000 Scholarship (PKR 4.8 Million+)",
-      uni: "University of Bristol",
-      avatar: "/avatar_ahmad.webp?v=2",
+      name: "Awaisha Inayat",
+      city: "Karachi",
+      gap: "10 years of study gap",
+      result: "Won £64,000 Total Scholarship (PKR 2.38 Crore+)",
+      uni: "LSE, Nottingham, NTU, & Sussex",
+      avatar: "/avatar_awaisha.webp?v=2",
       avatarScale: "scale-[1.45]",
-      quote: "It was an excellent session and it lasted more than 80 minutes (2x the originally allotted slot). Ayesha was kind enough to listen to and address my queries. I had no idea of where to start my journey from but this session gave me a fair idea about the journey ahead."
+      quote: "UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process."
     },
     {
       name: "Kashmala Khan",
@@ -69,14 +69,14 @@ export default function VslSection() {
       quote: "I've been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master's degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm."
     },
     {
-      name: "Awaisha Inayat",
-      city: "Karachi",
-      gap: "10 years of study gap",
-      result: "Won £64,000 Total Scholarship (PKR 2.38 Crore+)",
-      uni: "LSE, Nottingham, NTU, & Sussex",
-      avatar: "/avatar_awaisha.webp?v=2",
+      name: "Ahmad Bilal",
+      city: "Lahore",
+      gap: "9 years of study gap",
+      result: "Won £13,000 Scholarship (PKR 4.8 Million+)",
+      uni: "University of Bristol",
+      avatar: "/avatar_ahmad.webp?v=2",
       avatarScale: "scale-[1.45]",
-      quote: "UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process."
+      quote: "It was an excellent session and it lasted more than 80 minutes (2x the originally allotted slot). Ayesha was kind enough to listen to and address my queries. I had no idea of where to start my journey from but this session gave me a fair idea about the journey ahead."
     }
   ];
 
@@ -84,7 +84,7 @@ export default function VslSection() {
     <section 
       id="video" 
       ref={containerRef} 
-      className="relative py-20 lg:py-28 overflow-hidden noise-overlay"
+      className="relative pt-10 pb-20 lg:pt-16 lg:pb-28 overflow-hidden noise-overlay"
       style={{ zIndex: isPlaying ? 999999 : undefined }}
     >
       {/* Deep purple gradient background */}

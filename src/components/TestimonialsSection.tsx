@@ -72,9 +72,6 @@ export default function TestimonialsSection() {
               Have To Say…
             </span>
           </motion.h2>
-          <p className="text-xl text-purple-200 font-medium max-w-2xl mx-auto">
-            Real stories from real students who took the first step with a 1:1 session.
-          </p>
         </div>
 
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 max-w-6xl mx-auto mb-16">
