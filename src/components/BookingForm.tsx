@@ -8,6 +8,7 @@ import {
   Send,
   CheckCircle,
   ArrowRight,
+  ArrowDown,
   Copy,
   CreditCard,
   User,
@@ -239,13 +240,13 @@ export default function BookingForm() {
                 </div>
               </motion.div>
 
-              {/* Spotlight Testimonial Card */}
+              {/* Spotlight Testimonial Card (Desktop Only) */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 80, damping: 20 }}
-                className="relative group w-full"
+                className="relative group w-full hidden lg:block"
               >
                 {/* Card glow */}
                 <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-200 via-purple-100 to-purple-200 rounded-[2rem] blur-sm opacity-60 group-hover:opacity-100 transition-opacity" />
@@ -305,6 +306,11 @@ export default function BookingForm() {
                 </div>
               </motion.div>
 
+
+              {/* Mobile Arrow down to form */}
+              <div className="flex lg:hidden justify-center items-center py-2 animate-bounce">
+                <ArrowDown className="w-8 h-8 text-purple-600" />
+              </div>
 
             </div>
 
@@ -550,6 +556,74 @@ export default function BookingForm() {
                 </div>
               </motion.div>
             </div>
+
+            {/* Mobile Only Spotlight Testimonial Card */}
+            <div className="lg:hidden mt-8 w-full">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ type: "spring", stiffness: 80, damping: 20 }}
+                className="relative group w-full"
+              >
+                {/* Card glow */}
+                <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-200 via-purple-100 to-purple-200 rounded-[2rem] blur-sm opacity-60 group-hover:opacity-100 transition-opacity" />
+
+                <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-6 sm:p-8 overflow-hidden shadow-xl">
+
+                  {/* Decorative quote */}
+                  <div className="absolute top-4 right-4 text-purple-100/50 pointer-events-none">
+                    <Quote className="w-16 h-16 rotate-180" />
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
+                    {/* Portrait */}
+                    <div className="relative shrink-0">
+                      <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-sm" />
+                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
+                        <img
+                          src="/avatar_eesha.webp?v=2"
+                          alt="Eesha Valait"
+                          className="w-full h-full object-cover object-center rounded-full"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Right text content */}
+                    <div className="flex-1 text-center sm:text-left space-y-3 min-w-0">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+
+                        {/* 5 Stars */}
+                        <div className="flex items-center justify-center gap-0.5">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="w-3 h-3 text-yellow-400 fill-yellow-400" />
+                          ))}
+                        </div>
+                      </div>
+
+                      <p className="text-slate-800 text-xs italic font-bold leading-relaxed">
+                        &ldquo;Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options.&rdquo;
+                      </p>
+
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100 w-full">
+                        <div className="text-left">
+                          <p className="text-xs font-black text-purple-700">Eesha Valait</p>
+                          <p className="text-[10px] font-bold text-slate-500">Recent graduate, Rawalpindi</p>
+                        </div>
+                        <div className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-100 shadow-xs justify-center shrink-0">
+                          <ExternalLink className="w-3 h-3 text-emerald-600" />
+                          <span className="text-[10px] font-bold text-emerald-700">
+                            Won <span className="font-black">£27,700</span> in scholarships (<span className="text-red-600 font-extrabold">PKR 1 Crore+</span>)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </motion.div>
+            </div>
+
           </div>
         </div>
       </section>
