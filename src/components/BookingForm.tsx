@@ -310,12 +310,12 @@ export default function BookingForm() {
               {/* Mobile Arrow down to form */}
               <div className="flex lg:hidden justify-center items-center py-6">
                 <motion.div 
-                  animate={{ y: [0, 12, 0] }} 
-                  transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+                  animate={{ y: [0, 15, 0] }} 
+                  transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
                 >
                   <svg viewBox="0 0 100 100" className="w-16 h-16 text-purple-600 drop-shadow-lg overflow-visible transform rotate-6">
-                    <path d="M25 15 C 60 10, 80 40, 50 85" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
-                    <path d="M30 65 L 50 85 L 70 65" fill="none" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M20 20 Q 80 20, 50 80" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
+                    <path d="M30 60 L 50 80 L 70 55" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </motion.div>
               </div>

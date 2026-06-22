@@ -116,16 +116,7 @@ export default function VslSection() {
         
         {/* Section Heading (Constrained Width) */}
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 mb-6 sm:mb-8">
-          <motion.div 
-            initial={{ scale: 0.5, rotate: -10 }}
-            whileInView={{ scale: 1, rotate: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purple-500/20 border-2 border-purple-400/30 text-purple-200 font-black text-sm tracking-widest uppercase backdrop-blur-sm"
-          >
-            <Video className="w-4 h-4" />
-            Watch First
-          </motion.div>
+
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
