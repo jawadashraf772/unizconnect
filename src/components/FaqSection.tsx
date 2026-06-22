@@ -122,17 +122,11 @@ export default function FaqSection() {
           viewport={{ once: true }}
           className="text-center space-y-5 mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 border border-purple-200 text-purple-700 text-xs font-black uppercase tracking-widest shadow-sm">
-            <HelpCircle className="w-4 h-4" />
-            Got Questions?
-          </div>
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight lg:whitespace-nowrap">
             Frequently Asked{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-600">Questions</span>
           </h2>
-          <p className="text-lg text-slate-500 font-medium max-w-2xl mx-auto">
-            Everything you need to know about booking and the strategy session.
-          </p>
         </motion.div>
 
         {/* FAQ Accordion */}
