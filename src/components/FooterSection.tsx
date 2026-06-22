@@ -81,18 +81,15 @@ export default function FooterSection() {
         {/* Footer Info */}
         <div className="border-t-2 border-purple-800/50 pt-10 mt-16 space-y-6">
           {/* Logo */}
-          <div className="flex items-center justify-center gap-3">
-            <div className="w-10 h-10 relative rounded-2xl bg-white/10 flex items-center justify-center shadow-lg overflow-hidden">
+          <div className="flex items-center justify-center">
+            <div className="w-24 h-24 relative rounded-2xl bg-white/10 flex items-center justify-center shadow-lg overflow-hidden">
               <Image 
                 src="/logo.webp" 
                 alt="UnizConnect Logo" 
                 fill
-                className="object-contain p-1"
+                className="object-contain p-2"
               />
             </div>
-            <span className="font-black text-xl text-white tracking-tight">
-              Uniz<span className="text-purple-300">Connect</span>
-            </span>
           </div>
 
           {/* Social Links */}
