@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Play, Video, Sparkles, Star } from "lucide-react";
+import { Play, Video, Sparkles, Star, User } from "lucide-react";
 import React, { useState, useRef, useEffect } from "react";
 
 export default function VslSection() {
@@ -79,7 +79,7 @@ export default function VslSection() {
         </>
       ),
       uni: "Liverpool, NTU, & Loughborough",
-      avatar: "/avatar_eesha.webp?v=2",
+      avatar: "",
       avatarScale: "scale-100",
       quote: "Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options."
     },
