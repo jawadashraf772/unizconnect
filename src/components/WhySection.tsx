@@ -68,8 +68,7 @@ export default function WhySection() {
                   But most of that free information stays surface-level.
                 </p>
 
-                <div className="flex items-start gap-4 bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-100 rounded-xl p-5 shadow-sm">
-                  <Target className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
+                <div className="bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-100 rounded-xl p-5 shadow-sm">
                   <p className="text-slate-800 font-bold">
                     It tells you what&apos;s possible for students in general.
                   </p>
@@ -90,10 +89,7 @@ export default function WhySection() {
                   transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute top-0 right-0 w-40 h-40 bg-white/60 rounded-full blur-3xl"
                 />
-                <div className="flex items-start gap-4 relative">
-                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm border border-yellow-100">
-                    <DollarSign className="w-6 h-6 text-yellow-600" />
-                  </div>
+                <div className="relative">
                   <div className="space-y-2">
                     <p className="text-3xl sm:text-4xl font-black text-slate-900">It just costs PKR 5,000.</p>
                     <p className="text-sm text-slate-600 font-medium leading-relaxed">
@@ -108,8 +104,7 @@ export default function WhySection() {
                   But the wrong degree, missed scholarship, or delayed application can cost you far more than money.
                 </p>
 
-                <div className="flex items-start gap-4 bg-red-50 border border-red-100 rounded-xl p-5 shadow-sm">
-                  <Clock className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                <div className="bg-red-50 border border-red-100 rounded-xl p-5 shadow-sm">
                   <p className="text-slate-900 font-black">
                     It can cost you time, effort, confidence, and mental peace.
                   </p>
