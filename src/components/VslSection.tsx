@@ -116,7 +116,7 @@ export default function VslSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 80 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black max-w-4xl mx-auto leading-tight text-white"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black max-w-5xl mx-auto leading-tight text-white"
           >
             Before you book, watch Ayesha, <br className="hidden sm:inline" />
             Founder of UnizConnect, explain what's <br className="hidden sm:inline" />

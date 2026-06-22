@@ -18,7 +18,6 @@ export default function TestimonialsSection() {
     "/shagufta naz.webp",
     "irfan",
     "/Muhammad Talal.webp",
-    "manahil",
     "/hamza akram.webp",
     "nayab",
     "/Quratulain Sajid.webp",
@@ -26,7 +25,8 @@ export default function TestimonialsSection() {
     "nabila",
     "/WhatsApp Image 2026-06-05 at 12.54.54 AM 1.webp",
     "/WhatsApp Image 2026-06-05 at 12.55.31 AM 1.webp",
-    "/WhatsApp Image 2026-06-05 at 12.56.01 AM 1.webp"
+    "/WhatsApp Image 2026-06-05 at 12.56.01 AM 1.webp",
+    "manahil"
   ];
 
   return (
