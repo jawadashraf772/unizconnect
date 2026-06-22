@@ -32,7 +32,6 @@ export default function HeroSection() {
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
               className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-200/50 text-purple-700 text-[10px] sm:text-xs font-black tracking-widest uppercase shadow-sm"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
               College Students • Undergraduates • <br className="inline sm:hidden" /> Graduates • Working Professionals
             </motion.div>
 
