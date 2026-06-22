@@ -37,7 +37,7 @@ export default function UniversitiesSection() {
           {universities.map((uni, idx) => (
             <div 
               key={idx} 
-              className="bg-white border border-purple-100/60 rounded-xl aspect-[1.8/1] flex items-center justify-center p-2 shadow-xs hover:border-purple-200 hover:shadow-sm transition-all duration-300"
+              className="bg-white border border-purple-100/60 rounded-xl w-full h-14 flex items-center justify-center p-2 shadow-xs hover:border-purple-200 hover:shadow-sm transition-all duration-300"
             >
               <img
                 src={uni.logo}

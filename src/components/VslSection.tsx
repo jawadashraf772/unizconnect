@@ -100,7 +100,7 @@ export default function VslSection() {
       <div className="relative z-10 w-full flex flex-col items-center">
         
         {/* Section Heading (Constrained Width) */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 mb-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 mb-6 sm:mb-8">
           <motion.div 
             initial={{ scale: 0.5, rotate: -10 }}
             whileInView={{ scale: 1, rotate: 0 }}
@@ -128,7 +128,7 @@ export default function VslSection() {
         </div>
 
         {/* Inline Video Player (Centered & Constrained Width) */}
-        <div className="max-w-4xl w-full mx-auto px-4 my-8 relative z-20">
+        <div className="max-w-4xl w-full mx-auto px-4 my-4 sm:my-6 relative z-20">
           <motion.div 
             initial={{ opacity: 0, y: 50, scale: 0.95 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -169,7 +169,7 @@ export default function VslSection() {
         </div>
 
         {/* Testimonials Boxes in Purple Background */}
-        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-8 relative z-20">
+        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-12 mb-8 relative z-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {transformations.map((t, idx) => (
               <motion.div
