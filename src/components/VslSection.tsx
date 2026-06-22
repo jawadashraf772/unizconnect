@@ -79,7 +79,7 @@ export default function VslSection() {
         </>
       ),
       uni: "Liverpool, NTU, & Loughborough",
-      avatar: "/avatar_eesha.webp?v=2",
+      avatar: "dummy",
       avatarScale: "scale-100",
       quote: "Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options."
     },
@@ -207,8 +207,12 @@ export default function VslSection() {
 
                   {/* Profile info: Avatar, Name, City/Gap */}
                   <div className="flex items-center gap-4 py-2 border-b border-purple-100 pb-4">
-                    <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-purple-200 flex-shrink-0 bg-white">
-                      <img src={t.avatar} alt={t.name} className={`w-full h-full object-cover origin-center ${t.avatarScale}`} />
+                    <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-purple-200 flex-shrink-0 bg-slate-50 flex items-center justify-center">
+                      {t.avatar === "dummy" ? (
+                        <User className="w-10 h-10 text-slate-400" />
+                      ) : (
+                        <img src={t.avatar} alt={t.name} className={`w-full h-full object-cover origin-center ${t.avatarScale}`} />
+                      )}
                     </div>
                     <div>
                       <h4 className="font-black text-base text-slate-900 group-hover:text-purple-600 transition-colors leading-tight">{t.name}</h4>
