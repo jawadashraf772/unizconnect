@@ -308,8 +308,11 @@ export default function BookingForm() {
 
 
               {/* Mobile Arrow down to form */}
-              <div className="flex lg:hidden justify-center items-center py-2 animate-bounce">
-                <ArrowDown className="w-8 h-8 text-purple-600" />
+              <div className="flex lg:hidden justify-center items-center py-6 animate-bounce">
+                <svg width="64" height="64" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-slate-800">
+                  <path d="M40 20 C60 10, 80 30, 60 50 C40 70, 20 50, 40 30 C60 10, 80 40, 60 75" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
+                  <path d="M40 60 L65 85 L85 50 Z" fill="currentColor" />
+                </svg>
               </div>
 
             </div>
