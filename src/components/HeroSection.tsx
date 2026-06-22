@@ -12,7 +12,7 @@ export default function HeroSection() {
     }
   };
   return (
-    <section id="home" className="relative overflow-hidden pt-24 pb-12 lg:pt-36 lg:pb-16">
+    <section id="home" className="relative overflow-hidden pt-12 pb-8 sm:pt-16 lg:pt-20 lg:pb-12">
       {/* Purple gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-violet-50" />
 
@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-fuchsia-200/15 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <div className="space-y-10 max-w-4xl mx-auto">
+        <div className="space-y-6 sm:space-y-8 max-w-4xl mx-auto">
           
           {/* Target Audience Badge */}
           <div className="flex flex-col items-center gap-3">
@@ -45,8 +45,8 @@ export default function HeroSection() {
             transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.2] px-2"
           >
-            Get Personalized Guidance <br className="hidden sm:inline" />
-            That Has Helped{" "}
+            Get Personalized Guidance That <br className="hidden sm:inline" />
+            Has Helped{" "}
             <span className="relative inline-block text-red-600 px-1 font-black">
               1300+ Students
               <span className="absolute left-0 bottom-1.5 w-full h-2 bg-red-100 rounded-full -z-10 transform -rotate-1" />
