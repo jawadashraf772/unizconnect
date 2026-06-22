@@ -32,9 +32,7 @@ export default function UniversitiesSection() {
     <div className="relative w-screen left-1/2 -translate-x-1/2 overflow-hidden mt-2 sm:mt-4 z-20">
       {/* Mobile/Tablet view: Static logo showcase */}
       <div className="block sm:hidden px-4">
-        <p className="text-center text-xs font-black text-purple-600/80 uppercase tracking-widest mb-5">
-          Admitted to top-tier institutions
-        </p>
+
         <div className="grid grid-cols-3 gap-3 max-w-sm mx-auto">
           {universities.map((uni, idx) => (
             <div 
@@ -53,11 +51,7 @@ export default function UniversitiesSection() {
 
       {/* Desktop/Tablet view: Smooth Marquee */}
       <div className="hidden sm:block w-full relative">
-        <div className="text-center mb-8">
-          <p className="text-xs sm:text-sm font-black text-purple-600/80 uppercase tracking-widest">
-            Admitted to top-tier institutions
-          </p>
-        </div>
+
         
         {/* Marquee Row 1 - scrolls left */}
         <div className="relative mb-6 w-full">
