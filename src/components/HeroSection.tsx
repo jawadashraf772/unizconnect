@@ -24,7 +24,19 @@ export default function HeroSection() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div className="space-y-6 sm:space-y-8 max-w-5xl mx-auto">
           
+          {/* Target Audience Badge */}
+          <div className="flex flex-col items-center gap-3">
+            <motion.div 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purple-500/10 border border-purple-200/50 text-purple-700 text-xs sm:text-sm font-black tracking-widest uppercase shadow-sm"
+            >
+              <span className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
+              College Students • Undergraduates • Graduates • Working Professionals
+            </motion.div>
 
+          </div>
 
           {/* Main Headline */}
           <motion.h1 
