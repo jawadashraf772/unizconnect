@@ -173,7 +173,7 @@ export default function VslSection() {
                 onClick={handlePlayClick}
                 className="absolute inset-0 flex items-center justify-center bg-black/10 cursor-pointer z-10 group"
               >
-                <div className="w-20 h-20 bg-white text-purple-700 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white border-4 border-white/80">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-700 to-indigo-800 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform group-hover:scale-110 group-hover:from-purple-600 group-hover:to-indigo-700 border-4 border-purple-400/50">
                   <Play className="w-8 h-8 fill-current translate-x-0.5" />
                 </div>
                 {/* Glowing ring animation */}
