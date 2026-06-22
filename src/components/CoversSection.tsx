@@ -26,33 +26,33 @@ export default function CoversSection() {
   const covers = [
     {
       num: 1,
-      title: "PROFILE REVIEW & BUILDING TIPS",
-      desc: "Where you actually stand with your academic background, CGPA, professional experience, and what activities you can engage in to strengthen a weak profile (since competitive scholarships are never just about good grades)."
+      title: "REVIEW YOUR PROFILE",
+      desc: "Where you actually stand with your academic background, CGPA, professional experience, and what activities you can engage in to strengthen your profile (since competitive scholarships are never just about good grades)."
     },
     {
       num: 2,
       title: "COMPARE COUNTRIES",
-      desc: "Which countries seem the best fit for your course choice and long-term goals and what are the visa implications of each"
+      desc: "Which countries are worth considering for your specific situation and how do factors such as field of study, course availability, visa ratio, and long-term career prospects compare."
     },
     {
       num: 3,
-      title: "COMMENT ON SCHOLARSHIP FIT",
-      desc: "Which scholarships are realistic for you to target - mainstream or university-specific funding that most students don’t know"
+      title: "COMMENT ON FIT",
+      desc: "Which scholarships are realistic for you to target based on your profile including both mainstream scholarships and university-specific funding opportunities that most students don't know about."
     },
     {
       num: 4,
       title: "TALK ABOUT FINANCES",
-      desc: "What kind of budget should you expect for studying abroad, given that costs differ across countries, programmes, and scholarship outcomes"
+      desc: "How much should you expect to spend based on your target country, course duration, university choice, scholarship chances, and whether you intend to study independently or with dependants."
     },
     {
       num: 5,
       title: "DISCUSS PROCESS & TIMELINE",
-      desc: "What to do, how to do, and when to do, so you stop going in circles and avoid missing deadlines"
+      desc: "What your application timeline would look like based on your target intake including when to take English language test, prepare documents, apply for scholarships, and submit applications."
     },
     {
       num: 6,
-      title: "ADDRESS YOUR CONFUSIONS & QUESTIONS",
-      desc: "Get a safe space to ask the questions you’ve been too embarrassed to ask anywhere else. No question is too small, basic, or silly. You can ask as many as you want, even if that means extending the session from 40 to 60 minutes."
+      title: "ADDRESS YOUR CONFUSIONS",
+      desc: "Which concerns, fears, or doubts are stopping you from taking the next step and what should you expect from the study abroad process...No question is too small, basic, or silly - you can ask as many as you want."
     }
   ];
 
