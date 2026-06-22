@@ -137,7 +137,7 @@ export default function VslSection() {
             <video 
               ref={videoRef}
               className="w-full h-full object-cover"
-              poster="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/6928bdac571896657f6dba4d.webp"
+              poster="/image.png"
               controls
               playsInline
               preload="metadata"
