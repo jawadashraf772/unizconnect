@@ -96,17 +96,6 @@ export default function OfferSection() {
               {/* Card body */}
               <div className="relative bg-white backdrop-blur-2xl rounded-[2rem] p-8 sm:p-10 border border-purple-100 overflow-hidden shadow-xl">
 
-                {/* Top badge */}
-                <div className="flex items-center justify-between mb-8">
-                  <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-50 to-fuchsia-50 border border-purple-200/60">
-                    <Zap className="w-3.5 h-3.5 text-yellow-500" />
-                    <span className="text-xs font-black text-purple-700 uppercase tracking-wider">Most Popular</span>
-                  </div>
-                  <span className="text-[10px] font-black text-purple-600 bg-purple-50 px-3 py-1.5 rounded-lg uppercase tracking-wider border border-purple-100">
-                    100% Certified
-                  </span>
-                </div>
-
                 {/* Title & Price */}
                 <div className="space-y-4 mb-8">
                   <h3 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">
@@ -116,12 +105,6 @@ export default function OfferSection() {
                     <span className="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-700">
                       PKR 5,000
                     </span>
-                    <span className="text-base line-through text-slate-400 font-bold">
-                      PKR 10,000
-                    </span>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 text-xs font-black">
-                    <span>🔥</span> 50% OFF — Limited Time
                   </div>
                 </div>
 
@@ -149,48 +132,13 @@ export default function OfferSection() {
                   </ul>
                 </div>
 
-
-
-                {/* Action Button */}
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={scrollToForm}
-                  className="w-full py-5 bg-gradient-to-r from-purple-700 to-indigo-800 hover:from-purple-600 hover:to-indigo-700 text-white font-black text-lg rounded-2xl shadow-xl shadow-purple-500/20 transition-all text-center flex items-center justify-center gap-3 uppercase tracking-widest relative overflow-hidden group/btn whitespace-nowrap"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Book It NOW!
-                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                  </span>
-                </motion.button>
-
-                {/* Micro social proof */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                  className="flex items-center justify-center gap-3 mt-5"
-                >
-                  <div className="flex -space-x-2">
-                    {["🧕", "👩‍🎓", "👨‍💼", "👩‍💻"].map((emoji, i) => (
-                      <div key={i} className="w-8 h-8 rounded-full bg-purple-100 border-2 border-white flex items-center justify-center text-sm shadow-sm animate-bounce" style={{ animationDelay: `${i * 150}ms`, animationDuration: '2s' }}>
-                        {emoji}
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-xs text-slate-500 font-semibold">
-                    <span className="text-purple-700 font-black">12 students</span> booked this week
-                  </p>
-                </motion.div>
-
                 {/* Bonuses Box */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
-                  className="relative bg-gradient-to-br from-purple-50 to-fuchsia-50 border border-purple-100 rounded-2xl p-6 overflow-hidden shadow-sm mt-6"
+                  className="relative bg-gradient-to-br from-purple-50 to-fuchsia-50 border border-purple-100 rounded-2xl p-6 overflow-hidden shadow-sm mt-6 mb-8"
                 >
                   <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
                   <p className="text-xs font-black text-yellow-600 uppercase tracking-[0.15em] flex items-center gap-2 mb-4 relative">
@@ -207,6 +155,19 @@ export default function OfferSection() {
                     ))}
                   </div>
                 </motion.div>
+
+                {/* Action Button */}
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={scrollToForm}
+                  className="w-full py-5 bg-gradient-to-r from-purple-700 to-indigo-800 hover:from-purple-600 hover:to-indigo-700 text-white font-black text-lg rounded-2xl shadow-xl shadow-purple-500/20 transition-all text-center flex items-center justify-center gap-3 uppercase tracking-widest relative overflow-hidden group/btn whitespace-nowrap"
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    Book It NOW!
+                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                  </span>
+                </motion.button>
 
               </div>
             </motion.div>
