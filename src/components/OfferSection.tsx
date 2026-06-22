@@ -12,18 +12,18 @@ export default function OfferSection() {
   };
 
   const inclusions = [
-    "Personalized profile & target country guidance",
-    "Comprehensive admission & scholarship strategy",
-    "Country-specific comparison & pros/cons",
-    "Tailored university & course recommendations",
-    "Custom application roadmap & timeline",
-    "Future career direction & opportunities",
-    "Direct answers to all your specific queries",
+    "Personalized guidance",
+    "Admission and scholarship discussion",
+    "University & course suggestions",
+    "Roadmap and timeline",
+    "Career direction",
+    "Answers to all your queries",
   ];
 
   const bonuses = [
-    { num: 1, text: "FREE follow-up questions" },
+    { num: 1, text: "Free follow-up questions" },
     { num: 2, text: "Custom recap email" },
+    { num: 3, text: "Direct access to Ayesha" },
   ];
 
   return (

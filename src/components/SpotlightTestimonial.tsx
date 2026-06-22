@@ -12,19 +12,6 @@ export default function SpotlightTestimonial() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
 
-        {/* Label */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-10"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-100 border border-yellow-200 text-yellow-700 text-xs font-black uppercase tracking-widest shadow-sm">
-            <Star className="w-3.5 h-3.5 fill-yellow-500 text-yellow-500" />
-            Featured Success Story
-          </div>
-        </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

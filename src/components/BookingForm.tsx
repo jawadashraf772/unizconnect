@@ -46,17 +46,16 @@ export default function BookingForm() {
   const router = useRouter();
 
   const inclusions = [
-    "Personalized profile & target country guidance",
-    "Comprehensive admission & scholarship strategy",
-    "Country-specific comparison & pros/cons",
-    "Tailored university & course recommendations",
-    "Custom application roadmap & timeline",
-    "Future career direction & opportunities",
-    "Direct answers to all your specific queries",
+    "Personalized guidance",
+    "Admission and scholarship discussion",
+    "University & course suggestions",
+    "Roadmap and timeline",
+    "Career direction",
+    "Answers to all your queries",
   ];
 
   const bonuses = [
-    { num: 1, text: "FREE follow-up questions" },
+    { num: 1, text: "Free follow-up questions" },
     { num: 2, text: "Custom recap email" },
     { num: 3, text: "Direct access to Ayesha" },
   ];
@@ -274,11 +273,7 @@ export default function BookingForm() {
                     {/* Right text content */}
                     <div className="flex-1 text-center sm:text-left space-y-3 min-w-0">
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                        {/* Featured Story Label */}
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-yellow-100 border border-yellow-200 text-yellow-700 text-[9px] font-black uppercase tracking-wider shadow-xs">
-                          <Star className="w-2.5 h-2.5 fill-yellow-500 text-yellow-500" />
-                          Featured success story
-                        </div>
+
 
                         {/* 5 Stars */}
                         <div className="flex items-center justify-center gap-0.5">
