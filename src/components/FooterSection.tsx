@@ -42,9 +42,9 @@ export default function FooterSection() {
             transition={{ type: "spring", stiffness: 80 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-black max-w-4xl mx-auto leading-tight text-white"
           >
-            Before you apply, get clarity from someone who can{" "}
+            Before you apply, get clarity from someone who{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-fuchsia-300 to-violet-300">
-              review your profile properly.
+              has already guided 1300+ people like you.
             </span>
           </motion.h2>
           <motion.p 
