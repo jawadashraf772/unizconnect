@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Play, Video, Sparkles, Star } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 export default function VslSection() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -47,7 +47,18 @@ export default function VslSection() {
     }
   };
 
-  const transformations = [
+  interface Transformation {
+    name: string;
+    city: string;
+    gap: string;
+    result: React.ReactNode;
+    uni: string;
+    avatar: string;
+    avatarScale: string;
+    quote: string;
+  }
+
+  const transformations: Transformation[] = [
     {
       name: "Awaisha Inayat",
       city: "Karachi",
@@ -59,14 +70,18 @@ export default function VslSection() {
       quote: "UnizConnect has been an incredible support system for me and I can't thank Ayesha Saleem enough for her guidance. She has been more than just helpful, she's a true mentor and guide. As a student, I was unsure about many things, but Ayesha helped me figure out my passion, guided me through the entire process."
     },
     {
-      name: "Kashmala Khan",
-      city: "Lahore",
-      gap: "BNU Graduate",
-      result: "Now at Cardiff Met University, UK",
-      uni: "Cardiff Met University",
-      avatar: "/kashmala.webp?v=2",
-      avatarScale: "scale-[1.85]",
-      quote: "I've been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master's degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm."
+      name: "Eesha Valait",
+      city: "Rawalpindi",
+      gap: "Recent graduate",
+      result: (
+        <>
+          Won a total of £27,700 in scholarships = <span className="text-red-600 font-extrabold">PKR 1 crore+</span> from Liverpool, NTU, & Loughborough
+        </>
+      ),
+      uni: "Liverpool, NTU, & Loughborough",
+      avatar: "/avatar_eesha.webp?v=2",
+      avatarScale: "scale-100",
+      quote: "Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options."
     },
     {
       name: "Ahmad Bilal",

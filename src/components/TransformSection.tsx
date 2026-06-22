@@ -46,21 +46,6 @@ export default function TransformSection() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           <div className="text-center space-y-6 mb-16">
-            <motion.div 
-              initial={{ rotate: -15, scale: 0.5, opacity: 0 }}
-              whileInView={{ rotate: 0, scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 200, damping: 12 }}
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white text-purple-700 text-base font-black tracking-widest uppercase shadow-xl border-2 border-purple-200"
-            >
-              <motion.span 
-                animate={{ rotate: [0, 360] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-              >
-                <AlertCircle className="w-6 h-6" />
-              </motion.span>
-              Is This You?
-            </motion.div>
              <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -132,8 +117,7 @@ export default function TransformSection() {
             className="mt-20 text-center"
           >
             <motion.button
-              whileHover={{ scale: 1.08, rotate: 3 }}
-              whileTap={{ scale: 0.92, rotate: -3 }}
+              whileTap={{ scale: 0.98 }}
               animate={{ boxShadow: ["0 0 0 0 rgba(217,70,239,0)", "0 0 0 15px rgba(217,70,239,0)"] }}
               transition={{ boxShadow: { duration: 1.5, repeat: Infinity } }}
               onClick={scrollToForm}
