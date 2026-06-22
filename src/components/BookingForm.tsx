@@ -529,7 +529,7 @@ export default function BookingForm() {
                         ) : (
                           <>
                             <Send className="w-4 h-4" />
-                            SUBMIT REQUEST
+                            SUBMIT AND BOOK
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                           </>
                         )}
