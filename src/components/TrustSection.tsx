@@ -189,13 +189,13 @@ export default function TrustSection() {
 
         {/* Call To Action */}
         <div className="mt-10 text-center">
-          <motion.button
-            whileHover={{ scale: 1.05, y: -4 }}
-            whileTap={{ scale: 0.95, y: 0 }}
+          <motion.button 
             onClick={scrollToForm}
-            className="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-black text-xl rounded-full shadow-lg shadow-purple-500/20 active:mt-1 transition-all whitespace-nowrap"
+            whileHover={{ scale: 1.08, rotate: -2 }}
+            whileTap={{ scale: 0.92, rotate: 2 }}
+            className="w-full sm:w-auto px-12 py-5 bg-white text-purple-700 font-black text-xl rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border-b-4 border-purple-200 active:border-b-0 active:mt-1 transition-all flex items-center justify-center gap-3 mx-auto whitespace-nowrap"
           >
-            Book Your 1:1 Session
+            Yes! I want to Book My 1:1 Session 🎁
           </motion.button>
         </div>
 

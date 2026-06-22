@@ -157,16 +157,13 @@ export default function OfferSection() {
                 </motion.div>
 
                 {/* Action Button */}
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                <motion.button 
                   onClick={scrollToForm}
-                  className="w-full py-5 bg-gradient-to-r from-purple-700 to-indigo-800 hover:from-purple-600 hover:to-indigo-700 text-white font-black text-lg rounded-2xl shadow-xl shadow-purple-500/20 transition-all text-center flex items-center justify-center gap-3 uppercase tracking-widest relative overflow-hidden group/btn whitespace-nowrap"
+                  whileHover={{ scale: 1.08, rotate: -2 }}
+                  whileTap={{ scale: 0.92, rotate: 2 }}
+                  className="w-full sm:w-auto px-12 py-5 bg-white text-purple-700 font-black text-xl rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border-b-4 border-purple-200 active:border-b-0 active:mt-1 transition-all flex items-center justify-center gap-3 mx-auto whitespace-nowrap"
                 >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Book It NOW!
-                    <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                  </span>
+                  Yes! I want to Book My 1:1 Session 🎁
                 </motion.button>
 
               </div>

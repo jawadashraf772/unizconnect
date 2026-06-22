@@ -76,12 +76,11 @@ export default function HeroSection() {
           >
             <motion.button 
               onClick={scrollToForm}
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-8 py-4.5 sm:px-12 sm:py-5 bg-gradient-to-r from-purple-800 to-indigo-900 text-white font-black text-base sm:text-lg rounded-full shadow-xl shadow-purple-900/30 cursor-pointer border-b-4 border-purple-950 active:border-b-0 active:mt-1 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+              whileHover={{ scale: 1.08, rotate: -2 }}
+              whileTap={{ scale: 0.92, rotate: 2 }}
+              className="w-full sm:w-auto px-12 py-5 bg-white text-purple-700 font-black text-xl rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border-b-4 border-purple-200 active:border-b-0 active:mt-1 transition-all flex items-center justify-center gap-3 mx-auto whitespace-nowrap"
             >
-              <span>Book Your 1:1 Session</span>
-              <span className="text-lg">➔</span>
+              Yes! I want to Book My 1:1 Session 🎁
             </motion.button>
 
             {/* Overlapping Trust Badge */}

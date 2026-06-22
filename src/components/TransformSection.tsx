@@ -116,14 +116,13 @@ export default function TransformSection() {
             transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
             className="mt-20 text-center"
           >
-            <motion.button
-              whileTap={{ scale: 0.98 }}
-              animate={{ boxShadow: ["0 0 0 0 rgba(217,70,239,0)", "0 0 0 15px rgba(217,70,239,0)"] }}
-              transition={{ boxShadow: { duration: 1.5, repeat: Infinity } }}
+            <motion.button 
               onClick={scrollToForm}
-              className="w-full sm:w-auto px-12 py-6 bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600 text-white font-black text-2xl rounded-full shadow-2xl shadow-purple-500/30 cursor-pointer border-b-4 border-purple-800 active:border-b-0 active:mt-1 transition-all whitespace-nowrap"
+              whileHover={{ scale: 1.08, rotate: -2 }}
+              whileTap={{ scale: 0.92, rotate: 2 }}
+              className="w-full sm:w-auto px-12 py-5 bg-white text-purple-700 font-black text-xl rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border-b-4 border-purple-200 active:border-b-0 active:mt-1 transition-all flex items-center justify-center gap-3 mx-auto whitespace-nowrap"
             >
-              Yes, This is Me! 🙋‍♂️ Book My Session
+              Yes! I want to Book My 1:1 Session 🎁
             </motion.button>
           </motion.div>
 
