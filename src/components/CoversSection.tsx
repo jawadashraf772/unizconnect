@@ -156,7 +156,7 @@ export default function CoversSection() {
         <div className="text-center space-y-4 mb-16 w-full">
           <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
             Not just 40 minutes of guidance... <br />
-            when you book this session, you also get access to <span className="text-yellow-400 underline decoration-2 underline-offset-4">3 FREE bonuses</span> 👇
+            when you book this session, you also get access to <span className="whitespace-nowrap"><span className="text-yellow-400 underline decoration-2 underline-offset-4">3 FREE bonuses</span> 👇</span>
           </h3>
         </div>
  
