@@ -143,11 +143,16 @@ export default function TransformSection() {
                 
                 <div className="pl-6 pr-6 sm:pl-8 sm:pr-8">
                   <p className="text-lg sm:text-xl md:text-2xl font-semibold italic leading-relaxed text-slate-100">
-                    I took a consultation session. It was a very wonderful experience. Ayesha not only guided me through the application process but she was also very transparent and supportive. Applications can be very exhausting and draining but due to Ayesha's encouragement I felt much better after the session.
+                    I've been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master's degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm.
                   </p>
                   
-                  <div className="text-yellow-400 font-black text-base sm:text-lg tracking-wider mt-6">
-                    Maryam Imran - Bahria University, Islamabad
+                  <div className="text-yellow-400 font-black text-base sm:text-lg tracking-wider mt-6 flex items-center gap-4">
+                    <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-yellow-400/50">
+                      <img src="/kashmala khan.webp" alt="Kashmala Khan" className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      Kashmala Khan - BNU, Lahore (now studying at <span className="text-yellow-300">Cardiff Met University</span>, UK)
+                    </div>
                   </div>
                 </div>
                 
