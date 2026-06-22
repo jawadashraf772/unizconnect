@@ -264,9 +264,9 @@ export default function BookingForm() {
                       <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-sm" />
                       <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                         <img
-                          src="/kashmala.webp"
-                          alt="Kashmala Khan"
-                          className="w-full h-full object-cover object-center scale-[1.9] rounded-full"
+                          src="/avatar_eesha.webp?v=2"
+                          alt="Eesha Valait"
+                          className="w-full h-full object-cover object-center rounded-full"
                         />
                       </div>
                     </div>
@@ -289,18 +289,18 @@ export default function BookingForm() {
                       </div>
 
                       <p className="text-slate-800 text-xs italic font-bold leading-relaxed">
-                        &ldquo;I&apos;ve been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master&apos;s degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm.&rdquo;
+                        &ldquo;Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options.&rdquo;
                       </p>
 
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100 w-full">
                         <div className="text-left">
-                          <p className="text-xs font-black text-purple-700">Kashmala Khan</p>
-                          <p className="text-[10px] font-bold text-slate-500">BNU, Lahore</p>
+                          <p className="text-xs font-black text-purple-700">Eesha Valait</p>
+                          <p className="text-[10px] font-bold text-slate-500">Recent graduate, Rawalpindi</p>
                         </div>
                         <div className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-100 shadow-xs justify-center shrink-0">
                           <ExternalLink className="w-3 h-3 text-emerald-600" />
                           <span className="text-[10px] font-bold text-emerald-700">
-                            Now at <span className="font-black underline decoration-emerald-300">Cardiff Met University</span>, UK
+                            Won <span className="font-black">£27,700</span> in scholarships (<span className="text-red-600 font-extrabold">PKR 1 Crore+</span>)
                           </span>
                         </div>
                       </div>
