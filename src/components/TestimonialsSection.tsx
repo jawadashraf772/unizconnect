@@ -389,7 +389,7 @@ export default function TestimonialsSection() {
             onClick={scrollToForm}
             whileHover={{ scale: 1.08, rotate: -2 }}
             whileTap={{ scale: 0.92, rotate: 2 }}
-            className="w-full sm:w-auto px-12 py-5 bg-white text-purple-700 font-black text-xl rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border border-purple-200 transition-all flex items-center justify-center gap-3 mx-auto whitespace-nowrap"
+            className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-white text-purple-700 font-black text-sm sm:text-base md:text-lg rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border border-purple-200 transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
           >
             Yes! I want to Book My 1:1 Session 🎁
           </motion.button>
