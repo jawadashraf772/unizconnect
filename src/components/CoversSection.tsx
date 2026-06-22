@@ -82,37 +82,6 @@ export default function CoversSection() {
       <section id="what-is-covered" className="pt-8 pb-10 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/30 to-white" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* Maryam Imran Quote Spotlight */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-purple-950 text-white rounded-[2rem] p-8 sm:p-12 shadow-2xl mb-20 relative overflow-hidden border-2 border-purple-800"
-        >
-          <div className="relative z-10 flex items-stretch gap-6 sm:gap-8">
-            {/* Left vertical white border line */}
-            <div className="w-1.5 bg-white rounded-full shrink-0" />
-            
-            <div className="relative flex-1 py-2">
-              {/* Top quote icon */}
-              <span className="text-yellow-400 text-6xl sm:text-7xl font-serif absolute -top-8 -left-4 select-none opacity-80">“</span>
-              
-              <div className="pl-6 pr-6 sm:pl-8 sm:pr-8">
-                <p className="text-lg sm:text-xl md:text-2xl font-semibold italic leading-relaxed text-slate-100">
-                  I took a consultation session. It was a very wonderful experience. Ayesha not only guided me through the application process but she was also very transparent and supportive. Applications can be very exhausting and draining but due to Ayesha's encouragement I felt much better after the session.
-                </p>
-                
-                <div className="text-yellow-400 font-black text-base sm:text-lg tracking-wider mt-6">
-                  Maryam Imran - Bahria University, Islamabad
-                </div>
-              </div>
-              
-              {/* Bottom quote icon */}
-              <span className="text-yellow-400 text-6xl sm:text-7xl font-serif absolute -bottom-12 right-2 select-none opacity-80">”</span>
-            </div>
-          </div>
-        </motion.div>
   
         {/* Core Coverage Header */}
         <div className="text-center space-y-6 mb-20">
