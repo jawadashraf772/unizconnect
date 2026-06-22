@@ -199,7 +199,7 @@ export default function TrustSection() {
             onClick={scrollToForm}
             className="w-full sm:w-auto px-12 py-5 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-black text-xl rounded-full shadow-lg shadow-purple-500/20 active:mt-1 transition-all"
           >
-            Book Your 1:1 Strategy Session 🚀
+            Book Your 1:1 Session 🚀
           </motion.button>
         </div>
 
