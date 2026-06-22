@@ -329,7 +329,7 @@ export default function BookingForm() {
                         <Sparkles className="w-4 h-4 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-black text-slate-900">Step-by-Step Session Booking</h3>
+                        <h3 className="text-lg font-black text-slate-900">Book Here</h3>
                         <div className="flex items-center gap-1.5 mt-0.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                           <span className="text-[10px] font-bold text-emerald-600">Accepting bookings now</span>
