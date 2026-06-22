@@ -33,7 +33,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-200/50 text-purple-700 text-[10px] sm:text-xs font-black tracking-widest uppercase shadow-sm"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
-              College Students • Undergraduates • Graduates • Working Professionals
+              College Students • Undergraduates • <br className="inline sm:hidden" /> Graduates • Working Professionals
             </motion.div>
 
           </div>
@@ -63,7 +63,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 max-w-5xl mx-auto font-semibold leading-relaxed px-4 flex items-center justify-center gap-2 flex-wrap sm:flex-nowrap"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 max-w-5xl mx-auto font-semibold leading-relaxed px-4 flex items-center justify-center gap-2 flex-wrap sm:flex-nowrap"
           >
             <span className="sm:whitespace-nowrap text-center">without feeling overwhelmed by too many options and too little clarity.</span>
           </motion.p>
@@ -86,8 +86,8 @@ export default function HeroSection() {
             </motion.button>
 
             {/* Overlapping Trust Badge */}
-            <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 justify-center bg-white/60 backdrop-blur-xs py-3.5 px-6 rounded-full border border-purple-100 shadow-sm max-w-max mx-auto">
-              <div className="flex -space-x-3">
+            <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 justify-center bg-transparent sm:bg-white/60 sm:backdrop-blur-xs py-3.5 px-6 sm:rounded-full border-0 sm:border sm:border-purple-100 shadow-none sm:shadow-sm max-w-max mx-auto">
+              <div className="flex justify-center gap-2">
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
                   src="/image 1.webp"
