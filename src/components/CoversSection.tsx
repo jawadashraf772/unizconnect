@@ -147,13 +147,7 @@ export default function CoversSection() {
  
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
         
-        {/* Exclusive Access Badge */}
-        <div className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-purple-700 font-black tracking-widest uppercase shadow-lg border-2 border-purple-100 mb-8 mt-4">
-          <Gift className="w-5 h-5" />
-          Exclusive Access
-        </div>
- 
-        <div className="text-center space-y-4 mb-16 w-full">
+        <div className="text-center space-y-4 mb-14 mt-4 w-full">
           <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight">
             Not just 40 minutes of guidance... <br />
             when you book this session, you also get access to <span className="whitespace-nowrap"><span className="text-yellow-400 underline decoration-2 underline-offset-4">3 FREE bonuses</span> 👇</span>
