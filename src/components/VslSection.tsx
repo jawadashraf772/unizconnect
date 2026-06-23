@@ -73,11 +73,7 @@ export default function VslSection() {
       name: "Eesha Valait",
       city: "Rawalpindi",
       gap: "Recent graduate",
-      result: (
-        <>
-          Won a total of £27,700 in scholarships = <span className="font-extrabold">PKR 1 crore+</span>
-        </>
-      ),
+      result: "Won £27,200 Total Scholarship (PKR 1 crore+)",
       uni: "Liverpool, NTU, & Loughborough",
       avatar: "dummy",
       avatarScale: "scale-100",
