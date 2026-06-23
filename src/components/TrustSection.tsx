@@ -138,12 +138,12 @@ export default function TrustSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ type: "spring", stiffness: 50, damping: 15, delay: 0.1 }}
-              className="max-w-[80%] sm:max-w-[70%] lg:max-w-[85%] mx-auto"
+              className="max-w-[80%] sm:max-w-[70%] lg:max-w-[85%] mx-auto overflow-hidden rounded-[2rem] shadow-md"
             >
               <img
                 src="/ayesha_new.webp"
                 alt="Ayesha Saleem"
-                className="w-full h-auto rounded-[2rem] object-cover"
+                className="w-full h-auto object-cover scale-[1.03] origin-center"
               />
             </motion.div>
 
