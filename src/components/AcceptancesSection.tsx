@@ -34,7 +34,7 @@ export default function AcceptancesSection() {
     { name: "University of Sussex", logo: "/uni of sussex logo.webp", scaleClass: "scale-100" },
     { name: "University of Stirling", logo: "/uni of stirling logo.webp", scaleClass: "scale-[1.2]" },
     { name: "University of Reading", logo: "/uni of reading logo.webp", scaleClass: "scale-[1.25]" },
-    { name: "Birkbeck, University of London", logo: "/birkbeck london logo.webp", scaleClass: "scale-100" },
+    { name: "Birkbeck, University of London", logo: "/birbeck.webp", scaleClass: "scale-[1.2]" },
     { name: "Queen's University Belfast", logo: "/queen uni belfast logo.png", scaleClass: "scale-100" },
   ];
 
