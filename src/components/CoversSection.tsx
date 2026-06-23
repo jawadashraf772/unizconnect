@@ -140,7 +140,7 @@ export default function CoversSection() {
     </section>
  
     {/* Full-width Bonuses Section */}
-    <section id="bonuses" className="w-full bg-purple-950 border-y-4 border-purple-900 pt-12 pb-20 relative overflow-hidden">
+    <section id="bonuses" className="w-full bg-purple-950 border-y-4 border-purple-900 pt-12 pb-8 sm:pb-20 relative overflow-hidden">
       {/* Decorative Blur Blob */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none" />
  

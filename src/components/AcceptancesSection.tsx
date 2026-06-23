@@ -39,7 +39,7 @@ export default function AcceptancesSection() {
   ];
 
   return (
-    <section className="py-10 sm:py-16 lg:py-24 bg-white relative overflow-hidden border-t border-slate-100">
+    <section className="pt-8 pb-12 sm:py-16 lg:py-24 bg-white relative overflow-hidden border-t border-slate-100">
       <div className="absolute inset-0 bg-slate-50/50 pointer-events-none" />
       
       {/* Decorative Blob */}
