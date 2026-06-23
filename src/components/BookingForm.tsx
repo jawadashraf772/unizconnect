@@ -169,7 +169,7 @@ export default function BookingForm() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-start">
             
             {/* LEFT COLUMN: Pricing Card */}
             <div className="lg:col-span-5 w-full flex flex-col gap-8 lg:sticky lg:top-24 lg:self-start">
@@ -315,12 +315,12 @@ export default function BookingForm() {
 
 
               {/* Mobile Arrow down to form */}
-              <div className="flex lg:hidden justify-center items-center py-6">
+              <div className="flex lg:hidden justify-center items-center pt-2 pb-1">
                 <motion.div 
                   animate={{ y: [0, 15, 0] }} 
                   transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
                 >
-                  <svg viewBox="0 0 100 100" className="w-16 h-16 text-purple-600 drop-shadow-lg overflow-visible transform rotate-6">
+                  <svg viewBox="0 0 100 100" className="w-12 h-12 text-purple-600 drop-shadow-lg overflow-visible transform rotate-6">
                     <path d="M20 20 Q 80 20, 50 80" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
                     <path d="M30 60 L 50 80 L 70 55" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
