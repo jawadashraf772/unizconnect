@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from "react";
+
 export default function UniversitiesSection() {
+  const [showAll, setShowAll] = useState(false);
   const universities = [
     { name: "LUMS", logo: "/lums.webp" },
     { name: "Bahria University", logo: "/Bahria-university-logo.webp" },
@@ -40,7 +43,9 @@ export default function UniversitiesSection() {
           {universities.map((uni, idx) => (
             <div 
               key={idx} 
-              className="bg-white border border-purple-100/60 rounded-xl w-full h-14 flex items-center justify-center p-2 shadow-xs hover:border-purple-200 hover:shadow-sm transition-all duration-300"
+              className={`bg-white border border-purple-100/60 rounded-xl w-full h-14 flex items-center justify-center p-2 shadow-xs hover:border-purple-200 hover:shadow-sm transition-all duration-300 ${
+                idx >= 6 ? (showAll ? "flex" : "hidden") : "flex"
+              }`}
             >
               <img
                 src={uni.logo}
@@ -49,6 +54,16 @@ export default function UniversitiesSection() {
               />
             </div>
           ))}
+        </div>
+
+        {/* Show More Button for Mobile only */}
+        <div className="text-center mt-5">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-5 py-2.5 bg-purple-50 hover:bg-purple-100 active:bg-purple-200 text-purple-700 font-extrabold text-xs rounded-full border border-purple-200 transition-all cursor-pointer shadow-xs"
+          >
+            {showAll ? "Show Less" : "Show All (+6 More) 🏛️"}
+          </button>
         </div>
       </div>
 
