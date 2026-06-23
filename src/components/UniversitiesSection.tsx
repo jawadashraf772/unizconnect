@@ -11,7 +11,7 @@ export default function UniversitiesSection() {
     { name: "IBA Karachi", logo: "/IBA_clean.webp" },
     { name: "IoBM", logo: "/IOBM_clean.webp" },
     { name: "Karachi University", logo: "/karachi uni.webp" },
-    { name: "LGS", logo: "/LGS_clean.webp" },
+    { name: "LGS", logo: "/lgs logo.webp" },
     { name: "NED University", logo: "/NED_clean.webp" },
     { name: "NUST", logo: "/NUST_clean.webp" }
   ];
