@@ -89,7 +89,7 @@ export default function AcceptancesSection() {
             onClick={() => setShowAll(!showAll)}
             className="px-6 py-3 bg-purple-50 hover:bg-purple-100 active:bg-purple-200 text-purple-700 font-extrabold text-sm rounded-full border border-purple-200 transition-all cursor-pointer shadow-xs"
           >
-            {showAll ? "Show Less" : "Show All (+24 More) 🏛️"}
+            {showAll ? "Show Less" : "Show All (+24 More)"}
           </button>
         </div>
 

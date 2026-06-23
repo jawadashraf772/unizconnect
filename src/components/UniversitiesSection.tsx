@@ -63,7 +63,7 @@ export default function UniversitiesSection() {
             onClick={() => setShowAll(!showAll)}
             className="px-5 py-2.5 bg-purple-50 hover:bg-purple-100 active:bg-purple-200 text-purple-700 font-extrabold text-xs rounded-full border border-purple-200 transition-all cursor-pointer shadow-xs"
           >
-            {showAll ? "Show Less" : "Show All (+7 More) 🏛️"}
+            {showAll ? "Show Less" : "Show All (+7 More)"}
           </button>
         </div>
       </div>
