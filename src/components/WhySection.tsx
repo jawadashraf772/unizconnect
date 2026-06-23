@@ -47,7 +47,7 @@ export default function WhySection() {
         >
           <div className="absolute -inset-[1px] border border-purple-200/60 rounded-[2.1rem] pointer-events-none" />
 
-          <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-8 sm:p-12 shadow-2xl overflow-hidden">
+          <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-6 sm:p-12 shadow-2xl overflow-hidden">
 
             {/* Decorative corner accent */}
             <div className="absolute top-0 right-0 w-40 h-40 bg-purple-50/50 rounded-bl-[4rem]" />
