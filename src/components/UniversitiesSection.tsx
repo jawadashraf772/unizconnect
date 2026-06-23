@@ -14,12 +14,13 @@ export default function UniversitiesSection() {
     { name: "IBA Karachi", logo: "/IBA_clean.webp" },
     { name: "IoBM", logo: "/IOBM_clean.webp" },
     { name: "Karachi University", logo: "/karachi uni.webp" },
+    { name: "Lahore School of Economics", logo: "/lahore school of economics logo.webp" },
     { name: "LGS", logo: "/lgs logo.webp" },
     { name: "NED University", logo: "/NED_clean.webp" },
     { name: "NUST", logo: "/NUST_clean.webp" }
   ];
 
-  const row1 = universities.slice(6, 12);
+  const row1 = universities.slice(6, 13);
   const row2 = universities.slice(0, 6);
   const row1Extended = [...row1, ...row1, ...row1];
   const row2Extended = [...row2, ...row2, ...row2];
@@ -62,7 +63,7 @@ export default function UniversitiesSection() {
             onClick={() => setShowAll(!showAll)}
             className="px-5 py-2.5 bg-purple-50 hover:bg-purple-100 active:bg-purple-200 text-purple-700 font-extrabold text-xs rounded-full border border-purple-200 transition-all cursor-pointer shadow-xs"
           >
-            {showAll ? "Show Less" : "Show All (+6 More) 🏛️"}
+            {showAll ? "Show Less" : "Show All (+7 More) 🏛️"}
           </button>
         </div>
       </div>
