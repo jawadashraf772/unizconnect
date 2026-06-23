@@ -75,7 +75,7 @@ export default function VslSection() {
       gap: "Recent graduate",
       result: (
         <>
-          Won a total of £27,700 in scholarships = <span className="text-red-600 font-extrabold">PKR 1 crore+</span> from Liverpool, NTU, & Loughborough
+          Won a total of £27,700 in scholarships = <span className="font-extrabold">PKR 1 crore+</span> from Liverpool, NTU, & Loughborough
         </>
       ),
       uni: "Liverpool, NTU, & Loughborough",
@@ -103,7 +103,7 @@ export default function VslSection() {
       style={{ zIndex: isPlaying ? 999999 : undefined }}
     >
       {/* Deep purple gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-950 via-violet-900 to-indigo-950" />
+      <div className="absolute inset-0 bg-purple-950" />
       
       {/* Animated gradient blobs */}
       <div className="absolute top-10 right-1/4 w-[400px] h-[400px] bg-purple-600/15 rounded-full blur-[100px] animate-gpu-blob-1 pointer-events-none" />
@@ -127,7 +127,7 @@ export default function VslSection() {
             Before you book, watch Ayesha, <br className="hidden sm:inline" />
             Founder of UnizConnect, explain what's <br className="hidden sm:inline" />
             covered in a{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-fuchsia-300 to-violet-300">
+            <span className="text-purple-300">
               1:1 session
             </span>
           </motion.h2>
@@ -164,7 +164,7 @@ export default function VslSection() {
                 onClick={handlePlayClick}
                 className="absolute inset-0 flex items-center justify-center bg-black/10 cursor-pointer z-10 group"
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-700 to-indigo-800 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform group-hover:scale-110 group-hover:from-purple-600 group-hover:to-indigo-700 border-4 border-purple-400/50">
+                <div className="w-20 h-20 bg-purple-700 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform group-hover:scale-110 group-hover:bg-purple-600 border-4 border-purple-400/50">
                   <Play className="w-8 h-8 fill-current translate-x-0.5" />
                 </div>
                 {/* Glowing ring animation */}
@@ -230,7 +230,7 @@ export default function VslSection() {
                 <div className="mt-6 pt-4 border-t border-purple-500/10">
                   <motion.div 
                     whileHover={{ scale: 1.05 }}
-                    className="bg-gradient-to-r from-purple-100 to-fuchsia-100 text-purple-800 text-sm font-black py-2.5 px-4 rounded-xl text-center shadow-sm"
+                    className="bg-purple-100 text-purple-800 text-sm font-black py-2.5 px-4 rounded-xl text-center shadow-sm"
                   >
                     {t.result}
                   </motion.div>
@@ -249,12 +249,10 @@ export default function VslSection() {
           className="pt-6 mt-8 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
           <motion.button 
-            whileHover={{ scale: 1.08, rotate: -2 }}
-            whileTap={{ scale: 0.92, rotate: 2 }}
             onClick={scrollToForm}
-            className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-white text-purple-700 font-black text-sm sm:text-base md:text-lg rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border border-purple-200 transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
+            className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
           >
-            Yes! I want to Book My 1:1 Session 🎁
+            Book Your 1:1 Session
           </motion.button>
         </motion.div>
 

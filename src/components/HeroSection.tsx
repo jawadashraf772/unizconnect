@@ -14,7 +14,7 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative overflow-hidden pt-12 pb-8 sm:pt-16 lg:pt-20 lg:pb-12">
       {/* Purple gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-violet-50" />
+      <div className="absolute inset-0 bg-purple-50/30" />
 
       {/* Decorative gradient blobs */}
       <div className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-purple-300/20 rounded-full blur-[100px] -z-10 animate-gpu-blob-1 pointer-events-none" />
@@ -42,10 +42,10 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.2] px-2"
+            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.2] px-2"
           >
-            Get Personalized Guidance That <br className="hidden sm:inline" />
-            Has Helped{" "}
+            Get Personalized Guidance <br className="hidden sm:inline" />
+            That Has Helped{" "}
             <span className="relative inline-block text-red-600 px-1 font-black">
               1300+ Students
               <span className="absolute left-0 bottom-1.5 w-full h-2 bg-red-100 rounded-full -z-10 transform -rotate-1" />
@@ -76,11 +76,9 @@ export default function HeroSection() {
           >
             <motion.button 
               onClick={scrollToForm}
-              whileHover={{ scale: 1.08, rotate: -2 }}
-              whileTap={{ scale: 0.92, rotate: 2 }}
-              className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-white text-purple-700 font-black text-sm sm:text-base md:text-lg rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border border-purple-200 transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
+              className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
             >
-              Yes! I want to Book My 1:1 Session 🎁
+              Book Your 1:1 Session
             </motion.button>
 
             {/* Overlapping Trust Badge */}

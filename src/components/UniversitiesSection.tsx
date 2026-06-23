@@ -3,18 +3,21 @@
 export default function UniversitiesSection() {
   const universities = [
     { name: "LUMS", logo: "/lums.webp" },
-    { name: "Bahria University", logo: "/BAHARIA_UNI_clean.webp" },
-    { name: "Beaconhouse National University", logo: "/BNU_clean.webp" },
+    { name: "Bahria University", logo: "/Bahria-university-logo.webp" },
+    { name: "Beaconhouse National University", logo: "/bnu_logo.webp" },
+    { name: "Beaconhouse", logo: "/beaconhouse-logo.webp" },
+    { name: "FAST-NU", logo: "/FAST-NU-logo.webp" },
     { name: "Forman Christian College", logo: "/FCC_clean.webp" },
     { name: "IBA Karachi", logo: "/IBA_clean.webp" },
     { name: "IoBM", logo: "/IOBM_clean.webp" },
+    { name: "Karachi University", logo: "/karachi uni.webp" },
     { name: "LGS", logo: "/LGS_clean.webp" },
     { name: "NED University", logo: "/NED_clean.webp" },
     { name: "NUST", logo: "/NUST_clean.webp" }
   ];
 
-  const row1 = universities.slice(0, 5);
-  const row2 = universities.slice(5, 9);
+  const row1 = universities.slice(6, 12);
+  const row2 = universities.slice(0, 6);
   const row1Extended = [...row1, ...row1, ...row1];
   const row2Extended = [...row2, ...row2, ...row2];
 
@@ -55,8 +58,6 @@ export default function UniversitiesSection() {
         
         {/* Marquee Row 1 - scrolls left */}
         <div className="relative mb-6 w-full">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-purple-50/50 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-purple-50/50 to-transparent z-10 pointer-events-none" />
           <div className="overflow-hidden w-full">
             <div className="flex gap-5 w-max animate-marquee-left">
               {[...row1Extended, ...row1Extended].map((uni, idx) => (
@@ -68,8 +69,6 @@ export default function UniversitiesSection() {
 
         {/* Marquee Row 2 - scrolls right */}
         <div className="relative w-full">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-purple-50/50 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-purple-50/50 to-transparent z-10 pointer-events-none" />
           <div className="overflow-hidden w-full">
             <div className="flex gap-5 w-max animate-marquee-right">
               {[...row2Extended, ...row2Extended].map((uni, idx) => (

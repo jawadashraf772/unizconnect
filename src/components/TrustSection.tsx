@@ -32,7 +32,7 @@ export default function TrustSection() {
 
   return (
     <section id="about-ayesha" className="pt-24 pb-10 relative overflow-hidden bg-slate-50/50">
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/20 to-white pointer-events-none" />
+      <div className="absolute inset-0 bg-slate-50/50 pointer-events-none" />
       
       {/* Decorative Blob */}
       <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-purple-200/20 rounded-full blur-[120px] -z-10 mix-blend-multiply pointer-events-none" />
@@ -49,7 +49,7 @@ export default function TrustSection() {
             
             <div className="space-y-4">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight lg:whitespace-nowrap">
-                Hey, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Ayesha.</span>
+                Hey, I'm <span className="text-purple-600">Ayesha.</span>
               </h2>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-800">
                 I understand your confusion because I've lived it.
@@ -191,11 +191,9 @@ export default function TrustSection() {
         <div className="mt-10 text-center">
           <motion.button 
             onClick={scrollToForm}
-            whileHover={{ scale: 1.08, rotate: -2 }}
-            whileTap={{ scale: 0.92, rotate: 2 }}
-            className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-white text-purple-700 font-black text-sm sm:text-base md:text-lg rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border border-purple-200 transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
+            className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
           >
-            Yes! I want to Book My 1:1 Session 🎁
+            Book Your 1:1 Session
           </motion.button>
         </div>
 

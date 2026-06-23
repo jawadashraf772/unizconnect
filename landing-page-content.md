@@ -221,5 +221,5 @@ That is exactly why she founded UnizConnect: to help students avoid years of con
 ---
 
 ## 16. FINAL CTA SECTION
-**Text:** Before you apply, get clarity from someone who can review your profile properly.
+**Text:** Before you apply, get clarity from someone who has already guided 1300+ people like you.
 **CTA Button:** Book Your 1:1 Strategy Session

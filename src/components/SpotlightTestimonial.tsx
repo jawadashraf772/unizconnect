@@ -7,7 +7,7 @@ export default function SpotlightTestimonial() {
   return (
     <section className="relative py-24 overflow-hidden bg-slate-50">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-purple-50/20 to-slate-50" />
+      <div className="absolute inset-0 bg-slate-50" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-200/20 rounded-full blur-[150px] animate-gpu-blob-1 pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
@@ -20,7 +20,7 @@ export default function SpotlightTestimonial() {
           className="relative group"
         >
           {/* Card glow */}
-          <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-200 via-purple-100 to-purple-200 rounded-[2rem] blur-sm opacity-60 group-hover:opacity-100 transition-opacity" />
+          <div className="absolute -inset-[1px] bg-purple-200/50 rounded-[2rem] blur-sm opacity-60 group-hover:opacity-100 transition-opacity" />
 
           <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-8 sm:p-12 overflow-hidden shadow-xl">
 
@@ -52,11 +52,11 @@ export default function SpotlightTestimonial() {
                 className="shrink-0"
               >
                 <div className="relative">
-                  <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-2xl opacity-60 blur-sm" />
+                  <div className="absolute -inset-1 bg-purple-200 rounded-2xl opacity-60 blur-sm" />
                   <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                     <img
-                      src="/avatar_eesha.webp"
-                      alt="Eesha Valait"
+                      src="/kashmala khan.webp"
+                      alt="Kashmala Khan"
                       className="w-full h-full object-cover object-center"
                     />
                   </div>
@@ -66,19 +66,19 @@ export default function SpotlightTestimonial() {
               {/* Text Content */}
               <div className="space-y-6 relative">
                 <p className="text-slate-800 text-lg sm:text-xl lg:text-2xl font-bold italic leading-relaxed">
-                  &ldquo;Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options.&rdquo;
+                  &ldquo;I’ve been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master’s degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm.&rdquo;
                 </p>
                 
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
                   <div>
-                    <p className="text-lg font-black text-purple-700">Eesha Valait</p>
-                    <p className="text-sm font-bold text-slate-500">Recent graduate, Rawalpindi</p>
+                    <p className="text-lg font-black text-purple-700">Kashmala Khan</p>
+                    <p className="text-sm font-bold text-slate-500">BNU, Lahore</p>
                   </div>
                   <div className="hidden sm:block w-px h-8 bg-purple-200" />
                   <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-50 border border-emerald-100 shadow-sm">
                     <ExternalLink className="w-3.5 h-3.5 text-emerald-600" />
                     <span className="text-sm font-bold text-emerald-700">
-                      Won <span className="font-black">£27,700</span> in scholarships (<span className="text-red-600 font-extrabold">PKR 1 Crore+</span>)
+                      Now studying at <span className="font-black">Cardiff Met University, UK</span>
                     </span>
                   </div>
                 </div>

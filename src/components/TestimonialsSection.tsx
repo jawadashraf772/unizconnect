@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
   return (
     <section className="py-24 relative overflow-hidden noise-overlay">
       {/* Deep purple background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-950 via-violet-900 to-indigo-950" />
+      <div className="absolute inset-0 bg-purple-950" />
       
       {/* Animated blobs */}
       <motion.div 
@@ -65,12 +65,10 @@ export default function TestimonialsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 80 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight"
+            className="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight"
           >
-            What Our Students{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-fuchsia-300 to-violet-300">
-              Have To Say…
-            </span>
+            What Our Students <br className="sm:hidden" />
+            <span className="text-purple-300">Have To Say…</span>
           </motion.h2>
         </div>
 
@@ -101,7 +99,7 @@ export default function TestimonialsSection() {
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
-                        <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
+                        <div className="absolute -inset-1 bg-purple-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                           <img
                             src="/Muhammad Talal.webp"
@@ -133,7 +131,7 @@ export default function TestimonialsSection() {
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
-                        <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
+                        <div className="absolute -inset-1 bg-purple-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                           <img
                             src="/shagufta naz.webp"
@@ -165,7 +163,7 @@ export default function TestimonialsSection() {
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
-                        <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
+                        <div className="absolute -inset-1 bg-purple-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                           <img
                             src="/hamza akram.webp"
@@ -197,7 +195,7 @@ export default function TestimonialsSection() {
                     </div>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="relative shrink-0">
-                        <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-xs" />
+                        <div className="absolute -inset-1 bg-purple-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                           <img
                             src="/Quratulain Sajid.webp"
@@ -382,11 +380,9 @@ export default function TestimonialsSection() {
         >
           <motion.button 
             onClick={scrollToForm}
-            whileHover={{ scale: 1.08, rotate: -2 }}
-            whileTap={{ scale: 0.92, rotate: 2 }}
-            className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-white text-purple-700 font-black text-sm sm:text-base md:text-lg rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border border-purple-200 transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
+            className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
           >
-            Yes! I want to Book My 1:1 Session 🎁
+            Book Your 1:1 Session
           </motion.button>
         </motion.div>
 

@@ -109,7 +109,7 @@ export default function FaqSection() {
   return (
     <section id="faq" className="relative pt-12 pb-24 overflow-hidden bg-slate-50">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-50/50 via-white to-purple-50/30" />
+      <div className="absolute inset-0 bg-slate-50" />
       <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-violet-200/30 rounded-full blur-[120px] mix-blend-multiply pointer-events-none" />
       <div className="absolute bottom-20 left-0 w-[300px] h-[300px] bg-purple-200/30 rounded-full blur-[100px] mix-blend-multiply pointer-events-none" />
 
@@ -125,7 +125,7 @@ export default function FaqSection() {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight lg:whitespace-nowrap">
             Frequently Asked{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-600">Questions</span>
+            <span className="text-purple-600">Questions</span>
           </h2>
         </motion.div>
 
@@ -167,20 +167,19 @@ export default function FaqSection() {
                     </motion.div>
                   </button>
 
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ type: "spring", stiffness: 200, damping: 25 }}
-                      >
-                        <div className="px-5 sm:px-6 pb-6 text-sm sm:text-base text-slate-600 font-medium leading-relaxed border-t border-purple-50 pt-4 ml-[52px] sm:ml-[56px]">
-                          {faq.answer}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <motion.div
+                    initial={false}
+                    animate={{ 
+                      height: isOpen ? "auto" : 0, 
+                      opacity: isOpen ? 1 : 0 
+                    }}
+                    transition={{ type: "spring", stiffness: 250, damping: 30 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-5 sm:px-6 pb-6 text-sm sm:text-base text-slate-600 font-medium leading-relaxed border-t border-purple-50 pt-4 ml-[52px] sm:ml-[56px]">
+                      {faq.answer}
+                    </div>
+                  </motion.div>
                 </div>
               </motion.div>
             );

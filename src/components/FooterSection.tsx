@@ -15,7 +15,7 @@ export default function FooterSection() {
   return (
     <footer className="relative overflow-hidden noise-overlay">
       {/* Deep purple gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-950 via-violet-950 to-indigo-950" />
+      <div className="absolute inset-0 bg-purple-950" />
       
       {/* Animated blobs */}
       <motion.div 
@@ -43,7 +43,7 @@ export default function FooterSection() {
             className="text-4xl sm:text-5xl lg:text-6xl font-black max-w-4xl mx-auto leading-tight text-white"
           >
             Before you apply, get clarity from someone who{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-fuchsia-300 to-violet-300">
+            <span className="text-purple-300">
               has already guided 1300+ people like you.
             </span>
           </motion.h2>
@@ -67,11 +67,9 @@ export default function FooterSection() {
         >
           <motion.button 
             onClick={scrollToForm}
-            whileHover={{ scale: 1.08, rotate: -2 }}
-            whileTap={{ scale: 0.92, rotate: 2 }}
-            className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-white text-purple-700 font-black text-sm sm:text-base md:text-lg rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border border-purple-200 transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
+            className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
           >
-            Yes! I want to Book My 1:1 Session 🎁
+            Book Your 1:1 Session
           </motion.button>
         </motion.div>
 
@@ -79,12 +77,12 @@ export default function FooterSection() {
         <div className="border-t-2 border-purple-800/50 pt-10 mt-16 space-y-6">
           {/* Logo */}
           <div className="flex items-center justify-center">
-            <div className="w-24 h-24 relative rounded-2xl bg-white/10 flex items-center justify-center shadow-lg overflow-hidden">
+            <div className="w-48 h-16 relative flex items-center justify-center overflow-hidden rounded-xl">
               <Image 
-                src="/logo.webp" 
+                src="/unizconnect.webp" 
                 alt="UnizConnect Logo" 
                 fill
-                className="object-contain p-2"
+                className="object-contain"
               />
             </div>
           </div>

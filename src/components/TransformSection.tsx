@@ -12,27 +12,27 @@ export default function TransformSection() {
   };
 
   const paintPoints = [
-    { text: "You've watched videos and read websites but feel more confused", emoji: "😵", gradient: "from-pink-500 to-rose-500", bg: "bg-pink-50", border: "border-pink-200", hoverBg: "hover:bg-pink-100" },
-    { text: "You keep switching between UK, US, Canada, Germany, and other countries", emoji: "🔄", gradient: "from-blue-500 to-cyan-500", bg: "bg-blue-50", border: "border-blue-200", hoverBg: "hover:bg-blue-100" },
-    { text: "You're worried your grades, study gap, or background is not strong enough", emoji: "😟", gradient: "from-amber-500 to-orange-500", bg: "bg-amber-50", border: "border-amber-200", hoverBg: "hover:bg-amber-100" },
-    { text: "You don't have a rich family and are looking for scholarships but don't know which ones fit you", emoji: "💰", gradient: "from-emerald-500 to-teal-500", bg: "bg-emerald-50", border: "border-emerald-200", hoverBg: "hover:bg-emerald-100" },
-    { text: "You're scared of choosing the wrong course or country and regretting it later", emoji: "😨", gradient: "from-purple-500 to-violet-500", bg: "bg-purple-50", border: "border-purple-200", hoverBg: "hover:bg-purple-100" },
-    { text: "You're working full-time and don't have time to do research anything", emoji: "⏰", gradient: "from-red-500 to-pink-500", bg: "bg-red-50", border: "border-red-200", hoverBg: "hover:bg-red-100" },
-    { text: "You want to know how you can improve your profile for admissions and scholarships", emoji: "📈", gradient: "from-indigo-500 to-blue-500", bg: "bg-indigo-50", border: "border-indigo-200", hoverBg: "hover:bg-indigo-100" },
-    { text: "You're about to graduate (or recently graduated) and worried about not having experience", emoji: "🎓", gradient: "from-fuchsia-500 to-purple-500", bg: "bg-fuchsia-50", border: "border-fuchsia-200", hoverBg: "hover:bg-fuchsia-100" },
-    { text: "You're a mom or a dad exploring options abroad but have concerns", emoji: "👨‍👩‍👧", gradient: "from-cyan-500 to-sky-500", bg: "bg-cyan-50", border: "border-cyan-200", hoverBg: "hover:bg-cyan-100" }
+    { text: "You've watched videos and read websites but feel more confused", emoji: "😵", solidAccent: "bg-pink-500", bg: "bg-pink-50", border: "border-pink-200", hoverBg: "hover:bg-pink-100" },
+    { text: "You keep switching between UK, US, Canada, Germany, and other countries", emoji: "🔄", solidAccent: "bg-blue-500", bg: "bg-blue-50", border: "border-blue-200", hoverBg: "hover:bg-blue-100" },
+    { text: "You're worried your grades, study gap, or background is not strong enough", emoji: "😟", solidAccent: "bg-amber-500", bg: "bg-amber-50", border: "border-amber-200", hoverBg: "hover:bg-amber-100" },
+    { text: "You don't have a rich family and are looking for scholarships but don't know which ones fit you", emoji: "💰", solidAccent: "bg-emerald-500", bg: "bg-emerald-50", border: "border-emerald-200", hoverBg: "hover:bg-emerald-100" },
+    { text: "You're scared of choosing the wrong course or country and regretting it later", emoji: "😨", solidAccent: "bg-purple-500", bg: "bg-purple-50", border: "border-purple-200", hoverBg: "hover:bg-purple-100" },
+    { text: "You're working full-time and don't have time to do research anything", emoji: "⏰", solidAccent: "bg-red-500", bg: "bg-red-50", border: "border-red-200", hoverBg: "hover:bg-red-100" },
+    { text: "You want to know how you can improve your profile for admissions and scholarships", emoji: "📈", solidAccent: "bg-indigo-500", bg: "bg-indigo-50", border: "border-indigo-200", hoverBg: "hover:bg-indigo-100" },
+    { text: "You're about to graduate (or recently graduated) and worried about not having experience", emoji: "🎓", solidAccent: "bg-fuchsia-500", bg: "bg-fuchsia-50", border: "border-fuchsia-200", hoverBg: "hover:bg-fuchsia-100" },
+    { text: "You're a mom or a dad exploring options abroad but have concerns", emoji: "👨‍👩‍👧", solidAccent: "bg-cyan-500", bg: "bg-cyan-50", border: "border-cyan-200", hoverBg: "hover:bg-cyan-100" }
   ];
 
   return (
     <div className="py-12 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/20 to-white" />
+      <div className="absolute inset-0 bg-purple-50/10" />
       {/* Decorative Blob */}
       <div className="absolute top-40 left-0 w-[600px] h-[600px] bg-purple-200/30 rounded-full blur-[120px] -z-10 mix-blend-multiply" />
 
       {/* This Session is for You If — SUPER PLAYFUL */}
       <section className="relative py-16 overflow-hidden">
         {/* Fun multi-color background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-violet-50 to-purple-50" />
+        <div className="absolute inset-0 bg-purple-50" />
         <motion.div 
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 8, repeat: Infinity }}
@@ -57,7 +57,7 @@ export default function TransformSection() {
               <motion.span 
                 animate={{ scale: [1, 1.1, 1], rotate: [0, 3, -3, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-violet-500"
+                className="inline-block text-purple-600"
               >
                 Session For?
               </motion.span>
@@ -85,8 +85,8 @@ export default function TransformSection() {
                 whileTap={{ scale: 0.95 }}
                 className={`relative ${point.bg} ${point.border} border-2 p-6 rounded-[2rem] cursor-crosshair group overflow-hidden shadow-lg ${point.hoverBg} transition-colors duration-300`}
               >
-                {/* Gradient accent bar at top */}
-                <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${point.gradient} rounded-t-[2rem]`} />
+                {/* Accent bar at top */}
+                <div className={`absolute top-0 left-0 right-0 h-1.5 ${point.solidAccent} rounded-t-[2rem]`} />
                 
                 {/* Large emoji bubble */}
                 <motion.div 
@@ -104,7 +104,7 @@ export default function TransformSection() {
                 </p>
 
                 {/* Decorative corner blob */}
-                <div className={`absolute -bottom-4 -right-4 w-20 h-20 bg-gradient-to-br ${point.gradient} rounded-full opacity-10 group-hover:opacity-25 group-hover:scale-150 transition-all duration-500`} />
+                <div className={`absolute -bottom-4 -right-4 w-20 h-20 ${point.solidAccent} rounded-full opacity-10 group-hover:opacity-25 group-hover:scale-150 transition-all duration-500`} />
               </motion.div>
             ))}
           </div>
@@ -118,11 +118,9 @@ export default function TransformSection() {
           >
             <motion.button 
               onClick={scrollToForm}
-              whileHover={{ scale: 1.08, rotate: -2 }}
-              whileTap={{ scale: 0.92, rotate: 2 }}
-              className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-white text-purple-700 font-black text-sm sm:text-base md:text-lg rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border border-purple-200 transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
+              className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
             >
-              Yes! I want to Book My 1:1 Session 🎁
+              Book Your 1:1 Session
             </motion.button>
           </motion.div>
 

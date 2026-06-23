@@ -29,7 +29,7 @@ export default function OfferSection() {
   return (
     <section className="relative py-28 overflow-hidden bg-white">
       {/* Light Theme Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-violet-50" />
+      <div className="absolute inset-0 bg-purple-50/30" />
 
       {/* Soft gradient orbs */}
       <motion.div
@@ -60,11 +60,11 @@ export default function OfferSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.1] lg:whitespace-nowrap">
             Take Your{" "}
             <span className="relative">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-fuchsia-600 to-violet-600">
+              <span className="text-purple-600">
                 FIRST STEP
               </span>
               <motion.div
-                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 to-fuchsia-400 rounded-full opacity-60"
+                className="absolute -bottom-2 left-0 right-0 h-1 bg-purple-400 rounded-full opacity-60"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
@@ -91,7 +91,7 @@ export default function OfferSection() {
               className="w-full max-w-[520px] relative group"
             >
               {/* Animated border glow */}
-              <div className="absolute -inset-[2px] bg-gradient-to-r from-purple-300 via-fuchsia-300 to-indigo-300 rounded-[2rem] opacity-60 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
+              <div className="absolute -inset-[1px] border border-purple-200/60 rounded-[2.1rem] pointer-events-none" />
 
               {/* Card body */}
               <div className="relative bg-white backdrop-blur-2xl rounded-[2rem] p-8 sm:p-10 border border-purple-100 overflow-hidden shadow-xl">
@@ -102,13 +102,13 @@ export default function OfferSection() {
                     40-Minute 1:1 Consultation
                   </h3>
                   <div className="flex items-baseline gap-3">
-                    <span className="text-5xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-700">
+                    <span className="text-5xl sm:text-6xl font-black text-purple-700">
                       PKR 5,000
                     </span>
                   </div>
                 </div>
 
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-200 to-transparent mb-8" />
+                <div className="w-full h-px bg-purple-200/50 mb-8" />
 
                 {/* Inclusions */}
                 <div className="space-y-5 mb-8">
@@ -123,7 +123,7 @@ export default function OfferSection() {
                         transition={{ delay: 0.1 * idx }}
                         className="flex items-start gap-3 group/item"
                       >
-                        <div className="bg-gradient-to-br from-purple-100 to-fuchsia-100 border border-purple-200 p-1 rounded-lg shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform">
+                        <div className="bg-purple-100 border border-purple-200 p-1 rounded-lg shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform">
                           <Check className="w-3 h-3 text-purple-600" />
                         </div>
                         <span className="text-sm font-semibold text-slate-700 leading-relaxed">{item}</span>
@@ -138,7 +138,7 @@ export default function OfferSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
-                  className="relative bg-gradient-to-br from-purple-50 to-fuchsia-50 border border-purple-100 rounded-2xl p-6 overflow-hidden shadow-sm mt-6 mb-8"
+                  className="relative bg-purple-50 border border-purple-100 rounded-2xl p-6 overflow-hidden shadow-sm mt-6 mb-8"
                 >
                   <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
                   <p className="text-xs font-black text-yellow-600 uppercase tracking-[0.15em] flex items-center gap-2 mb-4 relative">
@@ -159,11 +159,9 @@ export default function OfferSection() {
                 {/* Action Button */}
                 <motion.button 
                   onClick={scrollToForm}
-                  whileHover={{ scale: 1.08, rotate: -2 }}
-                  whileTap={{ scale: 0.92, rotate: 2 }}
-                  className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-white text-purple-700 font-black text-sm sm:text-base md:text-lg rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border border-purple-200 transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
+                  className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
                 >
-                  Yes! I want to Book My 1:1 Session 🎁
+                  Book Your 1:1 Session
                 </motion.button>
 
               </div>

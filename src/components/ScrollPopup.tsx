@@ -95,7 +95,7 @@ export function ScrollPopup() {
             {/* Left Icon with animated rings */}
             <div className="relative shrink-0 mt-1">
               <div className="absolute -inset-1.5 bg-purple-500 rounded-2xl opacity-20 animate-ping" />
-              <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-indigo-600 text-white flex items-center justify-center shadow-lg shadow-purple-500/20">
+              <div className="relative w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center shadow-lg shadow-purple-500/20">
                 <ActiveIcon className="w-6 h-6 animate-pulse" />
               </div>
             </div>

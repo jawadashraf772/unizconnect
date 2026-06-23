@@ -116,6 +116,9 @@ export default function BookingForm() {
         throw new Error("Failed to submit form");
       }
 
+      if (typeof window !== "undefined") {
+        window.sessionStorage.setItem("submittedName", formData.name);
+      }
       router.push("/thank-you");
     } catch (error) {
       console.error("Submission error:", error);
@@ -145,7 +148,7 @@ export default function BookingForm() {
       {/* FORM SECTION (Light Theme Update) */}
       <section id="booking-form" className="relative pt-4 pb-14 overflow-hidden bg-slate-50/50">
         {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-purple-50/40 to-slate-50" />
+        <div className="absolute inset-0 bg-slate-50" />
         <motion.div
           animate={{ x: [0, 30, 0], y: [0, -15, 0] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
@@ -169,9 +172,6 @@ export default function BookingForm() {
                 transition={{ type: "spring", stiffness: 80, damping: 20 }}
                 className="w-full relative group"
               >
-                {/* Animated border glow */}
-                <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-300 via-fuchsia-300 to-indigo-300 rounded-[2rem] opacity-60 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
-
                 {/* Card body */}
                 <div className="relative bg-white backdrop-blur-2xl rounded-[2rem] p-6 sm:p-8 border border-purple-100 overflow-hidden shadow-xl">
 
@@ -181,13 +181,13 @@ export default function BookingForm() {
                       40-Minute 1:1 Consultation
                     </h3>
                     <div className="flex items-baseline gap-2">
-                      <span className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-indigo-700">
+                      <span className="text-4xl sm:text-5xl font-black text-purple-700">
                         PKR 5,000
                       </span>
                     </div>
                   </div>
 
-                  <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-200 to-transparent mb-6" />
+                  <div className="w-full h-px bg-purple-200/50 mb-6" />
 
                   {/* Inclusions */}
                   <div className="space-y-4 mb-6">
@@ -202,7 +202,7 @@ export default function BookingForm() {
                           transition={{ delay: 0.05 * idx }}
                           className="flex items-start gap-2.5 group/item"
                         >
-                          <div className="bg-gradient-to-br from-purple-100 to-fuchsia-100 border border-purple-200 p-0.5 rounded-lg shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform">
+                          <div className="bg-purple-100 border border-purple-200 p-0.5 rounded-lg shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform">
                             <Check className="w-2.5 h-2.5 text-purple-600" />
                           </div>
                           <span className="text-xs font-semibold text-slate-700 leading-relaxed">{item}</span>
@@ -219,7 +219,7 @@ export default function BookingForm() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.3 }}
-                    className="relative bg-gradient-to-br from-purple-50 to-fuchsia-50 border border-purple-100 rounded-2xl p-4 sm:p-5 overflow-hidden shadow-sm mt-5"
+                    className="relative bg-purple-50 border border-purple-100 rounded-2xl p-4 sm:p-5 overflow-hidden shadow-sm mt-5"
                   >
                     <div className="absolute top-0 right-0 w-24 h-24 bg-yellow-400/10 rounded-full blur-2xl" />
                     <p className="text-[10px] font-black text-yellow-600 uppercase tracking-[0.12em] flex items-center gap-1.5 mb-3 relative">
@@ -248,8 +248,7 @@ export default function BookingForm() {
                 transition={{ type: "spring", stiffness: 80, damping: 20 }}
                 className="relative group w-full hidden lg:block"
               >
-                {/* Card glow */}
-                <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-200 via-purple-100 to-purple-200 rounded-[2rem] blur-sm opacity-60 group-hover:opacity-100 transition-opacity" />
+
 
                 <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-6 sm:p-8 overflow-hidden shadow-xl">
 
@@ -261,11 +260,11 @@ export default function BookingForm() {
                   <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
                     {/* Portrait */}
                     <div className="relative shrink-0">
-                      <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-sm" />
+                      <div className="absolute -inset-1 bg-purple-200 rounded-full opacity-60 blur-sm" />
                       <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                         <img
-                          src="/avatar_eesha.webp?v=2"
-                          alt="Eesha Valait"
+                          src="/kashmala khan.webp"
+                          alt="Kashmala Khan"
                           className="w-full h-full object-cover object-center rounded-full"
                         />
                       </div>
@@ -285,18 +284,18 @@ export default function BookingForm() {
                       </div>
 
                       <p className="text-slate-800 text-xs italic font-bold leading-relaxed">
-                        &ldquo;Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options.&rdquo;
+                        &ldquo;I’ve been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master’s degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm.&rdquo;
                       </p>
 
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100 w-full">
                         <div className="text-left">
-                          <p className="text-xs font-black text-purple-700">Eesha Valait</p>
-                          <p className="text-[10px] font-bold text-slate-500">Recent graduate, Rawalpindi</p>
+                          <p className="text-xs font-black text-purple-700">Kashmala Khan</p>
+                          <p className="text-[10px] font-bold text-slate-500">BNU, Lahore</p>
                         </div>
                         <div className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-100 shadow-xs justify-center shrink-0">
                           <ExternalLink className="w-3 h-3 text-emerald-600" />
                           <span className="text-[10px] font-bold text-emerald-700">
-                            Won <span className="font-black">£27,700</span> in scholarships (<span className="text-red-600 font-extrabold">PKR 1 Crore+</span>)
+                            Studying at <span className="font-black">Cardiff Met University, UK</span>
                           </span>
                         </div>
                       </div>
@@ -331,15 +330,14 @@ export default function BookingForm() {
                 transition={{ type: "spring", stiffness: 80 }}
                 className="relative"
               >
-                {/* Card glow */}
-                <div className="absolute -inset-[1px] bg-gradient-to-b from-purple-200 via-purple-100 to-transparent rounded-[2rem] blur-sm" />
+
 
                 <div className="relative bg-white backdrop-blur-2xl rounded-[2rem] p-6 sm:p-8 border border-purple-100 overflow-hidden shadow-xl">
 
                   {/* Top Header */}
                   <div className="space-y-4 mb-8">
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500 to-fuchsia-500 flex items-center justify-center shadow-sm">
+                      <div className="w-9 h-9 rounded-xl bg-purple-500 flex items-center justify-center shadow-sm">
                         <Sparkles className="w-4 h-4 text-white" />
                       </div>
                       <div>
@@ -357,7 +355,7 @@ export default function BookingForm() {
                   </div>
                   
                   {/* Bank Details Card */}
-                  <div className="relative bg-gradient-to-br from-purple-50 to-indigo-50 border border-purple-100 rounded-2xl p-5 sm:p-6 mb-8 overflow-hidden shadow-sm">
+                  <div className="relative bg-purple-50 border border-purple-100 rounded-2xl p-5 sm:p-6 mb-8 overflow-hidden shadow-sm">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/60 rounded-full blur-2xl" />
                     
                     <div className="flex items-center gap-2.5 mb-4 relative">
@@ -377,14 +375,12 @@ export default function BookingForm() {
                             </span>
                             {detail.copyText && (
                               <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
                                 type="button"
                                 onClick={() => handleCopy(detail.copyText, detail.label)}
                                 className={`flex items-center gap-1 text-[10px] font-black px-2 py-1 rounded-lg border transition-all ${
                                   copiedField === detail.label
-                                    ? "bg-emerald-50 border-emerald-200 text-emerald-600"
-                                    : "bg-white border-slate-200 text-purple-700 hover:bg-purple-50 hover:border-purple-200 shadow-xs"
+                                    ? "bg-emerald-50 border-emerald-200 text-emerald-600 active:scale-100"
+                                    : "bg-white border-slate-200 text-purple-700 hover:bg-purple-50 hover:border-purple-200 active:bg-slate-100 shadow-xs"
                                 }`}
                               >
                                 {copiedField === detail.label ? (
@@ -527,13 +523,10 @@ export default function BookingForm() {
 
                     {/* Submit Button */}
                     <motion.button
-                      whileHover={{ scale: 1.01 }}
-                      whileTap={{ scale: 0.99 }}
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-indigo-600 hover:from-purple-500 hover:via-fuchsia-500 hover:to-indigo-500 text-white font-black text-lg rounded-xl shadow-xl shadow-purple-500/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2.5 uppercase tracking-wider mt-6 relative overflow-hidden group whitespace-nowrap"
+                      className="w-full py-4 bg-purple-600 hover:bg-purple-700 active:bg-purple-800 text-white font-black text-lg rounded-xl shadow-xl shadow-purple-500/20 hover:shadow-purple-500/35 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2.5 uppercase tracking-wider mt-6 relative overflow-hidden group whitespace-nowrap"
                     >
-                      <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
                       <span className="relative flex items-center gap-2.5">
                         {isSubmitting ? (
                           <>
@@ -574,8 +567,8 @@ export default function BookingForm() {
                 transition={{ type: "spring", stiffness: 80, damping: 20 }}
                 className="relative group w-full"
               >
-                {/* Card glow */}
-                <div className="absolute -inset-[1px] bg-gradient-to-r from-purple-200 via-purple-100 to-purple-200 rounded-[2rem] blur-sm opacity-60 group-hover:opacity-100 transition-opacity" />
+                {/* Card border */}
+                <div className="absolute -inset-[1px] border border-purple-200/60 rounded-[2.1rem] pointer-events-none" />
 
                 <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-6 sm:p-8 overflow-hidden shadow-xl">
 
@@ -587,11 +580,11 @@ export default function BookingForm() {
                   <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
                     {/* Portrait */}
                     <div className="relative shrink-0">
-                      <div className="absolute -inset-1 bg-gradient-to-br from-purple-200 to-fuchsia-200 rounded-full opacity-60 blur-sm" />
+                      <div className="absolute -inset-1 bg-purple-200 rounded-full opacity-60 blur-sm" />
                       <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
                         <img
-                          src="/avatar_eesha.webp?v=2"
-                          alt="Eesha Valait"
+                          src="/kashmala khan.webp"
+                          alt="Kashmala Khan"
                           className="w-full h-full object-cover object-center rounded-full"
                         />
                       </div>
@@ -610,18 +603,18 @@ export default function BookingForm() {
                       </div>
 
                       <p className="text-slate-800 text-xs italic font-bold leading-relaxed">
-                        &ldquo;Miss Ayesha openly discusses every possible scenario and provides clear guidance. Her expertise was evident from the very first session. Unlike other consultants, she gives full support and attention to each individual based on their profile, which helped us secure the best options rather than just any options.&rdquo;
+                        &ldquo;I’ve been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master’s degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm.&rdquo;
                       </p>
 
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100 w-full">
                         <div className="text-left">
-                          <p className="text-xs font-black text-purple-700">Eesha Valait</p>
-                          <p className="text-[10px] font-bold text-slate-500">Recent graduate, Rawalpindi</p>
+                          <p className="text-xs font-black text-purple-700">Kashmala Khan</p>
+                          <p className="text-[10px] font-bold text-slate-500">BNU, Lahore</p>
                         </div>
                         <div className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-100 shadow-xs justify-center shrink-0">
                           <ExternalLink className="w-3 h-3 text-emerald-600" />
                           <span className="text-[10px] font-bold text-emerald-700">
-                            Won <span className="font-black">£27,700</span> in scholarships (<span className="text-red-600 font-extrabold">PKR 1 Crore+</span>)
+                            Studying at <span className="font-black">Cardiff Met University, UK</span>
                           </span>
                         </div>
                       </div>

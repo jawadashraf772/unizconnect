@@ -14,7 +14,7 @@ export default function WhySection() {
   return (
     <section className="relative pt-12 pb-10 overflow-hidden bg-slate-50">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-purple-50/40 to-slate-50" />
+      <div className="absolute inset-0 bg-slate-50" />
       <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-purple-200/30 rounded-full blur-[150px] mix-blend-multiply pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-indigo-200/30 rounded-full blur-[120px] mix-blend-multiply pointer-events-none" />
 
@@ -33,7 +33,7 @@ export default function WhySection() {
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight lg:whitespace-nowrap">
             Why It&apos;s For{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-fuchsia-600 to-violet-600">PKR 5000</span>?
+            <span className="text-purple-600">PKR 5000</span>?
           </h2>
         </motion.div>
 
@@ -45,12 +45,12 @@ export default function WhySection() {
           transition={{ type: "spring", stiffness: 80 }}
           className="relative"
         >
-          <div className="absolute -inset-[1px] bg-gradient-to-b from-purple-200 via-purple-100 to-transparent rounded-[2rem] blur-md" />
+          <div className="absolute -inset-[1px] border border-purple-200/60 rounded-[2.1rem] pointer-events-none" />
 
           <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-8 sm:p-12 shadow-2xl overflow-hidden">
 
             {/* Decorative corner accent */}
-            <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-purple-50 to-transparent rounded-bl-[4rem]" />
+            <div className="absolute top-0 right-0 w-40 h-40 bg-purple-50/50 rounded-bl-[4rem]" />
 
             <div className="space-y-8 relative">
               
@@ -68,7 +68,7 @@ export default function WhySection() {
                   But most of that free information stays surface-level.
                 </p>
 
-                <div className="bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-100 rounded-xl p-5 shadow-sm">
+                <div className="bg-purple-50/50 border border-purple-100 rounded-xl p-5 shadow-sm">
                   <p className="text-slate-800 font-bold">
                     It tells you what&apos;s possible for students in general.
                   </p>
@@ -82,7 +82,7 @@ export default function WhySection() {
               {/* Price Highlight Card (Light Theme Version) */}
               <motion.div
                 whileHover={{ scale: 1.01 }}
-                className="bg-gradient-to-br from-yellow-50 to-amber-50 border border-yellow-200 rounded-2xl p-8 shadow-lg relative overflow-hidden"
+                className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 shadow-lg relative overflow-hidden"
               >
                 <motion.div
                   animate={{ x: [0, 30, 0] }}
@@ -118,7 +118,7 @@ export default function WhySection() {
                   Every time a spot opens and you choose to wait, someone else books it.
                 </p>
 
-                <p className="text-2xl sm:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-fuchsia-700 to-indigo-700 pt-4 leading-tight">
+                <p className="text-2xl sm:text-3xl font-black text-purple-700 pt-4 leading-tight">
                   That&apos;s how much demand this one session has created since launch.
                 </p>
               </div>
@@ -129,11 +129,9 @@ export default function WhySection() {
             <div className="pt-10 mt-10 border-t border-purple-100 text-center">
               <motion.button 
                 onClick={scrollToForm}
-                whileHover={{ scale: 1.08, rotate: -2 }}
-                whileTap={{ scale: 0.92, rotate: 2 }}
-                className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-white text-purple-700 font-black text-sm sm:text-base md:text-lg rounded-full shadow-2xl shadow-purple-500/20 cursor-pointer border border-purple-200 transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
+                className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
               >
-                Yes! I want to Book My 1:1 Session 🎁
+                Book Your 1:1 Session
               </motion.button>
             </div>
 

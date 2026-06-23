@@ -26,25 +26,22 @@ export default function Header() {
           onClick={() => scrollToSection("home")}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="flex items-center gap-3 cursor-pointer"
+          className="flex items-center cursor-pointer"
         >
-          <div className="w-14 h-14 sm:w-18 sm:h-18 relative flex items-center justify-center overflow-hidden">
+          <div className="w-36 h-12 sm:w-48 sm:h-16 relative flex items-center justify-center overflow-hidden">
             <Image 
-              src="/logo.webp" 
+              src="/unizconnect.webp" 
               alt="UnizConnect Logo" 
               fill
               className="object-contain"
             />
           </div>
-          <span className="font-black text-lg sm:text-xl text-slate-900 tracking-tight hidden xs:block">
-            Uniz<span className="text-purple-600">Connect</span>
-          </span>
         </motion.div>
 
         {/* CTA Button */}
         <button
           onClick={() => scrollToSection("booking-form")}
-          className="px-6 py-3 sm:px-8 sm:py-3.5 bg-gradient-to-r from-purple-600 to-violet-600 text-white font-black text-sm sm:text-base rounded-full shadow-lg shadow-purple-500/25 cursor-pointer flex items-center gap-2 border-b-2 border-purple-800 active:border-b-0 transition-all"
+          className="px-6 py-3 sm:px-8 sm:py-3.5 bg-purple-600 hover:bg-purple-700 active:bg-purple-800 text-white font-black text-sm sm:text-base rounded-full shadow-lg shadow-purple-500/25 cursor-pointer flex items-center gap-2 border-b-2 border-purple-800 active:border-b-0 transition-all"
         >
           <Sparkles className="w-5 h-5" />
           Book Session

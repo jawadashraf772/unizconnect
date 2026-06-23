@@ -8,6 +8,22 @@ import Header from "@/components/Header";
 import FooterSection from "@/components/FooterSection";
 
 export default function ThankYouPage() {
+  const [name, setName] = React.useState("");
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedName = window.sessionStorage.getItem("submittedName");
+      if (storedName) {
+        const capitalized = storedName.trim().split(" ")
+          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+        setName(capitalized);
+      }
+    }
+  }, []);
+
+  const greeting = name ? `Thank you ${name} for submitting your details!` : "Thank you for submitting your details!";
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
       <Header />
@@ -25,15 +41,20 @@ export default function ThankYouPage() {
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-28 h-28 bg-gradient-to-br from-emerald-400 to-teal-500 text-white rounded-full flex items-center justify-center mx-auto shadow-2xl shadow-emerald-500/30 border-4 border-white"
+            className="w-28 h-28 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto shadow-2xl shadow-emerald-500/30 border-4 border-white"
           >
             <Check className="w-14 h-14" />
           </motion.div>
           
-          <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">You're All Set! 🎉</h1>
-            <p className="text-slate-600 text-xl font-medium max-w-lg mx-auto leading-relaxed">
-              Our team is verifying your payment. Keep an eye on your email and WhatsApp for Ayesha's calendar link within 24 hours.
+          <div className="space-y-6">
+            <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+              {greeting}
+            </h1>
+            <p className="text-slate-600 text-lg font-medium max-w-xl mx-auto leading-relaxed">
+              Our team will verify your payment screenshot and confirm it within 24 hours. Once verified, you’ll receive a booking link on both WhatsApp and email, where you can select your preferred slot.
+            </p>
+            <p className="text-purple-600 text-xl font-black max-w-xl mx-auto leading-relaxed">
+              Looking forward to speaking with you!
             </p>
           </div>
           
@@ -45,9 +66,7 @@ export default function ThankYouPage() {
             
             <Link href="/">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-lg rounded-full transition-colors border-b-4 border-slate-300 active:border-b-0 active:mt-1"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 active:bg-slate-300 text-slate-700 font-bold text-lg rounded-full transition-colors border-b-4 border-slate-300 active:border-b-0 active:mt-1"
               >
                 <ArrowLeft className="w-5 h-5" />
                 Back to Home
