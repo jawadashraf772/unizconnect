@@ -31,16 +31,16 @@ export default function FooterSection() {
 
 
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20 lg:py-28 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-10 lg:py-14 relative z-10">
         
         {/* Pitch Headline */}
-        <div className="space-y-8 mb-12">
+        <div className="space-y-3 mb-6">
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 80 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black max-w-4xl mx-auto leading-tight text-white"
+            className="text-2xl sm:text-3xl lg:text-4xl font-black max-w-2xl mx-auto leading-tight text-white"
           >
             Before you apply, get clarity from someone who{" "}
             <span className="text-purple-300">
@@ -52,7 +52,7 @@ export default function FooterSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-purple-200 max-w-xl mx-auto text-xl font-black leading-relaxed uppercase tracking-wider"
+            className="text-purple-200 max-w-xl mx-auto text-xs sm:text-sm font-black leading-relaxed uppercase tracking-wider"
           >
             Your Future Deserves More Than Random Advice!
           </motion.p>
@@ -74,10 +74,10 @@ export default function FooterSection() {
         </motion.div>
 
         {/* Footer Info */}
-        <div className="border-t-2 border-purple-800/50 pt-10 mt-16 space-y-6">
+        <div className="border-t border-purple-800/50 pt-6 mt-8 space-y-4">
           {/* Logo */}
           <div className="flex items-center justify-center">
-            <div className="w-48 h-16 relative flex items-center justify-center overflow-hidden rounded-xl">
+            <div className="w-36 h-10 relative flex items-center justify-center overflow-hidden rounded-xl">
               <Image 
                 src="/unizconnect.webp" 
                 alt="UnizConnect Logo" 

@@ -142,7 +142,7 @@ export default function OfferSection() {
                 >
                   <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
                   <p className="text-xs font-black text-yellow-600 uppercase tracking-[0.15em] flex items-center gap-2 mb-4 relative">
-                    <Gift className="w-4 h-4 text-yellow-500" /> Exclusive Access Bonuses (PKR 15k+ value)
+                    <Gift className="w-4 h-4 text-yellow-500" /> Exclusive Access Bonuses
                   </p>
                   <div className="space-y-3 relative">
                     {bonuses.map((bonus, idx) => (
