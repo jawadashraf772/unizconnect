@@ -5,35 +5,35 @@ import { useState } from "react";
 export default function UniversitiesSection() {
   const [showAll, setShowAll] = useState(false);
   const universities = [
-    { name: "LUMS", logo: "/lums.webp" },
-    { name: "Bahria University", logo: "/Bahria-university-logo.webp" },
-    { name: "Beaconhouse National University", logo: "/bnu_logo.webp" },
-    { name: "Beaconhouse", logo: "/beaconhouse-logo.webp" },
-    { name: "FAST-NU", logo: "/FAST-NU-logo.webp" },
-    { name: "Forman Christian College", logo: "/FCCU new logo.webp" },
-    { name: "GIKI", logo: "/giki logo.png" },
-    { name: "IBA Karachi", logo: "/IBA_clean.webp" },
-    { name: "IIU Islamabad", logo: "/IIU islamabad.png" },
-    { name: "IoBM", logo: "/iobm logo.webp" },
-    { name: "PIEAS", logo: "/PIEAS logo.png" },
-    { name: "Karachi University", logo: "/karachi uni.webp" },
-    { name: "LACAS", logo: "/LACAS.png" },
-    { name: "Lahore School of Economics", logo: "/lahore school of economics logo.webp" },
-    { name: "LGS", logo: "/lgs.png" },
-    { name: "NED University", logo: "/NED logo.webp" },
-    { name: "NUML", logo: "/numl logoss.png" },
-    { name: "NUST", logo: "/NUST logo.webp" },
-    { name: "Virtual University", logo: "/VU logo.png" },
-    { name: "SZABIST", logo: "/szabist logoss.png" },
-    { name: "UET Lahore", logo: "/UET logoss.png" },
-    { name: "UMT", logo: "/UMT logo.jpg" },
-    { name: "University of Peshawar", logo: "/uni of peshawar logo....png" },
-    { name: "University of Sahiwal", logo: "/uni of sahiwal logo.webp" },
-    { name: "University of Lahore", logo: "/uol logoss.png" },
-    { name: "COMSATS", logo: "/comsats.jpg" },
-    { name: "University of Agriculture", logo: "/uni of agriculture.png" },
-    { name: "Punjab University", logo: "/pu logo.svg" },
-    { name: "Abdul Wali Khan University", logo: "/abdul wali khan logosss.jpeg" }
+    { name: "LUMS", logo: "/lums.webp", scaleClass: "scale-100" },
+    { name: "Bahria University", logo: "/Bahria-university-logo.webp", scaleClass: "scale-[1.15]" },
+    { name: "Beaconhouse National University", logo: "/bnu_logo.webp", scaleClass: "scale-100" },
+    { name: "Beaconhouse", logo: "/beaconhouse-logo.webp", scaleClass: "scale-[1.1]" },
+    { name: "FAST-NU", logo: "/FAST-NU-logo.webp", scaleClass: "scale-[1.15]" },
+    { name: "Forman Christian College", logo: "/FCCU new logo.webp", scaleClass: "scale-[1.25]" },
+    { name: "GIKI", logo: "/giki logo.png", scaleClass: "scale-[1.2]" },
+    { name: "IBA Karachi", logo: "/IBA_clean.webp", scaleClass: "scale-[1.15]" },
+    { name: "IIU Islamabad", logo: "/IIU islamabad.png", scaleClass: "scale-[1.2]" },
+    { name: "IoBM", logo: "/iobm logo.webp", scaleClass: "scale-[1.25]" },
+    { name: "PIEAS", logo: "/PIEAS logo.png", scaleClass: "scale-[1.25]" },
+    { name: "Karachi University", logo: "/karachi uni.webp", scaleClass: "scale-[1.2]" },
+    { name: "LACAS", logo: "/LACAS.png", scaleClass: "scale-[1.15]" },
+    { name: "Lahore School of Economics", logo: "/lahore school of economics logo.webp", scaleClass: "scale-[1.1]" },
+    { name: "LGS", logo: "/lgs.png", scaleClass: "scale-[1.25]" },
+    { name: "NED University", logo: "/NED logo.webp", scaleClass: "scale-[1.2]" },
+    { name: "NUML", logo: "/numl logoss.png", scaleClass: "scale-[1.2]" },
+    { name: "NUST", logo: "/NUST logo.webp", scaleClass: "scale-[1.1]" },
+    { name: "Virtual University", logo: "/VU logo.png", scaleClass: "scale-[1.2]" },
+    { name: "SZABIST", logo: "/szabist logoss.png", scaleClass: "scale-[1.25]" },
+    { name: "UET Lahore", logo: "/UET logoss.png", scaleClass: "scale-[1.2]" },
+    { name: "UMT", logo: "/UMT logo.jpg", scaleClass: "scale-[1.2]" },
+    { name: "University of Peshawar", logo: "/uni of peshawar logo....png", scaleClass: "scale-[1.25]" },
+    { name: "University of Sahiwal", logo: "/uni of sahiwal logo.webp", scaleClass: "scale-[1.25]" },
+    { name: "University of Lahore", logo: "/uol logoss.png", scaleClass: "scale-[1.35]" },
+    { name: "COMSATS", logo: "/comsats.jpg", scaleClass: "scale-[1.2]" },
+    { name: "University of Agriculture", logo: "/uni of agriculture.png", scaleClass: "scale-[1.25]" },
+    { name: "Punjab University", logo: "/pu logo.svg", scaleClass: "scale-[1.25]" },
+    { name: "Abdul Wali Khan University", logo: "/abdul wali khan logosss.jpeg", scaleClass: "scale-[1.2]" }
   ];
 
   const half = Math.ceil(universities.length / 2);
@@ -47,7 +47,7 @@ export default function UniversitiesSection() {
       <img
         src={uni.logo}
         alt={`${uni.name} logo`}
-        className={`max-w-[85%] max-h-[85%] object-contain group-hover:scale-105 transition-all duration-300 ${uni.filterClass || ""}`}
+        className={`max-w-[90%] max-h-[90%] object-contain group-hover:scale-105 transition-all duration-300 ${uni.scaleClass || "scale-100"} ${uni.filterClass || ""}`}
       />
     </div>
   );
@@ -68,7 +68,7 @@ export default function UniversitiesSection() {
               <img
                 src={uni.logo}
                 alt={`${uni.name} logo`}
-                className={`max-w-[90%] max-h-[90%] object-contain ${(uni as any).filterClass || ""}`}
+                className={`max-w-[94%] max-h-[94%] object-contain ${uni.scaleClass || "scale-100"} ${(uni as any).filterClass || ""}`}
               />
             </div>
           ))}
