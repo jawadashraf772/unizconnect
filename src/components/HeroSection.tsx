@@ -44,16 +44,15 @@ export default function HeroSection() {
             transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.1 }}
             className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.2] px-2"
           >
-            Get Personalized Guidance <br className="hidden sm:inline" />
-            That Has Helped{" "}
+            Get personalized guidance <br className="hidden sm:inline" />
+            that has helped{" "}
             <span className="relative inline-block text-red-600 px-1 font-black">
-              1300+ Students
+              1300+ students
               <span className="absolute left-0 bottom-1.5 w-full h-2 bg-red-100 rounded-full -z-10 transform -rotate-1" />
             </span>{" "}
-            <br className="hidden sm:inline" />
-            Make Smarter Decisions About <br className="hidden sm:inline" />
+            with <br className="hidden sm:inline" />
             <span className="text-purple-600">
-              Admissions, Scholarships, & Careers
+              admissions, scholarships, & careers
             </span>
           </motion.h1>
 
