@@ -16,7 +16,7 @@ export default function AcceptancesSection() {
     { name: "Newcastle University", logo: "/newcastle university.webp", scaleClass: "scale-[1.15]" },
     { name: "University of Exeter", logo: "/university of exeter.webp", scaleClass: "scale-[1.2]" },
     { name: "University of Warwick", logo: "/university of warwick updated logo.webp", scaleClass: "scale-100" },
-    { name: "University of Birmingham", logo: "/university of birmingham logo.webp", scaleClass: "scale-[1.15]" },
+    { name: "University of Birmingham", logo: "/university of birmingham logo.webp", scaleClass: "scale-[1.45]" },
     { name: "Queen Mary London", logo: "/Queen mary uni of london logo.webp", scaleClass: "scale-100" },
     { name: "University of Hartford", logo: "/uni of hartford.webp", scaleClass: "scale-100" },
     { name: "NJCU", logo: "/mew jersey city uni logo.webp", scaleClass: "scale-100" },

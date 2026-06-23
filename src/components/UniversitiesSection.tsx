@@ -7,7 +7,7 @@ export default function UniversitiesSection() {
     { name: "Beaconhouse National University", logo: "/bnu_logo.webp" },
     { name: "Beaconhouse", logo: "/beaconhouse-logo.webp" },
     { name: "FAST-NU", logo: "/FAST-NU-logo.webp" },
-    { name: "Forman Christian College", logo: "/FCCU new logo.webp", filterClass: "invert" },
+    { name: "Forman Christian College", logo: "/fc.png", filterClass: "invert" },
     { name: "IBA Karachi", logo: "/IBA_clean.webp" },
     { name: "IoBM", logo: "/IOBM_clean.webp" },
     { name: "Karachi University", logo: "/karachi uni.webp" },
