@@ -143,7 +143,7 @@ export default function TrustSection() {
               <img
                 src="/ayesha_new.webp"
                 alt="Ayesha Saleem"
-                className="w-full h-auto object-cover scale-[1.03] origin-center"
+                className="w-[104%] max-w-none h-auto object-cover -translate-x-[2%]"
               />
             </motion.div>
 
