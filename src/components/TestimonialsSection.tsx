@@ -183,7 +183,7 @@ export default function TestimonialsSection() {
                       ))}
                     </div>
                     <p className="text-slate-700 text-xs leading-relaxed font-semibold italic">
-                      &ldquo;Had a great session with Ms. Ayesha. She really understands students’ needs and guided me well about scholarships and options in the US, UK and Germany. Very helpful and supportive.&rdquo;
+                      &ldquo;Had 2 experiences with Ayesha, one for Master at Warwick and the other was for PhD. She took her time to understand the requirements and came up with brilliant solutions that I couldn’t not say no to. I keep recommending her to my friends whoever needs consultation.&rdquo;
                     </p>
                   </div>
                 )}
