@@ -114,7 +114,7 @@ export default function TransformSection() {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-            className="mt-20 text-center"
+            className="mt-8 sm:mt-16 text-center"
           >
             <motion.button 
               onClick={scrollToForm}
@@ -129,7 +129,7 @@ export default function TransformSection() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-purple-950 text-white rounded-[2rem] p-8 sm:p-12 shadow-2xl mt-16 relative overflow-hidden border-2 border-purple-800 text-left"
+            className="bg-purple-950 text-white rounded-[2rem] p-8 sm:p-12 shadow-2xl mt-8 sm:mt-14 relative overflow-hidden border-2 border-purple-800 text-left"
           >
             <div className="relative z-10 flex items-stretch gap-6 sm:gap-8">
               {/* Left vertical white border line */}

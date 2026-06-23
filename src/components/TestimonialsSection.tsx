@@ -30,7 +30,7 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="pt-24 pb-16 relative overflow-hidden noise-overlay">
+    <section className="pt-12 pb-10 sm:pt-24 sm:pb-16 relative overflow-hidden noise-overlay">
       {/* Deep purple background */}
       <div className="absolute inset-0 bg-purple-950" />
       

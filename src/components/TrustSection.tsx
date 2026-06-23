@@ -31,7 +31,7 @@ export default function TrustSection() {
   ];
 
   return (
-    <section id="about-ayesha" className="pt-24 pb-10 relative overflow-hidden bg-slate-50/50">
+    <section id="about-ayesha" className="pt-10 pb-8 sm:pt-24 sm:pb-10 relative overflow-hidden bg-slate-50/50">
       <div className="absolute inset-0 bg-slate-50/50 pointer-events-none" />
       
       {/* Decorative Blob */}

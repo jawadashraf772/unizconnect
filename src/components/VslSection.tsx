@@ -99,7 +99,7 @@ export default function VslSection() {
     <section 
       id="video" 
       ref={containerRef} 
-      className="relative pt-10 pb-20 lg:pt-16 lg:pb-28 overflow-hidden noise-overlay"
+      className="relative pt-10 pb-10 sm:pb-16 lg:pt-16 lg:pb-28 overflow-hidden noise-overlay"
       style={{ zIndex: isPlaying ? 999999 : undefined }}
     >
       {/* Deep purple gradient background */}
@@ -246,7 +246,7 @@ export default function VslSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-          className="pt-6 mt-8 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+          className="pt-2 mt-4 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
           <motion.button 
             onClick={scrollToForm}
