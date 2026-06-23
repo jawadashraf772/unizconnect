@@ -75,7 +75,7 @@ export default function VslSection() {
       gap: "Recent graduate",
       result: (
         <>
-          Won a total of £27,700 in scholarships = <span className="font-extrabold">PKR 1 crore+</span> from Liverpool, NTU, & Loughborough
+          Won a total of £27,700 in scholarships = <span className="font-extrabold">PKR 1 crore+</span>
         </>
       ),
       uni: "Liverpool, NTU, & Loughborough",
