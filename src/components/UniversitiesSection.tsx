@@ -10,18 +10,35 @@ export default function UniversitiesSection() {
     { name: "Beaconhouse National University", logo: "/bnu_logo.webp" },
     { name: "Beaconhouse", logo: "/beaconhouse-logo.webp" },
     { name: "FAST-NU", logo: "/FAST-NU-logo.webp" },
-    { name: "Forman Christian College", logo: "/fc.png" },
+    { name: "Forman Christian College", logo: "/FCCU new logo.webp" },
+    { name: "GIKI", logo: "/giki logo.png" },
     { name: "IBA Karachi", logo: "/IBA_clean.webp" },
-    { name: "IoBM", logo: "/IOBM_clean.webp" },
+    { name: "IIU Islamabad", logo: "/IIU islamabad.png" },
+    { name: "IoBM", logo: "/iobm logo.webp" },
+    { name: "PIEAS", logo: "/PIEAS logo.png" },
     { name: "Karachi University", logo: "/karachi uni.webp" },
+    { name: "LACAS", logo: "/LACAS.png" },
     { name: "Lahore School of Economics", logo: "/lahore school of economics logo.webp" },
-    { name: "LGS", logo: "/lgs logo.webp" },
-    { name: "NED University", logo: "/NED_clean.webp" },
-    { name: "NUST", logo: "/NUST_clean.webp" }
+    { name: "LGS", logo: "/lgs.png" },
+    { name: "NED University", logo: "/NED logo.webp" },
+    { name: "NUML", logo: "/numl logoss.png" },
+    { name: "NUST", logo: "/NUST logo.webp" },
+    { name: "Virtual University", logo: "/VU logo.png" },
+    { name: "SZABIST", logo: "/szabist logoss.png" },
+    { name: "UET Lahore", logo: "/UET logoss.png" },
+    { name: "UMT", logo: "/UMT logo.jpg" },
+    { name: "University of Peshawar", logo: "/uni of peshawar logo....png" },
+    { name: "University of Sahiwal", logo: "/uni of sahiwal logo.webp" },
+    { name: "University of Lahore", logo: "/uol logoss.png" },
+    { name: "COMSATS", logo: "/comsats.jpg" },
+    { name: "University of Agriculture", logo: "/uni of agriculture.png" },
+    { name: "Punjab University", logo: "/pu logo.svg" },
+    { name: "Abdul Wali Khan University", logo: "/abdul wali khan logosss.jpeg" }
   ];
 
-  const row1 = universities.slice(6, 13);
-  const row2 = universities.slice(0, 6);
+  const half = Math.ceil(universities.length / 2);
+  const row1 = universities.slice(0, half);
+  const row2 = universities.slice(half);
   const row1Extended = [...row1, ...row1, ...row1];
   const row2Extended = [...row2, ...row2, ...row2];
 
@@ -63,7 +80,7 @@ export default function UniversitiesSection() {
             onClick={() => setShowAll(!showAll)}
             className="px-5 py-2.5 bg-purple-50 hover:bg-purple-100 active:bg-purple-200 text-purple-700 font-extrabold text-xs rounded-full border border-purple-200 transition-all cursor-pointer shadow-xs"
           >
-            {showAll ? "Show Less" : "Show All (+7 More)"}
+            {showAll ? "Show Less" : `Show All (+${universities.length - 6} More)`}
           </button>
         </div>
       </div>
