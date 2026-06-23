@@ -7,7 +7,7 @@ export default function UniversitiesSection() {
     { name: "Beaconhouse National University", logo: "/bnu_logo.webp" },
     { name: "Beaconhouse", logo: "/beaconhouse-logo.webp" },
     { name: "FAST-NU", logo: "/FAST-NU-logo.webp" },
-    { name: "Forman Christian College", logo: "/FCC_clean.webp" },
+    { name: "Forman Christian College", logo: "/FCCU new logo.webp", filterClass: "invert" },
     { name: "IBA Karachi", logo: "/IBA_clean.webp" },
     { name: "IoBM", logo: "/IOBM_clean.webp" },
     { name: "Karachi University", logo: "/karachi uni.webp" },
@@ -21,12 +21,12 @@ export default function UniversitiesSection() {
   const row1Extended = [...row1, ...row1, ...row1];
   const row2Extended = [...row2, ...row2, ...row2];
 
-  const UniCard = ({ uni }: { uni: typeof universities[0] }) => (
+  const UniCard = ({ uni }: { uni: typeof universities[0] & { filterClass?: string } }) => (
     <div className="flex-shrink-0 bg-white border-2 border-purple-100/40 rounded-xl w-48 h-24 flex items-center justify-center p-3 shadow-sm hover:shadow-md hover:border-purple-300 transition-all duration-300 group">
       <img
         src={uni.logo}
         alt={`${uni.name} logo`}
-        className="max-w-[85%] max-h-[85%] object-contain group-hover:scale-105 transition-all duration-300"
+        className={`max-w-[85%] max-h-[85%] object-contain group-hover:scale-105 transition-all duration-300 ${uni.filterClass || ""}`}
       />
     </div>
   );
@@ -45,7 +45,7 @@ export default function UniversitiesSection() {
               <img
                 src={uni.logo}
                 alt={`${uni.name} logo`}
-                className="max-w-[90%] max-h-[90%] object-contain"
+                className={`max-w-[90%] max-h-[90%] object-contain ${(uni as any).filterClass || ""}`}
               />
             </div>
           ))}
