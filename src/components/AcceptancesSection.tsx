@@ -6,36 +6,36 @@ import { useState } from "react";
 export default function AcceptancesSection() {
   const [showAll, setShowAll] = useState(false);
   const universities = [
-    { name: "Imperial College London", logo: "/imperial new.webp", scaleClass: "scale-100" },
-    { name: "UCL", logo: "/UCL logo.webp", scaleClass: "scale-100" },
-    { name: "LSE", logo: "/London School of Economics logo.webp", scaleClass: "scale-100" },
+    { name: "Imperial College London", logo: "/imperial new.webp", scaleClass: "scale-[1.05]" },
+    { name: "UCL", logo: "/UCL logo.webp", scaleClass: "scale-[1.05]" },
+    { name: "LSE", logo: "/London School of Economics logo.webp", scaleClass: "scale-[1.15]" },
     { name: "King's College London", logo: "/kings logoo.webp", scaleClass: "scale-100" },
-    { name: "University of Bristol", logo: "/Uni of Bristol logo.webp", scaleClass: "scale-100" },
-    { name: "University of Edinburgh", logo: "/university of edinburgh.webp", scaleClass: "scale-[1.15]" },
-    { name: "University of Manchester", logo: "/manchester.webp", scaleClass: "scale-100" },
-    { name: "Newcastle University", logo: "/newcastle university.webp", scaleClass: "scale-[1.15]" },
-    { name: "University of Exeter", logo: "/university of exeter.webp", scaleClass: "scale-[1.2]" },
-    { name: "University of Warwick", logo: "/university of warwick updated logo.webp", scaleClass: "scale-100" },
-    { name: "University of Birmingham", logo: "/university of birmingham logo.webp", scaleClass: "scale-[1.45]" },
-    { name: "Queen Mary London", logo: "/Queen mary uni of london logo.webp", scaleClass: "scale-100" },
-    { name: "University of Hartford", logo: "/uni of hartford.webp", scaleClass: "scale-100" },
-    { name: "NJCU", logo: "/mew jersey city uni logo.webp", scaleClass: "scale-100" },
-    { name: "Webster University", logo: "/webster uni.webp", scaleClass: "scale-[1.15]" },
-    { name: "University of Liverpool", logo: "/uni of liverpool logo.webp", scaleClass: "scale-[1.2]" },
-    { name: "Durham University", logo: "/durham logo.webp", scaleClass: "scale-[1.25]" },
+    { name: "University of Bristol", logo: "/Uni of Bristol logo.webp", scaleClass: "scale-[1.1]" },
+    { name: "University of Edinburgh", logo: "/university of edinburgh.webp", scaleClass: "scale-[1.3]" },
+    { name: "University of Manchester", logo: "/manchester.webp", scaleClass: "scale-[1.2]" },
+    { name: "Newcastle University", logo: "/newcastle university.webp", scaleClass: "scale-[1.25]" },
+    { name: "University of Exeter", logo: "/university of exeter.webp", scaleClass: "scale-[1.35]" },
+    { name: "University of Warwick", logo: "/university of warwick updated logo.webp", scaleClass: "scale-[1.2]" },
+    { name: "University of Birmingham", logo: "/university of birmingham logo.webp", scaleClass: "scale-[1.55]" },
+    { name: "Queen Mary London", logo: "/Queen mary uni of london logo.webp", scaleClass: "scale-[1.2]" },
+    { name: "University of Hartford", logo: "/uni of hartford.webp", scaleClass: "scale-[1.15]" },
+    { name: "NJCU", logo: "/mew jersey city uni logo.webp", scaleClass: "scale-[1.25]" },
+    { name: "Webster University", logo: "/webster uni.webp", scaleClass: "scale-[1.3]" },
+    { name: "University of Liverpool", logo: "/uni of liverpool logo.webp", scaleClass: "scale-[1.4]" },
+    { name: "Durham University", logo: "/durham logo.webp", scaleClass: "scale-[1.35]" },
     { name: "Cardiff University", logo: "/cardiff uni logo.webp", scaleClass: "scale-100" },
-    { name: "University of York", logo: "/uni of york.webp", scaleClass: "scale-100" },
-    { name: "University of Sheffield", logo: "/sheffield logo new.webp", scaleClass: "scale-[1.2]" },
-    { name: "University of Nottingham", logo: "/uni of nottingham.webp", scaleClass: "scale-100" },
-    { name: "Loughborough University", logo: "/Loughborough logo new.webp", scaleClass: "scale-100" },
-    { name: "University of Kent", logo: "/uni of kent logo.webp", scaleClass: "scale-[1.25]" },
+    { name: "University of York", logo: "/uni of york.webp", scaleClass: "scale-[1.2]" },
+    { name: "University of Sheffield", logo: "/sheffield logo new.webp", scaleClass: "scale-[1.35]" },
+    { name: "University of Nottingham", logo: "/uni of nottingham.webp", scaleClass: "scale-[1.25]" },
+    { name: "Loughborough University", logo: "/Loughborough logo new.webp", scaleClass: "scale-[1.1]" },
+    { name: "University of Kent", logo: "/uni of kent logo.webp", scaleClass: "scale-[1.35]" },
     { name: "SOAS London", logo: "/SOAS logo.webp", scaleClass: "scale-100", filterClass: "invert" },
-    { name: "University of Strathclyde", logo: "/University of Strathclyde.webp", scaleClass: "scale-[1.3]" },
-    { name: "University of Sussex", logo: "/uni of sussex logo.webp", scaleClass: "scale-100" },
-    { name: "University of Stirling", logo: "/uni of stirling logo.webp", scaleClass: "scale-[1.2]" },
-    { name: "University of Reading", logo: "/uni of reading logo.webp", scaleClass: "scale-[1.25]" },
-    { name: "Birkbeck, University of London", logo: "/birbeck.webp", scaleClass: "scale-[1.2]" },
-    { name: "Queen's University Belfast", logo: "/queen uni belfast logo.png", scaleClass: "scale-100" },
+    { name: "University of Strathclyde", logo: "/University of Strathclyde.webp", scaleClass: "scale-[1.35]" },
+    { name: "University of Sussex", logo: "/uni of sussex logo.webp", scaleClass: "scale-[1.25]" },
+    { name: "University of Stirling", logo: "/uni of stirling logo.webp", scaleClass: "scale-[1.35]" },
+    { name: "University of Reading", logo: "/uni of reading logo.webp", scaleClass: "scale-[1.35]" },
+    { name: "Birkbeck, University of London", logo: "/birbeck.webp", scaleClass: "scale-[1.25]" },
+    { name: "Queen's University Belfast", logo: "/queen uni belfast logo.png", scaleClass: "scale-[1.2]" },
   ];
 
   return (
@@ -72,7 +72,7 @@ export default function AcceptancesSection() {
                 <img
                   src={uni.logo}
                   alt={`${uni.name} logo`}
-                  className={`max-w-[85%] max-h-[85%] object-contain origin-center transition-all duration-300 filter contrast-[1.03] brightness-[1.01] ${uni.scaleClass} ${uni.filterClass || ""} group-hover:scale-[1.08]`}
+                  className={`max-w-[92%] max-h-[92%] object-contain origin-center transition-all duration-300 filter contrast-[1.03] brightness-[1.01] ${uni.scaleClass} ${uni.filterClass || ""} group-hover:scale-[1.08]`}
                 />
               ) : (
                 <span className="text-slate-700 text-sm font-extrabold tracking-tight uppercase group-hover:text-purple-600 transition-colors px-1">
