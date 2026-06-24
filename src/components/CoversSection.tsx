@@ -89,11 +89,11 @@ export default function CoversSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 100 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900"
+            className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.4] sm:leading-[1.3] lg:leading-normal py-2"
           >
             What You'll Get From{" "}
             <span className="inline-block relative">
-              <span className="relative z-10 text-white px-4 py-2 bg-purple-600 rounded-2xl rotate-2 inline-block transform hover:-rotate-2 transition-transform cursor-crosshair">This 1:1 Session</span>
+              <span className="relative z-10 text-white px-3 py-1 sm:px-4 sm:py-2 bg-purple-600 rounded-2xl rotate-2 inline-block transform hover:-rotate-2 transition-transform cursor-crosshair">This 1:1 Session</span>
             </span>
           </motion.h2>
           
