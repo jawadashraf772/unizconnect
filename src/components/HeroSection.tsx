@@ -83,29 +83,29 @@ export default function HeroSection() {
 
             {/* Overlapping Trust Badge */}
             <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 justify-center bg-transparent sm:bg-white/60 sm:backdrop-blur-xs py-3.5 px-6 sm:rounded-full border-0 sm:border sm:border-purple-100 shadow-none sm:shadow-sm max-w-max mx-auto">
-              <div className="flex -space-x-4 justify-center">
+              <div className="flex -space-x-2 justify-center">
                 <img
-                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
-                  src="/image%202.webp"
-                  alt="Student 2"
-                />
-                <img
-                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
+                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs relative z-50"
                   src="/image%201.jpeg"
                   alt="Student 1"
                 />
                 <img
-                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
+                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs relative z-40"
+                  src="/image%202.webp"
+                  alt="Student 2"
+                />
+                <img
+                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs relative z-30"
                   src="/image%205.webp"
                   alt="Student 5"
                 />
                 <img
-                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
+                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs relative z-20"
                   src="/image%204.webp"
                   alt="Student 4"
                 />
                 <img
-                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
+                  className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs relative z-10"
                   src="/image%203.webp"
                   alt="Student 3"
                 />
