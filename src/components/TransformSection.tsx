@@ -118,7 +118,7 @@ export default function TransformSection() {
           >
             <motion.button 
               onClick={scrollToForm}
-              className="w-auto px-8 py-3.5 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
+              className="w-full max-w-[90%] sm:w-auto px-6 py-3.5 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-normal sm:whitespace-nowrap text-center"
             >
               Yes, This is Me...... Book My Session
             </motion.button>
