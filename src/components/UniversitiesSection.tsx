@@ -37,7 +37,7 @@ export default function UniversitiesSection() {
     { name: "Karachi University", logo: "/karachi uni.webp", scaleClass: "scale-[1.2]" },
     { name: "LACAS", logo: "/LACAS.png", scaleClass: "scale-[1.15]" },
     { name: "Lahore School of Economics", logo: "/lahore school of economics logo.webp", scaleClass: "scale-[1.1]" },
-    { name: "LGS", logo: "/lgs.png", scaleClass: "scale-[1.25]" },
+    { name: "LGS", logo: "/LGS.png", scaleClass: "scale-[1.25]" },
     { name: "NED University", logo: "/NED logo.webp", scaleClass: "scale-[1.2]" },
     { name: "NUML", logo: "/numl logoss.png", scaleClass: "scale-[1.2]" },
     { name: "NUST", logo: "/NUST logo.webp", scaleClass: "scale-[1.1]" },
