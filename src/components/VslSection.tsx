@@ -170,6 +170,22 @@ export default function VslSection() {
           </motion.div>
         </div>
 
+        {/* VSL CTA (Constrained Width) - Moved under the video */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+          className="pt-2 pb-6 text-center z-20"
+        >
+          <motion.button 
+            onClick={scrollToForm}
+            className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
+          >
+            Book Your 1:1 Session
+          </motion.button>
+        </motion.div>
+
         {/* Testimonials Boxes in Purple Background */}
         <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-12 mb-8 relative z-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -235,22 +251,6 @@ export default function VslSection() {
             ))}
           </div>
         </div>
-
-        {/* VSL CTA (Constrained Width) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-          className="pt-2 mt-4 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-        >
-          <motion.button 
-            onClick={scrollToForm}
-            className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
-          >
-            Book Your 1:1 Session
-          </motion.button>
-        </motion.div>
 
       </div>
     </section>
