@@ -382,7 +382,7 @@ export default function TestimonialsSection() {
             onClick={scrollToForm}
             className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
           >
-            I Want to Book My 1:1 Session
+            Book Your 1:1 Session
           </motion.button>
         </motion.div>
 
