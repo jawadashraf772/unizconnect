@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Gift, Sparkles, Flame, ShieldCheck, Users, Zap, ArrowRight } from "lucide-react";
+import { Check, Gift, Flame, ShieldCheck, Users, Zap, ArrowRight } from "lucide-react";
 
 export default function OfferSection() {
   const scrollToForm = () => {
@@ -54,7 +54,7 @@ export default function OfferSection() {
           className="text-center mb-20 space-y-5"
         >
           <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-purple-100/80 border border-purple-200 backdrop-blur-sm shadow-sm">
-            <Sparkles className="w-4 h-4 text-purple-600" />
+            <Zap className="w-4 h-4 text-purple-600" />
             <span className="text-purple-700 font-black text-xs uppercase tracking-[0.2em]">Exclusive Strategy Offer</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.1] lg:whitespace-nowrap">

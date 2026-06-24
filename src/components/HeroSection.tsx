@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import UniversitiesSection from "./UniversitiesSection";
 
 export default function HeroSection() {

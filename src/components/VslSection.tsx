@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Play, Video, Sparkles, Star, User } from "lucide-react";
+import { Play, Video, Star, User } from "lucide-react";
 import React, { useState, useRef, useEffect } from "react";
 
 export default function VslSection() {

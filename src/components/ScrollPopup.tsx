@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, X, Heart, ShieldCheck, TrendingUp } from "lucide-react";
+import { Flame, X, Heart, ShieldCheck, TrendingUp } from "lucide-react";
 
 export function ScrollPopup() {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +11,7 @@ export function ScrollPopup() {
 
   const messages = [
     {
-      icon: Sparkles,
+      icon: Flame,
       text: "Only 3 slots left for Ayesha's sessions this week.",
       badge: "Urgent",
       color: "from-amber-500 to-orange-500",

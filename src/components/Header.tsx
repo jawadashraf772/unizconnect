@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
 import Image from "next/image";
 
 export default function Header() {
@@ -43,7 +42,6 @@ export default function Header() {
           onClick={() => scrollToSection("booking-form")}
           className="px-6 py-3 sm:px-8 sm:py-3.5 bg-purple-600 hover:bg-purple-700 active:bg-purple-800 text-white font-black text-sm sm:text-base rounded-full shadow-lg shadow-purple-500/25 cursor-pointer flex items-center gap-2 border-b-2 border-purple-800 active:border-b-0 transition-all"
         >
-          <Sparkles className="w-5 h-5" />
           Book Session
         </button>
 

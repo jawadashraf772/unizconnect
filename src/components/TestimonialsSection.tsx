@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Quote, MessageCircle, Sparkles } from "lucide-react";
+import { Star, Quote, MessageCircle } from "lucide-react";
 
 export default function TestimonialsSection() {
   const scrollToForm = () => {

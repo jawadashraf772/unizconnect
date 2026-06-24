@@ -64,7 +64,7 @@ export default function AcceptancesSection() {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ type: "spring", stiffness: 100, delay: (idx % 6) * 0.05 }}
               whileHover={{ y: -8, scale: 1.04, rotate: 1, borderColor: "rgba(168, 85, 247, 0.4)", boxShadow: "0 25px 30px -10px rgba(168, 85, 247, 0.2)" }}
-              className={`bg-white border sm:border-2 border-slate-100 rounded-2xl sm:rounded-3xl h-16 sm:h-28 p-1 sm:p-2 flex items-center justify-center text-center shadow-xs sm:shadow-sm hover:border-purple-200 transition-all duration-300 select-none group ${
+              className={`bg-white border sm:border-2 border-slate-100 rounded-2xl sm:rounded-3xl h-16 sm:h-28 p-2.5 sm:p-4 flex items-center justify-center text-center shadow-xs sm:shadow-sm hover:border-purple-200 transition-all duration-300 select-none overflow-hidden group ${
                 idx >= 12 ? (showAll ? "flex" : "hidden sm:flex") : "flex"
               }`}
             >
@@ -72,7 +72,7 @@ export default function AcceptancesSection() {
                 <img
                   src={uni.logo}
                   alt={`${uni.name} logo`}
-                  className={`max-w-[92%] max-h-[92%] object-contain origin-center transition-all duration-300 filter contrast-[1.03] brightness-[1.01] ${uni.scaleClass} ${uni.filterClass || ""} group-hover:scale-[1.08]`}
+                  className={`max-w-[85%] max-h-[85%] sm:max-w-[90%] sm:max-h-[90%] object-contain origin-center transition-all duration-300 filter contrast-[1.03] brightness-[1.01] sm:${uni.scaleClass || "scale-100"} scale-100 ${uni.filterClass || ""} group-hover:scale-[1.08]`}
                 />
               ) : (
                 <span className="text-slate-700 text-sm font-extrabold tracking-tight uppercase group-hover:text-purple-600 transition-colors px-1">

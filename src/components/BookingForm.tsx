@@ -20,7 +20,7 @@ import {
   FileText,
   Image as ImageIcon,
   Loader2,
-  Sparkles,
+  Calendar,
   Check,
   Gift,
   Zap,
@@ -346,7 +346,7 @@ export default function BookingForm() {
                   <div className="space-y-4 mb-8">
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-xl bg-purple-500 flex items-center justify-center shadow-sm">
-                        <Sparkles className="w-4 h-4 text-white" />
+                        <Calendar className="w-4 h-4 text-white" />
                       </div>
                       <div>
                         <h3 className="text-lg font-black text-slate-900">Book Here</h3>
