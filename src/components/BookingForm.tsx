@@ -296,7 +296,7 @@ export default function BookingForm() {
                         &ldquo;I’ve been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master’s degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm.&rdquo;
                       </p>
 
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100 w-full">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100 w-full flex-wrap">
                         <div className="text-left">
                           <p className="text-xs font-black text-purple-700 whitespace-nowrap">Kashmala Khan</p>
                           <p className="text-[10px] font-bold text-slate-500 whitespace-nowrap">BNU, Lahore</p>
@@ -615,7 +615,7 @@ export default function BookingForm() {
                         &ldquo;I’ve been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master’s degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm.&rdquo;
                       </p>
 
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100 w-full">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100 w-full flex-wrap">
                         <div className="text-left">
                           <p className="text-xs font-black text-purple-700 whitespace-nowrap">Kashmala Khan</p>
                           <p className="text-[10px] font-bold text-slate-500 whitespace-nowrap">BNU, Lahore</p>

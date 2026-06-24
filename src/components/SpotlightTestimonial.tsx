@@ -69,7 +69,7 @@ export default function SpotlightTestimonial() {
                   &ldquo;I’ve been working with Ayesha since 2023, and I can confidently say that my journey toward pursuing a master’s degree would not have been the same without her support and guidance. She never rushed the process and always gave me the time and space I needed to manage things at my own pace, something I deeply appreciated, especially during moments of overwhelm.&rdquo;
                 </p>
                 
-                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 flex-wrap">
                   <div>
                     <p className="text-lg font-black text-purple-700 whitespace-nowrap">Kashmala Khan</p>
                     <p className="text-sm font-bold text-slate-500 whitespace-nowrap">BNU, Lahore</p>
