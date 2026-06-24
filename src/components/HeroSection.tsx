@@ -50,7 +50,8 @@ export default function HeroSection() {
               1300+ students
               <span className="absolute left-0 bottom-1.5 w-full h-2 bg-red-100 rounded-full -z-10 transform -rotate-1" />
             </span>{" "}
-            with <br className="hidden sm:inline" />
+            <br className="block sm:hidden" />
+            with{" "}
             <span className="text-purple-600">
               admissions, <br className="block sm:hidden" /> scholarships, & careers
             </span>
