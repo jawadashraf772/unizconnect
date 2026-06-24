@@ -103,7 +103,7 @@ export default function CoversSection() {
                 💡 This is not a random session conducted by a junior counsellor.
               </span>
               <span className="text-slate-900 font-medium block">
-                It's a 1:1 session directly with Ayesha. For 40 minutes, she blocks her calendar just for you, and gives you her full attention.
+                It's a 1:1 session directly with Ayesha. For 40 minutes, she blocks her calendar just for you and gives you her full attention.
               </span>
             </div>
           </div>
