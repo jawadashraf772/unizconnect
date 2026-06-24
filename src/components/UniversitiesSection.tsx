@@ -16,6 +16,9 @@ const getMobileScale = (scaleClass?: string) => {
     "scale-[1.15]": "scale-[1.10]",
     "scale-[1.1]": "scale-[1.07]",
     "scale-[1.05]": "scale-[1.04]",
+    "scale-100": "scale-100",
+    "scale-[0.95]": "scale-[0.90]",
+    "scale-[0.9]": "scale-[0.85]",
   };
   return map[scaleClass] || "scale-100";
 };
@@ -24,34 +27,34 @@ export default function UniversitiesSection() {
   const [showAll, setShowAll] = useState(false);
   const universities = [
     { name: "LUMS", logo: "/lums.webp", scaleClass: "scale-100" },
-    { name: "Bahria University", logo: "/Bahria-university-logo.webp", scaleClass: "scale-[1.15]" },
+    { name: "Bahria University", logo: "/Bahria-university-logo.webp", scaleClass: "scale-100" },
     { name: "Beaconhouse National University", logo: "/bnu_logo.webp", scaleClass: "scale-100" },
     { name: "Beaconhouse", logo: "/beaconhouse-logo.webp", scaleClass: "scale-[1.1]" },
-    { name: "FAST-NU", logo: "/FAST-NU-logo.webp", scaleClass: "scale-[1.15]" },
-    { name: "Forman Christian College", logo: "/FCCU new logo.webp", scaleClass: "scale-[1.25]" },
-    { name: "GIKI", logo: "/giki logo.png", scaleClass: "scale-[1.2]" },
-    { name: "IBA Karachi", logo: "/IBA_clean.webp", scaleClass: "scale-[1.15]" },
-    { name: "IIU Islamabad", logo: "/IIU islamabad.png", scaleClass: "scale-[1.2]" },
-    { name: "IoBM", logo: "/iobm logo.webp", scaleClass: "scale-[1.35]" },
-    { name: "PIEAS", logo: "/PIEAS logo.png", scaleClass: "scale-[1.25]" },
-    { name: "Karachi University", logo: "/karachi uni.webp", scaleClass: "scale-[1.2]" },
-    { name: "LACAS", logo: "/LACAS.png", scaleClass: "scale-[1.15]" },
-    { name: "Lahore School of Economics", logo: "/lahore school of economics logo.webp", scaleClass: "scale-[1.1]" },
-    { name: "LGS", logo: "/LGS.png", scaleClass: "scale-[1.25]" },
-    { name: "NED University", logo: "/NED logo.webp", scaleClass: "scale-[1.2]" },
-    { name: "NUML", logo: "/numl logoss.png", scaleClass: "scale-[1.2]" },
-    { name: "NUST", logo: "/NUST logo.webp", scaleClass: "scale-[1.1]" },
-    { name: "Virtual University", logo: "/VU logo.png", scaleClass: "scale-[1.2]" },
-    { name: "SZABIST", logo: "/szabist logoss.png", scaleClass: "scale-[1.25]" },
-    { name: "UET Lahore", logo: "/UET logoss.png", scaleClass: "scale-[1.2]" },
-    { name: "UMT", logo: "/UMT logo.jpg", scaleClass: "scale-[1.2]" },
-    { name: "University of Peshawar", logo: "/uni of peshawar logo....png", scaleClass: "scale-[1.25]" },
-    { name: "University of Sahiwal", logo: "/uni of sahiwal logo.webp", scaleClass: "scale-[1.25]" },
-    { name: "University of Lahore", logo: "/uol logoss.png", scaleClass: "scale-[1.45]" },
-    { name: "COMSATS", logo: "/comsats.jpg", scaleClass: "scale-[1.2]" },
-    { name: "University of Agriculture", logo: "/uni of agriculture.png", scaleClass: "scale-[1.25]" },
-    { name: "Punjab University", logo: "/pu logo.svg", scaleClass: "scale-[1.25]" },
-    { name: "Abdul Wali Khan University", logo: "/abdul wali khan logosss.jpeg", scaleClass: "scale-[1.2]" }
+    { name: "FAST-NU", logo: "/FAST-NU-logo.webp", scaleClass: "scale-[1.05]" },
+    { name: "Forman Christian College", logo: "/FCCU new logo.webp", scaleClass: "scale-[1.15]" },
+    { name: "GIKI", logo: "/giki logo.png", scaleClass: "scale-[1.1]" },
+    { name: "IBA Karachi", logo: "/IBA_clean.webp", scaleClass: "scale-100" },
+    { name: "IIU Islamabad", logo: "/IIU islamabad.png", scaleClass: "scale-[1.1]" },
+    { name: "IoBM", logo: "/iobm logo.webp", scaleClass: "scale-[0.95]" },
+    { name: "PIEAS", logo: "/PIEAS logo.png", scaleClass: "scale-[1.1]" },
+    { name: "Karachi University", logo: "/karachi uni.webp", scaleClass: "scale-[1.1]" },
+    { name: "LACAS", logo: "/LACAS.png", scaleClass: "scale-[1.05]" },
+    { name: "Lahore School of Economics", logo: "/lahore school of economics logo.webp", scaleClass: "scale-100" },
+    { name: "LGS", logo: "/LGS.png", scaleClass: "scale-[1.15]" },
+    { name: "NED University", logo: "/NED logo.webp", scaleClass: "scale-[1.1]" },
+    { name: "NUML", logo: "/numl logoss.png", scaleClass: "scale-[1.1]" },
+    { name: "NUST", logo: "/NUST logo.webp", scaleClass: "scale-100" },
+    { name: "Virtual University", logo: "/VU logo.png", scaleClass: "scale-[1.1]" },
+    { name: "SZABIST", logo: "/szabist logoss.png", scaleClass: "scale-[1.15]" },
+    { name: "UET Lahore", logo: "/UET logoss.png", scaleClass: "scale-[1.1]" },
+    { name: "UMT", logo: "/UMT logo.jpg", scaleClass: "scale-[1.1]" },
+    { name: "University of Peshawar", logo: "/uni of peshawar logo....png", scaleClass: "scale-[1.05]" },
+    { name: "University of Sahiwal", logo: "/uni of sahiwal logo.webp", scaleClass: "scale-[1.05]" },
+    { name: "University of Lahore", logo: "/uol logoss.png", scaleClass: "scale-[1.1]" },
+    { name: "COMSATS", logo: "/comsats.jpg", scaleClass: "scale-[1.1]" },
+    { name: "University of Agriculture", logo: "/uni of agriculture.png", scaleClass: "scale-[1.15]" },
+    { name: "Punjab University", logo: "/pu logo.svg", scaleClass: "scale-[1.15]" },
+    { name: "Abdul Wali Khan University", logo: "/abdul wali khan logosss.jpeg", scaleClass: "scale-[1.1]" }
   ];
 
   const half = Math.ceil(universities.length / 2);
@@ -61,7 +64,7 @@ export default function UniversitiesSection() {
   const row2Extended = [...row2, ...row2, ...row2];
 
   const UniCard = ({ uni }: { uni: typeof universities[0] & { filterClass?: string } }) => (
-    <div className="flex-shrink-0 bg-white border-2 border-purple-100/40 rounded-xl w-48 h-24 flex items-center justify-center p-3 shadow-sm hover:shadow-md hover:border-purple-300 transition-all duration-300 group">
+    <div className="flex-shrink-0 bg-white border-2 border-purple-100/40 rounded-xl w-48 h-24 flex items-center justify-center p-3 shadow-sm hover:shadow-md hover:border-purple-300 transition-all duration-300 group overflow-hidden">
       <img
         src={uni.logo}
         alt={`${uni.name} logo`}
