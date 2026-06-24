@@ -86,7 +86,7 @@ export default function HeroSection() {
               <div className="flex -space-x-4 justify-center">
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs"
-                  src="/image%201.webp"
+                  src="/image%201.jpeg"
                   alt="Student 1"
                 />
                 <img
