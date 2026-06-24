@@ -3,6 +3,22 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+const getMobileScale = (scaleClass?: string) => {
+  if (!scaleClass) return "scale-100";
+  const map: Record<string, string> = {
+    "scale-[1.55]": "scale-[1.33]",
+    "scale-[1.4]": "scale-[1.24]",
+    "scale-[1.35]": "scale-[1.21]",
+    "scale-[1.3]": "scale-[1.18]",
+    "scale-[1.25]": "scale-[1.15]",
+    "scale-[1.2]": "scale-[1.12]",
+    "scale-[1.15]": "scale-[1.09]",
+    "scale-[1.1]": "scale-[1.06]",
+    "scale-[1.05]": "scale-[1.03]",
+  };
+  return map[scaleClass] || "scale-100";
+};
+
 export default function AcceptancesSection() {
   const [showAll, setShowAll] = useState(false);
   const universities = [
@@ -72,7 +88,7 @@ export default function AcceptancesSection() {
                 <img
                   src={uni.logo}
                   alt={`${uni.name} logo`}
-                  className={`max-w-[85%] max-h-[85%] sm:max-w-[90%] sm:max-h-[90%] object-contain origin-center transition-all duration-300 filter contrast-[1.03] brightness-[1.01] sm:${uni.scaleClass || "scale-100"} scale-100 ${uni.filterClass || ""} group-hover:scale-[1.08]`}
+                  className={`max-w-[85%] max-h-[85%] sm:max-w-[90%] sm:max-h-[90%] object-contain origin-center transition-all duration-300 filter contrast-[1.03] brightness-[1.01] ${getMobileScale(uni.scaleClass)} sm:${uni.scaleClass || "scale-100"} ${uni.filterClass || ""} group-hover:scale-[1.08]`}
                 />
               ) : (
                 <span className="text-slate-700 text-sm font-extrabold tracking-tight uppercase group-hover:text-purple-600 transition-colors px-1">
