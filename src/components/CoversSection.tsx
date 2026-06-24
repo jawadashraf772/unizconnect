@@ -98,12 +98,15 @@ export default function CoversSection() {
           </motion.h2>
           
           <div className="max-w-3xl mx-auto space-y-4">
-            <div className="text-xl bg-purple-50 border border-purple-100 rounded-2xl px-6 py-5 inline-block shadow-sm text-center">
-              <span className="text-purple-700 font-black block mb-2">
-                💡 This is not a random session conducted by a junior counsellor.
+            <div className="text-xl bg-purple-50 border border-purple-100 rounded-2xl px-6 py-5 inline-block shadow-sm text-center w-full">
+              <span className="text-purple-700 font-black block mb-3">
+                This is not a random session conducted by a junior counsellor.
               </span>
-              <span className="text-slate-900 font-medium block">
+              <span className="text-slate-900 font-medium block mb-3">
                 It's a 1:1 session directly with Ayesha. For 40 minutes, she blocks her calendar just for you and gives you her full attention.
+              </span>
+              <span className="text-purple-700 font-black block">
+                This means you'll have her:
               </span>
             </div>
           </div>
