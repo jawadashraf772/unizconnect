@@ -6,17 +6,17 @@ import { useState } from "react";
 const getMobileScale = (scaleClass?: string) => {
   if (!scaleClass) return "scale-100";
   const map: Record<string, string> = {
-    "scale-[1.55]": "scale-[1.33]",
-    "scale-[1.5]": "scale-[1.30]",
-    "scale-[1.45]": "scale-[1.27]",
-    "scale-[1.4]": "scale-[1.24]",
-    "scale-[1.35]": "scale-[1.21]",
-    "scale-[1.3]": "scale-[1.18]",
-    "scale-[1.25]": "scale-[1.15]",
-    "scale-[1.2]": "scale-[1.12]",
-    "scale-[1.15]": "scale-[1.09]",
-    "scale-[1.1]": "scale-[1.06]",
-    "scale-[1.05]": "scale-[1.03]",
+    "scale-[1.55]": "scale-[1.38]",
+    "scale-[1.5]": "scale-[1.34]",
+    "scale-[1.45]": "scale-[1.30]",
+    "scale-[1.4]": "scale-[1.27]",
+    "scale-[1.35]": "scale-[1.24]",
+    "scale-[1.3]": "scale-[1.21]",
+    "scale-[1.25]": "scale-[1.17]",
+    "scale-[1.2]": "scale-[1.14]",
+    "scale-[1.15]": "scale-[1.10]",
+    "scale-[1.1]": "scale-[1.07]",
+    "scale-[1.05]": "scale-[1.04]",
   };
   return map[scaleClass] || "scale-100";
 };
