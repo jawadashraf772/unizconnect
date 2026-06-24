@@ -49,6 +49,7 @@ export default function BookingForm() {
   const inclusions = [
     "Personalized guidance",
     "Admission and scholarship discussion",
+    "Country discussion",
     "University & course suggestions",
     "Roadmap and timeline",
     "Career direction",

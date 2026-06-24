@@ -71,8 +71,8 @@ export default function SpotlightTestimonial() {
                 
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
                   <div>
-                    <p className="text-lg font-black text-purple-700">Kashmala Khan</p>
-                    <p className="text-sm font-bold text-slate-500">BNU, Lahore</p>
+                    <p className="text-lg font-black text-purple-700 whitespace-nowrap">Kashmala Khan</p>
+                    <p className="text-sm font-bold text-slate-500 whitespace-nowrap">BNU, Lahore</p>
                   </div>
                   <div className="hidden sm:block w-px h-8 bg-purple-200" />
                   <div className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-50 border border-emerald-100 shadow-sm">
