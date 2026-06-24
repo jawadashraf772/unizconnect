@@ -298,8 +298,8 @@ export default function BookingForm() {
 
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100 w-full">
                         <div className="text-left">
-                          <p className="text-xs font-black text-purple-700">Kashmala Khan</p>
-                          <p className="text-[10px] font-bold text-slate-500">BNU, Lahore</p>
+                          <p className="text-xs font-black text-purple-700 whitespace-nowrap">Kashmala Khan</p>
+                          <p className="text-[10px] font-bold text-slate-500 whitespace-nowrap">BNU, Lahore</p>
                         </div>
                         <div className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-100 shadow-xs justify-center shrink-0">
                           <ExternalLink className="w-3 h-3 text-emerald-600" />
@@ -617,8 +617,8 @@ export default function BookingForm() {
 
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-slate-100 w-full">
                         <div className="text-left">
-                          <p className="text-xs font-black text-purple-700">Kashmala Khan</p>
-                          <p className="text-[10px] font-bold text-slate-500">BNU, Lahore</p>
+                          <p className="text-xs font-black text-purple-700 whitespace-nowrap">Kashmala Khan</p>
+                          <p className="text-[10px] font-bold text-slate-500 whitespace-nowrap">BNU, Lahore</p>
                         </div>
                         <div className="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-100 shadow-xs justify-center shrink-0">
                           <ExternalLink className="w-3 h-3 text-emerald-600" />
