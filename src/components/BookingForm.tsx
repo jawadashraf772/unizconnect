@@ -466,7 +466,7 @@ export default function BookingForm() {
                         rows={4}
                         value={formData.notes}
                         onChange={handleInputChange}
-                        placeholder="Tell us about your target universities, scholarships, or questions..."
+                        placeholder="Share anything specific you’d like to discuss with Ayesha during the session…"
                         className="w-full px-4 py-3 bg-slate-50/50 border border-slate-200 rounded-xl focus:outline-none focus:border-purple-400 focus:bg-white focus:ring-4 focus:ring-purple-500/10 text-sm font-bold text-slate-900 placeholder:text-slate-400 transition-all resize-none shadow-xs"
                       />
                     </div>
