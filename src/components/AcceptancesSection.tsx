@@ -7,6 +7,8 @@ const getMobileScale = (scaleClass?: string) => {
   if (!scaleClass) return "scale-100";
   const map: Record<string, string> = {
     "scale-[1.55]": "scale-[1.33]",
+    "scale-[1.5]": "scale-[1.30]",
+    "scale-[1.45]": "scale-[1.27]",
     "scale-[1.4]": "scale-[1.24]",
     "scale-[1.35]": "scale-[1.21]",
     "scale-[1.3]": "scale-[1.18]",

@@ -6,6 +6,8 @@ const getMobileScale = (scaleClass?: string) => {
   if (!scaleClass) return "scale-100";
   const map: Record<string, string> = {
     "scale-[1.55]": "scale-[1.33]",
+    "scale-[1.5]": "scale-[1.30]",
+    "scale-[1.45]": "scale-[1.27]",
     "scale-[1.4]": "scale-[1.24]",
     "scale-[1.35]": "scale-[1.21]",
     "scale-[1.3]": "scale-[1.18]",
@@ -30,7 +32,7 @@ export default function UniversitiesSection() {
     { name: "GIKI", logo: "/giki logo.png", scaleClass: "scale-[1.2]" },
     { name: "IBA Karachi", logo: "/IBA_clean.webp", scaleClass: "scale-[1.15]" },
     { name: "IIU Islamabad", logo: "/IIU islamabad.png", scaleClass: "scale-[1.2]" },
-    { name: "IoBM", logo: "/iobm logo.webp", scaleClass: "scale-[1.25]" },
+    { name: "IoBM", logo: "/iobm logo.webp", scaleClass: "scale-[1.35]" },
     { name: "PIEAS", logo: "/PIEAS logo.png", scaleClass: "scale-[1.25]" },
     { name: "Karachi University", logo: "/karachi uni.webp", scaleClass: "scale-[1.2]" },
     { name: "LACAS", logo: "/LACAS.png", scaleClass: "scale-[1.15]" },
@@ -45,7 +47,7 @@ export default function UniversitiesSection() {
     { name: "UMT", logo: "/UMT logo.jpg", scaleClass: "scale-[1.2]" },
     { name: "University of Peshawar", logo: "/uni of peshawar logo....png", scaleClass: "scale-[1.25]" },
     { name: "University of Sahiwal", logo: "/uni of sahiwal logo.webp", scaleClass: "scale-[1.25]" },
-    { name: "University of Lahore", logo: "/uol logoss.png", scaleClass: "scale-[1.35]" },
+    { name: "University of Lahore", logo: "/uol logoss.png", scaleClass: "scale-[1.45]" },
     { name: "COMSATS", logo: "/comsats.jpg", scaleClass: "scale-[1.2]" },
     { name: "University of Agriculture", logo: "/uni of agriculture.png", scaleClass: "scale-[1.25]" },
     { name: "Punjab University", logo: "/pu logo.svg", scaleClass: "scale-[1.25]" },
