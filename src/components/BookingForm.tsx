@@ -231,7 +231,7 @@ export default function BookingForm() {
                   >
                     <div className="absolute top-0 right-0 w-24 h-24 bg-yellow-400/10 rounded-full blur-2xl" />
                     <p className="text-[10px] font-black text-yellow-600 uppercase tracking-[0.12em] flex items-center gap-1.5 mb-3 relative">
-                      <Gift className="w-3.5 h-3.5 text-yellow-500" /> Exclusive Access Bonuses
+                      <Gift className="w-3.5 h-3.5 text-yellow-500" /> Free Access to 3 Bonuses
                     </p>
                     <div className="space-y-2 relative">
                       {bonuses.map((bonus, idx) => (
