@@ -15,8 +15,8 @@ export default function WhySection() {
     <section className="relative pt-6 pb-6 sm:pt-12 sm:pb-10 overflow-hidden bg-slate-50">
       {/* Background */}
       <div className="absolute inset-0 bg-slate-50" />
-      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-purple-200/30 rounded-full blur-[150px] mix-blend-multiply pointer-events-none" />
-      <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-indigo-200/30 rounded-full blur-[120px] mix-blend-multiply pointer-events-none" />
+      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-purple-200/30 rounded-full blur-[150px] mix-blend-multiply pointer-events-none hidden sm:block" />
+      <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-indigo-200/30 rounded-full blur-[120px] mix-blend-multiply pointer-events-none hidden sm:block" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
         
@@ -129,7 +129,7 @@ export default function WhySection() {
             <div className="pt-10 mt-10 border-t border-purple-100 text-center">
               <motion.button 
                 onClick={scrollToForm}
-                className="w-full max-w-[90%] sm:w-auto px-6 py-3.5 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-normal sm:whitespace-nowrap text-center"
+                className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
               >
                 I Want to Book My 1:1 Session
               </motion.button>

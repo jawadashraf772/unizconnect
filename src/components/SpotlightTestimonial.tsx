@@ -8,7 +8,7 @@ export default function SpotlightTestimonial() {
     <section className="relative py-24 overflow-hidden bg-slate-50">
       {/* Background */}
       <div className="absolute inset-0 bg-slate-50" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-200/20 rounded-full blur-[150px] animate-gpu-blob-1 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-200/20 rounded-full blur-[150px] animate-gpu-blob-1 pointer-events-none hidden sm:block" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
 

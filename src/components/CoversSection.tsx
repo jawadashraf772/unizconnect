@@ -142,7 +142,7 @@ export default function CoversSection() {
     {/* Full-width Bonuses Section */}
     <section id="bonuses" className="w-full bg-purple-950 border-y-4 border-purple-900 pt-12 pb-8 sm:pb-20 relative overflow-hidden">
       {/* Decorative Blur Blob */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none hidden sm:block" />
  
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
         
@@ -190,7 +190,7 @@ export default function CoversSection() {
         <div className="text-center mt-8 sm:mt-16">
           <motion.button
             onClick={scrollToForm}
-            className="w-full max-w-[90%] sm:w-auto px-6 py-3.5 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-normal sm:whitespace-nowrap text-center"
+            className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
           >
             I Want These Bonuses.....Book My 1:1
           </motion.button>

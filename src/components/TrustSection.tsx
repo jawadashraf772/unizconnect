@@ -35,8 +35,8 @@ export default function TrustSection() {
       <div className="absolute inset-0 bg-slate-50/50 pointer-events-none" />
       
       {/* Decorative Blob */}
-      <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-purple-200/20 rounded-full blur-[120px] -z-10 mix-blend-multiply pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[500px] h-[500px] bg-violet-200/20 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none" />
+      <div className="absolute top-1/3 right-0 w-[600px] h-[600px] bg-purple-200/20 rounded-full blur-[120px] -z-10 mix-blend-multiply pointer-events-none hidden sm:block" />
+      <div className="absolute bottom-10 left-10 w-[500px] h-[500px] bg-violet-200/20 rounded-full blur-[100px] -z-10 mix-blend-multiply pointer-events-none hidden sm:block" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -191,7 +191,7 @@ export default function TrustSection() {
         <div className="mt-10 text-center">
           <motion.button 
             onClick={scrollToForm}
-            className="w-full max-w-[90%] sm:w-auto px-6 py-3.5 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-normal sm:whitespace-nowrap text-center"
+            className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
           >
             I Want to Book My 1:1 Session
           </motion.button>

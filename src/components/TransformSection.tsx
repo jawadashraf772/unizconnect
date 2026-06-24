@@ -27,7 +27,7 @@ export default function TransformSection() {
     <div className="py-12 relative overflow-hidden">
       <div className="absolute inset-0 bg-purple-50/10" />
       {/* Decorative Blob */}
-      <div className="absolute top-40 left-0 w-[600px] h-[600px] bg-purple-200/30 rounded-full blur-[120px] -z-10 mix-blend-multiply" />
+      <div className="absolute top-40 left-0 w-[600px] h-[600px] bg-purple-200/30 rounded-full blur-[120px] -z-10 mix-blend-multiply hidden sm:block" />
 
       {/* This Session is for You If — SUPER PLAYFUL */}
       <section className="relative py-16 overflow-hidden">
@@ -36,10 +36,10 @@ export default function TransformSection() {
         <motion.div 
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-20 left-10 w-[300px] h-[300px] bg-purple-300/40 rounded-full blur-[80px] mix-blend-multiply" 
+          className="absolute top-20 left-10 w-[300px] h-[300px] bg-purple-300/40 rounded-full blur-[80px] mix-blend-multiply hidden sm:block" 
         />
-        <div className="absolute bottom-20 right-10 w-[300px] h-[300px] bg-violet-300/40 rounded-full blur-[80px] mix-blend-multiply" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-200/30 rounded-full blur-[100px] mix-blend-multiply" />
+        <div className="absolute bottom-20 right-10 w-[300px] h-[300px] bg-violet-300/40 rounded-full blur-[80px] mix-blend-multiply hidden sm:block" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-200/30 rounded-full blur-[100px] mix-blend-multiply hidden sm:block" />
 
 
 
@@ -118,7 +118,7 @@ export default function TransformSection() {
           >
             <motion.button 
               onClick={scrollToForm}
-              className="w-full max-w-[90%] sm:w-auto px-6 py-3.5 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-normal sm:whitespace-nowrap text-center"
+              className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
             >
               Yes, This is Me...... Book My Session
             </motion.button>
