@@ -35,12 +35,12 @@ export default function OfferSection() {
       <motion.div
         animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 left-[15%] w-[500px] h-[500px] bg-purple-300/30 rounded-full blur-[150px] mix-blend-multiply pointer-events-none"
+        className="absolute top-20 left-[15%] w-[500px] h-[500px] bg-purple-300/30 rounded-full blur-[150px] mix-blend-multiply hidden sm:block pointer-events-none"
       />
       <motion.div
         animate={{ x: [0, -20, 0], y: [0, 30, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-20 right-[10%] w-[600px] h-[600px] bg-indigo-300/30 rounded-full blur-[180px] mix-blend-multiply pointer-events-none"
+        className="absolute bottom-20 right-[10%] w-[600px] h-[600px] bg-indigo-300/30 rounded-full blur-[180px] mix-blend-multiply hidden sm:block pointer-events-none"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

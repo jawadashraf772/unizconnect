@@ -17,9 +17,9 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-purple-50/30" />
 
       {/* Decorative gradient blobs */}
-      <div className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-purple-300/20 rounded-full blur-[100px] -z-10 animate-gpu-blob-1 pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-violet-300/20 rounded-full blur-[100px] -z-10 animate-gpu-blob-2 pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-fuchsia-200/15 rounded-full blur-[100px] -z-10 pointer-events-none" />
+      <div className="absolute top-10 left-1/4 w-[500px] h-[500px] bg-purple-300/20 rounded-full blur-[100px] -z-10 hidden sm:block animate-gpu-blob-1 pointer-events-none" />
+      <div className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-violet-300/20 rounded-full blur-[100px] -z-10 hidden sm:block animate-gpu-blob-2 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-fuchsia-200/15 rounded-full blur-[100px] -z-10 hidden sm:block pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <div className="space-y-6 sm:space-y-8 max-w-5xl mx-auto">

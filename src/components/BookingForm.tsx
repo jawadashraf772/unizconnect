@@ -152,12 +152,12 @@ export default function BookingForm() {
         <motion.div
           animate={{ x: [0, 30, 0], y: [0, -15, 0] }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 left-[10%] w-[500px] h-[500px] bg-purple-200/40 rounded-full blur-[120px] mix-blend-multiply pointer-events-none"
+          className="absolute top-1/4 left-[10%] w-[500px] h-[500px] bg-purple-200/40 rounded-full blur-[120px] mix-blend-multiply hidden sm:block pointer-events-none"
         />
         <motion.div
           animate={{ x: [0, -20, 0], y: [0, 20, 0] }}
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-1/4 right-[10%] w-[400px] h-[400px] bg-indigo-200/40 rounded-full blur-[100px] mix-blend-multiply pointer-events-none"
+          className="absolute bottom-1/4 right-[10%] w-[400px] h-[400px] bg-indigo-200/40 rounded-full blur-[100px] mix-blend-multiply hidden sm:block pointer-events-none"
         />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

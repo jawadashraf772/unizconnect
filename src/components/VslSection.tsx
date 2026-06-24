@@ -102,8 +102,8 @@ export default function VslSection() {
       <div className="absolute inset-0 bg-purple-950" />
       
       {/* Animated gradient blobs */}
-      <div className="absolute top-10 right-1/4 w-[400px] h-[400px] bg-purple-600/15 rounded-full blur-[100px] animate-gpu-blob-1 pointer-events-none" />
-      <div className="absolute bottom-10 left-1/4 w-[400px] h-[400px] bg-violet-600/15 rounded-full blur-[100px] animate-gpu-blob-2 pointer-events-none" />
+      <div className="absolute top-10 right-1/4 w-[400px] h-[400px] bg-purple-600/15 rounded-full blur-[100px] hidden sm:block animate-gpu-blob-1 pointer-events-none" />
+      <div className="absolute bottom-10 left-1/4 w-[400px] h-[400px] bg-violet-600/15 rounded-full blur-[100px] hidden sm:block animate-gpu-blob-2 pointer-events-none" />
 
 
 

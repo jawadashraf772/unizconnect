@@ -110,8 +110,8 @@ export default function FaqSection() {
     <section id="faq" className="relative pt-6 pb-12 sm:pt-12 sm:pb-24 overflow-hidden bg-slate-50">
       {/* Background */}
       <div className="absolute inset-0 bg-slate-50" />
-      <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-violet-200/30 rounded-full blur-[120px] mix-blend-multiply pointer-events-none" />
-      <div className="absolute bottom-20 left-0 w-[300px] h-[300px] bg-purple-200/30 rounded-full blur-[100px] mix-blend-multiply pointer-events-none" />
+      <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-violet-200/30 rounded-full blur-[120px] mix-blend-multiply hidden sm:block pointer-events-none" />
+      <div className="absolute bottom-20 left-0 w-[300px] h-[300px] bg-purple-200/30 rounded-full blur-[100px] mix-blend-multiply hidden sm:block pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

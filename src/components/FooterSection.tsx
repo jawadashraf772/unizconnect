@@ -20,12 +20,12 @@ export default function FooterSection() {
       <motion.div 
         animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.2, 0.1] }}
         transition={{ duration: 8, repeat: Infinity }}
-        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-600 rounded-full blur-[120px]" 
+        className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-purple-600 rounded-full blur-[120px] hidden sm:block" 
       />
       <motion.div 
         animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.15, 0.1] }}
         transition={{ duration: 10, repeat: Infinity, delay: 3 }}
-        className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-violet-600 rounded-full blur-[120px]" 
+        className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-violet-600 rounded-full blur-[120px] hidden sm:block" 
       />
 
 
