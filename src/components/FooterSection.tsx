@@ -68,7 +68,7 @@ export default function FooterSection() {
             onClick={scrollToForm}
             className="w-auto px-8 py-3.5 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-sm sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
           >
-            Book Your 1:1 Session
+            I Want to Book My 1:1 Session
           </motion.button>
         </motion.div>
 
