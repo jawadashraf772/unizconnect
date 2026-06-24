@@ -101,10 +101,23 @@ export default function FaqSection() {
           </p>
         </div>
       )
+    },
+    {
+      question: "Is the consultation fee refundable if I miss my session?",
+      answer: (
+        <div className="space-y-3">
+          <p>
+            The consultation fee is non-refundable because your slot is reserved exclusively for you and cannot be offered to someone else once booked.
+          </p>
+          <p>
+            If something unexpected comes up, simply let us know in advance and we'll do our best to help you reschedule.
+          </p>
+        </div>
+      )
     }
   ];
 
-  const emojiMap = ["⏱️", "📝", "🎓", "📊", "🇬🇧", "💼", "📩", "📄", "🏆", "🔗", "📚"];
+  const emojiMap = ["⏱️", "📝", "🎓", "📊", "🇬🇧", "💼", "📩", "📄", "🏆", "🔗", "📚", "💳"];
 
   return (
     <section id="faq" className="relative pt-6 pb-12 sm:pt-12 sm:pb-24 overflow-hidden bg-slate-50">
