@@ -117,8 +117,6 @@ export default function FaqSection() {
     }
   ];
 
-  const emojiMap = ["⏱️", "📝", "🎓", "📊", "🇬🇧", "💼", "📩", "📄", "🏆", "🔗", "📚", "💳"];
-
   return (
     <section id="faq" className="relative pt-6 pb-12 sm:pt-12 sm:pb-24 overflow-hidden bg-slate-50">
       {/* Background */}
@@ -163,12 +161,7 @@ export default function FaqSection() {
                     onClick={() => toggleFAQ(idx)}
                     className="w-full flex justify-between items-center p-5 sm:p-6 text-left font-bold text-slate-800 text-[17px] sm:text-[20px] focus:outline-none select-none gap-4 group"
                   >
-                    <div className="flex items-center gap-3.5">
-                      <span className="text-xl sm:text-2xl select-none shrink-0 group-hover:scale-110 transition-transform">
-                        {emojiMap[idx] || "❓"}
-                      </span>
-                      <span className="group-hover:text-purple-700 transition-colors font-bold leading-snug">{faq.question}</span>
-                    </div>
+                    <span className="group-hover:text-purple-700 transition-colors font-bold leading-snug">{faq.question}</span>
                     <motion.div
                       animate={{ rotate: isOpen ? 180 : 0 }}
                       transition={{ type: "spring", stiffness: 300 }}
@@ -189,7 +182,7 @@ export default function FaqSection() {
                     transition={{ type: "spring", stiffness: 250, damping: 30 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-5 sm:px-6 pb-6 text-sm sm:text-base text-slate-600 font-medium leading-relaxed border-t border-purple-50 pt-4 ml-[52px] sm:ml-[56px]">
+                    <div className="px-5 sm:px-6 pb-6 text-sm sm:text-base text-slate-600 font-medium leading-relaxed border-t border-purple-50 pt-4">
                       {faq.answer}
                     </div>
                   </motion.div>
