@@ -34,7 +34,7 @@ export default function UniversitiesSection() {
     { name: "University of Agriculture", logo: "/uni of agriculture.png", scaleClass: "scale-[1.15]" },
     { name: "Punjab University", logo: "/pu logo.svg", scaleClass: "scale-[1.15]" },
     { name: "Abdul Wali Khan University", logo: "/abdul wali khan logosss.jpeg", scaleClass: "scale-[1.1]" },
-    { name: "Bahauddin Zakariya University", logo: "/BZU_logo.png", scaleClass: "scale-[1.15]" }
+    { name: "Bahauddin Zakariya University", logo: "/bzu logo.jpeg", scaleClass: "scale-[1.15]" }
   ];
 
   const half = Math.ceil(universities.length / 2);
