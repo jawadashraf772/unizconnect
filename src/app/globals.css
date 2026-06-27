@@ -238,3 +238,47 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
+/* ====================================
+   MOBILE PERFORMANCE OPTIMIZATIONS
+   ==================================== */
+
+/* Disable heavy blob/float animations on mobile to prevent lag */
+@media (max-width: 767px) {
+  .animate-gpu-blob-1,
+  .animate-gpu-blob-2,
+  .animate-float,
+  .animate-float-slow,
+  .animate-pulse-glow,
+  .animate-smooth-pulse-glow {
+    animation: none !important;
+    will-change: auto !important;
+  }
+
+  /* Slow down marquee on mobile for reduced CPU usage */
+  .animate-marquee-left {
+    animation-duration: 40s;
+  }
+
+  .animate-marquee-right {
+    animation-duration: 45s;
+  }
+
+  /* Reduce expensive backdrop blur on mobile GPU */
+  .backdrop-blur-xl {
+    backdrop-filter: blur(8px) !important;
+  }
+  .backdrop-blur-3xl {
+    backdrop-filter: blur(16px) !important;
+  }
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

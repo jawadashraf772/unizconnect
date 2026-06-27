@@ -1,15 +1,18 @@
+import dynamic from "next/dynamic";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import VslSection from "@/components/VslSection";
-import TransformSection from "@/components/TransformSection";
-import CoversSection from "@/components/CoversSection";
-import AcceptancesSection from "@/components/AcceptancesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import TrustSection from "@/components/TrustSection";
-import BookingForm from "@/components/BookingForm";
-import WhySection from "@/components/WhySection";
-import FaqSection from "@/components/FaqSection";
-import FooterSection from "@/components/FooterSection";
+
+// Lazy-load all below-the-fold sections to drastically reduce initial JS bundle on mobile
+const TransformSection = dynamic(() => import("@/components/TransformSection"), { ssr: true });
+const CoversSection = dynamic(() => import("@/components/CoversSection"), { ssr: true });
+const AcceptancesSection = dynamic(() => import("@/components/AcceptancesSection"), { ssr: true });
+const TestimonialsSection = dynamic(() => import("@/components/TestimonialsSection"), { ssr: true });
+const TrustSection = dynamic(() => import("@/components/TrustSection"), { ssr: true });
+const BookingForm = dynamic(() => import("@/components/BookingForm"), { ssr: true });
+const WhySection = dynamic(() => import("@/components/WhySection"), { ssr: true });
+const FaqSection = dynamic(() => import("@/components/FaqSection"), { ssr: true });
+const FooterSection = dynamic(() => import("@/components/FooterSection"), { ssr: true });
 
 export default function Home() {
   return (
@@ -41,8 +44,6 @@ export default function Home() {
 
         {/* 12-14. Offer, Value Prop, How Booking Works & Form */}
         <BookingForm />
-
-
 
         {/* 14.8. Why PKR 5,000 Section */}
         <WhySection />
