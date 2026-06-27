@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import Image from "next/image";
 import UniversitiesSection from "./UniversitiesSection";
 
 export default function HeroSection() {
@@ -84,30 +85,45 @@ export default function HeroSection() {
             {/* Overlapping Trust Badge */}
             <div className="mt-0 sm:mt-4 flex flex-col sm:flex-row items-center gap-2 sm:gap-4 justify-center bg-transparent sm:bg-white/60 sm:backdrop-blur-xs py-0 sm:py-3.5 px-0 sm:px-6 sm:rounded-full border-0 sm:border sm:border-purple-100 shadow-none sm:shadow-sm max-w-max mx-auto">
               <div className="flex -space-x-2 justify-center">
-                <img
+                <Image
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs relative z-50"
                   src="/image%201.jpeg"
                   alt="Student 1"
+                  width={40}
+                  height={40}
+                  priority
                 />
-                <img
+                <Image
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs relative z-40"
                   src="/image%202.webp"
                   alt="Student 2"
+                  width={40}
+                  height={40}
+                  priority
                 />
-                <img
+                <Image
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs relative z-30"
                   src="/image%205.webp"
                   alt="Student 5"
+                  width={40}
+                  height={40}
+                  priority
                 />
-                <img
+                <Image
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs relative z-20"
                   src="/image%204.webp"
                   alt="Student 4"
+                  width={40}
+                  height={40}
+                  priority
                 />
-                <img
+                <Image
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs relative z-10"
                   src="/image%203.webp"
                   alt="Student 3"
+                  width={40}
+                  height={40}
+                  priority
                 />
               </div>
               <div className="flex flex-col items-center sm:items-start gap-0.5">

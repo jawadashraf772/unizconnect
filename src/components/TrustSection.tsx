@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Award, Compass, Heart, Quote } from "lucide-react";
+import Image from "next/image";
 
 export default function TrustSection() {
   const scrollToForm = () => {
@@ -140,9 +141,12 @@ export default function TrustSection() {
               transition={{ type: "spring", stiffness: 50, damping: 15, delay: 0.1 }}
               className="max-w-[80%] sm:max-w-[70%] lg:max-w-[85%] mx-auto overflow-hidden rounded-[2rem] shadow-md"
             >
-              <img
+              <Image
                 src="/ayesha_new.webp"
                 alt="Ayesha Saleem"
+                width={400}
+                height={500}
+                sizes="(max-width: 768px) 80vw, 400px"
                 className="w-[104%] max-w-none h-auto object-cover -translate-x-[2%]"
               />
             </motion.div>

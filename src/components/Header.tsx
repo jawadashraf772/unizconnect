@@ -32,6 +32,8 @@ export default function Header() {
               src="/unizconnect.webp" 
               alt="UnizConnect Logo" 
               fill
+              priority
+              sizes="(max-width: 768px) 144px, 192px"
               className="object-contain"
             />
           </div>

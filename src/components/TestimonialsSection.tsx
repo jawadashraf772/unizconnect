@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Star, Quote, MessageCircle } from "lucide-react";
+import Image from "next/image";
 
 export default function TestimonialsSection() {
   const scrollToForm = () => {
@@ -101,9 +102,11 @@ export default function TestimonialsSection() {
                       <div className="relative shrink-0">
                         <div className="absolute -inset-1 bg-purple-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
-                          <img
+                          <Image
                             src="/Muhammad Talal.webp"
                             alt="Muhammad Talal"
+                            width={64}
+                            height={64}
                             className="w-full h-full object-cover object-center scale-[1.05]"
                           />
                         </div>
@@ -133,9 +136,11 @@ export default function TestimonialsSection() {
                       <div className="relative shrink-0">
                         <div className="absolute -inset-1 bg-purple-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
-                          <img
+                          <Image
                             src="/shagufta naz.webp"
                             alt="Shagufta Naz"
+                            width={64}
+                            height={64}
                             className="w-full h-full object-cover object-center"
                           />
                         </div>
@@ -165,9 +170,11 @@ export default function TestimonialsSection() {
                       <div className="relative shrink-0">
                         <div className="absolute -inset-1 bg-purple-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
-                          <img
+                          <Image
                             src="/hamza akram.webp"
                             alt="Hamza Akram"
+                            width={64}
+                            height={64}
                             className="w-full h-full object-cover object-center"
                           />
                         </div>
@@ -197,9 +204,11 @@ export default function TestimonialsSection() {
                       <div className="relative shrink-0">
                         <div className="absolute -inset-1 bg-purple-200 rounded-full opacity-60 blur-xs" />
                         <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-white bg-purple-50 shadow-md">
-                          <img
+                          <Image
                             src="/Quratulain Sajid.webp"
                             alt="Quratulain Sajid"
+                            width={64}
+                            height={64}
                             className="w-full h-full object-cover object-center"
                           />
                         </div>
@@ -359,9 +368,12 @@ export default function TestimonialsSection() {
                 )}
 
                 {isImage && (
-                  <img
+                  <Image
                     src={src}
                     alt={`Student success review ${idx + 1}`}
+                    width={480}
+                    height={720}
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="w-full h-auto rounded-[1.5rem] object-contain border border-transparent shadow-xs"
                   />
                 )}
