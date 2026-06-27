@@ -73,7 +73,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="pt-0 flex flex-col items-center gap-2 sm:gap-4 !mt-5 sm:!mt-6"
+            className="pt-0 flex flex-col items-center gap-4 sm:gap-6 !mt-4 sm:!mt-6"
           >
             <motion.button 
               onClick={scrollToForm}
