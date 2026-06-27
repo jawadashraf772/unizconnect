@@ -47,13 +47,7 @@ export default function OfferSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 80 }}
-          className="text-center mb-20 space-y-5"
-        >
+        <div className="text-center mb-20 space-y-5">
           <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-purple-100/80 border border-purple-200 backdrop-blur-sm shadow-sm">
             <Zap className="w-4 h-4 text-purple-600" />
             <span className="text-purple-700 font-black text-xs uppercase tracking-[0.2em]">Exclusive Strategy Offer</span>
@@ -64,33 +58,21 @@ export default function OfferSection() {
               <span className="text-purple-600">
                 FIRST STEP
               </span>
-              <motion.div
-                className="absolute -bottom-2 left-0 right-0 h-1 bg-purple-400 rounded-full opacity-60"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-              />
+              <div className="absolute -bottom-2 left-0 right-0 h-1 bg-purple-400 rounded-full opacity-60" />
             </span>{" "}
             Today
           </h2>
           <p className="text-slate-600 text-lg sm:text-xl font-medium max-w-2xl mx-auto leading-relaxed">
             Skip the guesswork. Stop wasting months reading generic online advice. Sit down for a hyper-personalized 1:1 strategy session with Ayesha and leave with a clear blueprint.
           </p>
-        </motion.div>
+        </div>
 
         {/* Main Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
           {/* Center Column - Premium Pricing Card (Light Theme) */}
           <div className="lg:col-span-12 flex justify-center">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring", stiffness: 80, damping: 20 }}
-              className="w-full max-w-[520px] relative group"
-            >
+            <div className="w-full max-w-[520px] relative group">
               {/* Animated border glow */}
               <div className="absolute -inset-[1px] border border-purple-200/60 rounded-[2.1rem] pointer-events-none" />
 
@@ -116,31 +98,18 @@ export default function OfferSection() {
                   <p className="text-[11px] font-black text-purple-600 uppercase tracking-[0.2em]">What You'll Get in This Session</p>
                   <ul className="space-y-3">
                     {inclusions.map((item, idx) => (
-                      <motion.li
-                        key={idx}
-                        initial={{ opacity: 0, x: -10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 * idx }}
-                        className="flex items-start gap-3 group/item"
-                      >
+                      <li key={idx} className="flex items-start gap-3 group/item">
                         <div className="bg-purple-100 border border-purple-200 p-1 rounded-lg shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform">
                           <Check className="w-3 h-3 text-purple-600" />
                         </div>
                         <span className="text-sm font-semibold text-slate-700 leading-relaxed">{item}</span>
-                      </motion.li>
+                      </li>
                     ))}
                   </ul>
                 </div>
 
                 {/* Bonuses Box */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4 }}
-                  className="relative bg-purple-50 border border-purple-100 rounded-2xl p-6 overflow-hidden shadow-sm mt-6 mb-8"
-                >
+                <div className="relative bg-purple-50 border border-purple-100 rounded-2xl p-6 overflow-hidden shadow-sm mt-6 mb-8">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full blur-3xl" />
                   <p className="text-xs font-black text-yellow-600 uppercase tracking-[0.15em] flex items-center gap-2 mb-4 relative">
                     <Gift className="w-4 h-4 text-yellow-500" /> Free Access to 3 Bonuses
@@ -155,18 +124,18 @@ export default function OfferSection() {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Action Button */}
-                <motion.button 
+                <button 
                   onClick={scrollToForm}
                   className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
                 >
                   Book Your 1:1 Session
-                </motion.button>
+                </button>
 
               </div>
-            </motion.div>
+            </div>
           </div>
 
         </div>

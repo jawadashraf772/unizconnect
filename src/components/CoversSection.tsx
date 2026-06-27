@@ -84,18 +84,12 @@ export default function CoversSection() {
   
         {/* Core Coverage Header */}
         <div className="text-center space-y-6 mb-20">
-          <motion.h2 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 100 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.4] sm:leading-[1.3] lg:leading-normal py-2"
-          >
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.4] sm:leading-[1.3] lg:leading-normal py-2">
             What You'll Get From{" "}
             <span className="inline-block relative">
               <span className="relative z-10 text-white px-3 py-1 sm:px-4 sm:py-2 bg-purple-600 rounded-2xl rotate-2 inline-block transform hover:-rotate-2 transition-transform cursor-crosshair">This 1:1 Session</span>
             </span>
-          </motion.h2>
+          </h2>
           
           <div className="max-w-3xl mx-auto space-y-4">
             <div className="text-xl bg-purple-50 border border-purple-100 rounded-2xl px-6 py-5 inline-block shadow-sm text-center w-full">
@@ -117,10 +111,6 @@ export default function CoversSection() {
           {covers.map((item, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ type: "spring", stiffness: 100, delay: idx * 0.08 }}
               whileHover={{ y: -6, scale: 1.02, boxShadow: "0 25px 50px -12px rgba(124, 58, 237, 0.12)" }}
               className="bg-white border-2 border-slate-100 rounded-[2rem] p-8 pt-12 shadow-lg hover:border-purple-200 transition-all duration-300 relative group flex flex-col justify-start h-full"
             >
@@ -141,12 +131,12 @@ export default function CoversSection() {
         </div>
       </div>
     </section>
- 
+  
     {/* Full-width Bonuses Section */}
     <section id="bonuses" className="w-full bg-purple-950 border-y-4 border-purple-900 pt-12 pb-8 sm:pb-20 relative overflow-hidden">
       {/* Decorative Blur Blob */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[120px] pointer-events-none hidden sm:block" />
- 
+  
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
         
         <div className="text-center space-y-4 mb-14 mt-4 w-full">
@@ -155,17 +145,13 @@ export default function CoversSection() {
             when you book this session, you also get access to <span className="whitespace-nowrap"><span className="text-yellow-400 underline decoration-2 underline-offset-4">3 FREE bonuses</span> 👇</span>
           </h3>
         </div>
- 
+  
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl w-full">
           {bonuses.map((bonus, idx) => {
             const IconComponent = bonus.icon;
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ type: "spring", stiffness: 100, delay: idx * 0.15 }}
                 whileHover={{ scale: 1.01, y: -4 }}
                 className="bg-purple-900 p-4 sm:p-5 rounded-[2rem] shadow-xl transition-all h-full flex flex-col"
               >
@@ -189,14 +175,14 @@ export default function CoversSection() {
             );
           })}
         </div>
-
+  
         <div className="text-center mt-8 sm:mt-16">
-          <motion.button
+          <button
             onClick={scrollToForm}
             className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
           >
             I Want These Bonuses... Book My 1:1
-          </motion.button>
+          </button>
         </div>
 
       </div>

@@ -34,43 +34,26 @@ export default function FooterSection() {
         
         {/* Pitch Headline */}
         <div className="space-y-3 mb-6">
-          <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 80 }}
-            className="text-2xl sm:text-3xl lg:text-4xl font-black max-w-2xl mx-auto leading-tight text-white"
-          >
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black max-w-2xl mx-auto leading-tight text-white">
             Before you apply, get clarity from someone who{" "}
             <span className="text-purple-300">
               has already guided 1300+ people like you.
             </span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-purple-200 max-w-xl mx-auto text-xs sm:text-sm font-black leading-relaxed uppercase tracking-wider"
-          >
+          </h2>
+          <p className="text-purple-200 max-w-xl mx-auto text-xs sm:text-sm font-black leading-relaxed uppercase tracking-wider">
             Your Future Deserves More Than Random Advice!
-          </motion.p>
+          </p>
         </div>
 
         {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
-        >
-          <motion.button 
+        <div>
+          <button 
             onClick={scrollToForm}
             className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
           >
             I'm Ready... Book My 1:1 Now
-          </motion.button>
-        </motion.div>
+          </button>
+        </div>
 
         {/* Footer Info */}
         <div className="border-t border-purple-800/50 pt-6 mt-8 space-y-4">

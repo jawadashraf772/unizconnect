@@ -127,31 +127,19 @@ export default function FaqSection() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center space-y-5 mb-16"
-        >
-
+        <div className="text-center space-y-5 mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight lg:whitespace-nowrap">
             Frequently Asked{" "}
             <span className="text-purple-600">Questions</span>
           </h2>
-        </motion.div>
+        </div>
 
         {/* FAQ Accordion */}
         <div className="space-y-3">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-20px" }}
-                transition={{ delay: idx * 0.03, type: "spring", stiffness: 150 }}
-              >
+              <div key={idx}>
                 <div className={`rounded-2xl overflow-hidden transition-all duration-300 border ${
                   isOpen 
                     ? "bg-white border-purple-200 shadow-lg shadow-purple-500/5" 
@@ -187,13 +175,10 @@ export default function FaqSection() {
                     </div>
                   </motion.div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
-
-
-
       </div>
     </section>
   );

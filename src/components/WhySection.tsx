@@ -21,12 +21,7 @@ export default function WhySection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center space-y-5 mb-16"
-        >
+        <div className="text-center space-y-5 mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100/80 border border-purple-200 text-purple-700 text-xs font-black uppercase tracking-widest shadow-sm">
             <HelpCircle className="w-4 h-4" />
             Let&apos;s Talk About Value
@@ -35,16 +30,10 @@ export default function WhySection() {
             Why It&apos;s For{" "}
             <span className="text-purple-600">PKR 5000</span>?
           </h2>
-        </motion.div>
+        </div>
 
         {/* Main Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", stiffness: 80 }}
-          className="relative"
-        >
+        <div className="relative">
           <div className="absolute -inset-[1px] border border-purple-200/60 rounded-[2.1rem] pointer-events-none" />
 
           <div className="relative bg-white backdrop-blur-2xl border border-purple-100 rounded-[2rem] p-6 sm:p-12 shadow-2xl overflow-hidden">
@@ -80,15 +69,8 @@ export default function WhySection() {
               </div>
 
               {/* Price Highlight Card (Light Theme Version) */}
-              <motion.div
-                whileHover={{ scale: 1.01 }}
-                className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 shadow-lg relative overflow-hidden"
-              >
-                <motion.div
-                  animate={{ x: [0, 30, 0] }}
-                  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-0 right-0 w-40 h-40 bg-white/60 rounded-full blur-3xl"
-                />
+              <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 shadow-lg relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-white/60 rounded-full blur-3xl" />
                 <div className="relative">
                   <div className="space-y-2">
                     <p className="text-3xl sm:text-4xl font-black text-slate-900">It just costs PKR 5,000.</p>
@@ -97,7 +79,7 @@ export default function WhySection() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               <div className="space-y-6 text-slate-600 font-medium leading-relaxed text-base sm:text-lg">
                 <p>
@@ -127,16 +109,16 @@ export default function WhySection() {
 
             {/* CTA */}
             <div className="pt-10 mt-10 border-t border-purple-100 text-center">
-              <motion.button 
+              <button 
                 onClick={scrollToForm}
                 className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"
               >
                 Book Your 1:1 Session
-              </motion.button>
+              </button>
             </div>
 
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>
