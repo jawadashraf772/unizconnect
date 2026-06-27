@@ -72,7 +72,7 @@ export default function TestimonialsSection() {
           </motion.h2>
         </div>
 
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 max-w-6xl mx-auto mb-6 sm:mb-12">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 max-w-6xl mx-auto mb-2 sm:mb-12">
           {reviewImages.map((src, idx) => {
             const isTalal = src === "/Muhammad Talal.webp";
             const isShagufta = src === "/shagufta naz.webp";
