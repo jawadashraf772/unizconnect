@@ -140,11 +140,11 @@ export default function TransformSection() {
                 <span className="text-yellow-400 text-6xl sm:text-7xl font-serif absolute -top-8 -left-4 select-none opacity-80">“</span>
                 
                 <div className="pl-6 pr-6 sm:pl-8 sm:pr-8">
-                  <p className="text-lg sm:text-xl md:text-2xl font-semibold italic leading-relaxed text-slate-100">
-                    I took a consultation session. It was a very wonderful experience. Ayesha not only guided me through the application process but she was also very transparent and supportive. Applications can be very exhausting and draining but due to Ayesha's encouragement I felt much better after the session.
+                  <p className="text-sm sm:text-base md:text-lg font-semibold italic leading-relaxed text-slate-100">
+                    I took a consultation session. It was a very wonderful experience. Ayesha not only guided me through the application process but she was also very transparent and supportive. Applications can be very exhausting and draining but due to Ayesha&apos;s encouragement I felt much better after the session.
                   </p>
                   
-                  <div className="text-yellow-400 font-black text-base sm:text-lg tracking-wider mt-6">
+                  <div className="text-yellow-400 font-black text-xs sm:text-sm tracking-wider mt-4">
                     Maryam Imran - Bahria University, Islamabad
                   </div>
                 </div>
