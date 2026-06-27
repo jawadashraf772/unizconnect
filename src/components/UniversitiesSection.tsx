@@ -43,7 +43,7 @@ export default function UniversitiesSection() {
   const row2Extended = [...row2, ...row2, ...row2];
 
   const UniCard = ({ uni }: { uni: typeof universities[0] & { filterClass?: string } }) => (
-    <div className="flex-shrink-0 bg-white border-2 border-purple-100/40 rounded-xl w-48 h-24 flex items-center justify-center p-3 shadow-sm hover:shadow-md hover:border-purple-300 transition-all duration-300 group overflow-hidden">
+    <div className="flex-shrink-0 bg-white border-2 border-purple-100/40 rounded-xl w-48 h-24 flex items-center justify-center p-3 shadow-sm hover:shadow-md hover:border-purple-300 transition-all duration-300 group overflow-hidden isolate">
       <img
         src={uni.logo}
         alt={`${uni.name} logo`}
@@ -64,7 +64,7 @@ export default function UniversitiesSection() {
             return (
               <div 
                 key={idx} 
-                className={`bg-white border border-purple-100/60 rounded-xl w-full h-20 flex items-center justify-center p-2 shadow-xs hover:border-purple-200 hover:shadow-sm transition-all duration-300 overflow-hidden ${
+                className={`bg-white border border-purple-100/60 rounded-xl w-full h-20 flex items-center justify-center p-2 shadow-xs hover:border-purple-200 hover:shadow-sm transition-all duration-300 overflow-hidden isolate ${
                   idx >= 6 ? (showAll ? "flex" : "hidden") : "flex"
                 }`}
               >
