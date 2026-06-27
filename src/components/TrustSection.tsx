@@ -31,7 +31,7 @@ export default function TrustSection() {
   ];
 
   return (
-    <section id="about-ayesha" className="pt-10 pb-8 sm:pt-24 sm:pb-10 relative overflow-hidden bg-slate-50/50">
+    <section id="about-ayesha" className="pt-10 pb-4 sm:pt-24 sm:pb-10 relative overflow-hidden bg-slate-50/50">
       <div className="absolute inset-0 bg-slate-50/50 pointer-events-none" />
       
       {/* Decorative Blob */}
@@ -188,7 +188,7 @@ export default function TrustSection() {
         </div>
 
         {/* Call To Action */}
-        <div className="mt-10 text-center">
+        <div className="mt-6 sm:mt-10 text-center">
           <motion.button 
             onClick={scrollToForm}
             className="w-auto px-5 py-3 sm:px-12 sm:py-5 bg-purple-700 hover:bg-purple-800 active:bg-purple-900 text-white font-black text-xs sm:text-base md:text-lg rounded-full shadow-xl shadow-purple-900/20 cursor-pointer transition-all flex items-center justify-center gap-2 sm:gap-3 mx-auto whitespace-nowrap"

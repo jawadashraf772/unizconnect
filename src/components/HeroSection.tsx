@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] bg-fuchsia-200/15 rounded-full blur-[100px] -z-10 hidden sm:block pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <div className="space-y-6 sm:space-y-8 max-w-5xl mx-auto">
+        <div className="space-y-4 sm:space-y-6 max-w-5xl mx-auto">
           
           {/* Target Audience Badge */}
           <div className="flex flex-col items-center gap-2">
@@ -72,7 +72,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="pt-4 flex flex-col items-center gap-6"
+            className="pt-0 flex flex-col items-center gap-3 sm:gap-6"
           >
             <motion.button 
               onClick={scrollToForm}
@@ -82,7 +82,7 @@ export default function HeroSection() {
             </motion.button>
 
             {/* Overlapping Trust Badge */}
-            <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 justify-center bg-transparent sm:bg-white/60 sm:backdrop-blur-xs py-3.5 px-6 sm:rounded-full border-0 sm:border sm:border-purple-100 shadow-none sm:shadow-sm max-w-max mx-auto">
+            <div className="mt-0 sm:mt-4 flex flex-col sm:flex-row items-center gap-2 sm:gap-4 justify-center bg-transparent sm:bg-white/60 sm:backdrop-blur-xs py-0 sm:py-3.5 px-0 sm:px-6 sm:rounded-full border-0 sm:border sm:border-purple-100 shadow-none sm:shadow-sm max-w-max mx-auto">
               <div className="flex -space-x-2 justify-center">
                 <img
                   className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover shadow-xs relative z-50"
@@ -129,7 +129,7 @@ export default function HeroSection() {
       </div>
 
       {/* Universities Marquee / Showcase emerged into Hero - Full Width */}
-      <div className="w-full relative z-20 mt-8 sm:mt-12">
+      <div className="w-full relative z-20 mt-5 sm:mt-12">
         <UniversitiesSection />
       </div>
     </section>

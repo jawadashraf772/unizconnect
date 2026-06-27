@@ -57,20 +57,26 @@ export default function UniversitiesSection() {
       {/* Mobile/Tablet view: Static logo showcase */}
       <div className="block sm:hidden px-4">
         <div className="grid grid-cols-3 gap-3 max-w-sm mx-auto">
-          {universities.map((uni, idx) => (
-            <div 
-              key={idx} 
-              className={`bg-white border border-purple-100/60 rounded-xl w-full h-20 flex items-center justify-center p-2 shadow-xs hover:border-purple-200 hover:shadow-sm transition-all duration-300 overflow-hidden ${
-                idx >= 6 ? (showAll ? "flex" : "hidden") : "flex"
-              }`}
-            >
-              <img
-                src={uni.logo}
-                alt={`${uni.name} logo`}
-                className={`max-w-[90%] max-h-[90%] object-contain ${uni.scaleClass || "scale-100"} ${(uni as any).filterClass || ""}`}
-              />
-            </div>
-          ))}
+          {universities.map((uni, idx) => {
+            const scaleMatch = uni.scaleClass?.match(/scale-\[(\d+\.?\d*)\]/);
+            const scaleVal = scaleMatch ? parseFloat(scaleMatch[1]) : 1;
+            const mobileScale = scaleVal > 1 ? 1 + (scaleVal - 1) * 0.35 : scaleVal;
+            return (
+              <div 
+                key={idx} 
+                className={`bg-white border border-purple-100/60 rounded-xl w-full h-20 flex items-center justify-center p-2 shadow-xs hover:border-purple-200 hover:shadow-sm transition-all duration-300 overflow-hidden ${
+                  idx >= 6 ? (showAll ? "flex" : "hidden") : "flex"
+                }`}
+              >
+                <img
+                  src={uni.logo}
+                  alt={`${uni.name} logo`}
+                  style={{ transform: `scale(${mobileScale})` }}
+                  className={`max-w-[82%] max-h-[82%] object-contain ${(uni as any).filterClass || ""}`}
+                />
+              </div>
+            );
+          })}
         </div>
 
         {/* Show More Button for Mobile only */}

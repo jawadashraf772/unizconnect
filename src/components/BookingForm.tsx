@@ -147,7 +147,7 @@ export default function BookingForm() {
     <div className="bg-white">
 
       {/* FORM SECTION (Light Theme Update) */}
-      <section id="booking-form" className="relative pt-4 pb-6 sm:pb-14 overflow-hidden bg-slate-50/50">
+      <section id="booking-form" className="relative pt-2 sm:pt-14 pb-6 sm:pb-14 overflow-hidden bg-slate-50/50">
         {/* Background */}
         <div className="absolute inset-0 bg-slate-50" />
         <motion.div
@@ -164,7 +164,7 @@ export default function BookingForm() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           {/* Section Header */}
-          <div className="text-center mb-10 sm:mb-14">
+          <div className="text-center mb-5 sm:mb-14">
             <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
               Take Your <span className="text-purple-700">FIRST STEP</span> Today
             </h2>

@@ -95,7 +95,7 @@ export default function VslSection() {
     <section 
       id="video" 
       ref={containerRef} 
-      className="relative pt-10 pb-10 sm:pb-16 lg:pt-16 lg:pb-28 overflow-hidden noise-overlay"
+      className="relative pt-10 pb-6 sm:pb-16 lg:pt-16 lg:pb-28 overflow-hidden noise-overlay"
       style={{ zIndex: isPlaying ? 999999 : undefined }}
     >
       {/* Deep purple gradient background */}
@@ -187,7 +187,7 @@ export default function VslSection() {
         </motion.div>
 
         {/* Testimonials Boxes in Purple Background */}
-        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-12 mb-8 relative z-20">
+        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 mt-8 sm:mt-12 mb-4 sm:mb-8 relative z-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {transformations.map((t, idx) => (
               <div
