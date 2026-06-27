@@ -19,7 +19,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     const originalScrollIntoView = Element.prototype.scrollIntoView;
     Element.prototype.scrollIntoView = function (options) {
       if (options && (options as any).behavior === "smooth") {
-        lenis.scrollTo(this);
+        lenis.scrollTo(this as HTMLElement);
       } else {
         originalScrollIntoView.call(this, options);
       }
