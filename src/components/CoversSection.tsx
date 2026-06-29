@@ -67,7 +67,7 @@ export default function CoversSection() {
       badge: "Bonus 2 - FREE",
       icon: MessageSquare,
       title: "Custom Recap Email",
-      description: "I understand no human (including us 😄) can remember everything word-for-word from a 40-minute session.\n\nDon’t worry...you don’t need to remember anything. Because after the session, you’ll receive a custom-written, detailed recap email covering highlights of the session."
+      description: "We understand no human (including us 😄) can remember everything word-for-word from a 40-minute session.\n\nDon’t worry...you don’t need to remember anything. Because after the session, you’ll receive a custom-written, detailed recap email covering highlights of the session."
     },
     {
       badge: "Bonus 3 - FREE",

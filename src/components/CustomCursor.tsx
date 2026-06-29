@@ -131,6 +131,7 @@ export function CustomCursor() {
         className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9999] border-2 hidden md:block"
         style={{
           x: cursorXSpring,
+          
           y: cursorYSpring,
           translateX: "-50%",
           translateY: "-50%",
