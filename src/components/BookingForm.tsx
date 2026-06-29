@@ -147,7 +147,7 @@ export default function BookingForm() {
     <div className="bg-white">
 
       {/* FORM SECTION (Light Theme Update) */}
-      <section id="booking-form" className="relative pt-2 sm:pt-14 pb-6 sm:pb-14 overflow-hidden bg-slate-50/50">
+      <section id="booking-form" className="relative pt-0 sm:pt-6 pb-6 sm:pb-14 overflow-hidden bg-slate-50/50">
         {/* Background */}
         <div className="absolute inset-0 bg-slate-50" />
         <motion.div
