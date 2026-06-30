@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function AcceptancesSection() {
   const [showAll, setShowAll] = useState(false);
@@ -69,11 +70,15 @@ export default function AcceptancesSection() {
               }`}
             >
               {uni.logo ? (
-                <img
-                  src={uni.logo}
-                  alt={`${uni.name} logo`}
-                  className={`max-w-[90%] max-h-[90%] object-contain origin-center transition-all duration-300 filter contrast-[1.03] brightness-[1.01] ${uni.scaleClass || "scale-100"} ${uni.filterClass || ""} group-hover:scale-[1.08]`}
-                />
+                <div className={`relative w-full h-full flex items-center justify-center transition-all duration-300 filter contrast-[1.03] brightness-[1.01] ${uni.scaleClass || "scale-100"} ${uni.filterClass || ""} group-hover:scale-[1.08]`}>
+                  <Image
+                    src={uni.logo}
+                    alt={`${uni.name} logo`}
+                    fill
+                    sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 16vw"
+                    className="object-contain origin-center p-2"
+                  />
+                </div>
               ) : (
                 <span className="text-slate-700 text-sm font-extrabold tracking-tight uppercase group-hover:text-purple-600 transition-colors px-1">
                   {uni.name}

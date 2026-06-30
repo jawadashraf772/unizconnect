@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Play, Video, Star, User } from "lucide-react";
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 
 export default function VslSection() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -209,7 +210,9 @@ export default function VslSection() {
                       {t.avatar === "dummy" ? (
                         <User className="w-10 h-10 text-slate-400" />
                       ) : (
-                        <img src={t.avatar} alt={t.name} className={`w-full h-full object-cover origin-center ${t.avatarScale}`} />
+                        <div className="relative w-full h-full">
+                          <Image src={t.avatar} alt={t.name} fill sizes="80px" className={`object-cover origin-center ${t.avatarScale}`} />
+                        </div>
                       )}
                     </div>
                     <div>

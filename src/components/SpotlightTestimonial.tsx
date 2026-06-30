@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Quote, Star, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 export default function SpotlightTestimonial() {
   return (
@@ -54,10 +55,12 @@ export default function SpotlightTestimonial() {
                 <div className="relative">
                   <div className="absolute -inset-1 bg-purple-200 rounded-2xl opacity-60 blur-sm" />
                   <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-white bg-purple-50 shadow-md">
-                    <img
+                    <Image
                       src="/kashmala khan.webp"
                       alt="Kashmala Khan"
-                      className="w-full h-full object-cover object-center"
+                      fill
+                      sizes="(max-width: 768px) 112px, 144px"
+                      className="object-cover object-center"
                     />
                   </div>
                 </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 // Using explicit padding controls to resize logos perfectly within card boundaries
 // This avoids CSS scale transform overflow bugs on Safari, iPhones, iPads, and Macs.
@@ -56,18 +57,20 @@ export default function UniversitiesSection() {
       }}
       className="flex-shrink-0 bg-white border-2 border-purple-100/40 rounded-xl w-48 h-24 flex items-center justify-center shadow-sm hover:shadow-md hover:border-purple-300 transition-all duration-300 group overflow-hidden"
     >
-      <img
-        src={uni.logo}
-        alt={`${uni.name} logo`}
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "contain",
-          display: "block",
-          transition: "transform 0.3s ease",
-        }}
-        className="group-hover:scale-105"
-      />
+      <div className="relative w-full h-full">
+        <Image
+          src={uni.logo}
+          alt={`${uni.name} logo`}
+          fill
+          style={{
+            objectFit: "contain",
+            display: "block",
+            transition: "transform 0.3s ease",
+          }}
+          sizes="(max-width: 640px) 0vw, 192px"
+          className="group-hover:scale-105"
+        />
+      </div>
     </div>
   );
 
@@ -90,16 +93,18 @@ export default function UniversitiesSection() {
                 idx >= 6 ? (showAll ? "flex" : "hidden") : "flex"
               }`}
             >
-              <img
-                src={uni.logo}
-                alt={`${uni.name} logo`}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
-                  display: "block",
-                }}
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src={uni.logo}
+                  alt={`${uni.name} logo`}
+                  fill
+                  style={{
+                    objectFit: "contain",
+                    display: "block",
+                  }}
+                  sizes="(max-width: 640px) 33vw, 0vw"
+                />
+              </div>
             </div>
           ))}
         </div>
