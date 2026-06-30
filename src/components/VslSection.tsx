@@ -151,7 +151,7 @@ export default function VslSection() {
               onEnded={() => setIsPlayingVideo(false)}
             >
               <source 
-                src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/697b5bdbb3ae839f21a29faa.mp4" 
+                src="https://drive.google.com/uc?export=download&id=1CufZ5fMPUXDyNLfeNliq64IZMxtL4o9c" 
                 type="video/mp4" 
               />
               Your browser does not support the video tag.
