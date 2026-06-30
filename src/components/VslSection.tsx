@@ -139,35 +139,12 @@ export default function VslSection() {
             transition={{ type: "spring", stiffness: 80, damping: 20 }}
             className="relative w-full aspect-video rounded-3xl overflow-hidden border-4 border-purple-400/30 bg-purple-950 shadow-2xl transition-all duration-300"
           >
-            <video 
-              ref={videoRef}
-              className="w-full h-full object-fill"
-              poster="/image.png"
-              controls
-              playsInline
-              preload="metadata"
-              onPlay={() => setIsPlayingVideo(true)}
-              onPause={() => setIsPlayingVideo(false)}
-              onEnded={() => setIsPlayingVideo(false)}
-            >
-              <source 
-                src="https://drive.google.com/uc?export=download&id=1CufZ5fMPUXDyNLfeNliq64IZMxtL4o9c" 
-                type="video/mp4" 
-              />
-              Your browser does not support the video tag.
-            </video>
-            {!isPlayingVideo && (
-              <div 
-                onClick={handlePlayClick}
-                className="absolute inset-0 flex items-center justify-center bg-black/10 cursor-pointer z-10 group"
-              >
-                <div className="w-20 h-20 bg-purple-700 text-white rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform group-hover:scale-110 group-hover:bg-purple-600 border-4 border-purple-400/50">
-                  <Play className="w-8 h-8 fill-current translate-x-0.5" />
-                </div>
-                {/* Glowing ring animation */}
-                <div className="absolute w-24 h-24 rounded-full border border-white/50 animate-ping pointer-events-none opacity-40 group-hover:border-purple-500/50" />
-              </div>
-            )}
+            <iframe
+              src="https://drive.google.com/file/d/1CufZ5fMPUXDyNLfeNliq64IZMxtL4o9c/preview"
+              className="w-full h-full border-0"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+            ></iframe>
           </motion.div>
         </div>
 
