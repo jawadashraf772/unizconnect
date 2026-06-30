@@ -86,7 +86,7 @@ export default function VslSection() {
       gap: "9 years of study gap",
       result: "Won £13,000 Scholarship (PKR 4.8 Million+)",
       uni: "University of Bristol",
-      avatar: "/avatar_ahmad.webp?v=2",
+      avatar: "/avatar_ahmad.webp",
       avatarScale: "scale-[1.45]",
       quote: "It was an excellent session and it lasted more than 80 minutes (2x the originally allotted slot). Ayesha was kind enough to listen to and address my queries. I had no idea of where to start my journey from but this session gave me a fair idea about the journey ahead."
     }
