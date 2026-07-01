@@ -148,7 +148,7 @@ export default function BookingForm() {
     <div className="bg-white">
 
       {/* FORM SECTION (Light Theme Update) */}
-      <section id="booking-form" className="relative pt-0 sm:pt-6 pb-6 sm:pb-14 overflow-hidden bg-slate-50/50">
+      <section id="booking-section" className="relative pt-0 sm:pt-6 pb-6 sm:pb-14 overflow-hidden bg-slate-50/50">
         {/* Background */}
         <div className="absolute inset-0 bg-slate-50" />
         <motion.div
@@ -334,7 +334,7 @@ export default function BookingForm() {
             </div>
 
             {/* RIGHT COLUMN: Form Card */}
-            <div className="lg:col-span-7 w-full">
+            <div id="booking-form" className="lg:col-span-7 w-full scroll-mt-24">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
