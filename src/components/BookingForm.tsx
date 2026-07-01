@@ -102,12 +102,35 @@ export default function BookingForm() {
     setIsSubmitting(true);
     
     try {
+      const uploadToCloudinary = async (file: File) => {
+        const data = new FormData();
+        data.append("file", file);
+        data.append("upload_preset", "Unizconnect form images");
+        const res = await fetch("https://api.cloudinary.com/v1_1/qj9ehefg/upload", {
+          method: "POST",
+          body: data,
+        });
+        if (!res.ok) throw new Error("Failed to upload file to Cloudinary");
+        const json = await res.json();
+        return json.secure_url;
+      };
+
+      // 1. Upload files to Cloudinary
+      const cvUrl = await uploadToCloudinary(cvFile);
+      const screenshotUrl = await uploadToCloudinary(screenshotFile);
+
+      // 2. Prepare payload for GHL Webhook
       const formPayload = new FormData();
       Object.entries(formData).forEach(([key, value]) => {
         formPayload.append(key, value as string);
       });
-      formPayload.append("cvFile", cvFile);
-      formPayload.append("screenshotFile", screenshotFile);
+      
+      // Attach the Cloudinary URLs
+      formPayload.append("cvUrl", cvUrl);
+      formPayload.append("screenshotUrl", screenshotUrl);
+      // Fallback keys in case GHL mapped to the old names
+      formPayload.append("cvFile", cvUrl);
+      formPayload.append("screenshotFile", screenshotUrl);
 
       const response = await fetch("https://services.leadconnectorhq.com/hooks/B1KkpgABfPleeIPoYy8x/webhook-trigger/bJivOdKvcs65nQRqpR2B", {
         method: "POST",
