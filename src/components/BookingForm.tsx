@@ -106,7 +106,7 @@ export default function BookingForm() {
         const data = new FormData();
         data.append("file", file);
         data.append("upload_preset", "Unizconnect form images");
-        const res = await fetch("https://api.cloudinary.com/v1_1/qj9ehefg/upload", {
+        const res = await fetch("https://api.cloudinary.com/v1_1/qj9ehefg/auto/upload", {
           method: "POST",
           body: data,
         });
