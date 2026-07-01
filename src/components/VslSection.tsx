@@ -139,12 +139,31 @@ export default function VslSection() {
             transition={{ type: "spring", stiffness: 80, damping: 20 }}
             className="relative w-full aspect-video rounded-3xl overflow-hidden border-4 border-purple-400/30 bg-purple-950 shadow-2xl transition-all duration-300"
           >
-            <iframe
-              src="https://drive.google.com/file/d/1CufZ5fMPUXDyNLfeNliq64IZMxtL4o9c/preview"
-              className="w-full h-full border-0"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-            ></iframe>
+            {!isPlayingVideo && (
+              <div 
+                className="absolute inset-0 z-10 flex items-center justify-center cursor-pointer"
+                onClick={handlePlayClick}
+              >
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center shadow-xl border-2 border-white/30 transition-all duration-300 hover:scale-110 hover:bg-purple-600/80 hover:border-purple-300/50">
+                  <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white fill-white ml-1.5" />
+                </div>
+              </div>
+            )}
+            <video
+              ref={videoRef}
+              src="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/6a44c82d21b1234da3f30c39.mp4"
+              poster="https://assets.cdn.filesafe.space/B1KkpgABfPleeIPoYy8x/media/6928bdac571896657f6dba4d.png"
+              className="w-full h-full object-cover"
+              controls={isPlayingVideo}
+              playsInline
+              onPlay={() => setIsPlayingVideo(true)}
+              onEnded={() => {
+                setIsPlayingVideo(false);
+                if (videoRef.current) {
+                  videoRef.current.load();
+                }
+              }}
+            ></video>
           </motion.div>
         </div>
 
